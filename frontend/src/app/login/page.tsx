@@ -7,7 +7,8 @@ import { inputCls } from '@/components/ui';
 
 export default function LoginPage() {
   const router = useRouter();
-  const [error, setError] = useState<string | null>(null);
+  const [error, setError] = useState<string | null>(() =>
+    typeof window !== 'undefined' && new URLSearchParams(window.location.search).has('denied') ? 'This account is not allowed to use this workspace.' : null);
   const [busy, setBusy] = useState(false);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {

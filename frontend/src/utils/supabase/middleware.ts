@@ -1,5 +1,6 @@
 import { createServerClient } from '@supabase/ssr';
 import { type NextRequest, NextResponse } from 'next/server';
+import { isOwner } from '@/lib/owner';
 
 /** Refreshes the Supabase session and redirects signed-out users to /login. */
 export async function updateSession(request: NextRequest) {
@@ -15,10 +16,15 @@ export async function updateSession(request: NextRequest) {
     },
   });
   const { data: { user } } = await supabase.auth.getUser();
-  if (!user && !request.nextUrl.pathname.startsWith('/login')) {
+  if (!request.nextUrl.pathname.startsWith('/login') && (!user || !isOwner(user.email))) {
+    // Signed in but not an allowed owner: end the session and send to login.
+    if (user) await supabase.auth.signOut();
     const url = request.nextUrl.clone();
     url.pathname = '/login';
-    return NextResponse.redirect(url);
+    url.search = user ? '?denied=1' : '';
+    const res = NextResponse.redirect(url);
+    response.cookies.getAll().forEach((c) => res.cookies.set(c));
+    return res;
   }
   return response;
 }

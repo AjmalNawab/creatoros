@@ -1,11 +1,12 @@
 import { type NextRequest } from 'next/server';
 import { createClient } from '@/utils/supabase/server';
+import { isOwner } from '@/lib/owner';
 
 /** Authenticated proxy for content files (audio, images, video with Range support). */
 export async function GET(req: NextRequest, { params }: { params: Promise<{ id: string }> }) {
   const supabase = await createClient();
   const { data: { user } } = await supabase.auth.getUser();
-  if (!user) return new Response('Unauthorized', { status: 401 });
+  if (!user || !isOwner(user.email)) return new Response('Unauthorized', { status: 401 });
   const { id } = await params;
   const rel = req.nextUrl.searchParams.get('path') ?? '';
   const headers: Record<string, string> = { 'x-api-key': process.env.API_KEY! };
