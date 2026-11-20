@@ -20,6 +20,7 @@ export interface BrandProfile {
   visualStyle: string;     // guidance for the visuals agent
   channels: { youtube?: { id: string; handle: string; name: string } };
   youtubeCategory: string; // YouTube Studio category name
+  youtubePlaylist?: string; // every upload of this series goes into this playlist (one channel can host several series)
 }
 
 export const BRANDS: { slug: string; name: string; description: string; profile: BrandProfile }[] = [
@@ -51,6 +52,7 @@ export const BRANDS: { slug: string; name: string; description: string; profile:
       visualStyle: 'Engineering blueprint look: deep navy background with faint grid, white/cyan line drawings, orange/red for stress, failure and warnings, clean sans-serif labels, cross-sections, force arrows, diagrams and timelines. No photos or real people.',
       channels: { youtube: { id: 'UCvugPJLIN5Wr5JeddlTrvKg', handle: '@MarginOfSafetyTV', name: 'Margin of Safety' } },
       youtubeCategory: 'Science & Technology',
+      youtubePlaylist: 'Engineering Stories (English)',
     },
   },
   {
@@ -71,8 +73,10 @@ export const BRANDS: { slug: string; name: string; description: string; profile:
       voiceRate: '+8%',
       wordsPerMinute: 175,
       visualStyle: 'Colourful night-sky/nature palette, simple SVG diagrams, Urdu Nastaliq labels (see media/renderer/src/videos/p001.tsx).',
-      channels: {},
+      // Same channel as Margin of Safety: owner runs both series on one channel, separated by playlist.
+      channels: { youtube: { id: 'UCvugPJLIN5Wr5JeddlTrvKg', handle: '@MarginOfSafetyTV', name: 'Margin of Safety' } },
       youtubeCategory: 'Education',
+      youtubePlaylist: 'اردو سائنس | Urdu Science',
     },
   },
 ];

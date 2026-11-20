@@ -6,7 +6,7 @@ import { Badge, Btn, Card, PageHeader, Pill, inputCls, textareaCls } from '@/com
 
 type Profile = {
   niche: string; audience: string; region: string; language: 'en' | 'ur'; tone: string; pillars: string[]; avoid: string[]; rules: string[];
-  formats: string[]; voice: string; voiceRate: string; wordsPerMinute: number; visualStyle: string; youtubeCategory: string;
+  formats: string[]; voice: string; voiceRate: string; wordsPerMinute: number; visualStyle: string; youtubeCategory: string; youtubePlaylist?: string;
   channels: { youtube?: { id: string; handle: string; name: string } };
 };
 type Brand = { id: string; slug: string; name: string; description: string | null; active: boolean; profile: Profile };
@@ -19,7 +19,7 @@ export default async function BrandPage({ searchParams }: { searchParams: Promis
   const p = b.profile;
   return (
     <div className="space-y-6">
-      <PageHeader icon={Building2} title="Brands" description="Each brand has its own language, voice, look, editorial rules and channels. New work is created for the active brand." />
+      <PageHeader icon={Building2} title="Series" description="Each series has its own language, voice, look and editorial rules. Several series can share one YouTube channel; each gets its own playlist. The active series is the default for new work." />
       <div className="grid gap-3 md:grid-cols-2">
         {brands.map((x) => (
           <Card key={x.id} className={x.slug === b.slug ? 'ring-2 ring-orange-400/60' : ''}>
@@ -61,6 +61,9 @@ export default async function BrandPage({ searchParams }: { searchParams: Promis
             <label className="space-y-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-400">YouTube channel ID<input className={inputCls} name="ytId" defaultValue={p.channels.youtube?.id ?? ''} placeholder="UC…" /></label>
             <label className="space-y-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-400">Handle<input className={inputCls} name="ytHandle" defaultValue={p.channels.youtube?.handle ?? ''} /></label>
             <label className="space-y-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-400">Channel name<input className={inputCls} name="ytName" defaultValue={p.channels.youtube?.name ?? ''} /></label>
+          </div>
+          <div className="md:col-span-2">
+            <label className="space-y-1.5 text-xs font-medium text-zinc-600 dark:text-zinc-400">YouTube playlist for this series<input className={inputCls} name="youtubePlaylist" defaultValue={p.youtubePlaylist ?? ''} placeholder="e.g. Engineering Stories (English)" /></label>
           </div>
           <div className="md:col-span-2"><Btn tone="accent" icon={Save}>Save {b.name}</Btn></div>
         </form>

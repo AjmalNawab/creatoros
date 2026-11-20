@@ -8,7 +8,7 @@ CreatorOS: an AI multi-agent system for producing and publishing content. It run
 
 **Brands** (multi-brand; each has its own language, voice, style, rules and channels):
 - **Margin of Safety** (active, default): English engineering stories (near-misses, failures, fixes). YouTube @MarginOfSafetyTV, channel `UCvugPJLIN5Wr5JeddlTrvKg`. Blueprint visual style, `en-GB-RyanNeural` at -8%.
-- **Urdu Science Explainers**: Urdu, `ur-PK-AsadNeural`. No channel yet, so its videos can't be published.
+- **Urdu Science Explainers**: Urdu, `ur-PK-AsadNeural`. It shares the **same channel** (owner's choice: one channel, different content per language), separated by YouTube playlists (`youtubePlaylist` per series).
 - **Source of truth:** `CreatorOS_Complete_Project_Blueprint_Updated.pdf` (v1.0 + Rev 1.1).
 - **Overrides the PDF:** `docs/REVIEW_AND_RECOMMENDATIONS.md` holds the adopted amendments, roadmap and open owner decisions. Read it before changing architecture. Don't silently change architectural decisions; explain and propose instead.
 - **$0 operator mode:** there is no runtime LLM API. Agents that need AI pause in the **AI queue**, and Claude Code answers them. Uploads pause as **human actions**, and Claude Code performs them in the owner's Chrome via the Chrome DevTools MCP while the owner watches.

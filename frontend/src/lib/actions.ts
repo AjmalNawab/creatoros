@@ -8,8 +8,8 @@ export async function emergencyStop() { await post('/system/stop'); revalidatePa
 export async function resumeSystem() { await post('/system/resume'); revalidatePath('/', 'layout'); }
 export async function submitInstruction(form: FormData) {
   const text = String(form.get('text') ?? '').trim();
-  const language = String(form.get('language') ?? '') || undefined;
-  if (text.length >= 3) await post('/instructions', { text, language });
+  const brandId = String(form.get('brandId') ?? '') || undefined;
+  if (text.length >= 3) await post('/instructions', { text, brandId });
   revalidatePath('/', 'layout');
 }
 export async function setAgentEnabled(id: string, enabled: boolean) {
@@ -33,11 +33,11 @@ export async function addPlatformToProject(projectId: string, platform: string) 
 }
 export async function startIdeation(form: FormData) {
   const focus = String(form.get('focus') ?? '').trim();
-  await post('/ideation', { count: Number(form.get('count') ?? 5), focus: focus || undefined });
+  await post('/ideation', { count: Number(form.get('count') ?? 5), focus: focus || undefined, brandId: String(form.get('brandId') ?? '') || undefined });
   revalidatePath('/ideas');
 }
 export async function selectIdea(id: string, form: FormData) {
-  await post(`/ideas/${id}/select`, { language: String(form.get('language') ?? '') || undefined }); revalidatePath('/', 'layout');
+  void form; await post(`/ideas/${id}/select`, {}); revalidatePath('/', 'layout');
 }
 export async function rejectIdea(id: string, form: FormData) {
   await post(`/ideas/${id}/reject`, { feedback: String(form.get('feedback') ?? '') || undefined }); revalidatePath('/ideas');
@@ -51,6 +51,7 @@ export async function saveBrand(slug: string, form: FormData) {
     language: String(form.get('language')), tone: String(form.get('tone')), pillars: lines('pillars'), avoid: lines('avoid'),
     rules: lines('rules'), formats: lines('formats'), voice: String(form.get('voice')), voiceRate: String(form.get('voiceRate')),
     wordsPerMinute: Number(form.get('wpm')), visualStyle: String(form.get('visualStyle')), youtubeCategory: String(form.get('youtubeCategory')),
+    youtubePlaylist: String(form.get('youtubePlaylist') ?? '') || undefined,
     channels: ytId ? { youtube: { id: ytId, handle: String(form.get('ytHandle') ?? ''), name: String(form.get('ytName') ?? '') } } : {} } });
   revalidatePath('/brand');
 }

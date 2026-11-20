@@ -23,7 +23,7 @@ const GROUPS = [
   ] },
   { label: 'Publish', items: [{ href: '/platforms', label: 'Platforms', icon: Radio }] },
   { label: 'Settings', items: [
-    { href: '/brand', label: 'Brands', icon: Building2 },
+    { href: '/brand', label: 'Series', icon: Building2 },
     { href: '/agents', label: 'Agents', icon: Bot },
   ] },
   { label: 'System', items: [

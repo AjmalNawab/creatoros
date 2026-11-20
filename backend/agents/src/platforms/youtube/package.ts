@@ -104,6 +104,8 @@ Answer with ONLY a JSON object:
       visibility: DEFAULT_VISIBILITY,
       madeForKids: false,
       category: profile.youtubeCategory,
+      playlist: profile.youtubePlaylist ?? null,
+      series: brand.name,
       language: ur ? 'Urdu' : 'English',
       channel,
       alteredContent: false, // stylised animation, nothing realistic → no "altered or synthetic" disclosure needed

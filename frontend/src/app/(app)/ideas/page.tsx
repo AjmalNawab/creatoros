@@ -2,10 +2,10 @@ import Link from 'next/link';
 import { Lightbulb, Search, Sparkles, Target, ThumbsDown, TrendingUp, Users, Wand2, Swords } from 'lucide-react';
 import { api } from '@/lib/api';
 import { rejectIdea, selectIdea, startIdeation } from '@/lib/actions';
-import { Badge, Btn, Card, EmptyState, LanguageToggle, PageHeader, Pill, ago, inputCls } from '@/components/ui';
+import { Badge, Btn, Card, EmptyState, PageHeader, Pill, SeriesPicker, ago, inputCls, type SeriesOption } from '@/components/ui';
 
 type Idea = {
-  id: string; taskId: string; rank: number; title: string; topic: string; angle: string; audience: string; whyNow: string;
+  id: string; brandId: string | null; taskId: string; rank: number; title: string; topic: string; angle: string; audience: string; whyNow: string;
   evidence: { source: string; detail: string; url?: string }[]; competition: string; keywords: string[]; format: string; durationSec: number;
   score: number; status: string; contentProjectId: string | null; feedback: string | null; createdAt: string;
 };
@@ -15,21 +15,21 @@ const scoreTone = (s: number) => (s >= 8 ? 'from-emerald-500 to-emerald-600' : s
 
 export default async function IdeasPage() {
   const [{ ideas, rounds }, brands] = await Promise.all([
-    api<{ ideas: Idea[]; rounds: Round[] }>('/ideas'), api<{ name: string; active: boolean; profile: { language: string } }[]>('/brands')]);
-  const brand = brands.find((b) => b.active);
-  const lang = brand?.profile.language ?? 'en';
+    api<{ ideas: Idea[]; rounds: Round[] }>('/ideas'), api<(SeriesOption & { name: string })[]>('/brands')]);
+  const seriesName = (id: string | null) => brands.find((b) => b.id === id);
   const busy = rounds.filter((r) => !['COMPLETED', 'CANCELLED', 'DEAD'].includes(r.status));
   const proposed = ideas.filter((i) => i.status === 'PROPOSED');
   const decided = ideas.filter((i) => i.status !== 'PROPOSED').slice(0, 20);
 
   return (
     <div className="space-y-6">
-      <PageHeader icon={Lightbulb} title="Ideas" description={<>The Trend agent scans what is timely for <b className="font-medium text-zinc-700 dark:text-zinc-200">{brand?.name}</b>, and the Strategy agent ranks ideas by fit, demand and competition. Nothing is produced until you pick one.</>} />
+      <PageHeader icon={Lightbulb} title="Ideas" description={<>Pick a series, and the Trend agent scans what is timely for it, and the Strategy agent ranks ideas by fit, demand and competition. Nothing is produced until you pick one.</>} />
 
       <Card>
         <form action={startIdeation} className="flex flex-col gap-2 sm:flex-row">
           <div className="relative flex-1"><Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-zinc-400" />
             <input name="focus" placeholder="Optional focus: e.g. aviation, bridges, anniversaries this month…" className={`${inputCls} pl-9`} /></div>
+          <SeriesPicker series={brands} />
           <select name="count" defaultValue="5" className={`${inputCls} sm:w-32`}>{[3, 5, 7, 10].map((n) => <option key={n} value={n}>{n} ideas</option>)}</select>
           <Btn tone="accent" icon={Wand2}>Suggest ideas</Btn>
         </form>
@@ -51,7 +51,7 @@ export default async function IdeasPage() {
                 <div className="text-center leading-none"><div className="text-xl font-bold">{i.score}</div><div className="text-[9px] opacity-80">/10</div></div>
               </div>
               <div className="min-w-0 flex-1">
-                <div className="flex flex-wrap items-center gap-1.5 text-xs text-zinc-500"><Pill>#{i.rank}</Pill><Pill>{i.format}</Pill><Pill>{Math.round(i.durationSec / 6) / 10} min</Pill><span>{ago(i.createdAt)}</span></div>
+                <div className="flex flex-wrap items-center gap-1.5 text-xs text-zinc-500">{seriesName(i.brandId) && <Pill tone="info">{seriesName(i.brandId)!.profile.language === 'ur' ? 'اردو' : 'EN'} · {seriesName(i.brandId)!.name}</Pill>}<Pill>#{i.rank}</Pill><Pill>{i.format}</Pill><Pill>{Math.round(i.durationSec / 6) / 10} min</Pill><span>{ago(i.createdAt)}</span></div>
                 <h3 dir="auto" className="mt-1.5 text-lg font-semibold leading-snug">{i.title}</h3>
                 <div className="text-sm text-zinc-500">{i.topic}</div>
               </div>
@@ -74,7 +74,6 @@ export default async function IdeasPage() {
                 <Btn tone="ghost" icon={ThumbsDown}>Reject</Btn>
               </form>
               <form action={selectIdea.bind(null, i.id)} className="flex gap-2">
-                <LanguageToggle defaultValue={lang} />
                 <Btn tone="accent" icon={Wand2}>Make this</Btn>
               </form>
             </div>

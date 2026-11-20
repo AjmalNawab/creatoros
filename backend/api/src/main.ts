@@ -279,7 +279,7 @@ class ContentController {
       niche: z.string().min(5), audience: z.string().min(5), region: z.string().length(2), language: z.enum(['en', 'ur']),
       tone: z.string().min(3), pillars: list, avoid: list, rules: list, formats: list,
       voice: z.string().min(3), voiceRate: z.string().regex(/^[+-]\d{1,2}%$/), wordsPerMinute: z.number().int().min(80).max(250),
-      visualStyle: z.string().min(5), youtubeCategory: z.string().min(3),
+      visualStyle: z.string().min(5), youtubeCategory: z.string().min(3), youtubePlaylist: z.string().max(150).optional(),
       channels: z.object({ youtube: z.object({ id: z.string().regex(/^UC[\w-]{22}$/), handle: z.string(), name: z.string() }).optional() }),
     }) }), body);
     const b = await this.db.brand.findUnique({ where: { slug } });
@@ -291,8 +291,8 @@ class ContentController {
 
   @Post('ideation')
   async ideation(@Body() body: unknown) {
-    const { count, focus } = parse(z.object({ count: z.number().int().min(3).max(10).default(5), focus: z.string().max(300).optional() }), body ?? {});
-    return submitIdeation(this.db, { count, focus, actor: OWNER });
+    const { count, focus, brandId } = parse(z.object({ count: z.number().int().min(3).max(10).default(5), focus: z.string().max(300).optional(), brandId: z.string().uuid().optional() }), body ?? {});
+    return submitIdeation(this.db, { count, focus, brandId, actor: OWNER });
   }
 
   @Get('ideas')

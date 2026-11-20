@@ -14,7 +14,7 @@ import { sha256File } from './package';
  * bypasses CAPTCHA, 2FA or verification; those steps are done by the owner.
  * Route "api": reserved for the YouTube Data API once the project is verified.
  */
-type Pkg = { channel?: { id: string; handle: string; name: string }; video: string; videoSha256: string; thumbnail: string; title: string; description: string; tags: string[]; visibility: string; madeForKids: boolean; category: string; language: string; alteredContent: boolean };
+type Pkg = { channel?: { id: string; handle: string; name: string }; playlist?: string | null; series?: string; video: string; videoSha256: string; thumbnail: string; title: string; description: string; tags: string[]; visibility: string; madeForKids: boolean; category: string; language: string; alteredContent: boolean };
 
 const VIDEO_ID = /(?:youtube\.com\/(?:watch\?v=|shorts\/|live\/)|youtu\.be\/|studio\.youtube\.com\/video\/)([A-Za-z0-9_-]{11})/;
 
@@ -59,6 +59,7 @@ export const youtubePublish: AgentDefinition = {
         `4. Description: copy from payload.description (also in ${abs('platforms/youtube/description.txt')})`,
         `5. Thumbnail: ${abs(pkg.thumbnail)} (needs a phone-verified channel; if unavailable, skip and note it)`,
         `6. Audience: "No, it's not made for kids". Show more → Altered content: No. Tags: payload.tags. Category: ${pkg.category}. Video language: ${pkg.language}.`,
+        ...(pkg.playlist ? [`6b. Playlist: add to "${pkg.playlist}" (create it if it does not exist; series: ${pkg.series ?? ''}).`] : []),
         `7. Visibility: ${pkg.visibility}. Save/Publish.`,
         '8. Copy the video link and complete this action with {"url": "<link>", "visibility": "<visibility>", "notes": "..."}.',
       ].join('\n'),

@@ -4,7 +4,7 @@ import {
 } from 'lucide-react';
 import { api } from '@/lib/api';
 import { submitInstruction, startIdeation } from '@/lib/actions';
-import { Badge, Btn, Card, EmptyState, LanguageToggle, PageHeader, Stat, ago, inputCls } from '@/components/ui';
+import { Badge, Btn, Card, EmptyState, PageHeader, SeriesPicker, Stat, ago, inputCls, type SeriesOption } from '@/components/ui';
 import { Pipeline, media } from '@/components/content';
 
 type Overview = {
@@ -16,7 +16,7 @@ type Overview = {
 type Project = { id: string; slug: string; title: string; status: string; createdAt: string; video: string | null; poster: string | null; tasks: { agentId: string; status: string }[] };
 
 export default async function OverviewPage() {
-  const [ov, projects] = await Promise.all([api<Overview>('/overview'), api<Project[]>('/content')]);
+  const [ov, projects, series] = await Promise.all([api<Overview>('/overview'), api<Project[]>('/content'), api<SeriesOption[]>('/brands')]);
   const todo = [
     { n: ov.pendingApprovals, href: '/approvals', icon: CheckCircle2, title: 'Approve', text: 'Scripts, final videos or upload packages are waiting for your decision.', tone: 'text-violet-600 bg-violet-50 dark:bg-violet-950/50' },
     { n: ov.aiPending, href: '/ai', icon: Sparkles, title: 'AI thinking needed', text: 'In Claude Code, say “process the AI queue”.', tone: 'text-sky-600 bg-sky-50 dark:bg-sky-950/50' },
@@ -28,7 +28,7 @@ export default async function OverviewPage() {
 
   return (
     <div className="space-y-6">
-      <PageHeader title={`Good to see you`} description={<>Active brand: <b className="font-medium text-zinc-700 dark:text-zinc-200">{ov.activeBrand.name}</b>{ov.activeBrand.youtube && <> · <Youtube className="-mt-0.5 inline size-3.5 text-red-500" /> {ov.activeBrand.youtube.handle}</>}</>} />
+      <PageHeader title="Good to see you" description={<><Youtube className="-mt-0.5 inline size-3.5 text-red-500" /> <b className="font-medium text-zinc-700 dark:text-zinc-200">{ov.activeBrand.youtube?.handle ?? 'No channel'}</b> · {series.map((x) => `${x.profile.language === 'ur' ? 'اردو' : 'EN'} ${x.name}`).join('  ·  ')}</>} />
 
       {/* Create */}
       <section className="relative overflow-hidden rounded-2xl border border-zinc-200/80 bg-white p-5 shadow-sm sm:p-6 dark:border-zinc-800 dark:bg-zinc-900">
@@ -39,12 +39,13 @@ export default async function OverviewPage() {
           <form action={submitInstruction} className="mt-4 flex flex-col gap-2 lg:flex-row">
             <input name="text" required minLength={3} placeholder='e.g. "A 3 minute story about the Tacoma Narrows Bridge collapse"' className={`${inputCls} h-11 text-base lg:flex-1`} />
             <div className="flex gap-2">
-              <LanguageToggle defaultValue={ov.activeBrand.language} />
+              <SeriesPicker series={series} />
               <Btn tone="accent" icon={Send} className="h-9 flex-1 lg:flex-none">Create</Btn>
             </div>
           </form>
           <form action={startIdeation} className="mt-3 flex items-center gap-2 text-sm text-zinc-500">
             <input type="hidden" name="count" value="5" />
+            <input type="hidden" name="brandId" value={series.find((s) => s.active)?.id ?? ''} />
             <span>No topic in mind?</span>
             <button className="inline-flex items-center gap-1 font-medium text-orange-600 hover:text-orange-700"><Lightbulb className="size-3.5" />Suggest trending ideas</button>
           </form>

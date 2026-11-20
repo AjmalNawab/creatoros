@@ -163,6 +163,24 @@ export function LanguageToggle({ defaultValue }: { defaultValue: string }) {
   );
 }
 
+export type SeriesOption = { id: string; name: string; active: boolean; profile: { language: string } };
+
+/** Pick which series (brand) a video or idea round is for; its language, voice and style follow. Posts `brandId`. */
+export function SeriesPicker({ series }: { series: SeriesOption[] }) {
+  const def = series.find((s) => s.active)?.id ?? series[0]?.id;
+  return (
+    <div role="radiogroup" aria-label="Series" className="inline-flex h-9 shrink-0 rounded-lg border border-zinc-200 bg-zinc-100 p-0.5 text-sm dark:border-zinc-700 dark:bg-zinc-800">
+      {series.map((s) => (
+        <label key={s.id} className="flex cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-md px-3 font-medium text-zinc-500 transition has-[:checked]:bg-white has-[:checked]:text-zinc-900 has-[:checked]:shadow-sm dark:has-[:checked]:bg-zinc-950 dark:has-[:checked]:text-white">
+          <input type="radio" name="brandId" value={s.id} defaultChecked={s.id === def} className="sr-only" />
+          {s.profile.language === 'ur' ? <span className="urdu text-base leading-none">اردو</span> : <span>EN</span>}
+          <span className="hidden sm:inline">· {s.name}</span>
+        </label>
+      ))}
+    </div>
+  );
+}
+
 /* ------------------------------------------------------------------ misc */
 
 export const ago = (d?: string | Date | null) => {
