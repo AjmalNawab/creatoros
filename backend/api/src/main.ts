@@ -10,7 +10,7 @@ import { APP_GUARD, NestFactory } from '@nestjs/core';
 import { z } from 'zod';
 import { getDb, type PrismaClient } from '@creatoros/db';
 import { audit, completeHumanAction, decideApproval, getLock, isEmergencyStopped, paths, safeContentPath, setEmergencyStop } from '@creatoros/core';
-import { PLATFORMS, addPlatform, submitInstruction, type PlatformId } from '@creatoros/agents';
+import { PLATFORMS, addPlatform, getDefaultBrand, profileOf, rejectIdea, selectIdea, submitIdeation, submitInstruction, type PlatformId } from '@creatoros/agents';
 
 // BigInt (lock tokens, audit ids) → JSON string
 (BigInt.prototype as unknown as { toJSON: () => string }).toJSON = function () { return this.toString(); };
@@ -231,6 +231,53 @@ class ContentController {
     const { result } = parse(z.object({ result: z.record(z.unknown()) }), body);
     try { await completeHumanAction(this.db, id, result as never, OWNER); return { ok: true }; }
     catch (e) { throw new BadRequestException((e as Error).message); }
+  }
+
+  // ---------- Strategy: brand profile + ideas ----------
+  @Get('brand')
+  async brand() {
+    const b = await getDefaultBrand(this.db);
+    return { id: b.id, name: b.name, description: b.description, profile: profileOf(b) };
+  }
+
+  @Post('brand')
+  async updateBrand(@Body() body: unknown) {
+    const list = z.array(z.string().min(1)).max(20);
+    const { name, profile } = parse(z.object({ name: z.string().min(2).max(80), profile: z.object({
+      niche: z.string().min(5), audience: z.string().min(5), region: z.string().length(2), language: z.string().min(2),
+      tone: z.string().min(3), pillars: list, avoid: list, formats: list }) }), body);
+    const b = await getDefaultBrand(this.db);
+    const updated = await this.db.brand.update({ where: { id: b.id }, data: { name, tone: profile.tone, settings: { ...(b.settings as object), profile } as never } });
+    await audit(this.db, OWNER, 'brand.updated', { entity: 'brand', entityId: b.id, brandId: b.id });
+    return { id: updated.id, name: updated.name, profile };
+  }
+
+  @Post('ideation')
+  async ideation(@Body() body: unknown) {
+    const { count, focus } = parse(z.object({ count: z.number().int().min(3).max(10).default(5), focus: z.string().max(300).optional() }), body ?? {});
+    return submitIdeation(this.db, { count, focus, actor: OWNER });
+  }
+
+  @Get('ideas')
+  async ideas() {
+    const [ideas, rounds] = await Promise.all([
+      this.db.idea.findMany({ orderBy: [{ createdAt: 'desc' }, { rank: 'asc' }], take: 60 }),
+      this.db.task.findMany({ where: { type: { in: ['trends_report', 'ideas'] } }, orderBy: { createdAt: 'desc' }, take: 10,
+        select: { id: true, agentId: true, status: true, createdAt: true, output: true, input: true } }),
+    ]);
+    return { ideas, rounds };
+  }
+
+  @Post('ideas/:id/select')
+  async select(@Param('id') id: string) {
+    try { return await selectIdea(this.db, id, { actor: OWNER }); } catch (e) { throw new BadRequestException((e as Error).message); }
+  }
+
+  @Post('ideas/:id/reject')
+  async reject(@Param('id') id: string, @Body() body: unknown) {
+    const { feedback } = parse(z.object({ feedback: z.string().max(1000).optional() }), body ?? {});
+    await rejectIdea(this.db, id, feedback, OWNER);
+    return { ok: true };
   }
 
   @Get('ai-requests')

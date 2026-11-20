@@ -19,14 +19,14 @@ export const research: AgentDefinition = {
   id: 'research', name: 'Research Agent', department: 'Strategy & Research', timeoutSec: 120,
   async run(ctx) {
     const p = await project(ctx);
-    const params = p.params as { topic: string; language: string; durationSec: number };
+    const params = p.params as { topic: string; language: string; durationSec: number; angle?: string; audience?: string; keywords?: string[] };
     const dir = paths.content(p.slug, 'research');
     const r = await askAi(getDb(), ctx, {
       kind: 'research', format: 'json', promptDir: paths.content(p.slug, 'ai'),
       prompt: withFeedback(`You are the Research Agent of CreatorOS, preparing an original educational ${params.language === 'ur' ? 'Urdu' : 'English'} video (~${params.durationSec}s) for a general audience in Pakistan.
 
 Topic: ${params.topic}
-
+${params.angle ? `Chosen angle (from strategy): ${params.angle}\nTarget audience: ${params.audience}\nSearch keywords: ${(params.keywords ?? []).join(', ')}\n` : ''}
 Collect 8-12 accurate, interesting, verifiable facts suitable for a short explainer. Prefer authoritative sources (USGS, NASA, NOAA, WHO, Smithsonian, National Geographic, Britannica, peer-reviewed). Mark confidence honestly. Include a local (Pakistan) angle if one genuinely exists — never invent one. List things to avoid (misconceptions, sensationalism).
 
 Answer with ONLY a JSON object:

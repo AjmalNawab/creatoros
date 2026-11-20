@@ -7,8 +7,8 @@ import { Btn } from '@/components/ui';
 type Overview = { emergencyStop: boolean; pendingApprovals: number };
 
 const NAV = [
-  ['/', 'Overview'], ['/content', 'Content Studio'], ['/approvals', 'Approvals'], ['/ai', 'AI Queue'], ['/actions', 'Browser actions'],
-  ['/platforms', 'Platforms'], ['/agents', 'Agents'], ['/tasks', 'Tasks'], ['/logs', 'System logs'],
+  ['/', 'Overview'], ['/ideas', 'Ideas'], ['/content', 'Content Studio'], ['/approvals', 'Approvals'], ['/ai', 'AI Queue'], ['/actions', 'Browser actions'],
+  ['/platforms', 'Platforms'], ['/brand', 'Brand'], ['/agents', 'Agents'], ['/tasks', 'Tasks'], ['/logs', 'System logs'],
 ] as const;
 
 export default async function AppLayout({ children }: { children: React.ReactNode }) {

@@ -19,7 +19,7 @@ beforeAll(() => {
 }, 120_000);
 
 beforeEach(async () => {
-  await db.$executeRawUnsafe(`TRUNCATE "AuditLog","Approval","AiRequest","HumanActionRequest","PlatformPost","TaskRun","TaskDependency","Task","ContentProject","Agent","SystemSetting","ExecutionLock" CASCADE`);
+  await db.$executeRawUnsafe(`TRUNCATE "AuditLog","Approval","AiRequest","HumanActionRequest","PlatformPost","TaskRun","TaskDependency","Task","ContentProject","Idea","Brand","Agent","SystemSetting","ExecutionLock" CASCADE`);
 });
 afterAll(() => db.$disconnect());
 

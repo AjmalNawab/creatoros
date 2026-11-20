@@ -11,12 +11,10 @@ CreatorOS: an AI multi-agent system for producing and publishing content (first 
 
 ## Operator duties (when the owner asks)
 
-- **"process the AI queue":** run `pnpm ai list`, then `pnpm ai show <id>`. Write the answer to a file, then run `pnpm ai answer <id> <file>`. Answers are validated (zod schemas; visuals TSX is compiled with `tsc`). An invalid answer is rejected, and a new request arrives with the error appended. For visuals, follow the style of `media/renderer/src/videos/p001.tsx` and the helpers in `common.tsx`.
-- **"upload it":** run `pnpm action list`, then `pnpm action show <id>`. Do the upload in the owner's Chrome with chrome-devtools MCP tools (`new_page`, `upload_file`, `fill`, `click`), using exactly the payload values. Then run `pnpm action complete <id> '{"url":"…","visibility":"…"}'`.
-  - Stop and hand over to the owner on any login, CAPTCHA, 2FA or verification prompt.
-  - Never upload anything that isn't in an approved package.
-  - The owner can also upload manually and paste the link on the dashboard's "Browser actions" page.
-  - Chrome must have remote debugging enabled at `chrome://inspect/#remote-debugging` (the MCP uses `--autoConnect`).
+Project skills in `.claude/skills/` hold the playbooks. Load them; don't improvise:
+- **"process the AI queue"** → `process-queue`, which routes by request kind to `trend-ideas`, `research`, `urdu-script`, `scene-visuals` or `youtube-metadata`.
+- **"upload it"** → `youtube-upload`: owner's Chrome via chrome-devtools MCP, approved payload only. Stop on login, CAPTCHA or 2FA.
+- **"what should we make next?"** → suggest starting an ideation round from the dashboard's Ideas page (or `POST /ideation`), then answer the queue with `trend-ideas`.
 
 ## Commands
 
@@ -62,6 +60,7 @@ backend/worker --Engine.runForever(ALL_AGENTS)--> backend/agents --> backend/cor
   - `approvals.ts`: `decideApproval` either completes the task, or re-queues it with `input.feedback`, which yields a new AI request. `findValidApproval(taskId, output)` is the backend gate that publishing agents must call right before any external action.
   - `ai.ts` / `human.ts`: requests are keyed by `taskId + kind + inputHash`, so feedback creates a fresh request.
 - **`backend/agents`:** all agent code, organised by department.
+  - `strategy/`: the Trend agent and the Content Strategy (ideas) agent, plus the brand profile (`Brand.settings.profile`, default "Urdu science explainers", editable on `/brand`). `submitIdeation` runs trends → ideas and stores `Idea` rows as PROPOSED. Nothing is produced until the owner runs `selectIdea`, which turns the idea into a content project and carries its angle, audience and keywords into the research and script prompts. If `YOUTUBE_API_KEY` is set, trends also pull YouTube most-popular charts for the brand region.
   - `main/`: the Main Agent. `planInstruction` gives topic, duration, language and platforms (default `youtube`). `submitInstruction` creates a `ContentProject` (`content/<NNN-slug>/`, renderer key `pNNN`; 001 is the hand-made pilot), then the production steps, then each **active** platform's steps. Planned platforms are reported as `skipped`. `addPlatform` appends platform steps to an existing project.
   - `production/`: research → script (approval) → voice → storyboard → visuals → video → qa (final approval). One file per agent; `shared.ts` holds the helpers and constants.
   - `platforms/<id>/`: a `PlatformModule` that registers the platform's agents and steps (`PLATFORMS` in `platforms/index.ts`). YouTube is `active` with `youtube.package` (approval) and `youtube.publish`. The publish step checks a valid approval, checks that the video's sha256 is unchanged, and checks idempotency (`PlatformPost.idempotencyKey`) before handing off the upload; afterwards it verifies the video via oEmbed. Facebook, Instagram, TikTok and LinkedIn are `planned` stubs. To activate one, copy the youtube pattern.

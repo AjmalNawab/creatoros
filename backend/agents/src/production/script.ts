@@ -17,7 +17,7 @@ export const script: AgentDefinition = {
   id: 'script', name: 'Script Writing Agent', department: 'Content Creation', timeoutSec: 120, requiresApprovalAfter: true,
   async run(ctx) {
     const p = await project(ctx);
-    const params = p.params as { topic: string; language: string; durationSec: number };
+    const params = p.params as { topic: string; language: string; durationSec: number; angle?: string; audience?: string; titleHint?: string };
     const r = await readJson<Research>(paths.content(p.slug, 'research', 'research.json'));
     const target = Math.round((params.durationSec / 60) * WORDS_PER_MIN);
     const s = await askAi(getDb(), ctx, {
@@ -25,7 +25,7 @@ export const script: AgentDefinition = {
       prompt: withFeedback(`You are the Script Writing Agent of CreatorOS. Write an ORIGINAL ${params.language === 'ur' ? 'Urdu (natural spoken Pakistani Urdu, Urdu script)' : 'English'} narration script for a ~${params.durationSec}s animated educational video.
 
 Topic: ${params.topic}
-Research (use only these facts; prefer high confidence):
+${params.angle ? `Angle (owner-selected idea): ${params.angle}\nTarget audience: ${params.audience}\nWorking title: ${params.titleHint}\n` : ''}Research (use only these facts; prefer high confidence):
 ${JSON.stringify({ summary: r.summary, facts: r.facts, avoid: r.avoid }, null, 1)}
 
 Requirements:

@@ -27,6 +27,7 @@ model Brand {
   tasks     Task[]
   approvals Approval[]
   projects  ContentProject[]
+  ideas     Idea[]
 }
 
 // ---------- Agents ----------
@@ -290,4 +291,39 @@ model PlatformPost {
   publishedAt      DateTime       @default(now())
 
   @@index([contentProjectId])
+}
+
+// ---------- Strategy: proposed content ideas (Trend + Idea agents) ----------
+enum IdeaStatus {
+  PROPOSED
+  SELECTED   // owner picked it → content project created
+  REJECTED
+}
+
+model Idea {
+  id               String     @id @default(uuid())
+  brandId          String?
+  brand            Brand?     @relation(fields: [brandId], references: [id])
+  taskId           String     // the ideas task that proposed it
+  rank             Int
+  title            String     // working title (Urdu)
+  topic            String     // topic in English (becomes the project topic)
+  angle            String     // what makes our video different
+  audience         String     // who it is for
+  whyNow           String     // trend evidence summary
+  evidence         Json       @default("[]") // [{source, detail, url?}]
+  competition      String     // existing coverage and how we beat it
+  keywords         Json       @default("[]")
+  format           String     // "long" | "short"
+  durationSec      Int
+  platforms        Json       @default("[\"youtube\"]")
+  score            Int        // 1-10 fit × opportunity
+  status           IdeaStatus @default(PROPOSED)
+  contentProjectId String?    @unique
+  feedback         String?
+  createdAt        DateTime   @default(now())
+  decidedAt        DateTime?
+
+  @@index([status])
+  @@index([taskId])
 }

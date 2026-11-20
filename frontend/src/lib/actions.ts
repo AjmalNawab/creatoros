@@ -30,3 +30,19 @@ export async function addPlatformToProject(projectId: string, platform: string) 
   await post(`/content/${projectId}/platforms`, { platform });
   revalidatePath(`/content/${projectId}`);
 }
+export async function startIdeation(form: FormData) {
+  const focus = String(form.get('focus') ?? '').trim();
+  await post('/ideation', { count: Number(form.get('count') ?? 5), focus: focus || undefined });
+  revalidatePath('/ideas');
+}
+export async function selectIdea(id: string) { await post(`/ideas/${id}/select`); revalidatePath('/', 'layout'); }
+export async function rejectIdea(id: string, form: FormData) {
+  await post(`/ideas/${id}/reject`, { feedback: String(form.get('feedback') ?? '') || undefined }); revalidatePath('/ideas');
+}
+export async function saveBrand(form: FormData) {
+  const lines = (k: string) => String(form.get(k) ?? '').split('\n').map((x) => x.trim()).filter(Boolean);
+  await post('/brand', { name: String(form.get('name')), profile: {
+    niche: String(form.get('niche')), audience: String(form.get('audience')), region: String(form.get('region')).toUpperCase(),
+    language: String(form.get('language')), tone: String(form.get('tone')), pillars: lines('pillars'), avoid: lines('avoid'), formats: lines('formats') } });
+  revalidatePath('/brand');
+}
