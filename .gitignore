@@ -1,0 +1,14 @@
+node_modules/
+.env
+.env.*
+!.env.example
+.venv/
+dist/
+.next/
+*.log
+.DS_Store
+# generated media (large)
+content/*/output/*.mp4
+content/*/audio/*.mp3
+media/renderer/public/p*/
+media/renderer/node_modules/

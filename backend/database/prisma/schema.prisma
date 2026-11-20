@@ -1,0 +1,192 @@
+// CreatorOS: Phase 1 core schema.
+// Rule: every brand-scoped row carries brandId; history is append-only (runs, audit).
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ---------- Brands ----------
+model Brand {
+  id          String   @id @default(uuid())
+  slug        String   @unique
+  name        String
+  description String?
+  language    String   @default("ur")
+  tone        String?
+  settings    Json     @default("{}")
+  active      Boolean  @default(true)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  tasks     Task[]
+  approvals Approval[]
+}
+
+// ---------- Agents ----------
+model Agent {
+  id           String   @id // stable key, e.g. "research", "script"
+  name         String
+  department   String
+  description  String?
+  enabled      Boolean  @default(true)
+  // execution limits
+  timeoutSec   Int      @default(600)
+  maxAttempts  Int      @default(3)
+  requiresApprovalAfter Boolean @default(false) // output must be human-approved before dependants run
+  config       Json     @default("{}")          // instructions version, allowed tools, schemas refs
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  tasks Task[]
+  runs  TaskRun[]
+}
+
+// ---------- Tasks ----------
+enum TaskStatus {
+  PENDING           // created, dependencies not yet met
+  QUEUED            // ready to run
+  RUNNING
+  AWAITING_APPROVAL
+  COMPLETED
+  FAILED            // last attempt failed, retry scheduled (see nextAttemptAt)
+  DEAD              // retries exhausted: dead-letter
+  CANCELLED
+  BLOCKED           // needs human action
+}
+
+model Task {
+  id            String     @id @default(uuid())
+  brandId       String?
+  brand         Brand?     @relation(fields: [brandId], references: [id])
+  parentTaskId  String?
+  parent        Task?      @relation("TaskTree", fields: [parentTaskId], references: [id])
+  children      Task[]     @relation("TaskTree")
+  agentId       String
+  agent         Agent      @relation(fields: [agentId], references: [id])
+  type          String
+  input         Json       @default("{}")
+  output        Json?
+  priority      Int        @default(100) // lower = sooner
+  status        TaskStatus @default(PENDING)
+  attempts      Int        @default(0)
+  maxAttempts   Int        @default(3)
+  nextAttemptAt DateTime?
+  lastError     String?
+  idempotencyKey String?   @unique
+  createdAt     DateTime   @default(now())
+  startedAt     DateTime?
+  completedAt   DateTime?
+  updatedAt     DateTime   @updatedAt
+
+  dependsOn  TaskDependency[] @relation("dependent")
+  dependents TaskDependency[] @relation("prerequisite")
+  runs       TaskRun[]
+  approvals  Approval[]
+
+  @@index([status, priority, createdAt])
+  @@index([brandId])
+}
+
+model TaskDependency {
+  taskId      String
+  dependsOnId String
+  task        Task   @relation("dependent", fields: [taskId], references: [id], onDelete: Cascade)
+  dependsOn   Task   @relation("prerequisite", fields: [dependsOnId], references: [id], onDelete: Cascade)
+
+  @@id([taskId, dependsOnId])
+}
+
+enum RunStatus {
+  RUNNING
+  SUCCEEDED
+  FAILED
+  TIMED_OUT
+  ABORTED   // emergency stop or lease lost
+}
+
+// One row per execution attempt (append-only history)
+model TaskRun {
+  id          String    @id @default(uuid())
+  taskId      String
+  task        Task      @relation(fields: [taskId], references: [id])
+  agentId     String
+  agent       Agent     @relation(fields: [agentId], references: [id])
+  attempt     Int
+  workerId    String
+  lockToken   BigInt    // fencing token held while running
+  status      RunStatus @default(RUNNING)
+  output      Json?
+  error       String?
+  costUsd     Decimal   @default(0) @db.Decimal(12, 6)
+  tokensIn    Int       @default(0)
+  tokensOut   Int       @default(0)
+  startedAt   DateTime  @default(now())
+  finishedAt  DateTime?
+
+  @@index([taskId])
+  @@index([agentId, startedAt])
+}
+
+// ---------- Global execution lock (single row id = 'global') ----------
+model ExecutionLock {
+  id         String    @id
+  holder     String?   // TaskRun id
+  workerId   String?
+  token      BigInt    @default(0) // fencing token, increments on each acquire
+  leaseUntil DateTime?
+  acquiredAt DateTime?
+}
+
+// ---------- Approvals ----------
+enum ApprovalDecision {
+  PENDING
+  APPROVED
+  REJECTED
+  CHANGES_REQUESTED
+}
+
+model Approval {
+  id          String           @id @default(uuid())
+  brandId     String?
+  brand       Brand?           @relation(fields: [brandId], references: [id])
+  taskId      String?
+  task        Task?            @relation(fields: [taskId], references: [id])
+  type        String           // script | video | thumbnail | publish | spend ...
+  subjectRef  String           // what is being approved (e.g. content version id / file path)
+  contentHash String           // approval is valid only for this exact content
+  decision    ApprovalDecision @default(PENDING)
+  decidedBy   String?
+  feedback    String?
+  createdAt   DateTime         @default(now())
+  decidedAt   DateTime?
+
+  @@index([decision])
+}
+
+// ---------- System ----------
+model SystemSetting {
+  key       String   @id // e.g. "emergency_stop"
+  value     Json
+  updatedAt DateTime @updatedAt
+  updatedBy String?
+}
+
+model AuditLog {
+  id        BigInt   @id @default(autoincrement())
+  at        DateTime @default(now())
+  actor     String   // "user:owner" | "agent:script" | "system:worker-1"
+  action    String   // e.g. "task.created", "lock.acquired", "system.emergency_stop"
+  entity    String?  // "task"
+  entityId  String?
+  brandId   String?
+  data      Json     @default("{}")
+
+  @@index([at])
+  @@index([entity, entityId])
+}
