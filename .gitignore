@@ -15,3 +15,5 @@ media/renderer/node_modules/
 
 # local tools / models
 media/whisper.cpp/
+content/_samples/
+*.wav
