@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { api } from '@/lib/api';
 import { Card, ago } from '@/components/ui';
 import { STATUS_STYLE } from '@/components/ui';
+import { media } from '@/components/content';
 
-type Project = { id: string; slug: string; title: string; status: string; createdAt: string; tasks: { agentId: string; status: string }[] };
+type Project = { id: string; slug: string; title: string; status: string; createdAt: string; tasks: { agentId: string; status: string }[]; video: string | null };
 
 const STEP_COLOR: Record<string, string> = {
   COMPLETED: 'bg-emerald-500', RUNNING: 'bg-amber-500 animate-pulse', WAITING_AI: 'bg-sky-500 animate-pulse',
@@ -21,6 +22,9 @@ export default async function ContentPage() {
           const steps = p.tasks.filter((t) => t.agentId !== 'orchestrator');
           return (
             <Link key={p.id} href={`/content/${p.id}`} className="block rounded-xl border border-zinc-200 bg-white p-4 hover:border-zinc-400 dark:border-zinc-800 dark:bg-zinc-900">
+              {p.video
+                ? <video src={`${media(p.id, p.video)}#t=45`} preload="metadata" muted className="mb-3 aspect-video w-full rounded-lg bg-black object-cover" />
+                : <div className="mb-3 flex aspect-video w-full items-center justify-center rounded-lg bg-zinc-100 text-sm text-zinc-400 dark:bg-zinc-800">video not rendered yet</div>}
               <div className="flex items-start justify-between gap-3">
                 <div className="min-w-0">
                   <div className="truncate font-medium" dir="auto">{p.title}</div>

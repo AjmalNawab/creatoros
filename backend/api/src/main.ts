@@ -174,14 +174,21 @@ function listFiles(slug: string): { path: string; bytes: number }[] {
   return out.sort((a, b) => a.path.localeCompare(b.path));
 }
 
+/** The project's final video: output/<slug>.mp4, else the newest .mp4 in output/. */
+function findVideo(slug: string): string | null {
+  const files = listFiles(slug).filter((f) => /^output\/[^/]+\.mp4$/.test(f.path));
+  return (files.find((f) => f.path === `output/${slug}.mp4`) ?? files.sort((a, b) => b.path.localeCompare(a.path))[0])?.path ?? null;
+}
+
 @Controller()
 class ContentController {
   constructor(@Inject(DB) private db: PrismaClient) {}
 
   @Get('content')
-  list() {
-    return this.db.contentProject.findMany({ orderBy: { createdAt: 'desc' },
+  async list() {
+    const projects = await this.db.contentProject.findMany({ orderBy: { createdAt: 'desc' },
       include: { tasks: { select: { agentId: true, status: true, type: true }, orderBy: { priority: 'asc' } } } });
+    return projects.map((p) => ({ ...p, video: findVideo(p.slug) }));
   }
 
   @Get('content/:id')
@@ -190,7 +197,9 @@ class ContentController {
       tasks: { orderBy: { priority: 'asc' }, include: { approvals: { orderBy: { createdAt: 'desc' } }, aiRequests: { orderBy: { createdAt: 'desc' }, select: { id: true, kind: true, status: true, error: true, createdAt: true } } } },
       posts: { orderBy: { publishedAt: 'desc' } } } });
     if (!p) throw new NotFoundException();
-    return { ...p, files: listFiles(p.slug) };
+    const brand = p.brandId ? await this.db.brand.findUnique({ where: { id: p.brandId } }) : null;
+    const youtube = brand ? profileOf(brand).channels.youtube ?? null : null;
+    return { ...p, files: listFiles(p.slug), video: findVideo(p.slug), brand: brand ? { name: brand.name, slug: brand.slug, youtube } : null };
   }
 
   /** Streams a file from content/<slug>/ (supports Range for video seeking). */

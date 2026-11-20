@@ -9,16 +9,15 @@ type Task = {
   aiRequests: { id: string; kind: string; status: string; error: string | null; createdAt: string }[];
 };
 type Post = { id: string; platform: string; url: string | null; status: string; visibility: string | null; publishedAt: string };
-type Project = { id: string; slug: string; title: string; status: string; createdAt: string; tasks: Task[]; posts: Post[]; files: { path: string; bytes: number }[] };
+type Project = { id: string; slug: string; title: string; status: string; createdAt: string; tasks: Task[]; posts: Post[]; files: { path: string; bytes: number }[]; video: string | null;
+  brand: { name: string; slug: string; youtube: { handle: string } | null } | null };
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const p = await api<Project>(`/content/${id}`);
-  const has = (rel: string) => p.files.some((f) => f.path === rel);
   const script = p.tasks.find((t) => t.agentId === 'script')?.output as { scenes?: never[]; titleOptions?: string[]; words?: number; targetWords?: number } | null;
   const audio = p.files.filter((f) => /^audio\/scene_\d+\.mp3$/.test(f.path)).sort((a, b) => parseInt(a.path.match(/\d+/)![0]) - parseInt(b.path.match(/\d+/)![0]));
-  const stills = p.files.filter((f) => /^visuals\/stills\/scene_\d+\.jpg$/.test(f.path)).sort((a, b) => parseInt(a.path.match(/\d+/)![0]) - parseInt(b.path.match(/\d+/)![0]));
-  const videoRel = `output/${p.slug}.mp4`;
+  const stills = p.files.filter((f) => /^(visuals\/stills|output\/stills)\/[^/]+\.(jpg|png)$/.test(f.path)).sort((a, b) => parseInt(a.path.match(/\d+/)![0]) - parseInt(b.path.match(/\d+/)![0]));
   const qa = p.tasks.find((t) => t.agentId === 'qa')?.output as { checks?: { check: string; pass: boolean; detail: string }[] } | null;
 
   return (
@@ -48,12 +47,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
             <li key={x.id}><span className="font-medium capitalize">{x.platform}</span>: {x.url ? <a href={x.url} target="_blank" className="text-sky-600 hover:underline">{x.url}</a> : '—'} <span className="text-zinc-500">({x.status}, {x.visibility})</span></li>
           ))}</ul>
         ) : <p className="mb-3 text-sm text-zinc-500">Not published anywhere yet.</p>}
-        {!p.tasks.some((t) => t.agentId === 'youtube.package' && t.status !== 'CANCELLED') && (
-          <form action={addPlatformToProject.bind(null, p.id, 'youtube')}><Btn>+ Publish to YouTube</Btn></form>
-        )}
+        {p.brand?.youtube
+          ? !p.tasks.some((t) => t.agentId === 'youtube.package' && t.status !== 'CANCELLED') && (
+              <form action={addPlatformToProject.bind(null, p.id, 'youtube')}><Btn>+ Publish to YouTube ({p.brand.youtube.handle})</Btn></form>)
+          : <p className="text-sm text-zinc-500">Brand “{p.brand?.name ?? 'none'}” has no YouTube channel yet. Add one on the Brands page to publish.</p>}
       </Card>
 
-      {has(videoRel) && <Card title="Final video"><VideoPlayer src={media(p.id, videoRel)} /></Card>}
+      {p.video && <Card title="Final video"><VideoPlayer src={media(p.id, p.video)} /><a href={media(p.id, p.video)} download className="mt-2 inline-block text-sm text-sky-600 hover:underline">Download MP4</a></Card>}
 
       {qa?.checks && (
         <Card title="Quality checks">

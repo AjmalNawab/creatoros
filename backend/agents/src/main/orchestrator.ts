@@ -81,8 +81,10 @@ export async function createContentWorkflow(db: PrismaClient, plan: Plan, opts: 
   const brandId = opts.brandId;
 
   return db.$transaction(async (tx) => {
-    // 001 is the hand-made pilot (content/001-volcanoes), so system projects start at 002.
-    const num = String((await tx.contentProject.count()) + 2).padStart(3, '0');
+    // Next number after the highest existing one (001 is the hand-made pilot, content/001-volcanoes).
+    const slugs = await tx.contentProject.findMany({ select: { slug: true } });
+    const max = Math.max(1, ...slugs.map((x) => parseInt(x.slug, 10)).filter((n) => !Number.isNaN(n)));
+    const num = String(max + 1).padStart(3, '0');
     const ascii = plan.topic.toLowerCase().normalize('NFKD').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 40);
     const project = await tx.contentProject.create({ data: {
       brandId, key: `p${num}`, slug: `${num}-${ascii || 'video'}`, title: plan.titleHint ?? plan.topic, language: plan.language, params: plan as never } });
