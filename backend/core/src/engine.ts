@@ -188,4 +188,7 @@ export class Engine {
 }
 
 import { createHash } from 'node:crypto';
-export const hashJson = (v: unknown) => createHash('sha256').update(JSON.stringify(v)).digest('hex');
+/** Canonical JSON (object keys sorted recursively) so a value hashes the same after a Postgres jsonb round trip. */
+export const canonicalJson = (v: unknown): string => JSON.stringify(v, (_k, x) =>
+  x && typeof x === 'object' && !Array.isArray(x) ? Object.fromEntries(Object.keys(x).sort().map((k) => [k, (x as Record<string, unknown>)[k]])) : x);
+export const hashJson = (v: unknown) => createHash('sha256').update(canonicalJson(v)).digest('hex');

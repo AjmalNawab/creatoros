@@ -220,7 +220,7 @@ const Scene6: React.FC = () => {
 const Scene7: React.FC = () => {
   const { f, d } = useP();
   const t = prog(f, 2, d * 0.9);
-  const ax = 190, ay = 900, bx = 800, by = 420;
+  const ax = 190, ay = 940, bx = 780, by = 600;
   return (
     <AbsoluteFill>
       <VBG />

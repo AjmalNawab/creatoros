@@ -56,7 +56,9 @@ const Captions: React.FC<{ words: Word[]; accent: string; urdu: boolean; big?: b
       gap: '0 26px', direction: urdu ? 'rtl' : 'ltr' }}>
       {page.map((w, i) => {
         const appear = spring({ frame: f - Math.round(w.start * fps), fps, config: { damping: 14, stiffness: 220, mass: 0.6 } });
-        const active = t >= w.start && t < w.end + 0.08;
+        // Exactly one highlighted word: active from its start until the next word starts (or its own end).
+        const next = page[i + 1];
+        const active = t >= w.start && t < (next ? next.start : w.end + 0.15);
         const shown = t >= w.start - 0.02;
         return (
           <span key={i} style={{

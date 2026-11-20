@@ -1,0 +1,34 @@
+{
+ "platform": "youtube",
+ "video": "output/003-voyager-1-remote-code-fix.mp4",
+ "videoSha256": "ae249d327e6f28091e96585eff38bb29fd65aa0215110c373789ec4b871db947",
+ "thumbnail": null,
+ "format": "short",
+ "title": "NASA Fixed a 1977 Computer 15 Billion Miles Away",
+ "description": "How engineers revived Voyager 1 in 2024 after one memory chip died: they split its code into pieces and moved them into free memory, one 22-hour command at a time. In November 2026 Voyager 1 went quiet again, and the team is still diagnosing it.\n\n📚 Sources: NASA Voyager blog: Voyager 1 resumes sending engineering updates (Apr 2024) · JPL news: Voyager 1 resumes sending engineering updates · IEEE Spectrum: Voyager 1 fix · NASA Voyager blog (Nov 18, 2026)\n🎙️ Narration: AI voice. Animation: original.\n\n#Shorts #Voyager1 #Engineering",
+ "tags": [
+  "voyager 1",
+  "voyager 1 fixed",
+  "nasa voyager 1 news",
+  "voyager 1 memory chip",
+  "voyager 1 2024 fix",
+  "voyager 1 one light day",
+  "how nasa fixed voyager",
+  "old computer in space",
+  "nasa engineering",
+  "deep space communication"
+ ],
+ "visibility": "unlisted",
+ "madeForKids": false,
+ "category": "Science & Technology",
+ "playlist": "Engineering Stories (English)",
+ "series": "Margin of Safety",
+ "language": "English",
+ "channel": {
+  "id": "UCvugPJLIN5Wr5JeddlTrvKg",
+  "name": "Margin of Safety",
+  "handle": "@MarginOfSafetyTV"
+ },
+ "alteredContent": false,
+ "route": "browser"
+}

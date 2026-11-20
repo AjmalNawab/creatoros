@@ -1,7 +1,7 @@
 import { execSync } from 'node:child_process';
 import { beforeAll, beforeEach, afterAll, describe, expect, it } from 'vitest';
 import { PrismaClient } from '@creatoros/db';
-import { Engine, acquireLock, getLock, setEmergencyStop, type AgentDefinition } from '../src';
+import { Engine, acquireLock, findValidApproval, getLock, hashJson, setEmergencyStop, type AgentDefinition } from '../src';
 
 // Isolated schema so tests never touch real data.
 const withSchema = (url: string) => url + (url.includes('?') ? '&' : '?') + 'schema=creatoros_test';
@@ -114,5 +114,22 @@ describe('retries and dead-letter', () => {
     expect(t.status).toBe('DEAD');
     expect(t.lastError).toBe('boom');
     expect(await db.taskRun.count({ where: { status: 'FAILED' } })).toBe(3);
+  }, 30_000);
+});
+
+describe('approval fingerprint', () => {
+  it('is stable across key order, and a stored package still matches its approval after a jsonb round trip', async () => {
+    expect(hashJson({ b: 1, a: { d: [1, { y: 2, x: 1 }], c: 3 } })).toBe(hashJson({ a: { c: 3, d: [1, { x: 1, y: 2 }] }, b: 1 }));
+    expect(hashJson({ a: 1 })).not.toBe(hashJson({ a: 2 }));
+    const engine = new Engine(db, { workerId: 'w' });
+    const output = { video: 'output/x.mp4', title: 'T', tags: ['a', 'b'], visibility: 'unlisted', channel: { name: 'C', id: 'UC1' } };
+    await engine.register([{ id: 'pkg', name: 'pkg', department: 'Test', requiresApprovalAfter: true, run: async () => ({ output }) }]);
+    const t = await db.task.create({ data: { agentId: 'pkg', type: 'youtube_package', status: 'QUEUED' } });
+    await engine.tick();
+    const a = await db.approval.findFirstOrThrow({ where: { taskId: t.id } });
+    await db.approval.update({ where: { id: a.id }, data: { decision: 'APPROVED' } });
+    const stored = (await db.task.findUniqueOrThrow({ where: { id: t.id } })).output;   // keys reordered by jsonb
+    expect(await findValidApproval(db, t.id, stored)).not.toBeNull();
+    expect(await findValidApproval(db, t.id, { ...output, title: 'changed' })).toBeNull();
   }, 30_000);
 });

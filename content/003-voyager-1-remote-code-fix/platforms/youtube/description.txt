@@ -1,0 +1,6 @@
+How engineers revived Voyager 1 in 2024 after one memory chip died: they split its code into pieces and moved them into free memory, one 22-hour command at a time. In November 2026 Voyager 1 went quiet again, and the team is still diagnosing it.
+
+📚 Sources: NASA Voyager blog: Voyager 1 resumes sending engineering updates (Apr 2024) · JPL news: Voyager 1 resumes sending engineering updates · IEEE Spectrum: Voyager 1 fix · NASA Voyager blog (Nov 18, 2026)
+🎙️ Narration: AI voice. Animation: original.
+
+#Shorts #Voyager1 #Engineering
