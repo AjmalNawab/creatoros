@@ -12,3 +12,6 @@ content/*/output/*.mp4
 content/*/audio/*.mp3
 media/renderer/public/p*/
 media/renderer/node_modules/
+
+# local tools / models
+media/whisper.cpp/

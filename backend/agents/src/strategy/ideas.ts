@@ -48,14 +48,14 @@ Already made (do not repeat): ${JSON.stringify(recent.map((r) => r.title))}
 Previously rejected by owner (learn from feedback): ${JSON.stringify(rejected)}
 
 For each idea:
-- title: catchy, honest Urdu working title
+- title: catchy, honest working title in ${profile.language === 'ur' ? 'Urdu' : 'English'}
 - topic: the topic in English (short)
 - angle: what makes OUR video different/better than existing ones
 - audience: the specific viewers it targets and why they will care
 - whyNow: why this is timely (link to the trend signals)
 - evidence: cite the signals/sources used
-- competition: what already exists (check YouTube search for the Urdu/Hindi/English topic) and how we beat it
-- keywords: search phrases people actually use (Urdu + Roman Urdu + English)
+- competition: what already exists (check YouTube search for the topic${profile.language === 'ur' ? ' in Urdu/Hindi/English' : ''}) and how we beat it
+- keywords: search phrases people actually use${profile.language === 'ur' ? ' (Urdu + Roman Urdu + English)' : ''}
 - format: "long" (60-180s) or "short" (<60s); durationSec
 - score: 1-10 = brand fit × opportunity (trend strength vs competition). Be honest; rank best first.
 Ideas must be explainable with simple animated diagrams (no real footage) and fit the "avoid" list.
