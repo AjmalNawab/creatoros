@@ -125,8 +125,8 @@ class TasksController {
 
   @Post('instructions')
   async instruct(@Body() body: unknown) {
-    const { text, brandId, language } = parse(z.object({ text: z.string().min(3).max(2000), brandId: z.string().uuid().optional(), language: z.enum(['en', 'ur']).optional() }), body);
-    return submitInstruction(this.db, text, { brandId, language, actor: OWNER });
+    const { text, brandId, language, format } = parse(z.object({ text: z.string().min(3).max(2000), brandId: z.string().uuid().optional(), language: z.enum(['en', 'ur']).optional(), format: z.enum(['short', 'long']).optional() }), body);
+    return submitInstruction(this.db, text, { brandId, language, format, actor: OWNER });
   }
 
   @Post('tasks/:id/retry')

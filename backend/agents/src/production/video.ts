@@ -13,7 +13,8 @@ export const video: AgentDefinition = {
     const out = paths.content(p.slug, 'output', `${p.slug}.mp4`);
     await mkdir(path.dirname(out), { recursive: true });
     const t0 = Date.now();
-    await run('npx', ['remotion', 'render', 'src/index.ts', 'Video', out, `--props=${paths.content(p.slug, 'storyboard', 'props.json')}`, '--codec=h264', '--crf=20'],
+    const short = (p.params as { format?: string }).format === 'short';
+    await run('npx', ['remotion', 'render', 'src/index.ts', short ? 'Short' : 'Video', out, `--props=${paths.content(p.slug, 'storyboard', 'props.json')}`, '--codec=h264', '--crf=20'],
       { cwd: paths.renderer(), signal: ctx.signal });
     const size = (await stat(out)).size;
     return { output: { file: `content/${p.slug}/output/${p.slug}.mp4`, bytes: size, renderSec: Math.round((Date.now() - t0) / 1000) } };

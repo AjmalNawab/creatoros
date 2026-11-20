@@ -149,6 +149,20 @@ export function Btn({ children, tone = 'default', icon: Icon, size = 'md', ...p 
 export const inputCls = 'h-9 w-full rounded-lg border border-zinc-200 bg-white px-3 text-sm shadow-sm outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-4 focus:ring-orange-500/10 dark:border-zinc-700 dark:bg-zinc-900';
 export const textareaCls = 'w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm shadow-sm outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-4 focus:ring-orange-500/10 dark:border-zinc-700 dark:bg-zinc-900';
 
+/** Short (9:16) / Long (16:9) segmented control. Posts `format`. */
+export function FormatToggle({ defaultValue = 'long' }: { defaultValue?: 'short' | 'long' }) {
+  return (
+    <div role="radiogroup" aria-label="Format" className="inline-flex h-9 shrink-0 rounded-lg border border-zinc-200 bg-zinc-100 p-0.5 text-sm dark:border-zinc-700 dark:bg-zinc-800">
+      {[['short', 'Short'], ['long', 'Long']].map(([v, l]) => (
+        <label key={v} className="flex cursor-pointer items-center gap-1.5 rounded-md px-3 font-medium text-zinc-500 transition has-[:checked]:bg-white has-[:checked]:text-zinc-900 has-[:checked]:shadow-sm dark:has-[:checked]:bg-zinc-950 dark:has-[:checked]:text-white">
+          <input type="radio" name="format" value={v} defaultChecked={v === defaultValue} className="sr-only" />
+          <span className={`inline-block rounded-[3px] border-2 border-current ${v === 'short' ? 'h-3.5 w-2' : 'h-2 w-3.5'}`} />{l}
+        </label>
+      ))}
+    </div>
+  );
+}
+
 /** English / Urdu segmented control (works inside <form>, posts `language`). */
 export function LanguageToggle({ defaultValue }: { defaultValue: string }) {
   return (

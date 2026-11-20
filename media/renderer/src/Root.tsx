@@ -5,6 +5,7 @@ import { SceneFade } from './common';
 import { VIDEOS } from './videos';
 import p001 from './data/p001.json';
 import { Thumbnail, thumbMetadata } from './Thumbnail';
+import { Short, shortMetadata, type ShortData } from './Short';
 
 export type StoryboardData = {
   key: string; language?: string; fps: number; width: number; height: number; totalFrames: number;
@@ -40,6 +41,8 @@ export const Root: React.FC = () => (
   <>
     <Composition id="Video" component={Video} defaultProps={{ data: p001 as StoryboardData }} calculateMetadata={calculateMetadata}
       durationInFrames={1} fps={30} width={1920} height={1080} />
+    <Composition id="Short" component={Short} calculateMetadata={shortMetadata} durationInFrames={30} fps={30} width={1080} height={1920}
+      defaultProps={{ data: { key: 'demo', fps: 30, width: 1080, height: 1920, totalFrames: 30, lines: [], brand: { name: 'Margin of Safety', handle: '@MarginOfSafetyTV' } } as ShortData }} />
     <Composition id="Thumbnail" component={Thumbnail} defaultProps={{ data: p001 as StoryboardData, sceneIndex: 0, text: 'آتش فشاں' }}
       calculateMetadata={thumbMetadata} durationInFrames={1} fps={30} width={1280} height={720} />
   </>

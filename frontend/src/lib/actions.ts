@@ -9,7 +9,8 @@ export async function resumeSystem() { await post('/system/resume'); revalidateP
 export async function submitInstruction(form: FormData) {
   const text = String(form.get('text') ?? '').trim();
   const brandId = String(form.get('brandId') ?? '') || undefined;
-  if (text.length >= 3) await post('/instructions', { text, brandId });
+  const format = String(form.get('format') ?? '') || undefined;
+  if (text.length >= 3) await post('/instructions', { text, brandId, format });
   revalidatePath('/', 'layout');
 }
 export async function setAgentEnabled(id: string, enabled: boolean) {

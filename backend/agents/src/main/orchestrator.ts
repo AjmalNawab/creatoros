@@ -27,12 +27,17 @@ export const PRODUCTION_STEPS: WorkflowStep[] = [
 
 export interface Plan {
   topic: string; language: string; durationSec: number; platforms: PlatformId[];
+  /** 'short' = vertical 9:16 YouTube Short (20-60 s); 'long' = 16:9 video. */
+  format?: 'short' | 'long';
   // Set when the project comes from a selected strategy idea:
   angle?: string; audience?: string; keywords?: string[]; titleHint?: string; ideaId?: string;
 }
 
 export function planInstruction(text: string): Plan {
-  const minutes = Number(text.match(/(\d+(?:\.\d+)?)\s*-?\s*(?:min|minute|منٹ)/i)?.[1] ?? 2);
+  const isShort = /\bshorts?\b|\breels?\b|\btiktok\b|\bvertical\b/i.test(text);
+  const minutes = Number(text.match(/(\d+(?:\.\d+)?)\s*-?\s*(?:min|minute|منٹ)/i)?.[1] ?? 0);
+  const seconds = Number(text.match(/(\d+)\s*-?\s*(?:s|sec|secs|seconds?)\b/i)?.[1] ?? 0);
+  const durationSec = Math.round(seconds || minutes * 60 || (isShort ? 40 : 120));
   const all = Object.keys(PLATFORMS) as PlatformId[];
   const mentioned = /\ball (platforms|socials)\b/i.test(text) ? all
     : all.filter((p) => new RegExp(`\\b${p}\\b`, 'i').test(text) || (p === 'youtube' && /\byt\b|shorts/i.test(text)));
@@ -40,11 +45,11 @@ export function planInstruction(text: string): Plan {
   const topic = text
     .replace(/^(please\s+)?(create|make|produce|generate)\s+/i, '')
     .replace(new RegExp(`\\b(for|on|to)\\s+(${platformWords})(\\s*(,|and|&)\\s*(${platformWords}))*\\b`, 'ig'), '')
-    .replace(/^(an?\s+)?(\d+(\.\d+)?\s*-?\s*(min|minutes?)\s+)?((urdu|english)\s+)?((youtube|facebook|instagram|tiktok|linkedin)\s+)?(educational\s+)?(video|short|explainer|post)\s+(about|on)\s+/i, '')
+    .replace(/^(an?\s+)?(\d+(\.\d+)?\s*-?\s*(min|minutes?|s|sec|secs|seconds?)\s+)?((urdu|english)\s+)?((youtube|facebook|instagram|tiktok|linkedin)\s+)?(educational\s+|vertical\s+)?(video|short|shorts|reel|explainer|post)\s+(about|on)\s+/i, '')
     .replace(/\s+/g, ' ').trim() || text.trim();
   // Explicit language wins; otherwise the brand's language is applied in createContentWorkflow.
   const language = /english/i.test(text) ? 'en' : /urdu|اردو|[\u0600-\u06FF]/i.test(text) ? 'ur' : '';
-  return { topic, language, durationSec: Math.round(minutes * 60), platforms: mentioned.length ? mentioned : ['youtube'] };
+  return { topic, language, durationSec: isShort ? Math.min(60, durationSec) : durationSec, format: isShort ? 'short' : 'long', platforms: mentioned.length ? mentioned : ['youtube'] };
 }
 
 type Tx = Parameters<Parameters<PrismaClient['$transaction']>[0]>[0];
@@ -62,9 +67,14 @@ async function createSteps(tx: Tx, steps: WorkflowStep[], ctx: { projectId: stri
 }
 
 /** Instruction → content project + production workflow + platform workflows. */
-export async function submitInstruction(db: PrismaClient, text: string, opts: { brandId?: string; actor?: string; language?: 'en' | 'ur' } = {}) {
+export async function submitInstruction(db: PrismaClient, text: string, opts: { brandId?: string; actor?: string; language?: 'en' | 'ur'; format?: 'short' | 'long' } = {}) {
   const brandId = opts.brandId ?? (await getDefaultBrand(db)).id;
-  const plan = planInstruction(text);
+  let plan = planInstruction(text);
+  if (opts.format && opts.format !== plan.format) {
+    // Explicit Short/Long choice from the dashboard wins; keep a stated duration, else use the format default.
+    const stated = /\d+\s*-?\s*(min|minute|s|sec|second)/i.test(text);
+    plan = { ...plan, format: opts.format, durationSec: opts.format === 'short' ? Math.min(60, stated ? plan.durationSec : 40) : stated ? plan.durationSec : 120 };
+  }
   // The owner's explicit choice wins over words in the instruction and over the brand default.
   return createContentWorkflow(db, opts.language ? { ...plan, language: opts.language } : plan, { brandId, actor: opts.actor, instruction: text });
 }
@@ -122,7 +132,8 @@ export async function selectIdea(db: PrismaClient, ideaId: string, opts: { actor
   const idea = await db.idea.findUniqueOrThrow({ where: { id: ideaId } });
   if (idea.status !== 'PROPOSED') throw new Error(`idea is already ${idea.status}`);
   const plan: Plan = {
-    topic: idea.topic, language: opts.language ?? '', durationSec: idea.durationSec,
+    topic: idea.topic, language: opts.language ?? '', durationSec: idea.format === 'short' ? Math.min(60, idea.durationSec) : idea.durationSec,
+    format: idea.format === 'short' ? 'short' : 'long',
     platforms: opts.platforms ?? (idea.platforms as PlatformId[]),
     angle: idea.angle, audience: idea.audience, keywords: idea.keywords as string[], titleHint: idea.title, ideaId: idea.id,
   };

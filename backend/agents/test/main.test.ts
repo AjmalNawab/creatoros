@@ -22,7 +22,9 @@ afterAll(() => db.$disconnect());
 
 describe('Main Agent planning', () => {
   it('extracts topic, duration, language and platforms', () => {
-    expect(planInstruction('Create a 2 minute Urdu video about volcanoes for YouTube')).toEqual({ topic: 'volcanoes', language: 'ur', durationSec: 120, platforms: ['youtube'] });
+    expect(planInstruction('Create a 2 minute Urdu video about volcanoes for YouTube')).toEqual({ topic: 'volcanoes', language: 'ur', durationSec: 120, format: 'long', platforms: ['youtube'] });
+    expect(planInstruction('Make a 45 second YouTube Short about Voyager 1')).toMatchObject({ topic: 'Voyager 1', durationSec: 45, format: 'short' });
+    expect(planInstruction('make a short about bridges').durationSec).toBe(40);
     expect(planInstruction('make a 1 minute video about how rainbows form').platforms).toEqual(['youtube']); // default
     expect(planInstruction('Create a video about rain for youtube and tiktok').platforms).toEqual(['youtube', 'tiktok']);
     expect(planInstruction('Create a video about rain for youtube and tiktok').topic).toBe('rain');

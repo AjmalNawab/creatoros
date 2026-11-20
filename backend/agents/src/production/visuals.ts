@@ -19,12 +19,14 @@ export const visuals: AgentDefinition = {
   id: 'visuals', name: 'Visual Generation Agent', department: 'Content Creation', timeoutSec: 900,
   async run(ctx) {
     const { p, profile } = await projectWithBrand(ctx);
-    type SB = { totalFrames: number; scenes: { id: number; title: string; visual: string; text: string; startFrame: number; durationFrames: number }[] };
-    const sb = await readJson<SB>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
+    type Scn = { id: number; title: string; visual: string; text: string; startFrame: number; durationFrames: number };
+    const raw = await readJson<{ totalFrames: number; scenes?: Scn[]; lines?: Scn[] }>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
+    const short = !!raw.lines;
+    const sb = { totalFrames: raw.totalFrames, scenes: (raw.scenes ?? raw.lines)! };
     const file = paths.renderer('src', 'videos', `${p.key}.tsx`);
     const code = await askAi(getDb(), ctx, {
       kind: 'visuals', format: 'text', promptDir: paths.content(p.slug, 'ai'),
-      prompt: withFeedback(`You are the Visual Generation Agent of CreatorOS. Write a Remotion (React + inline SVG) TSX module with one animated scene component per storyboard scene, for a 1920x1080 educational video.
+      prompt: withFeedback(`You are the Visual Generation Agent of CreatorOS. Write a Remotion (React + inline SVG) TSX module with one animated scene component per storyboard scene, for a ${short ? 'VERTICAL 1080x1920 YouTube Short' : '1920x1080 educational video'}.
 
 Write the file content for: media/renderer/src/videos/${p.key}.tsx
 Study the reference implementation first: media/renderer/src/videos/p001.tsx (style, helpers, quality bar) and media/renderer/src/common.tsx (helpers).
@@ -34,7 +36,9 @@ Rules:
 - Visual style for this brand: ${profile.visualStyle}
 - Import helpers only from '../common' (C, NightSky, Blueprint, Particles, Tag, Label, UrduText, ease, prog) and from 'remotion'. No external images, fonts, or network.
 - Animate with useCurrentFrame()/useVideoConfig() (durationInFrames = scene length). Deterministic: use remotion's random(seed), never Math.random.
-- Keep the bottom 170px clear of important content (subtitles are drawn there). On-screen labels in ${p.language === 'ur' ? 'Urdu via <UrduText>/<Tag lang="ur">' : 'English via <Label>/<Tag lang="en">'}.
+${short ? `- VERTICAL canvas 1080x1920 (use <svg width={1080} height={1920}>). Safe zones: keep text and key shapes out of the top 220px, the bottom 480px and the right 140px (platform UI). The band y=1000-1400 is reserved for big word-by-word captions drawn on top: put the main diagram in y=260-980.
+- Shorts pace: motion in the first 3 frames of every scene; each scene is one quick visual beat (2-6 s). Big, bold, simple shapes readable on a phone.
+- Numbers can count up: import { CountUp } from '../Short' and use <CountUp to={1940} /> inside a positioned <div>.` : '- Keep the bottom 170px clear of important content (subtitles are drawn there).'} On-screen labels in ${p.language === 'ur' ? 'Urdu via <UrduText>/<Tag lang="ur">' : 'English via <Label>/<Tag lang="en">'}.
 - Each scene must visually explain its narration (diagram, labels appearing in sync).
 
 Storyboard:
@@ -60,7 +64,7 @@ Answer with ONLY the complete TSX file content.`, ctx),
     // Preview stills (one per scene, at 85% of the scene) for review in the Content Studio.
     const frames = sb.scenes.map((s) => s.startFrame + Math.floor(s.durationFrames * 0.85));
     await run('node', ['scripts/stills.mjs', paths.content(p.slug, 'storyboard', 'props.json'), paths.content(p.slug, 'visuals', 'stills'), ...frames.map(String)],
-      { cwd: paths.renderer(), signal: ctx.signal });
+      { cwd: paths.renderer(), signal: ctx.signal, env: { COMPOSITION: short ? 'Short' : 'Video' } });
     return { output: { file: `media/renderer/src/videos/${p.key}.tsx`, lines: code.split('\n').length, stills: sb.scenes.map((_, i) => `visuals/stills/scene_${i + 1}.jpg`) } };
   },
 };

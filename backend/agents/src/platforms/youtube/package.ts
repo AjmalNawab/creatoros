@@ -37,8 +37,10 @@ export const youtubePackage: AgentDefinition = {
     const channel = profile.channels.youtube;
     if (!channel) throw new Error(`BLOCKED: brand "${brand.name}" has no YouTube channel configured (Brand page → channels)`);
     const ur = p.language === 'ur';
-    type SB = { scenes: { title: string; startFrame: number }[] };
-    const sb = await readJson<SB>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
+    type Scn = { title: string; startFrame: number; durationFrames: number };
+    const rawSb = await readJson<{ scenes?: Scn[]; lines?: Scn[] }>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
+    const short = !!rawSb.lines;
+    const sb = { scenes: (rawSb.scenes ?? rawSb.lines)! };
     const script = await readJson<{ titleOptions: string[]; scenes: { text: string }[] }>(paths.content(p.slug, 'script', 'script.json'));
     const research = await readJson<{ sources: { name: string; url: string }[] }>(paths.content(p.slug, 'research', 'research.json'));
 
@@ -55,7 +57,7 @@ Scenes (for chapters): ${JSON.stringify(sb.scenes.map((s, i) => ({ scene: i + 1,
 Rules:
 - title ≤ ${LIMITS.title} chars${ur ? ': Urdu first, then " | " and a short English version' : ''}. Curiosity + the key subject; honest (must match what the video shows), no ALL CAPS, no "<" or ">".
 - description: 2-4 short ${ur ? 'Urdu' : 'English'} paragraphs; the first 150 characters say what the viewer will learn. No links, no "<" or ">" (chapters, sources and disclosure are added automatically).
-- chapterTitles: exactly ${sb.scenes.length} short ${ur ? 'Urdu' : 'English'} chapter names, one per scene, in order.
+${short ? '- This is a YouTube SHORT: title under 60 characters, punchy; description 1-2 sentences. Include "#Shorts" in hashtags.\n' : ''}- chapterTitles: exactly ${sb.scenes.length} short ${ur ? 'Urdu' : 'English'} chapter names, one per scene, in order.
 - tags: 8-15 real search phrases${ur ? ' (Urdu, Roman Urdu and English)' : ''}, total under ${LIMITS.tagsTotal} chars.
 - hashtags: up to 3 relevant hashtags.
 - thumbnailText: 2-4 bold ${ur ? 'Urdu' : 'English'} words for the thumbnail (complements the title, readable at small size).
@@ -72,7 +74,7 @@ Answer with ONLY a JSON object:
     });
 
     // Chapters need: first at 0:00, at least 3, each ≥ 10s apart (YouTube rules).
-    const chapters = sb.scenes.map((s, i) => ({ at: s.startFrame / FPS, title: meta.chapterTitles[i] }))
+    const chapters = short ? [] : sb.scenes.map((s, i) => ({ at: s.startFrame / FPS, title: meta.chapterTitles[i] }))
       .filter((c, i, arr) => i === 0 || c.at - arr[i - 1].at >= 10);
     const description = [
       meta.description.trim(), '',
@@ -82,22 +84,25 @@ Answer with ONLY a JSON object:
       meta.hashtags.join(' '),
     ].join('\n').slice(0, LIMITS.description);
 
-    // Thumbnail 1280x720 from scene 1 + title text.
     const dir = paths.content(p.slug, 'platforms', 'youtube');
     await mkdir(dir, { recursive: true });
-    const thumbProps = paths.content(p.slug, 'platforms', 'youtube', 'thumbnail.props.json');
-    const data = await readJson<{ scenes: { durationFrames: number }[] }>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
-    await writeJson(thumbProps, { data, sceneIndex: 0, text: meta.thumbnailText });
-    const frame = Math.floor(data.scenes[0].durationFrames * 0.85);
-    await run('npx', ['remotion', 'still', 'src/index.ts', 'Thumbnail', paths.content(p.slug, 'platforms', 'youtube', 'thumbnail.jpg'),
-      `--props=${thumbProps}`, `--frame=${frame}`, '--image-format=jpeg', '--jpeg-quality=90'], { cwd: paths.renderer(), signal: ctx.signal });
+    if (!short) {
+      // Thumbnail 1280x720 from scene 1 + title text. (Shorts: the cover frame is picked in the YouTube app.)
+      const thumbProps = paths.content(p.slug, 'platforms', 'youtube', 'thumbnail.props.json');
+      const data = await readJson<{ scenes: { durationFrames: number }[] }>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
+      await writeJson(thumbProps, { data, sceneIndex: 0, text: meta.thumbnailText });
+      const frame = Math.floor(data.scenes[0].durationFrames * 0.85);
+      await run('npx', ['remotion', 'still', 'src/index.ts', 'Thumbnail', paths.content(p.slug, 'platforms', 'youtube', 'thumbnail.jpg'),
+        `--props=${thumbProps}`, `--frame=${frame}`, '--image-format=jpeg', '--jpeg-quality=90'], { cwd: paths.renderer(), signal: ctx.signal });
+    }
 
     const videoRel = `output/${p.slug}.mp4`;
     const pkg = {
       platform: 'youtube',
       video: videoRel,
       videoSha256: await sha256File(paths.content(p.slug, videoRel)),
-      thumbnail: 'platforms/youtube/thumbnail.jpg',
+      thumbnail: short ? null : 'platforms/youtube/thumbnail.jpg',
+      format: short ? 'short' : 'long',
       title: meta.title,
       description,
       tags: meta.tags,

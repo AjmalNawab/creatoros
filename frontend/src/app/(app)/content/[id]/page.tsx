@@ -53,7 +53,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
       <div className="grid gap-6 lg:grid-cols-3">
         <div className="min-w-0 space-y-6 lg:col-span-2">
           <Card title="Final video" actions={p.video && <a href={media(p.id, p.video)} download className="inline-flex items-center gap-1 text-xs font-medium text-zinc-500 hover:text-zinc-900 dark:hover:text-white"><Download className="size-3.5" />MP4</a>}>
-            {p.video ? <VideoPlayer src={media(p.id, p.video)} /> : (
+            {p.video ? <VideoPlayer vertical={(p as unknown as { params?: { format?: string } }).params?.format === 'short'} src={media(p.id, p.video)} /> : (
               <div className="grid h-40 place-items-center rounded-xl border border-dashed border-zinc-300 bg-zinc-50 text-sm text-zinc-400 dark:border-zinc-700 dark:bg-zinc-800/40">The video appears here once it is rendered</div>
             )}
           </Card>

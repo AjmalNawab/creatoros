@@ -4,7 +4,7 @@ import {
 } from 'lucide-react';
 import { api } from '@/lib/api';
 import { submitInstruction, startIdeation } from '@/lib/actions';
-import { Badge, Btn, Card, EmptyState, PageHeader, SeriesPicker, Stat, ago, inputCls, type SeriesOption } from '@/components/ui';
+import { Badge, Btn, Card, EmptyState, FormatToggle, PageHeader, SeriesPicker, Stat, ago, inputCls, type SeriesOption } from '@/components/ui';
 import { Pipeline, media } from '@/components/content';
 
 type Overview = {
@@ -38,7 +38,8 @@ export default async function OverviewPage() {
           <p className="mt-1 text-sm text-zinc-500">Describe it in a sentence. The Main Agent plans research → script → voice → visuals → render → YouTube, and stops for your approval at each key step.</p>
           <form action={submitInstruction} className="mt-4 flex flex-col gap-2 lg:flex-row">
             <input name="text" required minLength={3} placeholder='e.g. "A 3 minute story about the Tacoma Narrows Bridge collapse"' className={`${inputCls} h-11 text-base lg:flex-1`} />
-            <div className="flex gap-2">
+            <div className="flex flex-wrap gap-2">
+              <FormatToggle />
               <SeriesPicker series={series} />
               <Btn tone="accent" icon={Send} className="h-9 flex-1 lg:flex-none">Create</Btn>
             </div>

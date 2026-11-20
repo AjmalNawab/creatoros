@@ -49,22 +49,22 @@ export default async function ApprovalsPage() {
                 <ScriptView scenes={o.scenes} titleOptions={o.titleOptions} words={o.words} targetWords={o.targetWords} />
               ) : a.task?.type === 'final_video' && pid && o?.video ? (
                 <div className="grid gap-5 lg:grid-cols-3">
-                  <div className="lg:col-span-2"><VideoPlayer src={media(pid, String(o.video).replace(/^content\/[^/]+\//, ''))} /></div>
+                  <div className="lg:col-span-2"><VideoPlayer vertical={o.format === 'short'} src={media(pid, String(o.video).replace(/^content\/[^/]+\//, ''))} /></div>
                   <ul className="space-y-2">{(o.checks ?? []).map((c: { check: string; pass: boolean; detail: string }, i: number) => <CheckRow key={i} pass={c.pass} label={c.check} detail={c.detail} />)}</ul>
                 </div>
               ) : a.task?.type === 'youtube_package' && pid ? (
                 <div className="grid gap-5 lg:grid-cols-5">
                   <div className="space-y-3 lg:col-span-2">
-                    <VideoPlayer src={media(pid, o.video)} />
+                    <VideoPlayer vertical={o.format === 'short'} src={media(pid, o.video)} />
                     {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img src={media(pid, o.thumbnail)} alt="Thumbnail" className="w-full rounded-xl ring-1 ring-zinc-200 dark:ring-zinc-700" />
+                    {o.thumbnail ? <img src={media(pid, o.thumbnail)} alt="Thumbnail" className="w-full rounded-xl ring-1 ring-zinc-200 dark:ring-zinc-700" /> : <p className="text-xs text-zinc-500">Short: the cover frame is chosen in the YouTube app.</p>}
                   </div>
                   <div className="space-y-4 lg:col-span-3">
                     <div><div className="text-xs font-medium text-zinc-500">Title</div><div dir="auto" className="mt-1 text-lg font-semibold">{o.title}</div></div>
                     <div><div className="text-xs font-medium text-zinc-500">Description</div><pre dir="auto" className="mt-1 max-h-72 overflow-auto whitespace-pre-wrap rounded-xl bg-zinc-50 p-3 font-sans text-sm ring-1 ring-zinc-200 dark:bg-zinc-950 dark:ring-zinc-800">{o.description}</pre></div>
                     <div><div className="text-xs font-medium text-zinc-500">Tags</div><div className="mt-1.5 flex flex-wrap gap-1">{(o.tags ?? []).map((t: string) => <Pill key={t}>{t}</Pill>)}</div></div>
                     <dl className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-3">
-                      {[['Channel', o.channel?.handle ?? '—'], ['Visibility', o.visibility], ['Made for kids', o.madeForKids ? 'Yes' : 'No'], ['Category', o.category], ['Language', o.language], ['Altered content', o.alteredContent ? 'Yes' : 'No']].map(([l, v]) => (
+                      {[['Format', o.format === 'short' ? 'Short (9:16)' : 'Long (16:9)'], ['Channel', o.channel?.handle ?? '—'], ['Playlist', o.playlist ?? '—'], ['Visibility', o.visibility], ['Made for kids', o.madeForKids ? 'Yes' : 'No'], ['Category', o.category], ['Language', o.language], ['Altered content', o.alteredContent ? 'Yes' : 'No']].map(([l, v]) => (
                         <div key={l} className="rounded-lg bg-zinc-50 px-3 py-2 ring-1 ring-zinc-200 dark:bg-zinc-800/50 dark:ring-zinc-700"><dt className="text-[11px] text-zinc-500">{l}</dt><dd className="font-medium">{v}</dd></div>
                       ))}
                     </dl>

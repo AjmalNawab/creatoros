@@ -46,9 +46,9 @@ export const BRANDS: { slug: string; name: string; description: string; profile:
         'Use correct units and numbers; convert to metric+imperial where helpful.',
       ],
       formats: ['long: 2-6 minute animated story (default)', 'short: under 60 seconds, one striking fact (later)'],
-      voice: 'en-GB-RyanNeural',   // measured 170 wpm at +0%; -8% ≈ 157 wpm documentary pace
-      voiceRate: '-8%',
-      wordsPerMinute: 157,
+      voice: 'am_michael',         // Kokoro-82M, local. 141 wpm at 1.0x; +10% ≈ 155 wpm
+      voiceRate: '+10%',
+      wordsPerMinute: 155,
       visualStyle: 'Engineering blueprint look: deep navy background with faint grid, white/cyan line drawings, orange/red for stress, failure and warnings, clean sans-serif labels, cross-sections, force arrows, diagrams and timelines. No photos or real people.',
       channels: { youtube: { id: 'UCvugPJLIN5Wr5JeddlTrvKg', handle: '@MarginOfSafetyTV', name: 'Margin of Safety' } },
       youtubeCategory: 'Science & Technology',

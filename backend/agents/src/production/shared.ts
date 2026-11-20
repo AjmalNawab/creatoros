@@ -31,9 +31,13 @@ export async function projectWithBrand(ctx: AgentContext) {
 
 /** Voice for the video's language: the brand's own voice if it matches, otherwise the default for that language. */
 export const DEFAULT_VOICES: Record<'en' | 'ur', { voice: string; rate: string; wpm: number }> = {
-  en: { voice: 'en-GB-RyanNeural', rate: '-8%', wpm: 157 },
-  ur: { voice: 'ur-PK-AsadNeural', rate: '+8%', wpm: 175 },
+  en: { voice: 'am_michael', rate: '+10%', wpm: 155 },        // Kokoro (local): 141 wpm at 1.0x
+  ur: { voice: 'ur-PK-AsadNeural', rate: '+8%', wpm: 175 },  // edge-tts (Kokoro has no Urdu)
 };
+/** Kokoro voices look like "am_michael"; edge-tts voices like "en-GB-RyanNeural". */
+export const isKokoro = (voice: string) => /^[a-z]{2}_[a-z]+$/.test(voice);
+/** "+10%" → 1.1 (Kokoro speed) */
+export const rateToSpeed = (rate: string) => 1 + Number(rate.replace('%', '')) / 100;
 export function voiceFor(profile: BrandProfile, language: string) {
   const lang = (language === 'ur' ? 'ur' : 'en') as 'en' | 'ur';
   return profile.language === lang ? { voice: profile.voice, rate: profile.voiceRate, wpm: profile.wordsPerMinute } : DEFAULT_VOICES[lang];

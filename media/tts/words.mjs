@@ -35,7 +35,7 @@ let words;
 try {
   const dir = mkdtempSync(path.join(os.tmpdir(), 'whisper-'));
   const out = path.join(dir, 'out');
-  execFileSync(WHISPER, ['-m', MODEL, '-f', audio, '-ojf', '-of', out, '-np', '-l', 'en', '-t', '4'], { stdio: 'pipe' });
+  execFileSync(WHISPER, ['-ng', '-m', MODEL, '-f', audio, '-ojf', '-of', out, '-np', '-l', 'en', '-t', '4', '-dtw', 'base.en'], { stdio: 'pipe' });
   const json = JSON.parse(readFileSync(`${out}.json`, 'utf8'));
   rmSync(dir, { recursive: true, force: true });
   // Merge sub-word tokens into words (a new word starts with a space).

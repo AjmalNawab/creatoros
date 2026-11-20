@@ -14,7 +14,7 @@ import { sha256File } from './package';
  * bypasses CAPTCHA, 2FA or verification; those steps are done by the owner.
  * Route "api": reserved for the YouTube Data API once the project is verified.
  */
-type Pkg = { channel?: { id: string; handle: string; name: string }; playlist?: string | null; series?: string; video: string; videoSha256: string; thumbnail: string; title: string; description: string; tags: string[]; visibility: string; madeForKids: boolean; category: string; language: string; alteredContent: boolean };
+type Pkg = { format?: string; channel?: { id: string; handle: string; name: string }; playlist?: string | null; series?: string; video: string; videoSha256: string; thumbnail: string | null; title: string; description: string; tags: string[]; visibility: string; madeForKids: boolean; category: string; language: string; alteredContent: boolean };
 
 const VIDEO_ID = /(?:youtube\.com\/(?:watch\?v=|shorts\/|live\/)|youtu\.be\/|studio\.youtube\.com\/video\/)([A-Za-z0-9_-]{11})/;
 
@@ -47,7 +47,7 @@ export const youtubePublish: AgentDefinition = {
     const result = await awaitHumanAction<{ url: string; visibility?: string; notes?: string }>(db, ctx, {
       kind: 'youtube_upload',
       title: `Upload to YouTube: ${pkg.title}`,
-      payload: { ...pkg, videoPath: abs(pkg.video), thumbnailPath: abs(pkg.thumbnail), approvalId: approval.id, idempotencyKey } as never,
+      payload: { ...pkg, videoPath: abs(pkg.video), thumbnailPath: pkg.thumbnail ? abs(pkg.thumbnail) : null, approvalId: approval.id, idempotencyKey } as never,
       instructions: [
         'Upload this APPROVED package to the owner\'s YouTube channel using their logged-in Chrome (Chrome DevTools MCP).',
         'Use exactly these values. Do not change anything. Stop and hand over to the owner on any login, CAPTCHA, 2FA or verification prompt.',
@@ -57,7 +57,7 @@ export const youtubePublish: AgentDefinition = {
         `2. Select file: ${abs(pkg.video)}`,
         `3. Title: copy from payload.title`,
         `4. Description: copy from payload.description (also in ${abs('platforms/youtube/description.txt')})`,
-        `5. Thumbnail: ${abs(pkg.thumbnail)} (needs a phone-verified channel; if unavailable, skip and note it)`,
+        pkg.thumbnail ? `5. Thumbnail: ${abs(pkg.thumbnail)} (needs a phone-verified channel; if unavailable, skip and note it)` : '5. SHORT: vertical ≤60 s, so YouTube classifies it as a Short automatically; no custom thumbnail (cover frame is chosen in the YouTube app).',
         `6. Audience: "No, it's not made for kids". Show more → Altered content: No. Tags: payload.tags. Category: ${pkg.category}. Video language: ${pkg.language}.`,
         ...(pkg.playlist ? [`6b. Playlist: add to "${pkg.playlist}" (create it if it does not exist; series: ${pkg.series ?? ''}).`] : []),
         `7. Visibility: ${pkg.visibility}. Save/Publish.`,

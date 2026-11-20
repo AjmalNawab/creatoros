@@ -125,6 +125,7 @@ export const Short: React.FC<Props> = ({ data }) => {
   const scenes = VIDEOS[`${data.key}`] ?? [];
   const urdu = data.language === 'ur';
   const last = data.lines[data.lines.length - 1];
+  if (!last) return <AbsoluteFill style={{ background: BP.bg }} />;
   return (
     <AbsoluteFill style={{ background: BP.bg }}>
       {data.lines.map((l, i) => {
