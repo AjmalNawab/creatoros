@@ -133,3 +133,12 @@ describe('approval fingerprint', () => {
     expect(await findValidApproval(db, t.id, { ...output, title: 'changed' })).toBeNull();
   }, 30_000);
 });
+
+describe('database security', () => {
+  it('every table has Row Level Security enabled (Supabase API cannot read it)', async () => {
+    const rows = await db.$queryRaw<{ tablename: string; rowsecurity: boolean }[]>`
+      SELECT tablename, rowsecurity FROM pg_tables WHERE schemaname = current_schema()`;
+    expect(rows.length).toBeGreaterThan(10);
+    expect(rows.filter((r) => !r.rowsecurity).map((r) => r.tablename)).toEqual([]);
+  });
+});

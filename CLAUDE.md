@@ -87,3 +87,4 @@ backend/worker --Engine.runForever(ALL_AGENTS)--> backend/agents --> backend/cor
 - Never publish the same video twice to a platform (idempotency key). Check the platform before retrying an ambiguous upload.
 - Every brand-scoped row carries `brandId`. Analytics are historical snapshots and are never overwritten. "Unavailable" is distinct from zero.
 - Introduce no paid service without owner approval.
+- **Supabase API lockdown:** every table has RLS enabled with no policies, and the `anon` and `authenticated` roles hold no privileges (migration `lock_down_supabase_api`). The publishable key must never reach data. Any migration that creates a table must also run `ALTER TABLE … ENABLE ROW LEVEL SECURITY`. The core test `database security` fails otherwise.
