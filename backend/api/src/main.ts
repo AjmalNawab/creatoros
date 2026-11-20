@@ -252,6 +252,10 @@ class ContentController {
   @Post('human-actions/:id/complete')
   async completeAction(@Param('id') id: string, @Body() body: unknown) {
     const { result } = parse(z.object({ result: z.record(z.unknown()) }), body);
+    const action = await this.db.humanActionRequest.findUnique({ where: { id } });
+    if (action?.kind === 'youtube_upload' && !/^https:\/\/(www\.)?(youtube\.com\/(watch\?v=|shorts\/)|youtu\.be\/|studio\.youtube\.com\/video\/)[\w-]{11}/.test(String(result.url ?? ''))) {
+      throw new BadRequestException('Paste the YouTube video link (e.g. https://youtube.com/shorts/… or https://youtu.be/…).');
+    }
     try { await completeHumanAction(this.db, id, result as never, OWNER); return { ok: true }; }
     catch (e) { throw new BadRequestException((e as Error).message); }
   }

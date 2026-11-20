@@ -34,7 +34,7 @@ export default async function ActionsPage() {
             <details><summary className="cursor-pointer text-xs font-medium text-zinc-500">Exact approved values</summary><div className="mt-2"><Json value={a.payload} /></div></details>
           </div>
           <form action={completeHumanAction.bind(null, a.id)} className="flex flex-col gap-2 border-t border-zinc-100 px-5 py-3 sm:flex-row dark:border-zinc-800">
-            <input name="url" required placeholder="Paste the published link (https://youtu.be/…)" className={`${inputCls} flex-1`} />
+            <input name="url" type="url" required pattern="https://(www\.)?(youtube\.com/(watch\?v=|shorts/)|youtu\.be/|studio\.youtube\.com/video/).+" title="A YouTube video link, e.g. https://youtube.com/shorts/…" placeholder="Only after uploading: paste the YouTube link (https://youtube.com/shorts/…)" className={`${inputCls} flex-1`} />
             <input name="notes" placeholder="Notes (optional)" className={`${inputCls} sm:w-56`} />
             <Btn tone="success" icon={Check}>Mark uploaded</Btn>
           </form>

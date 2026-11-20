@@ -66,7 +66,11 @@ export const youtubePublish: AgentDefinition = {
     });
 
     const videoId = result.url?.match(VIDEO_ID)?.[1];
-    if (!videoId) throw new Error(`Upload result has no valid YouTube video URL: ${result.url}`);
+    if (!videoId) {
+      // Re-open the upload request so the next attempt asks again instead of reusing a bad answer.
+      await db.humanActionRequest.updateMany({ where: { taskId: ctx.taskId, kind: 'youtube_upload', status: 'DONE' }, data: { status: 'CANCELLED' } });
+      throw new Error(`Upload result has no valid YouTube video URL: ${result.url}`);
+    }
     const url = `https://www.youtube.com/watch?v=${videoId}`;
 
     // Verify the video exists (oEmbed answers for public and unlisted videos; private ones are not verifiable this way).
