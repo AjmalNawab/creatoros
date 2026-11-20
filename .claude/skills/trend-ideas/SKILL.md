@@ -1,9 +1,18 @@
 ---
 name: trend-ideas
-description: Playbook for CreatorOS "trends" and "ideas" AI requests. Find what is genuinely trending now for the brand (Pakistan / Urdu audience), check competition, and propose ranked, evidence-backed video ideas. Use when answering trends/ideas requests or when the owner asks "what should we make next?".
+description: Playbook for CreatorOS "trends" and "ideas" AI requests. Find what is genuinely timely for the brand (its region, language and niche), check competition, and propose ranked, evidence-backed video ideas. Use when answering trends/ideas requests or when the owner asks "what should we make next?".
 ---
 
 # Trends → Ideas
+
+Read the brand block in the prompt first. Region, language and niche decide where to look.
+
+## Margin of Safety (engineering stories): where timely ideas come from
+- **Anniversaries** in the next 2–6 weeks: "on this day" engineering failures and near-misses (search `engineering disaster anniversary <month>`, `<month> <year> anniversary collapse`).
+- **New official reports**: NTSB, CSB, AAIB, BEA, ESA/NASA final reports and inquiry results published recently. A new report gives a fresh angle on an old story.
+- **Engineering news**: bridge and structure inspections, recalls, space mission anomalies, record builds. Avoid ongoing incidents with fatalities until the facts are established.
+- **Demand**: YouTube search suggestions and the view counts of recent videos on the story; Google Trends (worldwide or US) for the incident name.
+- **Competition**: Practical Engineering, Real Engineering, Plainly Difficult, Fascinating Horror, Brick Immortar and others. Note which stories they've covered and how. Our edge: an animated engineering explanation of the *mechanism* and the *lesson*, investigation-report sourcing, and a calm documentary tone. Prefer under-covered stories, or a clearly better angle on popular ones.
 
 ## Trends request: gather REAL, current signals (cite every one)
 Work through these sources, newest first:

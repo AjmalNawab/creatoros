@@ -10,7 +10,7 @@ import { APP_GUARD, NestFactory } from '@nestjs/core';
 import { z } from 'zod';
 import { getDb, type PrismaClient } from '@creatoros/db';
 import { audit, completeHumanAction, decideApproval, getLock, isEmergencyStopped, paths, safeContentPath, setEmergencyStop } from '@creatoros/core';
-import { PLATFORMS, addPlatform, getDefaultBrand, profileOf, rejectIdea, selectIdea, submitIdeation, submitInstruction, type PlatformId } from '@creatoros/agents';
+import { PLATFORMS, addPlatform, ensureBrands, getDefaultBrand, profileOf, rejectIdea, selectIdea, setActiveBrand, submitIdeation, submitInstruction, type PlatformId } from '@creatoros/agents';
 
 // BigInt (lock tokens, audit ids) → JSON string
 (BigInt.prototype as unknown as { toJSON: () => string }).toJSON = function () { return this.toString(); };
@@ -234,22 +234,36 @@ class ContentController {
   }
 
   // ---------- Strategy: brand profile + ideas ----------
-  @Get('brand')
-  async brand() {
-    const b = await getDefaultBrand(this.db);
-    return { id: b.id, name: b.name, description: b.description, profile: profileOf(b) };
+  @Get('brands')
+  async brands() {
+    await ensureBrands(this.db);
+    const active = await getDefaultBrand(this.db);
+    const all = await this.db.brand.findMany({ orderBy: { createdAt: 'asc' } });
+    return all.map((b) => ({ id: b.id, slug: b.slug, name: b.name, description: b.description, active: b.id === active.id, profile: profileOf(b) }));
   }
 
-  @Post('brand')
-  async updateBrand(@Body() body: unknown) {
+  @Post('brands/:slug/activate')
+  async activate(@Param('slug') slug: string) {
+    try { await setActiveBrand(this.db, slug, OWNER); } catch { throw new NotFoundException(); }
+    await audit(this.db, OWNER, 'brand.activated', { entity: 'brand', entityId: slug });
+    return { ok: true };
+  }
+
+  @Post('brands/:slug')
+  async updateBrand(@Param('slug') slug: string, @Body() body: unknown) {
     const list = z.array(z.string().min(1)).max(20);
     const { name, profile } = parse(z.object({ name: z.string().min(2).max(80), profile: z.object({
-      niche: z.string().min(5), audience: z.string().min(5), region: z.string().length(2), language: z.string().min(2),
-      tone: z.string().min(3), pillars: list, avoid: list, formats: list }) }), body);
-    const b = await getDefaultBrand(this.db);
-    const updated = await this.db.brand.update({ where: { id: b.id }, data: { name, tone: profile.tone, settings: { ...(b.settings as object), profile } as never } });
+      niche: z.string().min(5), audience: z.string().min(5), region: z.string().length(2), language: z.enum(['en', 'ur']),
+      tone: z.string().min(3), pillars: list, avoid: list, rules: list, formats: list,
+      voice: z.string().min(3), voiceRate: z.string().regex(/^[+-]\d{1,2}%$/), wordsPerMinute: z.number().int().min(80).max(250),
+      visualStyle: z.string().min(5), youtubeCategory: z.string().min(3),
+      channels: z.object({ youtube: z.object({ id: z.string().regex(/^UC[\w-]{22}$/), handle: z.string(), name: z.string() }).optional() }),
+    }) }), body);
+    const b = await this.db.brand.findUnique({ where: { slug } });
+    if (!b) throw new NotFoundException();
+    await this.db.brand.update({ where: { id: b.id }, data: { name, tone: profile.tone, language: profile.language, settings: { ...(b.settings as object), profile } as never } });
     await audit(this.db, OWNER, 'brand.updated', { entity: 'brand', entityId: b.id, brandId: b.id });
-    return { id: updated.id, name: updated.name, profile };
+    return { ok: true };
   }
 
   @Post('ideation')

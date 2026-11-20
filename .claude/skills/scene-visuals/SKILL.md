@@ -11,8 +11,10 @@ description: Playbook for CreatorOS "visuals" AI requests. Write the Remotion TS
 - Read `media/renderer/src/videos/p001.tsx` (the reference quality and patterns) and `media/renderer/src/common.tsx`.
 - Helpers available from `../common`:
   - `C` (palette), `NightSky`, `Particles`
-  - `Tag` (labelled Urdu pill), `UrduText`
+  - **`Blueprint`** (navy grid background) and **`BP`** palette (`line`, `cyan`, `warn`, `fail`, `ok`) for the engineering look
+  - `Tag` (labelled pill, `lang="en"|"ur"`), **`Label`** (English text), `UrduText`
   - `prog(f, a, b)` (clamped 0→1), `ease`
+- Follow the brand's **visual style** given in the prompt. Margin of Safety means blueprint: line drawings, cross-sections, force/load arrows (orange), failure in red, clean sans-serif labels, timelines and simple charts. Urdu Science means the colourful p001 style.
 - From `remotion`: `AbsoluteFill`, `useCurrentFrame`, `useVideoConfig`, `interpolate`, `random`.
 
 ## Rules (the validator compiles with tsc; the render must not crash)
@@ -20,7 +22,7 @@ description: Playbook for CreatorOS "visuals" AI requests. Write the Remotion TS
 - Deterministic only: `random('seed')`, never `Math.random()` or `Date`.
 - No external images, fonts or URLs. Draw with SVG shapes, gradients and `<UrduText>` / `<Tag>` labels.
 - Keep the bottom ~170 px free of important content (subtitles go there).
-- Each scene gets a clear focal diagram, motion within the first second, 1–3 Urdu labels and a background that fits the topic (sky, sea, lab, space). Use the palette `C`, or add topic colours locally.
+- Each scene gets a clear focal diagram, motion within the first second, 1–3 labels in the video's language and a background that fits the topic (sky, sea, lab, space). Use the palette `C`, or add topic colours locally.
 - Keep each component under ~80 lines. Reuse local helper components within the file.
 
 ## After answering

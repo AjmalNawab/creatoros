@@ -4,7 +4,7 @@ import path from 'node:path';
 import { z } from 'zod';
 import { getDb } from '@creatoros/db';
 import { askAi, parseJson, paths, run, type AgentDefinition } from '@creatoros/core';
-import { FPS, MP3_KBPS, TAIL_SEC, VOICE, WORDS_PER_MIN, feedbackOf, project, readJson, withFeedback, writeJson } from './shared';
+import { FPS, LANG_NAME, MP3_KBPS, TAIL_SEC, brandBlock, feedbackOf, project, projectWithBrand, readJson, withFeedback, writeJson } from './shared';
 
 export const qa: AgentDefinition = {
   id: 'qa', name: 'Quality Assurance Agent', department: 'Compliance & Protection', timeoutSec: 120, requiresApprovalAfter: true,

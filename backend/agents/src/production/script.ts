@@ -4,7 +4,7 @@ import path from 'node:path';
 import { z } from 'zod';
 import { getDb } from '@creatoros/db';
 import { askAi, parseJson, paths, run, type AgentDefinition } from '@creatoros/core';
-import { FPS, MP3_KBPS, TAIL_SEC, VOICE, WORDS_PER_MIN, feedbackOf, project, readJson, withFeedback, writeJson } from './shared';
+import { FPS, LANG_NAME, MP3_KBPS, TAIL_SEC, brandBlock, feedbackOf, project, projectWithBrand, readJson, withFeedback, writeJson } from './shared';
 import type { Research } from './research';
 
 export const ScriptSchema = z.object({
@@ -16,13 +16,15 @@ export type Script = z.infer<typeof ScriptSchema>;
 export const script: AgentDefinition = {
   id: 'script', name: 'Script Writing Agent', department: 'Content Creation', timeoutSec: 120, requiresApprovalAfter: true,
   async run(ctx) {
-    const p = await project(ctx);
+    const { p, brand, profile } = await projectWithBrand(ctx);
     const params = p.params as { topic: string; language: string; durationSec: number; angle?: string; audience?: string; titleHint?: string };
     const r = await readJson<Research>(paths.content(p.slug, 'research', 'research.json'));
-    const target = Math.round((params.durationSec / 60) * WORDS_PER_MIN);
+    const target = Math.round((params.durationSec / 60) * profile.wordsPerMinute);
     const s = await askAi(getDb(), ctx, {
       kind: 'script', format: 'json', promptDir: paths.content(p.slug, 'ai'),
-      prompt: withFeedback(`You are the Script Writing Agent of CreatorOS. Write an ORIGINAL ${params.language === 'ur' ? 'Urdu (natural spoken Pakistani Urdu, Urdu script)' : 'English'} narration script for a ~${params.durationSec}s animated educational video.
+      prompt: withFeedback(`You are the Script Writing Agent of CreatorOS. Write an ORIGINAL ${LANG_NAME[params.language as 'en' | 'ur'] ?? LANG_NAME.en} narration script for a ~${params.durationSec}s animated video.
+
+${brandBlock(brand.name, profile)}
 
 Topic: ${params.topic}
 ${params.angle ? `Angle (owner-selected idea): ${params.angle}\nTarget audience: ${params.audience}\nWorking title: ${params.titleHint}\n` : ''}Research (use only these facts; prefer high confidence):
@@ -30,8 +32,8 @@ ${JSON.stringify({ summary: r.summary, facts: r.facts, avoid: r.avoid }, null, 1
 
 Requirements:
 - ${target} words total (±15%), split into 5-8 scenes. Scene 1 is a strong hook (question or vivid image), the last scene ends with a short subscribe/comment call to action.
-- Simple, warm, curious tone. Short sentences (they become subtitles). Spell numbers as words.
-- For each scene give a short English "visual" note describing an animated diagram that can be drawn with simple SVG shapes (no photos, no real people, no logos).
+- Follow the brand tone. Short sentences (they become subtitles).${params.language === 'ur' ? ' Spell numbers as words.' : ''}
+- For each scene give a short English "visual" note describing an animated diagram in this style: ${profile.visualStyle}
 
 Answer with ONLY a JSON object:
 {"titleOptions": [string, string, string], "scenes": [{"title": string (English), "visual": string (English), "text": string (narration)}]}`, ctx),

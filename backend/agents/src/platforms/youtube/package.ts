@@ -4,7 +4,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { z } from 'zod';
 import { getDb } from '@creatoros/db';
 import { askAi, parseJson, paths, run, type AgentDefinition } from '@creatoros/core';
-import { FPS, project, readJson, withFeedback, writeJson } from '../../production/shared';
+import { FPS, brandBlock, projectWithBrand, readJson, withFeedback, writeJson } from '../../production/shared';
 
 /**
  * YouTube Package agent: prepares the exact upload package (video, title, description with chapters,
@@ -33,7 +33,10 @@ const mmss = (sec: number) => `${Math.floor(sec / 60)}:${String(Math.floor(sec %
 export const youtubePackage: AgentDefinition = {
   id: 'youtube.package', name: 'YouTube Agent: package', department: 'Platforms / YouTube', timeoutSec: 300, requiresApprovalAfter: true,
   async run(ctx) {
-    const p = await project(ctx);
+    const { p, brand, profile } = await projectWithBrand(ctx);
+    const channel = profile.channels.youtube;
+    if (!channel) throw new Error(`BLOCKED: brand "${brand.name}" has no YouTube channel configured (Brand page → channels)`);
+    const ur = p.language === 'ur';
     type SB = { scenes: { title: string; startFrame: number }[] };
     const sb = await readJson<SB>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
     const script = await readJson<{ titleOptions: string[]; scenes: { text: string }[] }>(paths.content(p.slug, 'script', 'script.json'));
@@ -41,19 +44,21 @@ export const youtubePackage: AgentDefinition = {
 
     const meta = await askAi(getDb(), ctx, {
       kind: 'youtube_metadata', format: 'json', promptDir: paths.content(p.slug, 'ai'),
-      prompt: withFeedback(`You are the YouTube Agent of CreatorOS. Write YouTube metadata for this original Urdu educational video.
+      prompt: withFeedback(`You are the YouTube Agent of CreatorOS. Write YouTube metadata for this original ${ur ? 'Urdu' : 'English'} animated video on the channel "${channel.name}".
+
+${brandBlock(brand.name, profile)}
 
 Topic: ${p.title}
 Approved title ideas: ${JSON.stringify(script.titleOptions)}
 Scenes (for chapters): ${JSON.stringify(sb.scenes.map((s, i) => ({ scene: i + 1, title: s.title, narration: script.scenes[i]?.text })))}
 
 Rules:
-- title ≤ ${LIMITS.title} chars: Urdu first, then " | " and a short English version. Honest, no clickbait, no ALL CAPS, no "<" or ">".
-- description: 2-4 short Urdu paragraphs (what viewers learn), no links, no "<" or ">" (chapters, sources and disclosure are added automatically).
-- chapterTitles: exactly ${sb.scenes.length} short Urdu chapter names, one per scene, in order.
-- tags: 8-15 search phrases (Urdu and English mixed), total under ${LIMITS.tagsTotal} chars.
-- hashtags: up to 3, e.g. "#سائنس".
-- thumbnailText: 2-4 bold Urdu words for the thumbnail.
+- title ≤ ${LIMITS.title} chars${ur ? ': Urdu first, then " | " and a short English version' : ''}. Curiosity + the key subject; honest (must match what the video shows), no ALL CAPS, no "<" or ">".
+- description: 2-4 short ${ur ? 'Urdu' : 'English'} paragraphs; the first 150 characters say what the viewer will learn. No links, no "<" or ">" (chapters, sources and disclosure are added automatically).
+- chapterTitles: exactly ${sb.scenes.length} short ${ur ? 'Urdu' : 'English'} chapter names, one per scene, in order.
+- tags: 8-15 real search phrases${ur ? ' (Urdu, Roman Urdu and English)' : ''}, total under ${LIMITS.tagsTotal} chars.
+- hashtags: up to 3 relevant hashtags.
+- thumbnailText: 2-4 bold ${ur ? 'Urdu' : 'English'} words for the thumbnail (complements the title, readable at small size).
 
 Answer with ONLY a JSON object:
 {"title": string, "description": string, "chapterTitles": [string], "tags": [string], "hashtags": [string], "thumbnailText": string}`, ctx),
@@ -71,9 +76,9 @@ Answer with ONLY a JSON object:
       .filter((c, i, arr) => i === 0 || c.at - arr[i - 1].at >= 10);
     const description = [
       meta.description.trim(), '',
-      ...(chapters.length >= 3 ? ['⏱️ ابواب', ...chapters.map((c) => `${mmss(c.at)} ${c.title}`), ''] : []),
+      ...(chapters.length >= 3 ? [ur ? '⏱️ ابواب' : '⏱️ Chapters', ...chapters.map((c) => `${mmss(c.at)} ${c.title}`), ''] : []),
       `📚 Sources: ${research.sources.map((s) => s.name).join(' · ')}`,
-      '🎙️ Narration: AI voice. Animations: original.', '',
+      '🎙️ Narration: AI voice. Animation: original.', '',
       meta.hashtags.join(' '),
     ].join('\n').slice(0, LIMITS.description);
 
@@ -98,8 +103,9 @@ Answer with ONLY a JSON object:
       tags: meta.tags,
       visibility: DEFAULT_VISIBILITY,
       madeForKids: false,
-      category: 'Education',
-      language: 'Urdu',
+      category: profile.youtubeCategory,
+      language: ur ? 'Urdu' : 'English',
+      channel,
       alteredContent: false, // stylised animation, nothing realistic → no "altered or synthetic" disclosure needed
       route: 'browser',
     };

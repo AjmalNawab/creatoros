@@ -39,10 +39,15 @@ export async function selectIdea(id: string) { await post(`/ideas/${id}/select`)
 export async function rejectIdea(id: string, form: FormData) {
   await post(`/ideas/${id}/reject`, { feedback: String(form.get('feedback') ?? '') || undefined }); revalidatePath('/ideas');
 }
-export async function saveBrand(form: FormData) {
+export async function activateBrand(slug: string) { await post(`/brands/${slug}/activate`); revalidatePath('/', 'layout'); }
+export async function saveBrand(slug: string, form: FormData) {
   const lines = (k: string) => String(form.get(k) ?? '').split('\n').map((x) => x.trim()).filter(Boolean);
-  await post('/brand', { name: String(form.get('name')), profile: {
+  const ytId = String(form.get('ytId') ?? '').trim();
+  await post(`/brands/${slug}`, { name: String(form.get('name')), profile: {
     niche: String(form.get('niche')), audience: String(form.get('audience')), region: String(form.get('region')).toUpperCase(),
-    language: String(form.get('language')), tone: String(form.get('tone')), pillars: lines('pillars'), avoid: lines('avoid'), formats: lines('formats') } });
+    language: String(form.get('language')), tone: String(form.get('tone')), pillars: lines('pillars'), avoid: lines('avoid'),
+    rules: lines('rules'), formats: lines('formats'), voice: String(form.get('voice')), voiceRate: String(form.get('voiceRate')),
+    wordsPerMinute: Number(form.get('wpm')), visualStyle: String(form.get('visualStyle')), youtubeCategory: String(form.get('youtubeCategory')),
+    channels: ytId ? { youtube: { id: ytId, handle: String(form.get('ytHandle') ?? ''), name: String(form.get('ytName') ?? '') } } : {} } });
   revalidatePath('/brand');
 }

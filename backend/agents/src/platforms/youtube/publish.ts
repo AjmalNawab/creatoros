@@ -14,7 +14,7 @@ import { sha256File } from './package';
  * bypasses CAPTCHA, 2FA or verification; those steps are done by the owner.
  * Route "api": reserved for the YouTube Data API once the project is verified.
  */
-type Pkg = { video: string; videoSha256: string; thumbnail: string; title: string; description: string; tags: string[]; visibility: string; madeForKids: boolean; category: string; language: string; alteredContent: boolean };
+type Pkg = { channel?: { id: string; handle: string; name: string }; video: string; videoSha256: string; thumbnail: string; title: string; description: string; tags: string[]; visibility: string; madeForKids: boolean; category: string; language: string; alteredContent: boolean };
 
 const VIDEO_ID = /(?:youtube\.com\/(?:watch\?v=|shorts\/|live\/)|youtu\.be\/|studio\.youtube\.com\/video\/)([A-Za-z0-9_-]{11})/;
 
@@ -39,6 +39,7 @@ export const youtubePublish: AgentDefinition = {
       return { output: { alreadyPublished: true, url: existing.url, postId: existing.id } as Json };
     }
 
+    if (!pkg.channel?.id) throw new Error('BLOCKED: package has no target channel');
     const route = process.env.YOUTUBE_ROUTE ?? 'browser';
     if (route !== 'browser') throw new Error(`YouTube route "${route}" is not configured yet`);
 
@@ -51,12 +52,13 @@ export const youtubePublish: AgentDefinition = {
         'Upload this APPROVED package to the owner\'s YouTube channel using their logged-in Chrome (Chrome DevTools MCP).',
         'Use exactly these values. Do not change anything. Stop and hand over to the owner on any login, CAPTCHA, 2FA or verification prompt.',
         '',
-        '1. Open https://studio.youtube.com → Create → Upload videos.',
+        `0. TARGET CHANNEL: ${pkg.channel.name} (${pkg.channel.handle}, id ${pkg.channel.id}). Open https://studio.youtube.com/channel/${pkg.channel.id} and confirm the Studio URL contains this id. If Studio shows a different channel, STOP (switch account/channel with the owner).`,
+        '1. Create → Upload videos.',
         `2. Select file: ${abs(pkg.video)}`,
         `3. Title: copy from payload.title`,
         `4. Description: copy from payload.description (also in ${abs('platforms/youtube/description.txt')})`,
         `5. Thumbnail: ${abs(pkg.thumbnail)} (needs a phone-verified channel; if unavailable, skip and note it)`,
-        `6. Audience: "No, it's not made for kids". Show more → Altered content: No. Tags: payload.tags. Category: Education. Video language: Urdu.`,
+        `6. Audience: "No, it's not made for kids". Show more → Altered content: No. Tags: payload.tags. Category: ${pkg.category}. Video language: ${pkg.language}.`,
         `7. Visibility: ${pkg.visibility}. Save/Publish.`,
         '8. Copy the video link and complete this action with {"url": "<link>", "visibility": "<visibility>", "notes": "..."}.',
       ].join('\n'),

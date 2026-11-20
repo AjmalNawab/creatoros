@@ -4,7 +4,7 @@ import path from 'node:path';
 import { z } from 'zod';
 import { getDb } from '@creatoros/db';
 import { askAi, parseJson, paths, run, type AgentDefinition } from '@creatoros/core';
-import { FPS, MP3_KBPS, TAIL_SEC, VOICE, WORDS_PER_MIN, feedbackOf, project, readJson, withFeedback, writeJson } from './shared';
+import { FPS, LANG_NAME, MP3_KBPS, TAIL_SEC, brandBlock, feedbackOf, project, projectWithBrand, readJson, withFeedback, writeJson } from './shared';
 
 async function regenerateVideoIndex() {
   const keys = (await readdir(paths.renderer('src', 'videos'))).filter((f) => /^p\d+\.tsx$/.test(f)).map((f) => f.replace('.tsx', '')).sort();
@@ -18,7 +18,7 @@ async function regenerateVideoIndex() {
 export const visuals: AgentDefinition = {
   id: 'visuals', name: 'Visual Generation Agent', department: 'Content Creation', timeoutSec: 900,
   async run(ctx) {
-    const p = await project(ctx);
+    const { p, profile } = await projectWithBrand(ctx);
     type SB = { totalFrames: number; scenes: { id: number; title: string; visual: string; text: string; startFrame: number; durationFrames: number }[] };
     const sb = await readJson<SB>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
     const file = paths.renderer('src', 'videos', `${p.key}.tsx`);
@@ -31,9 +31,10 @@ Study the reference implementation first: media/renderer/src/videos/p001.tsx (st
 
 Rules:
 - export const SCENES: React.FC[] = [Scene1, ..., Scene${sb.scenes.length}];  (exactly ${sb.scenes.length}, in order)
-- Import helpers only from '../common' (C, NightSky, Particles, Tag, UrduText, ease, prog) and from 'remotion'. No external images, fonts, or network.
+- Visual style for this brand: ${profile.visualStyle}
+- Import helpers only from '../common' (C, NightSky, Blueprint, Particles, Tag, Label, UrduText, ease, prog) and from 'remotion'. No external images, fonts, or network.
 - Animate with useCurrentFrame()/useVideoConfig() (durationInFrames = scene length). Deterministic: use remotion's random(seed), never Math.random.
-- Keep the bottom 170px clear of important content (subtitles are drawn there). Urdu on-screen labels via <UrduText>/<Tag>.
+- Keep the bottom 170px clear of important content (subtitles are drawn there). On-screen labels in ${p.language === 'ur' ? 'Urdu via <UrduText>/<Tag lang="ur">' : 'English via <Label>/<Tag lang="en">'}.
 - Each scene must visually explain its narration (diagram, labels appearing in sync).
 
 Storyboard:

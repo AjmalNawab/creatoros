@@ -1,6 +1,6 @@
 import type { PrismaClient } from '@creatoros/db';
 import { audit } from '@creatoros/core';
-import { getDefaultBrand } from '../strategy/brand';
+import { getDefaultBrand, profileOf } from '../strategy/brand';
 import { PLATFORMS, type PlatformId } from '../platforms';
 
 /**
@@ -42,7 +42,8 @@ export function planInstruction(text: string): Plan {
     .replace(new RegExp(`\\b(for|on|to)\\s+(${platformWords})(\\s*(,|and|&)\\s*(${platformWords}))*\\b`, 'ig'), '')
     .replace(/^(an?\s+)?(\d+(\.\d+)?\s*-?\s*(min|minutes?)\s+)?((urdu|english)\s+)?((youtube|facebook|instagram|tiktok|linkedin)\s+)?(educational\s+)?(video|short|explainer|post)\s+(about|on)\s+/i, '')
     .replace(/\s+/g, ' ').trim() || text.trim();
-  const language = /english/i.test(text) ? 'en' : 'ur';
+  // Explicit language wins; otherwise the brand's language is applied in createContentWorkflow.
+  const language = /english/i.test(text) ? 'en' : /urdu|اردو|[\u0600-\u06FF]/i.test(text) ? 'ur' : '';
   return { topic, language, durationSec: Math.round(minutes * 60), platforms: mentioned.length ? mentioned : ['youtube'] };
 }
 
@@ -69,6 +70,10 @@ export async function submitInstruction(db: PrismaClient, text: string, opts: { 
 /** Plan → content project + production steps + active platform steps (one transaction). */
 export async function createContentWorkflow(db: PrismaClient, plan: Plan, opts: { brandId: string; actor?: string; instruction?: string }) {
   const actor = opts.actor ?? 'user:owner';
+  if (!plan.language) {
+    const brand = await db.brand.findUniqueOrThrow({ where: { id: opts.brandId } });
+    plan = { ...plan, language: profileOf(brand).language };
+  }
   const active = plan.platforms.filter((p) => PLATFORMS[p].status === 'active');
   const skipped = plan.platforms.filter((p) => PLATFORMS[p].status !== 'active');
   const brandId = opts.brandId;
@@ -113,7 +118,7 @@ export async function selectIdea(db: PrismaClient, ideaId: string, opts: { actor
   const idea = await db.idea.findUniqueOrThrow({ where: { id: ideaId } });
   if (idea.status !== 'PROPOSED') throw new Error(`idea is already ${idea.status}`);
   const plan: Plan = {
-    topic: idea.topic, language: 'ur', durationSec: idea.durationSec,
+    topic: idea.topic, language: '', durationSec: idea.durationSec,
     platforms: opts.platforms ?? (idea.platforms as PlatformId[]),
     angle: idea.angle, audience: idea.audience, keywords: idea.keywords as string[], titleHint: idea.title, ideaId: idea.id,
   };

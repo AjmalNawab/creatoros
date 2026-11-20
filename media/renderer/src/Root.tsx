@@ -7,7 +7,7 @@ import p001 from './data/p001.json';
 import { Thumbnail, thumbMetadata } from './Thumbnail';
 
 export type StoryboardData = {
-  key: string; fps: number; width: number; height: number; totalFrames: number;
+  key: string; language?: string; fps: number; width: number; height: number; totalFrames: number;
   scenes: { id: number; title: string; audio: string; startFrame: number; durationFrames: number; captions: Cue[] }[];
 };
 type Props = { data: StoryboardData };
@@ -23,7 +23,7 @@ const Video: React.FC<Props> = ({ data }) => {
           <Sequence key={s.id} from={s.startFrame} durationInFrames={s.durationFrames} name={`${s.id}. ${s.title}`}>
             <SceneFade><Visual /></SceneFade>
             <Audio src={staticFile(s.audio)} />
-            <Captions cues={s.captions} />
+            <Captions cues={s.captions} lang={data.language ?? 'ur'} />
           </Sequence>
         );
       })}

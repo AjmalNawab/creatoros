@@ -16,6 +16,15 @@ const face = new FontFace('Nastaliq', `url(${staticFile('fonts/NotoNastaliqUrdu.
 face.load().then((f) => { document.fonts.add(f); continueRender(fontHandle); }).catch((e) => cancelRender(e));
 
 export const URDU = 'Nastaliq, serif';
+export const SANS = '"Helvetica Neue", Helvetica, Arial, sans-serif';
+
+/** English on-screen text (same visual weight as UrduText). */
+export const Label: React.FC<{ children: React.ReactNode; size?: number; color?: string; weight?: number; style?: React.CSSProperties }> = ({
+  children, size = 56, color = C.text, weight = 700, style,
+}) => (
+  <div style={{ fontFamily: SANS, fontSize: size, fontWeight: weight, color, lineHeight: 1.25, letterSpacing: 0.5,
+    textShadow: '0 4px 18px rgba(0,0,0,.6)', ...style }}>{children}</div>
+);
 
 export const UrduText: React.FC<{
   children: React.ReactNode; size?: number; color?: string; style?: React.CSSProperties;
@@ -52,15 +61,36 @@ export const NightSky: React.FC<{ stars?: number }> = ({ stars = 70 }) => {
   );
 };
 
-/** Labelled pill used for on-screen keywords */
-export const Tag: React.FC<{ x: number; y: number; text: string; o: number; color?: string; size?: number }> = ({
-  x, y, text, o, color = C.magma, size = 54,
+/** Labelled pill used for on-screen keywords. lang="en" uses the sans font. */
+export const Tag: React.FC<{ x: number; y: number; text: string; o: number; color?: string; size?: number; lang?: 'ur' | 'en' }> = ({
+  x, y, text, o, color = C.magma, size = 54, lang = 'ur',
 }) => (
   <div style={{ position: 'absolute', left: x, top: y, transform: `translate(-50%,-50%) scale(${0.8 + 0.2 * o})`, opacity: o,
-    background: 'rgba(11,16,32,.75)', border: `3px solid ${color}`, borderRadius: 24, padding: '0 34px' }}>
-    <UrduText size={size} color={color} style={{ whiteSpace: 'nowrap' }}>{text}</UrduText>
+    background: 'rgba(11,16,32,.75)', border: `3px solid ${color}`, borderRadius: 24, padding: lang === 'en' ? '10px 30px' : '0 34px' }}>
+    {lang === 'en'
+      ? <Label size={size * 0.8} color={color} style={{ whiteSpace: 'nowrap' }}>{text}</Label>
+      : <UrduText size={size} color={color} style={{ whiteSpace: 'nowrap' }}>{text}</UrduText>}
   </div>
 );
+
+/** Engineering blueprint background: navy with a fine + major grid (Margin of Safety style). */
+export const BP = { bg: '#0b1d33', bg2: '#0e2747', line: '#e8f4ff', cyan: '#5fd3ff', grid: 'rgba(120,180,255,.10)', gridMajor: 'rgba(120,180,255,.22)', warn: '#ff7a1a', fail: '#ff3b3b', ok: '#3ddc97' };
+export const Blueprint: React.FC<{ drift?: boolean }> = ({ drift = true }) => {
+  const f = useCurrentFrame();
+  const off = drift ? (f * 0.2) % 40 : 0;
+  return (
+    <AbsoluteFill style={{ background: `radial-gradient(ellipse at 50% 40%, ${BP.bg2}, ${BP.bg} 75%)` }}>
+      <svg width={1920} height={1080}>
+        <defs>
+          <pattern id="bpMinor" width={40} height={40} patternUnits="userSpaceOnUse" x={off} y={off}><path d="M40 0H0V40" fill="none" stroke={BP.grid} strokeWidth={1} /></pattern>
+          <pattern id="bpMajor" width={200} height={200} patternUnits="userSpaceOnUse" x={off} y={off}><path d="M200 0H0V200" fill="none" stroke={BP.gridMajor} strokeWidth={1.5} /></pattern>
+        </defs>
+        <rect width={1920} height={1080} fill="url(#bpMinor)" />
+        <rect width={1920} height={1080} fill="url(#bpMajor)" />
+      </svg>
+    </AbsoluteFill>
+  );
+};
 
 /** Deterministic lava/ash particles shooting out of a point */
 export const Particles: React.FC<{ x: number; y: number; t: number; n?: number; colors?: string[]; spread?: number; power?: number }> = ({

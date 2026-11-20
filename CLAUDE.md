@@ -4,7 +4,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-CreatorOS: an AI multi-agent system for producing and publishing content (first brand is Urdu educational video). It runs locally; there are no deployment plans for now.
+CreatorOS: an AI multi-agent system for producing and publishing content. It runs locally; there are no deployment plans for now.
+
+**Brands** (multi-brand; each has its own language, voice, style, rules and channels):
+- **Margin of Safety** (active, default): English engineering stories (near-misses, failures, fixes). YouTube @MarginOfSafetyTV, channel `UCvugPJLIN5Wr5JeddlTrvKg`. Blueprint visual style, `en-GB-RyanNeural` at -8%.
+- **Urdu Science Explainers**: Urdu, `ur-PK-AsadNeural`. No channel yet, so its videos can't be published.
 - **Source of truth:** `CreatorOS_Complete_Project_Blueprint_Updated.pdf` (v1.0 + Rev 1.1).
 - **Overrides the PDF:** `docs/REVIEW_AND_RECOMMENDATIONS.md` holds the adopted amendments, roadmap and open owner decisions. Read it before changing architecture. Don't silently change architectural decisions; explain and propose instead.
 - **$0 operator mode:** there is no runtime LLM API. Agents that need AI pause in the **AI queue**, and Claude Code answers them. Uploads pause as **human actions**, and Claude Code performs them in the owner's Chrome via the Chrome DevTools MCP while the owner watches.
@@ -12,7 +16,7 @@ CreatorOS: an AI multi-agent system for producing and publishing content (first 
 ## Operator duties (when the owner asks)
 
 Project skills in `.claude/skills/` hold the playbooks. Load them; don't improvise:
-- **"process the AI queue"** → `process-queue`, which routes by request kind to `trend-ideas`, `research`, `urdu-script`, `scene-visuals` or `youtube-metadata`.
+- **"process the AI queue"** → `process-queue`, which routes by request kind to `trend-ideas`, `research`, `script-writing`, `scene-visuals` or `youtube-metadata`.
 - **"upload it"** → `youtube-upload`: owner's Chrome via chrome-devtools MCP, approved payload only. Stop on login, CAPTCHA or 2FA.
 - **"what should we make next?"** → suggest starting an ideation round from the dashboard's Ideas page (or `POST /ideation`), then answer the queue with `trend-ideas`.
 
@@ -60,10 +64,10 @@ backend/worker --Engine.runForever(ALL_AGENTS)--> backend/agents --> backend/cor
   - `approvals.ts`: `decideApproval` either completes the task, or re-queues it with `input.feedback`, which yields a new AI request. `findValidApproval(taskId, output)` is the backend gate that publishing agents must call right before any external action.
   - `ai.ts` / `human.ts`: requests are keyed by `taskId + kind + inputHash`, so feedback creates a fresh request.
 - **`backend/agents`:** all agent code, organised by department.
-  - `strategy/`: the Trend agent and the Content Strategy (ideas) agent, plus the brand profile (`Brand.settings.profile`, default "Urdu science explainers", editable on `/brand`). `submitIdeation` runs trends → ideas and stores `Idea` rows as PROPOSED. Nothing is produced until the owner runs `selectIdea`, which turns the idea into a content project and carries its angle, audience and keywords into the research and script prompts. If `YOUTUBE_API_KEY` is set, trends also pull YouTube most-popular charts for the brand region.
+  - `strategy/`: the Trend agent and the Content Strategy (ideas) agent, plus brand profiles (`strategy/brand.ts`: `BRANDS` defaults merged with `Brand.settings.profile`; the active brand is the `SystemSetting` `active_brand`, editable on `/brand`). Production and platform agents read the project's brand through `projectWithBrand()` (language, voice, words/minute, rules, visual style, YouTube channel and category). `submitIdeation` runs trends → ideas and stores `Idea` rows as PROPOSED. Nothing is produced until the owner runs `selectIdea`, which turns the idea into a content project and carries its angle, audience and keywords into the research and script prompts. If `YOUTUBE_API_KEY` is set, trends also pull YouTube most-popular charts for the brand region.
   - `main/`: the Main Agent. `planInstruction` gives topic, duration, language and platforms (default `youtube`). `submitInstruction` creates a `ContentProject` (`content/<NNN-slug>/`, renderer key `pNNN`; 001 is the hand-made pilot), then the production steps, then each **active** platform's steps. Planned platforms are reported as `skipped`. `addPlatform` appends platform steps to an existing project.
   - `production/`: research → script (approval) → voice → storyboard → visuals → video → qa (final approval). One file per agent; `shared.ts` holds the helpers and constants.
-  - `platforms/<id>/`: a `PlatformModule` that registers the platform's agents and steps (`PLATFORMS` in `platforms/index.ts`). YouTube is `active` with `youtube.package` (approval) and `youtube.publish`. The publish step checks a valid approval, checks that the video's sha256 is unchanged, and checks idempotency (`PlatformPost.idempotencyKey`) before handing off the upload; afterwards it verifies the video via oEmbed. Facebook, Instagram, TikTok and LinkedIn are `planned` stubs. To activate one, copy the youtube pattern.
+  - `platforms/<id>/`: a `PlatformModule` that registers the platform's agents and steps (`PLATFORMS` in `platforms/index.ts`). YouTube is `active` with `youtube.package` (approval) and `youtube.publish`. The package targets the brand's own channel; a brand without a channel is blocked. The publish step checks a valid approval, checks that the video's sha256 is unchanged, and checks idempotency (`PlatformPost.idempotencyKey`) before handing off the upload; afterwards it verifies the video via oEmbed. Facebook, Instagram, TikTok and LinkedIn are `planned` stubs. To activate one, copy the youtube pattern.
 - **`backend/database`:** the Prisma schema. Table names are PascalCase, so raw SQL must quote them (`"Task"`). `AuditLog` and `TaskRun` are append-only, and every state change calls `audit()`.
 - **`backend/api`:** one file, `src/main.ts`. It runs under `tsx`, which emits no decorator metadata, so DI uses explicit `@Inject(TOKEN)` and validation uses zod. It binds to localhost and requires the `API_KEY` header. It streams content files with Range support.
 - **`frontend`:** the `(app)` route group sits behind Supabase Auth (`middleware.ts`). Data goes through `lib/api.ts` (server-only) and `lib/actions.ts`. Media goes through the authenticated proxy `app/media/[id]/route.ts`. Supabase is used for auth only.
@@ -74,7 +78,7 @@ backend/worker --Engine.runForever(ALL_AGENTS)--> backend/agents --> backend/cor
   - `remotion.config.ts` forces the installed Google Chrome, because the bundled headless shell hangs on this Mac.
   - `scripts/stills.mjs` renders preview stills.
   - A full render takes about 4 minutes for 2 minutes of video.
-- **Voice:** `edge-tts` lives in the root `.venv` (`ur-PK-AsadNeural`, `--rate=+8%`). It intermittently returns no audio; the voice agent retries with `--text`.
+- **Voice:** `edge-tts` lives in the root `.venv`; the voice and rate come from the brand. It intermittently returns no audio; the voice agent retries with `--text`.
 
 ## Non-negotiables to respect in code
 

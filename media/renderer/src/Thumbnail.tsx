@@ -1,6 +1,6 @@
 import React from 'react';
 import { AbsoluteFill, type CalculateMetadataFunction } from 'remotion';
-import { C, URDU } from './common';
+import { C, SANS, URDU } from './common';
 import { VIDEOS } from './videos';
 import type { StoryboardData } from './Root';
 
@@ -16,8 +16,11 @@ export const Thumbnail: React.FC<ThumbProps> = ({ data, sceneIndex, text }) => {
         <Scene />
       </div>
       <AbsoluteFill style={{ background: 'linear-gradient(180deg, rgba(0,0,0,0) 35%, rgba(0,0,0,.75) 100%)' }} />
-      <div style={{ position: 'absolute', bottom: 40, left: 40, right: 40, textAlign: 'center', fontFamily: URDU, direction: 'rtl',
-        fontSize: 112, lineHeight: 1.7, fontWeight: 700, color: '#ffd34d',
+      <div style={{ position: 'absolute', bottom: 40, left: 40, right: 40, textAlign: 'center',
+        ...(data.language === 'en'
+          ? { fontFamily: SANS, fontSize: 108, lineHeight: 1.05, fontWeight: 900, textTransform: 'uppercase' as const, letterSpacing: 1 }
+          : { fontFamily: URDU, direction: 'rtl' as const, fontSize: 112, lineHeight: 1.7, fontWeight: 700 }),
+        color: '#ffd34d',
         textShadow: '0 0 4px #000, 0 0 10px #000, 0 6px 24px rgba(0,0,0,.9)' }}>{text}</div>
     </AbsoluteFill>
   );

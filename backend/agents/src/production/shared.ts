@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { getDb } from '@creatoros/db';
-import { paths, type AgentContext } from '@creatoros/core';
+import { type AgentContext } from '@creatoros/core';
+import { brandForProject, profileOf, type BrandProfile } from '../strategy/brand';
 
 /**
  * Shared helpers for the production agents (the $0 pipeline proven by hand in content/001-volcanoes).
@@ -10,8 +11,6 @@ import { paths, type AgentContext } from '@creatoros/core';
 export const FPS = 30;
 export const TAIL_SEC = 0.6;          // pause after each scene's narration
 export const MP3_KBPS = 48;           // edge-tts output: 24kHz mono 48kbps CBR
-export const WORDS_PER_MIN = 175;     // measured: Asad voice at +8% ≈ 178 wpm
-export const VOICE = 'ur-PK-AsadNeural';
 
 export async function project(ctx: AgentContext) {
   if (!ctx.contentProjectId) throw new Error('task has no content project');
@@ -22,3 +21,24 @@ export const writeJson = (file: string, v: unknown) => writeFile(file, JSON.stri
 export const feedbackOf = (ctx: AgentContext) => (ctx.input as { feedback?: string } | null)?.feedback;
 export const withFeedback = (prompt: string, ctx: AgentContext) =>
   feedbackOf(ctx) ? `${prompt}\n\n---\nOWNER FEEDBACK ON THE PREVIOUS VERSION (must be addressed):\n${feedbackOf(ctx)}` : prompt;
+
+/** Project + its brand profile (language, voice, pace, rules, visual style). */
+export async function projectWithBrand(ctx: AgentContext) {
+  const p = await project(ctx);
+  const brand = await brandForProject(getDb(), p);
+  return { p, brand, profile: profileOf(brand) };
+}
+
+export const LANG_NAME: Record<BrandProfile['language'], string> = {
+  en: 'English (clear, natural spoken documentary English)',
+  ur: 'Urdu (natural spoken Pakistani Urdu, Urdu script)',
+};
+
+/** Brand block injected into every content prompt. */
+export const brandBlock = (name: string, b: BrandProfile) => `Brand: ${name}
+Niche: ${b.niche}
+Audience: ${b.audience}
+Tone: ${b.tone}
+Editorial rules (mandatory):
+${b.rules.map((r) => `- ${r}`).join('\n')}
+Never: ${b.avoid.join('; ')}`;

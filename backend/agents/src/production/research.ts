@@ -4,7 +4,7 @@ import path from 'node:path';
 import { z } from 'zod';
 import { getDb } from '@creatoros/db';
 import { askAi, parseJson, paths, run, type AgentDefinition } from '@creatoros/core';
-import { FPS, MP3_KBPS, TAIL_SEC, VOICE, WORDS_PER_MIN, feedbackOf, project, readJson, withFeedback, writeJson } from './shared';
+import { FPS, LANG_NAME, MP3_KBPS, TAIL_SEC, brandBlock, feedbackOf, project, projectWithBrand, readJson, withFeedback, writeJson } from './shared';
 
 export const ResearchSchema = z.object({
   summary: z.string().min(20),
@@ -18,16 +18,18 @@ export type Research = z.infer<typeof ResearchSchema>;
 export const research: AgentDefinition = {
   id: 'research', name: 'Research Agent', department: 'Strategy & Research', timeoutSec: 120,
   async run(ctx) {
-    const p = await project(ctx);
+    const { p, brand, profile } = await projectWithBrand(ctx);
     const params = p.params as { topic: string; language: string; durationSec: number; angle?: string; audience?: string; keywords?: string[] };
     const dir = paths.content(p.slug, 'research');
     const r = await askAi(getDb(), ctx, {
       kind: 'research', format: 'json', promptDir: paths.content(p.slug, 'ai'),
-      prompt: withFeedback(`You are the Research Agent of CreatorOS, preparing an original educational ${params.language === 'ur' ? 'Urdu' : 'English'} video (~${params.durationSec}s) for a general audience in Pakistan.
+      prompt: withFeedback(`You are the Research Agent of CreatorOS, preparing an original animated ${params.language === 'ur' ? 'Urdu' : 'English'} video (~${params.durationSec}s).
+
+${brandBlock(brand.name, profile)}
 
 Topic: ${params.topic}
 ${params.angle ? `Chosen angle (from strategy): ${params.angle}\nTarget audience: ${params.audience}\nSearch keywords: ${(params.keywords ?? []).join(', ')}\n` : ''}
-Collect 8-12 accurate, interesting, verifiable facts suitable for a short explainer. Prefer authoritative sources (USGS, NASA, NOAA, WHO, Smithsonian, National Geographic, Britannica, peer-reviewed). Mark confidence honestly. Include a local (Pakistan) angle if one genuinely exists — never invent one. List things to avoid (misconceptions, sensationalism).
+Collect 8-14 accurate, interesting, verifiable facts that tell the story (for incidents: timeline, root cause, investigators' findings, the fix and the lasting lesson). Prefer primary/authoritative sources (official investigation reports, agency sites, engineering papers, Britannica, reputable press). Mark confidence honestly. List things to avoid (misconceptions, myths, sensational framings).
 
 Answer with ONLY a JSON object:
 {"summary": string, "audience": string, "facts": [{"fact": string, "confidence": "high"|"medium"|"low", "source": string}], "sources": [{"name": string, "url": string}], "avoid": [string]}`, ctx),

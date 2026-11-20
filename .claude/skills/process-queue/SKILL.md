@@ -7,6 +7,8 @@ description: Answer CreatorOS AI-queue requests as the operator. Use when the ow
 
 CreatorOS agents pause in `WAITING_AI` until Claude Code answers. You are the AI brain. Quality matters: every answer becomes real content.
 
+Every prompt carries the **brand block** (niche, audience, tone, editorial rules). Follow it. The active brand is set on the dashboard's Brands page; **Margin of Safety** (English engineering stories, channel @MarginOfSafetyTV) is the default.
+
 ## Loop
 1. `pnpm ai list`: pending requests (oldest first). Process them **in order**; later steps depend on earlier ones.
 2. For each: `pnpm ai show <id>`. Read the whole prompt, including any `YOUR PREVIOUS ANSWER WAS REJECTED` section, and fix exactly that.
@@ -16,7 +18,7 @@ CreatorOS agents pause in `WAITING_AI` until Claude Code answers. You are the AI
    |---|---|
    | `trends`, `ideas` | `trend-ideas` |
    | `research` | `research` |
-   | `script` | `urdu-script` |
+   | `script` | `script-writing` |
    | `visuals` | `scene-visuals` |
    | `youtube_metadata` | `youtube-metadata` |
 

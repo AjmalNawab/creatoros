@@ -3,4 +3,4 @@ import { trends } from './trends';
 import { ideas } from './ideas';
 
 export const STRATEGY_AGENTS = [trends, ideas];
-export { DEFAULT_BRAND, getDefaultBrand, profileOf, type BrandProfile } from './brand';
+export { BRANDS, DEFAULT_BRAND, brandForProject, ensureBrands, getDefaultBrand, profileOf, setActiveBrand, type BrandProfile } from './brand';
