@@ -19,7 +19,7 @@ export default async function BrandPage({ searchParams }: { searchParams: Promis
   const p = b.profile;
   return (
     <div className="space-y-6">
-      <PageHeader icon={Building2} title="Series" description="Each series has its own language, voice, look and editorial rules. Several series can share one YouTube channel; each gets its own playlist. The active series is the default for new work." />
+      <PageHeader icon={Building2} title="Series" description="Each series has its own language, voice, look and editorial rules. Several series can share one YouTube channel; each gets its own playlist. The default series is pre-selected when you create videos or ask for ideas." />
       <div className="grid gap-3 md:grid-cols-2">
         {brands.map((x) => (
           <Card key={x.id} className={x.slug === b.slug ? 'ring-2 ring-orange-400/60' : ''}>
@@ -28,8 +28,8 @@ export default async function BrandPage({ searchParams }: { searchParams: Promis
                 <Link href={`/brand?slug=${x.slug}`} className="font-semibold hover:underline">{x.name}</Link>
                 <div className="mt-1 flex flex-wrap gap-1.5"><Pill>{x.profile.language === 'en' ? 'English' : 'Urdu'}</Pill>{x.profile.channels.youtube ? <Pill tone="danger"><Youtube className="size-3" />{x.profile.channels.youtube.handle}</Pill> : <Pill>no channel</Pill>}</div>
               </div>
-              {x.active ? <Badge status="COMPLETED" label="Active" />
-                : <form action={activateBrand.bind(null, x.slug)}><Btn size="sm" icon={Check}>Make active</Btn></form>}
+              {x.active ? <Badge status="COMPLETED" label="Default" />
+                : <form action={activateBrand.bind(null, x.slug)}><Btn size="sm" icon={Check}>Set as default</Btn></form>}
             </div>
             <p className="mt-2 text-sm text-zinc-500">{x.description}</p>
           </Card>
