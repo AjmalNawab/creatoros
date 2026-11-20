@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <radialGradient id="bg" cx="50%" cy="45%" r="70%"><stop offset="0" stop-color="#34204d"/><stop offset="1" stop-color="#140c20"/></radialGradient>
+    <linearGradient id="cup" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffd27a"/><stop offset="1" stop-color="#e8913a"/></linearGradient>
+  </defs>
+  <rect width="1024" height="1024" fill="url(#bg)"/>
+  <g fill="#fff" opacity=".8"><circle cx="270" cy="300" r="5"/><circle cx="760" cy="260" r="4"/><circle cx="790" cy="470" r="3"/><circle cx="235" cy="560" r="3"/><circle cx="680" cy="190" r="3"/></g>
+  <!-- steam rising into a question mark -->
+  <path d="M470 520 c-30 -30 30 -50 0 -85 c-20 -25 0 -45 20 -60 c40 -30 60 -55 60 -95 a70 70 0 0 0 -140 0" fill="none" stroke="#ffe7b0" stroke-width="30" stroke-linecap="round"/>
+  <circle cx="555" cy="470" r="20" fill="#ffd27a"/>
+  <!-- cup -->
+  <path d="M330 555 h340 l-30 200 a50 50 0 0 1 -50 42 h-180 a50 50 0 0 1 -50 -42 z" fill="url(#cup)"/>
+  <ellipse cx="500" cy="555" rx="170" ry="26" fill="#b4672c"/>
+  <path d="M665 590 c80 0 90 105 8 120" fill="none" stroke="#f0a24a" stroke-width="28" stroke-linecap="round"/>
+  <path d="M380 640 h220" stroke="#fff" stroke-opacity=".35" stroke-width="9" stroke-linecap="round"/>
+  <ellipse cx="500" cy="815" rx="230" ry="22" fill="#e8913a" opacity=".35"/>
+</svg>

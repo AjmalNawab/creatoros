@@ -10,7 +10,7 @@ import { APP_GUARD, NestFactory } from '@nestjs/core';
 import { z } from 'zod';
 import { getDb, type PrismaClient } from '@creatoros/db';
 import { audit, completeHumanAction, decideApproval, getLock, isEmergencyStopped, paths, safeContentPath, setEmergencyStop } from '@creatoros/core';
-import { PLATFORMS, addPlatform, ensureBrands, getDefaultBrand, profileOf, rejectIdea, selectIdea, setActiveBrand, submitIdeation, submitInstruction, type PlatformId } from '@creatoros/agents';
+import { FB_POST, PLATFORMS, addPlatform, ensureBrands, getDefaultBrand, profileOf, rejectIdea, selectIdea, setActiveBrand, submitIdeation, submitInstruction, type PlatformId } from '@creatoros/agents';
 
 // BigInt (lock tokens, audit ids) → JSON string
 (BigInt.prototype as unknown as { toJSON: () => string }).toJSON = function () { return this.toString(); };
@@ -255,6 +255,9 @@ class ContentController {
     const action = await this.db.humanActionRequest.findUnique({ where: { id } });
     if (action?.kind === 'youtube_upload' && !/^https:\/\/(www\.)?(youtube\.com\/(watch\?v=|shorts\/)|youtu\.be\/|studio\.youtube\.com\/video\/)[\w-]{11}/.test(String(result.url ?? ''))) {
       throw new BadRequestException('Paste the YouTube video link (e.g. https://youtube.com/shorts/… or https://youtu.be/…).');
+    }
+    if (action?.kind === 'facebook_upload' && !FB_POST.test(String(result.url ?? ''))) {
+      throw new BadRequestException('Paste the Facebook post link (e.g. https://www.facebook.com/reel/… or …/videos/…).');
     }
     try { await completeHumanAction(this.db, id, result as never, OWNER); return { ok: true }; }
     catch (e) { throw new BadRequestException((e as Error).message); }

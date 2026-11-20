@@ -19,9 +19,9 @@ export default async function ActionsPage() {
       <PageHeader icon={MonitorUp} title="Browser actions" description="Approved uploads happen in your own Chrome. Say “upload it” in Claude Code and it uploads via DevTools while you watch, or upload yourself and paste the link." />
       <div className="flex items-start gap-3 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-200">
         <ShieldAlert className="mt-0.5 size-5 shrink-0" />
-        <div>Safety rules: only approved packages are uploaded, the channel must match the brand, and any login, CAPTCHA or 2FA screen is handed back to you.</div>
+        <div>Safety rules: only approved packages are uploaded, the channel or Page must match, and any login, CAPTCHA or 2FA screen is handed back to you.</div>
       </div>
-      {!pending.length && <EmptyState icon={MonitorUp} title="Nothing to upload">Approved YouTube packages will appear here.</EmptyState>}
+      {!pending.length && <EmptyState icon={MonitorUp} title="Nothing to upload">Approved YouTube and Facebook packages will appear here.</EmptyState>}
       {pending.map((a) => (
         <section key={a.id} className="overflow-hidden rounded-2xl border border-fuchsia-200 bg-white shadow-sm dark:border-fuchsia-900/60 dark:bg-zinc-900">
           <header className="flex flex-wrap items-center justify-between gap-2 border-b border-zinc-100 bg-fuchsia-50/50 px-5 py-3.5 dark:border-zinc-800 dark:bg-fuchsia-950/20">
@@ -34,7 +34,9 @@ export default async function ActionsPage() {
             <details><summary className="cursor-pointer text-xs font-medium text-zinc-500">Exact approved values</summary><div className="mt-2"><Json value={a.payload} /></div></details>
           </div>
           <form action={completeHumanAction.bind(null, a.id)} className="flex flex-col gap-2 border-t border-zinc-100 px-5 py-3 sm:flex-row dark:border-zinc-800">
-            <input name="url" type="url" required pattern="https://(www\.)?(youtube\.com/(watch\?v=|shorts/)|youtu\.be/|studio\.youtube\.com/video/).+" title="A YouTube video link, e.g. https://youtube.com/shorts/…" placeholder="Only after uploading: paste the YouTube link (https://youtube.com/shorts/…)" className={`${inputCls} flex-1`} />
+            {a.kind === 'facebook_upload'
+              ? <input name="url" type="url" required pattern="https://(www\.|m\.|web\.)?facebook\.com/.+" title="A Facebook post link, e.g. https://www.facebook.com/reel/…" placeholder="Only after posting: paste the Facebook link (https://www.facebook.com/reel/…)" className={`${inputCls} flex-1`} />
+              : <input name="url" type="url" required pattern="https://(www\.)?(youtube\.com/(watch\?v=|shorts/)|youtu\.be/|studio\.youtube\.com/video/).+" title="A YouTube video link, e.g. https://youtube.com/shorts/…" placeholder="Only after uploading: paste the YouTube link (https://youtube.com/shorts/…)" className={`${inputCls} flex-1`} />}
             <input name="notes" placeholder="Notes (optional)" className={`${inputCls} sm:w-56`} />
             <Btn tone="success" icon={Check}>Mark uploaded</Btn>
           </form>

@@ -11,3 +11,5 @@ export { PLATFORMS, PLATFORM_AGENTS, type PlatformId, type PlatformModule } from
 
 /** Every agent the worker registers: Main → Strategy → Production → Platforms. */
 export const ALL_AGENTS = [MAIN_AGENT, ...STRATEGY_AGENTS, ...PRODUCTION_AGENTS, ...PLATFORM_AGENTS];
+export { FACEBOOK_PAGE } from './platforms/facebook/package';
+export { FB_POST } from './platforms/facebook/publish';

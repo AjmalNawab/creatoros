@@ -21,6 +21,7 @@ Every prompt carries the **brand block** (niche, audience, tone, editorial rules
    | `script` | `script-writing` |
    | `visuals` | `scene-visuals` |
    | `youtube_metadata` | `youtube-metadata` |
+   | `facebook_metadata` | `facebook-metadata` |
 
 4. `pnpm ai answer <id> <file>`. Validation happens when the agent re-runs (within about 2 s). Wait about 10 s, then run `pnpm ai list` again. A rejected answer comes back as a new request with the error. Fix it; don't argue with the validator.
 5. Stop when the queue is empty, or when the next step needs the **owner** (approval). Tell them exactly what to review and where (`http://localhost:3000` → Approvals / Ideas / Browser actions).
