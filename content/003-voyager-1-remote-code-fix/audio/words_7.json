@@ -1,0 +1,62 @@
+[
+ {
+  "text": "Every",
+  "start": 0.05,
+  "end": 0.43
+ },
+ {
+  "text": "command",
+  "start": 0.43,
+  "end": 0.961
+ },
+ {
+  "text": "took",
+  "start": 0.961,
+  "end": 1.265
+ },
+ {
+  "text": "about",
+  "start": 1.265,
+  "end": 1.645
+ },
+ {
+  "text": "twenty",
+  "start": 1.645,
+  "end": 2.1
+ },
+ {
+  "text": "two",
+  "start": 2.1,
+  "end": 2.328
+ },
+ {
+  "text": "and",
+  "start": 2.328,
+  "end": 2.556
+ },
+ {
+  "text": "a",
+  "start": 2.556,
+  "end": 2.708
+ },
+ {
+  "text": "half",
+  "start": 2.708,
+  "end": 3.012
+ },
+ {
+  "text": "hours",
+  "start": 3.012,
+  "end": 3.392
+ },
+ {
+  "text": "to",
+  "start": 3.392,
+  "end": 3.543
+ },
+ {
+  "text": "arrive.",
+  "start": 3.543,
+  "end": 4.075
+ }
+]

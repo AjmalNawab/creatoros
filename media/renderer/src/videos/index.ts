@@ -2,8 +2,10 @@
 import type React from 'react';
 import { SCENES as p001 } from './p001';
 import { SCENES as p002 } from './p002';
+import { SCENES as p003 } from './p003';
 
 export const VIDEOS: Record<string, React.FC[]> = {
   p001,
   p002,
+  p003,
 };

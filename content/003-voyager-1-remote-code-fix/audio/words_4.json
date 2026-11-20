@@ -1,0 +1,57 @@
+[
+ {
+  "text": "That",
+  "start": 0.27,
+  "end": 0.27
+ },
+ {
+  "text": "chip",
+  "start": 0.4,
+  "end": 0.48
+ },
+ {
+  "text": "held",
+  "start": 0.55,
+  "end": 0.78
+ },
+ {
+  "text": "part",
+  "start": 0.83,
+  "end": 1.04
+ },
+ {
+  "text": "of",
+  "start": 1.11,
+  "end": 1.21
+ },
+ {
+  "text": "the",
+  "start": 1.21,
+  "end": 1.4
+ },
+ {
+  "text": "software",
+  "start": 1.4,
+  "end": 2
+ },
+ {
+  "text": "that",
+  "start": 2,
+  "end": 2.13
+ },
+ {
+  "text": "packages",
+  "start": 2.43,
+  "end": 2.99
+ },
+ {
+  "text": "Voyager's",
+  "start": 3.01,
+  "end": 3.73
+ },
+ {
+  "text": "data.",
+  "start": 3.73,
+  "end": 4.19
+ }
+]

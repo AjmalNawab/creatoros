@@ -1,0 +1,666 @@
+{
+ "data": {
+  "key": "p003",
+  "language": "en",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 1517,
+  "lines": [
+   {
+    "id": 1,
+    "text": "Engineers repaired a computer fifteen billion miles from Earth.",
+    "title": "Hook",
+    "audio": "p003/scene_1.wav",
+    "startFrame": 0,
+    "durationFrames": 135,
+    "words": [
+     {
+      "text": "Engineers",
+      "start": 0.38,
+      "end": 0.69
+     },
+     {
+      "text": "repaired",
+      "start": 0.69,
+      "end": 1.3
+     },
+     {
+      "text": "a",
+      "start": 1.3,
+      "end": 1.37
+     },
+     {
+      "text": "computer",
+      "start": 1.37,
+      "end": 2
+     },
+     {
+      "text": "fifteen",
+      "start": 2,
+      "end": 2.45
+     },
+     {
+      "text": "billion",
+      "start": 2.45,
+      "end": 2.91
+     },
+     {
+      "text": "miles",
+      "start": 2.91,
+      "end": 3.26
+     },
+     {
+      "text": "from",
+      "start": 3.26,
+      "end": 3.54
+     },
+     {
+      "text": "Earth.",
+      "start": 3.54,
+      "end": 4.14
+     }
+    ],
+    "visual": "Black space, tiny Voyager 1 line drawing far away; distance counter rolls up to 15,000,000,000 miles; a red 'ERROR' blink on the probe."
+   },
+   {
+    "id": 2,
+    "text": "In November 2023, Voyager 1 started sending back gibberish.",
+    "title": "Gibberish",
+    "audio": "p003/scene_2.wav",
+    "startFrame": 135,
+    "durationFrames": 168,
+    "words": [
+     {
+      "text": "In",
+      "start": 0.18,
+      "end": 0.18
+     },
+     {
+      "text": "November",
+      "start": 0.39,
+      "end": 0.93
+     },
+     {
+      "text": "2023,",
+      "start": 0.93,
+      "end": 2.23
+     },
+     {
+      "text": "Voyager",
+      "start": 2.42,
+      "end": 2.88
+     },
+     {
+      "text": "1",
+      "start": 2.88,
+      "end": 3.2
+     },
+     {
+      "text": "started",
+      "start": 3.2,
+      "end": 3.63
+     },
+     {
+      "text": "sending",
+      "start": 3.69,
+      "end": 4.12
+     },
+     {
+      "text": "back",
+      "start": 4.12,
+      "end": 4.32
+     },
+     {
+      "text": "gibberish.",
+      "start": 4.45,
+      "end": 5.06
+     }
+    ],
+    "visual": "Blueprint data stream from the probe turns into scrambled random symbols; label 'Nov 2023'."
+   },
+   {
+    "id": 3,
+    "text": "The culprit was one dead memory chip inside its 1977 flight computer.",
+    "title": "The dead chip",
+    "audio": "p003/scene_3.wav",
+    "startFrame": 303,
+    "durationFrames": 195,
+    "words": [
+     {
+      "text": "The",
+      "start": 0.3,
+      "end": 0.3
+     },
+     {
+      "text": "culprit",
+      "start": 0.38,
+      "end": 0.99
+     },
+     {
+      "text": "was",
+      "start": 0.99,
+      "end": 1.29
+     },
+     {
+      "text": "one",
+      "start": 1.29,
+      "end": 1.53
+     },
+     {
+      "text": "dead",
+      "start": 1.61,
+      "end": 1.99
+     },
+     {
+      "text": "memory",
+      "start": 1.99,
+      "end": 2.44
+     },
+     {
+      "text": "chip",
+      "start": 2.93,
+      "end": 3
+     },
+     {
+      "text": "inside",
+      "start": 3,
+      "end": 3.48
+     },
+     {
+      "text": "its",
+      "start": 3.48,
+      "end": 3.72
+     },
+     {
+      "text": "1977",
+      "start": 3.72,
+      "end": 4.69
+     },
+     {
+      "text": "flight",
+      "start": 4.69,
+      "end": 5.17
+     },
+     {
+      "text": "computer.",
+      "start": 5.17,
+      "end": 5.84
+     }
+    ],
+    "visual": "Cross-section of the 1977 flight computer: a grid of memory chips, one chip flashes red and goes dark; label 'Flight Data Subsystem'."
+   },
+   {
+    "id": 4,
+    "text": "That chip held part of the software that packages Voyager's data.",
+    "title": "What it held",
+    "audio": "p003/scene_4.wav",
+    "startFrame": 498,
+    "durationFrames": 148,
+    "words": [
+     {
+      "text": "That",
+      "start": 0.27,
+      "end": 0.27
+     },
+     {
+      "text": "chip",
+      "start": 0.4,
+      "end": 0.48
+     },
+     {
+      "text": "held",
+      "start": 0.55,
+      "end": 0.78
+     },
+     {
+      "text": "part",
+      "start": 0.83,
+      "end": 1.04
+     },
+     {
+      "text": "of",
+      "start": 1.11,
+      "end": 1.21
+     },
+     {
+      "text": "the",
+      "start": 1.21,
+      "end": 1.4
+     },
+     {
+      "text": "software",
+      "start": 1.4,
+      "end": 2
+     },
+     {
+      "text": "that",
+      "start": 2,
+      "end": 2.13
+     },
+     {
+      "text": "packages",
+      "start": 2.43,
+      "end": 2.99
+     },
+     {
+      "text": "Voyager's",
+      "start": 3.01,
+      "end": 3.73
+     },
+     {
+      "text": "data.",
+      "start": 3.73,
+      "end": 4.19
+     }
+    ],
+    "visual": "Zoom into the red chip: code blocks inside it labelled 'packs the data'."
+   },
+   {
+    "id": 5,
+    "text": "And nobody can swap a chip in interstellar space.",
+    "title": "No repairs possible",
+    "audio": "p003/scene_5.wav",
+    "startFrame": 646,
+    "durationFrames": 117,
+    "words": [
+     {
+      "text": "And",
+      "start": 0.2,
+      "end": 0.22
+     },
+     {
+      "text": "nobody",
+      "start": 0.39,
+      "end": 0.66
+     },
+     {
+      "text": "can",
+      "start": 0.66,
+      "end": 0.88
+     },
+     {
+      "text": "swap",
+      "start": 0.88,
+      "end": 1.18
+     },
+     {
+      "text": "a",
+      "start": 1.18,
+      "end": 1.25
+     },
+     {
+      "text": "chip",
+      "start": 1.25,
+      "end": 1.55
+     },
+     {
+      "text": "in",
+      "start": 1.55,
+      "end": 1.7
+     },
+     {
+      "text": "interstellar",
+      "start": 1.7,
+      "end": 2.59
+     },
+     {
+      "text": "space.",
+      "start": 2.59,
+      "end": 3.23
+     }
+    ],
+    "visual": "A wrench icon flies toward the probe and stops at a huge distance line; label 'interstellar space'."
+   },
+   {
+    "id": 6,
+    "text": "So engineers split the code into pieces and hid them in free memory.",
+    "title": "Split the code",
+    "audio": "p003/scene_6.wav",
+    "startFrame": 763,
+    "durationFrames": 152,
+    "words": [
+     {
+      "text": "So",
+      "start": 0.15,
+      "end": 0.15
+     },
+     {
+      "text": "engineers",
+      "start": 0.38,
+      "end": 0.85
+     },
+     {
+      "text": "split",
+      "start": 0.85,
+      "end": 1.2
+     },
+     {
+      "text": "the",
+      "start": 1.29,
+      "end": 1.47
+     },
+     {
+      "text": "code",
+      "start": 1.47,
+      "end": 1.78
+     },
+     {
+      "text": "into",
+      "start": 1.78,
+      "end": 2.01
+     },
+     {
+      "text": "pieces",
+      "start": 2.08,
+      "end": 2.57
+     },
+     {
+      "text": "and",
+      "start": 2.93,
+      "end": 3.04
+     },
+     {
+      "text": "hid",
+      "start": 3.04,
+      "end": 3.23
+     },
+     {
+      "text": "them",
+      "start": 3.23,
+      "end": 3.49
+     },
+     {
+      "text": "in",
+      "start": 3.49,
+      "end": 3.62
+     },
+     {
+      "text": "free",
+      "start": 3.62,
+      "end": 3.88
+     },
+     {
+      "text": "memory.",
+      "start": 3.88,
+      "end": 4.36
+     }
+    ],
+    "visual": "Memory map grid: the code block splits into four pieces that slide into separate empty gaps; arrows re-link them."
+   },
+   {
+    "id": 7,
+    "text": "Every command took about twenty two and a half hours to arrive.",
+    "title": "22 hours per command",
+    "audio": "p003/scene_7.wav",
+    "startFrame": 915,
+    "durationFrames": 129,
+    "words": [
+     {
+      "text": "Every",
+      "start": 0.05,
+      "end": 0.43
+     },
+     {
+      "text": "command",
+      "start": 0.43,
+      "end": 0.961
+     },
+     {
+      "text": "took",
+      "start": 0.961,
+      "end": 1.265
+     },
+     {
+      "text": "about",
+      "start": 1.265,
+      "end": 1.645
+     },
+     {
+      "text": "twenty",
+      "start": 1.645,
+      "end": 2.1
+     },
+     {
+      "text": "two",
+      "start": 2.1,
+      "end": 2.328
+     },
+     {
+      "text": "and",
+      "start": 2.328,
+      "end": 2.556
+     },
+     {
+      "text": "a",
+      "start": 2.556,
+      "end": 2.708
+     },
+     {
+      "text": "half",
+      "start": 2.708,
+      "end": 3.012
+     },
+     {
+      "text": "hours",
+      "start": 3.012,
+      "end": 3.392
+     },
+     {
+      "text": "to",
+      "start": 3.392,
+      "end": 3.543
+     },
+     {
+      "text": "arrive.",
+      "start": 3.543,
+      "end": 4.075
+     }
+    ],
+    "visual": "A pulse travels from an Earth dish to Voyager along a long line; timer counts up to 22.5 hours."
+   },
+   {
+    "id": 8,
+    "text": "On April 20, 2024, readable data finally came home.",
+    "title": "It worked",
+    "audio": "p003/scene_8.wav",
+    "startFrame": 1044,
+    "durationFrames": 164,
+    "words": [
+     {
+      "text": "On",
+      "start": 0.18,
+      "end": 0.18
+     },
+     {
+      "text": "April",
+      "start": 0.38,
+      "end": 0.64
+     },
+     {
+      "text": "20,",
+      "start": 0.64,
+      "end": 1.29
+     },
+     {
+      "text": "2024,",
+      "start": 1.45,
+      "end": 2.7
+     },
+     {
+      "text": "readable",
+      "start": 2.76,
+      "end": 3.38
+     },
+     {
+      "text": "data",
+      "start": 3.38,
+      "end": 3.72
+     },
+     {
+      "text": "finally",
+      "start": 3.72,
+      "end": 4.31
+     },
+     {
+      "text": "came",
+      "start": 4.31,
+      "end": 4.62
+     },
+     {
+      "text": "home.",
+      "start": 4.65,
+      "end": 5.02
+     }
+    ],
+    "visual": "Gibberish symbols turn back into clean bars of data; green check; label 'April 20, 2024'."
+   },
+   {
+    "id": 9,
+    "text": "This month, Voyager 1 went quiet again, and engineers are still diagnosing it.",
+    "title": "Quiet again",
+    "audio": "p003/scene_9.wav",
+    "startFrame": 1208,
+    "durationFrames": 180,
+    "words": [
+     {
+      "text": "This",
+      "start": 0.34,
+      "end": 0.34
+     },
+     {
+      "text": "month,",
+      "start": 0.42,
+      "end": 0.83
+     },
+     {
+      "text": "Voyager",
+      "start": 1.1,
+      "end": 1.52
+     },
+     {
+      "text": "1",
+      "start": 1.52,
+      "end": 1.77
+     },
+     {
+      "text": "went",
+      "start": 1.77,
+      "end": 2.04
+     },
+     {
+      "text": "quiet",
+      "start": 2.13,
+      "end": 2.53
+     },
+     {
+      "text": "again,",
+      "start": 2.53,
+      "end": 3.11
+     },
+     {
+      "text": "and",
+      "start": 3.23,
+      "end": 3.32
+     },
+     {
+      "text": "engineers",
+      "start": 3.32,
+      "end": 3.9
+     },
+     {
+      "text": "are",
+      "start": 3.9,
+      "end": 4.1
+     },
+     {
+      "text": "still",
+      "start": 4.1,
+      "end": 4.43
+     },
+     {
+      "text": "diagnosing",
+      "start": 4.43,
+      "end": 5.09
+     },
+     {
+      "text": "it.",
+      "start": 5.09,
+      "end": 5.26
+     }
+    ],
+    "visual": "Data stream flatlines to a thin carrier line; label 'Nov 14, 2026: diagnosing'."
+   },
+   {
+    "id": 10,
+    "text": "Can they fix a computer fifteen billion miles away twice?",
+    "title": "Loop",
+    "audio": "p003/scene_10.wav",
+    "startFrame": 1388,
+    "durationFrames": 129,
+    "words": [
+     {
+      "text": "Can",
+      "start": 0.2,
+      "end": 0.23
+     },
+     {
+      "text": "they",
+      "start": 0.38,
+      "end": 0.54
+     },
+     {
+      "text": "fix",
+      "start": 0.54,
+      "end": 0.75
+     },
+     {
+      "text": "a",
+      "start": 0.8,
+      "end": 0.84
+     },
+     {
+      "text": "computer",
+      "start": 0.84,
+      "end": 1.34
+     },
+     {
+      "text": "fifteen",
+      "start": 1.34,
+      "end": 1.99
+     },
+     {
+      "text": "billion",
+      "start": 1.99,
+      "end": 2.49
+     },
+     {
+      "text": "miles",
+      "start": 2.49,
+      "end": 2.88
+     },
+     {
+      "text": "away",
+      "start": 2.88,
+      "end": 3.19
+     },
+     {
+      "text": "twice?",
+      "start": 3.19,
+      "end": 3.66
+     }
+    ],
+    "visual": "Distance counter from the hook returns, now showing 'one light-day'; question mark pulses."
+   }
+  ],
+  "brand": {
+   "name": "Margin of Safety",
+   "handle": "@MarginOfSafetyTV",
+   "accent": "#ff7a1a"
+  },
+  "endCard": {
+   "title": "Never stop debugging",
+   "cta": "Follow for a new engineering story every week"
+  }
+ }
+}

@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Lightbulb, Search, Sparkles, Target, ThumbsDown, TrendingUp, Users, Wand2, Swords } from 'lucide-react';
+import { ChevronDown, Clock, ExternalLink, Lightbulb, Search, Sparkles, Star, Swords, Target, ThumbsDown, TrendingUp, Users, Wand2 } from 'lucide-react';
 import { api } from '@/lib/api';
 import { rejectIdea, selectIdea, startIdeation } from '@/lib/actions';
 import { Badge, Btn, Card, EmptyState, PageHeader, Pill, SeriesPicker, ago, inputCls, type SeriesOption } from '@/components/ui';
@@ -11,27 +11,34 @@ type Idea = {
 };
 type Round = { id: string; agentId: string; status: string; createdAt: string; input: { focus?: string | null } };
 
-const scoreTone = (s: number) => (s >= 8 ? 'from-emerald-500 to-emerald-600' : s >= 6 ? 'from-amber-400 to-orange-500' : 'from-zinc-400 to-zinc-500');
+const scoreStyle = (s: number) =>
+  s >= 8 ? 'bg-emerald-500 text-white' : s >= 6 ? 'bg-amber-400 text-amber-950' : 'bg-zinc-300 text-zinc-700 dark:bg-zinc-700 dark:text-zinc-200';
+const fmtDur = (sec: number) => (sec < 90 ? `${sec}s` : `${Math.round(sec / 6) / 10} min`);
 
 export default async function IdeasPage() {
-  const [{ ideas, rounds }, brands] = await Promise.all([
-    api<{ ideas: Idea[]; rounds: Round[] }>('/ideas'), api<(SeriesOption & { name: string })[]>('/brands')]);
-  const seriesName = (id: string | null) => brands.find((b) => b.id === id);
+  const [{ ideas, rounds }, series] = await Promise.all([
+    api<{ ideas: Idea[]; rounds: Round[] }>('/ideas'), api<SeriesOption[]>('/brands')]);
+  const seriesOf = (id: string | null) => series.find((b) => b.id === id);
   const busy = rounds.filter((r) => !['COMPLETED', 'CANCELLED', 'DEAD'].includes(r.status));
-  const proposed = ideas.filter((i) => i.status === 'PROPOSED');
+  // Best first: newest round first, then by score, then by the agent's rank.
+  const proposed = ideas.filter((i) => i.status === 'PROPOSED')
+    .sort((a, b) => (a.taskId === b.taskId ? b.score - a.score || a.rank - b.rank : +new Date(b.createdAt) - +new Date(a.createdAt)));
   const decided = ideas.filter((i) => i.status !== 'PROPOSED').slice(0, 20);
+  const topId = proposed[0]?.id;
 
   return (
     <div className="space-y-6">
-      <PageHeader icon={Lightbulb} title="Ideas" description={<>Pick a series, and the Trend agent scans what is timely for it, and the Strategy agent ranks ideas by fit, demand and competition. Nothing is produced until you pick one.</>} />
+      <PageHeader icon={Lightbulb} title="Ideas" description="Ranked by fit, demand and competition, with sources. Nothing is produced until you pick one." />
 
       <Card>
-        <form action={startIdeation} className="flex flex-col gap-2 sm:flex-row">
-          <div className="relative flex-1"><Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-zinc-400" />
-            <input name="focus" placeholder="Optional focus: e.g. aviation, bridges, anniversaries this month…" className={`${inputCls} pl-9`} /></div>
-          <SeriesPicker series={brands} />
-          <select name="count" defaultValue="5" className={`${inputCls} sm:w-32`}>{[3, 5, 7, 10].map((n) => <option key={n} value={n}>{n} ideas</option>)}</select>
-          <Btn tone="accent" icon={Wand2}>Suggest ideas</Btn>
+        <form action={startIdeation} className="flex flex-col gap-2 xl:flex-row xl:items-center">
+          <div className="relative min-w-0 flex-1 self-stretch xl:self-auto"><Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-zinc-400" />
+            <input name="focus" placeholder="Optional focus: aviation, bridges, anniversaries this month…" className={`${inputCls} pl-9`} /></div>
+          <div className="flex flex-wrap items-center gap-2">
+            <SeriesPicker series={series} />
+            <select name="count" defaultValue="5" className="h-9 rounded-lg border border-zinc-200 bg-white px-2.5 text-sm shadow-sm dark:border-zinc-700 dark:bg-zinc-900">{[3, 5, 7, 10].map((n) => <option key={n} value={n}>{n} ideas</option>)}</select>
+            <Btn tone="accent" icon={Wand2}>Suggest ideas</Btn>
+          </div>
         </form>
         {busy.length > 0 && (
           <div className="mt-3 flex flex-wrap items-center gap-2 rounded-lg bg-sky-50 px-3 py-2 text-sm text-sky-800 dark:bg-sky-950/40 dark:text-sky-300">
@@ -43,43 +50,63 @@ export default async function IdeasPage() {
 
       {!proposed.length && !busy.length && <EmptyState icon={Lightbulb} title="No ideas waiting">Click “Suggest ideas” to get a fresh, ranked list.</EmptyState>}
 
-      <div className="grid gap-4 xl:grid-cols-2">
-        {proposed.map((i) => (
-          <section key={i.id} className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
-            <div className="flex items-start gap-4 p-5">
-              <div className={`grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br text-white shadow-sm ${scoreTone(i.score)}`}>
-                <div className="text-center leading-none"><div className="text-xl font-bold">{i.score}</div><div className="text-[9px] opacity-80">/10</div></div>
-              </div>
-              <div className="min-w-0 flex-1">
-                <div className="flex flex-wrap items-center gap-1.5 text-xs text-zinc-500">{seriesName(i.brandId) && <Pill tone="info">{seriesName(i.brandId)!.profile.language === 'ur' ? 'اردو' : 'EN'} · {seriesName(i.brandId)!.name}</Pill>}<Pill>#{i.rank}</Pill><Pill>{i.format}</Pill><Pill>{Math.round(i.durationSec / 6) / 10} min</Pill><span>{ago(i.createdAt)}</span></div>
-                <h3 dir="auto" className="mt-1.5 text-lg font-semibold leading-snug">{i.title}</h3>
-                <div className="text-sm text-zinc-500">{i.topic}</div>
-              </div>
-            </div>
-            <dl className="grid gap-3 border-t border-zinc-100 px-5 py-4 text-sm sm:grid-cols-2 dark:border-zinc-800">
-              {[[TrendingUp, 'Why now', i.whyNow], [Users, 'Audience', i.audience], [Target, 'Our angle', i.angle], [Swords, 'Competition', i.competition]].map(([Icon, l, v]) => {
-                const I = Icon as typeof Target;
-                return <div key={l as string}><dt className="flex items-center gap-1.5 text-xs font-medium text-zinc-500"><I className="size-3.5" />{l as string}</dt><dd className="mt-0.5 leading-relaxed">{v as string}</dd></div>;
-              })}
-            </dl>
-            <div className="space-y-2 px-5 pb-4">
-              <div className="flex flex-wrap gap-1">{i.keywords.map((k) => <Pill key={k}>{k}</Pill>)}</div>
-              <details className="text-sm"><summary className="cursor-pointer text-xs font-medium text-zinc-500 hover:text-zinc-800">Evidence ({i.evidence.length})</summary>
-                <ul className="mt-2 space-y-1 text-xs text-zinc-600 dark:text-zinc-400">{i.evidence.map((e, n) => <li key={n}>• <b className="font-medium">{e.source}</b>: {e.detail} {e.url && <a href={e.url} target="_blank" className="text-sky-600 hover:underline">source</a>}</li>)}</ul>
-              </details>
-            </div>
-            <div className="mt-auto flex flex-col gap-2 border-t border-zinc-100 bg-zinc-50/60 px-5 py-3 sm:flex-row dark:border-zinc-800 dark:bg-zinc-950/30">
-              <form action={rejectIdea.bind(null, i.id)} className="flex flex-1 gap-2">
-                <input name="feedback" placeholder="Why not? (teaches the next round)" className={`${inputCls} flex-1`} />
-                <Btn tone="ghost" icon={ThumbsDown}>Reject</Btn>
-              </form>
-              <form action={selectIdea.bind(null, i.id)} className="flex gap-2">
-                <Btn tone="accent" icon={Wand2}>Make this</Btn>
-              </form>
-            </div>
-          </section>
-        ))}
-      </div>
+      {proposed.length > 0 && (
+        <section className="overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+          <header className="flex items-center justify-between border-b border-zinc-100 px-5 py-3 text-sm dark:border-zinc-800">
+            <span className="font-semibold">{proposed.length} ideas to review</span>
+            <span className="text-xs text-zinc-500">Best first · click an idea for details</span>
+          </header>
+          <ol className="divide-y divide-zinc-100 dark:divide-zinc-800">
+            {proposed.map((i, n) => {
+              const s = seriesOf(i.brandId);
+              const top = i.id === topId;
+              return (
+                <li key={i.id} className={`flex items-start gap-2 pr-5 ${top ? 'bg-emerald-50/40 dark:bg-emerald-950/10' : ''}`}>
+                  <details className="group min-w-0 flex-1">
+                    <summary className="flex cursor-pointer list-none items-start gap-4 py-4 pl-5 hover:bg-zinc-50/80 dark:hover:bg-zinc-800/30 [&::-webkit-details-marker]:hidden">
+                      <div className={`grid size-12 shrink-0 place-items-center rounded-xl text-center leading-none shadow-sm ${scoreStyle(i.score)}`}>
+                        <div><div className="text-lg font-bold">{i.score}</div><div className="text-[9px] opacity-80">/10</div></div>
+                      </div>
+                      <div className="min-w-0 flex-1">
+                        <div className="flex flex-wrap items-center gap-1.5 text-xs text-zinc-500">
+                          <span className="font-semibold text-zinc-400">#{n + 1}</span>
+                          {top && <span className="inline-flex items-center gap-1 rounded-md bg-emerald-100 px-1.5 py-0.5 font-medium text-emerald-800 dark:bg-emerald-950 dark:text-emerald-300"><Star className="size-3 fill-current" />Recommended</span>}
+                          {s && <Pill tone="info">{s.profile.language === 'ur' ? 'اردو' : 'EN'} · {s.name}</Pill>}
+                          <Pill>{i.format === 'short' ? 'Short' : 'Long'}</Pill>
+                          <span className="inline-flex items-center gap-1"><Clock className="size-3" />{fmtDur(i.durationSec)}</span>
+                        </div>
+                        <h3 dir="auto" className="mt-1 font-semibold leading-snug">{i.title}</h3>
+                        <p className="mt-1 line-clamp-1 text-sm text-zinc-500"><TrendingUp className="-mt-0.5 mr-1 inline size-3.5 text-zinc-400" />{i.whyNow}</p>
+                      </div>
+                      <ChevronDown className="mt-1 size-4 shrink-0 text-zinc-400 transition group-open:rotate-180" />
+                    </summary>
+
+                    <div className="space-y-4 pb-5 pl-5 sm:pl-[5.25rem]">
+                      <dl className="grid gap-4 text-sm md:grid-cols-2">
+                        {([[Target, 'Our angle', i.angle], [Users, 'Audience', i.audience], [TrendingUp, 'Why now', i.whyNow], [Swords, 'Competition', i.competition]] as const).map(([Icon, l, v]) => (
+                          <div key={l}><dt className="flex items-center gap-1.5 text-xs font-medium text-zinc-500"><Icon className="size-3.5" />{l}</dt><dd className="mt-1 leading-relaxed">{v}</dd></div>
+                        ))}
+                      </dl>
+                      <div className="flex flex-wrap gap-1">{i.keywords.map((k) => <Pill key={k}>{k}</Pill>)}</div>
+                      <ul className="space-y-1 text-xs text-zinc-600 dark:text-zinc-400">
+                        {i.evidence.map((e, k) => (
+                          <li key={k} className="flex gap-1.5"><span className="font-medium text-zinc-800 dark:text-zinc-200">{e.source}:</span><span>{e.detail}</span>
+                            {e.url && <a href={e.url} target="_blank" className="inline-flex shrink-0 items-center gap-0.5 text-sky-600 hover:underline">source<ExternalLink className="size-3" /></a>}</li>
+                        ))}
+                      </ul>
+                      <form action={rejectIdea.bind(null, i.id)} className="flex gap-2">
+                        <input name="feedback" placeholder="Not this one? Say why (it teaches the next round)" className={`${inputCls} flex-1`} />
+                        <Btn tone="ghost" icon={ThumbsDown}>Reject</Btn>
+                      </form>
+                    </div>
+                  </details>
+                  <form action={selectIdea.bind(null, i.id)} className="shrink-0 pt-4"><Btn tone={top ? 'accent' : 'default'} size="sm" icon={Wand2}>Make this</Btn></form>
+                </li>
+              );
+            })}
+          </ol>
+        </section>
+      )}
 
       {decided.length > 0 && (
         <Card title="Decided" padded={false}>
@@ -89,7 +116,7 @@ export default async function IdeasPage() {
                 <span className="min-w-0 truncate" dir="auto">{i.title}{i.feedback && <span className="text-zinc-400"> · “{i.feedback}”</span>}</span>
                 <span className="flex items-center gap-3">
                   {i.contentProjectId && <Link href={`/content/${i.contentProjectId}`} className="text-xs font-medium text-sky-600 hover:underline">Open video</Link>}
-                  <Badge status={i.status} />
+                  <Badge status={i.status} /><span className="text-xs text-zinc-400">{ago(i.createdAt)}</span>
                 </span>
               </li>
             ))}

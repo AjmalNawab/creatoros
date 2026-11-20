@@ -1,0 +1,63 @@
+{
+ "titleOptions": [
+  "NASA Fixed a 1977 Computer 15 Billion Miles Away",
+  "How Engineers Repaired Voyager 1 Without Touching It",
+  "The Voyager 1 Fix That Took 22 Hours Per Command"
+ ],
+ "scenes": [
+  {
+   "title": "Hook",
+   "visual": "Black space, tiny Voyager 1 line drawing far away; distance counter rolls up to 15,000,000,000 miles; a red 'ERROR' blink on the probe.",
+   "text": "Engineers repaired a computer fifteen billion miles from Earth."
+  },
+  {
+   "title": "Gibberish",
+   "visual": "Blueprint data stream from the probe turns into scrambled random symbols; label 'Nov 2023'.",
+   "text": "In November 2023, Voyager 1 started sending back gibberish."
+  },
+  {
+   "title": "The dead chip",
+   "visual": "Cross-section of the 1977 flight computer: a grid of memory chips, one chip flashes red and goes dark; label 'Flight Data Subsystem'.",
+   "text": "The culprit was one dead memory chip inside its 1977 flight computer."
+  },
+  {
+   "title": "What it held",
+   "visual": "Zoom into the red chip: code blocks inside it labelled 'packs the data'.",
+   "text": "That chip held part of the software that packages Voyager's data."
+  },
+  {
+   "title": "No repairs possible",
+   "visual": "A wrench icon flies toward the probe and stops at a huge distance line; label 'interstellar space'.",
+   "text": "And nobody can swap a chip in interstellar space."
+  },
+  {
+   "title": "Split the code",
+   "visual": "Memory map grid: the code block splits into four pieces that slide into separate empty gaps; arrows re-link them.",
+   "text": "So engineers split the code into pieces and hid them in free memory."
+  },
+  {
+   "title": "22 hours per command",
+   "visual": "A pulse travels from an Earth dish to Voyager along a long line; timer counts up to 22.5 hours.",
+   "text": "Every command took about twenty two and a half hours to arrive."
+  },
+  {
+   "title": "It worked",
+   "visual": "Gibberish symbols turn back into clean bars of data; green check; label 'April 20, 2024'.",
+   "text": "On April 20, 2024, readable data finally came home."
+  },
+  {
+   "title": "Quiet again",
+   "visual": "Data stream flatlines to a thin carrier line; label 'Nov 14, 2026: diagnosing'.",
+   "text": "This month, Voyager 1 went quiet again, and engineers are still diagnosing it."
+  },
+  {
+   "title": "Loop",
+   "visual": "Distance counter from the hook returns, now showing 'one light-day'; question mark pulses.",
+   "text": "Can they fix a computer fifteen billion miles away twice?"
+  }
+ ],
+ "endCard": {
+  "title": "Never stop debugging",
+  "cta": "Follow for a new engineering story every week"
+ }
+}
