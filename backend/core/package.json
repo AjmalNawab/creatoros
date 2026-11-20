@@ -6,8 +6,18 @@
   "types": "src/index.ts",
   "scripts": {
     "test": "dotenv -e ../../.env -- vitest run",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "ai": "dotenv -e ../../.env -- tsx src/cli/ai.ts"
   },
-  "dependencies": { "@creatoros/db": "workspace:*" },
-  "devDependencies": { "vitest": "^3", "typescript": "^5", "@types/node": "^22", "dotenv-cli": "^8" }
+  "dependencies": {
+    "@creatoros/db": "workspace:*",
+    "zod": "3"
+  },
+  "devDependencies": {
+    "@types/node": "^22",
+    "dotenv-cli": "^8",
+    "typescript": "^5",
+    "vitest": "^3",
+    "tsx": "^4"
+  }
 }

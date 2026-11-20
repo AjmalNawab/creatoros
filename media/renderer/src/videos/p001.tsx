@@ -1,6 +1,6 @@
 import React from 'react';
 import { AbsoluteFill, interpolate, random, useCurrentFrame, useVideoConfig } from 'remotion';
-import { C, NightSky, Particles, Tag, UrduText, ease, prog } from './common';
+import { C, NightSky, Particles, Tag, UrduText, ease, prog } from '../common';
 
 const useP = () => {
   const f = useCurrentFrame();

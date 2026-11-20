@@ -2,7 +2,7 @@ import { randomUUID } from 'node:crypto';
 import type { PrismaClient } from '@creatoros/db';
 import { acquireLock, ensureLockRow, getLock, releaseLock, renewLock } from './lock';
 import { audit, isEmergencyStopped } from './system';
-import type { AgentDefinition, Json, TickResult } from './types';
+import { DeferError, type AgentDefinition, type Json, type TickResult } from './types';
 
 export interface EngineOptions {
   workerId?: string;
@@ -116,7 +116,7 @@ export class Engine {
     try {
       const result = await Promise.race([
         agent.run({
-          taskId, runId, brandId: task.brandId, input: task.input as Json, signal: ac.signal,
+          taskId, agentId: task.agentId, contentProjectId: task.contentProjectId, runId, brandId: task.brandId, input: task.input as Json, signal: ac.signal,
           log: (message, data) => audit(this.db, `agent:${task.agentId}`, 'agent.log', { entity: 'task', entityId: taskId, data: { message, ...data } }),
         }),
         aborted,
@@ -139,6 +139,15 @@ export class Engine {
       await audit(this.db, `agent:${task.agentId}`, needsApproval ? 'task.awaiting_approval' : 'task.completed', { entity: 'task', entityId: taskId, brandId: task.brandId, data: { runId } });
       return { kind: 'ran', taskId, runId, outcome: needsApproval ? 'awaiting_approval' : 'succeeded' };
     } catch (e) {
+      if (e instanceof DeferError && !abortReason) {
+        // Not a failure: pause the task (attempt not consumed) and free the lock for other work.
+        await this.db.$transaction([
+          this.db.taskRun.update({ where: { id: runId }, data: { status: 'DEFERRED', error: e.message, finishedAt: new Date() } }),
+          this.db.task.update({ where: { id: taskId }, data: { status: 'WAITING_AI', attempts: { decrement: 1 } } }),
+        ]);
+        await audit(this.db, `agent:${task.agentId}`, 'task.waiting_ai', { entity: 'task', entityId: taskId, data: { runId, ref: e.ref } });
+        return { kind: 'ran', taskId, runId, outcome: 'deferred' };
+      }
       const msg = abortReason || (e as Error).message || String(e);
       const isAbort = !!abortReason && abortReason !== `timeout after ${timeoutSec}s`;
       await this.db.taskRun.update({ where: { id: runId }, data: {

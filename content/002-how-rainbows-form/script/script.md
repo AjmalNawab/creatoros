@@ -1,0 +1,36 @@
+# Script: how rainbows form
+
+**Title options**
+1. دھنک کیسے بنتی ہے؟ | How Do Rainbows Form? (Urdu)
+2. قوسِ قزح کا راز: 1 منٹ میں سمجھیں
+3. بارش، سورج اور سات رنگ: دھنک کی سائنس
+
+### Scene 1: Hook
+*Visual: Grey rain clouds part, the sun comes out, a colourful rainbow arc grows across the sky above green fields; title text appears.*
+
+بارش کے بعد جب سورج نکلتا ہے، تو کبھی کبھی آسمان پر رنگوں کی ایک خوبصورت کمان نظر آتی ہے۔ اسے قوسِ قزح یا دھنک کہتے ہیں۔ لیکن یہ رنگ آتے کہاں سے ہیں؟
+
+### Scene 2: White light holds all colours
+*Visual: A white beam of sunlight enters from the left; as the narration lists colours, the beam splits into six coloured bands with Urdu colour labels appearing one by one.*
+
+سورج کی روشنی ہمیں سفید لگتی ہے، لیکن اصل میں اس کے اندر سارے رنگ چھپے ہوتے ہیں۔ سرخ، نارنجی، پیلا، سبز، نیلا اور بنفشی۔
+
+### Scene 3: Inside a raindrop
+*Visual: A big close-up raindrop (circle). A white ray enters, bends (label: مڑنا), hits the back wall and reflects (label: ٹکرانا), then exits bending again. Animated arrow path.*
+
+جب یہ روشنی بارش کے ایک قطرے میں داخل ہوتی ہے، تو تھوڑا سا مڑ جاتی ہے۔ پھر قطرے کی پچھلی دیوار سے ٹکرا کر واپس آتی ہے، اور باہر نکلتے ہوئے ایک بار پھر مڑتی ہے۔
+
+### Scene 4: Colours spread out
+*Visual: Same raindrop; the exiting ray fans out into coloured rays, violet bending most and red least (labels). Then zoom out: many small drops, each sending colours, forming an arc.*
+
+ہر رنگ تھوڑا مختلف مڑتا ہے۔ بنفشی سب سے زیادہ، اور سرخ سب سے کم۔ اسی لیے سفید روشنی بکھر کر رنگوں کی پٹی بن جاتی ہے۔ لاکھوں قطرے مل کر آسمان پر یہ کمان بنا دیتے ہیں۔
+
+### Scene 5: How to see one
+*Visual: Side view: sun low on the left behind a small person, rain curtain on the right, rainbow arc in front of the person; labels 'سورج پیچھے' and 'بارش سامنے'. A clock icon shows morning/evening.*
+
+دھنک دیکھنے کے لیے سورج آپ کے پیچھے، اور بارش آپ کے سامنے ہونی چاہیے۔ اسی لیے یہ اکثر صبح یا شام کو نظر آتی ہے۔ اور ہاں، ہر شخص اپنی الگ دھنک دیکھتا ہے!
+
+### Scene 6: History and outro
+*Visual: A glass sphere filled with water on a wooden desk with a candle-lit study and a scroll; label 'کمال الدین فارسی — تقریباً 1300ء'. Then end card with subscribe button.*
+
+تقریباً سات سو سال پہلے، فارسی سائنس دان کمال الدین فارسی نے پانی سے بھرے شیشے کے گولے سے یہ راز سمجھایا تھا۔ ویڈیو پسند آئی ہو تو سبسکرائب کریں، اور بتائیں اگلی ویڈیو کس موضوع پر ہو۔

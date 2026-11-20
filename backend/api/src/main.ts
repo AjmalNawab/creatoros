@@ -1,12 +1,15 @@
 import 'reflect-metadata';
+import { existsSync, readdirSync, statSync } from 'node:fs';
+import path from 'node:path';
+import type { Response } from 'express';
 import {
-  Body, CanActivate, Controller, ExecutionContext, Get, Inject, Injectable, Module, NotFoundException,
+  Body, CanActivate, Res, Controller, ExecutionContext, Get, Inject, Injectable, Module, NotFoundException,
   BadRequestException, Param, Patch, Post, Query, UnauthorizedException,
 } from '@nestjs/common';
 import { APP_GUARD, NestFactory } from '@nestjs/core';
 import { z } from 'zod';
 import { getDb, type PrismaClient } from '@creatoros/db';
-import { audit, decideApproval, getLock, isEmergencyStopped, setEmergencyStop, submitInstruction } from '@creatoros/core';
+import { audit, decideApproval, getLock, isEmergencyStopped, paths, safeContentPath, setEmergencyStop, submitInstruction } from '@creatoros/core';
 
 // BigInt (lock tokens, audit ids) → JSON string
 (BigInt.prototype as unknown as { toJSON: () => string }).toJSON = function () { return this.toString(); };
@@ -133,6 +136,9 @@ class TasksController {
     const r = await this.db.task.updateMany({ where: { id, status: { in: ['PENDING', 'QUEUED', 'FAILED', 'AWAITING_APPROVAL', 'BLOCKED'] } },
       data: { status: 'CANCELLED' } });
     if (!r.count) throw new BadRequestException('task cannot be cancelled in its current state');
+    // A cancelled task can no longer be approved: close its open approval requests.
+    await this.db.approval.updateMany({ where: { taskId: id, decision: 'PENDING' },
+      data: { decision: 'REJECTED', decidedBy: 'system', feedback: 'task cancelled', decidedAt: new Date() } });
     await audit(this.db, OWNER, 'task.cancelled', { entity: 'task', entityId: id });
     return { ok: true };
   }
@@ -140,7 +146,7 @@ class TasksController {
   @Get('approvals')
   approvals(@Query('decision') decision?: string) {
     return this.db.approval.findMany({ where: decision ? { decision: decision as never } : {}, orderBy: { createdAt: 'desc' }, take: 100,
-      include: { task: { select: { type: true, agentId: true, output: true, input: true } } } });
+      include: { task: { select: { type: true, agentId: true, output: true, input: true, contentProjectId: true } } } });
   }
 
   @Post('approvals/:id/decide')
@@ -151,8 +157,61 @@ class TasksController {
   }
 }
 
+/** Lists files under a content project folder (relative paths). */
+function listFiles(slug: string): { path: string; bytes: number }[] {
+  const base = paths.content(slug);
+  if (!existsSync(base)) return [];
+  const out: { path: string; bytes: number }[] = [];
+  const walk = (dir: string) => {
+    for (const name of readdirSync(dir)) {
+      const full = path.join(dir, name);
+      const st = statSync(full);
+      if (st.isDirectory()) walk(full); else out.push({ path: path.relative(base, full), bytes: st.size });
+    }
+  };
+  walk(base);
+  return out.sort((a, b) => a.path.localeCompare(b.path));
+}
+
+@Controller()
+class ContentController {
+  constructor(@Inject(DB) private db: PrismaClient) {}
+
+  @Get('content')
+  list() {
+    return this.db.contentProject.findMany({ orderBy: { createdAt: 'desc' },
+      include: { tasks: { select: { agentId: true, status: true, type: true }, orderBy: { priority: 'asc' } } } });
+  }
+
+  @Get('content/:id')
+  async get(@Param('id') id: string) {
+    const p = await this.db.contentProject.findUnique({ where: { id }, include: {
+      tasks: { orderBy: { priority: 'asc' }, include: { approvals: { orderBy: { createdAt: 'desc' } }, aiRequests: { orderBy: { createdAt: 'desc' }, select: { id: true, kind: true, status: true, error: true, createdAt: true } } } } } });
+    if (!p) throw new NotFoundException();
+    return { ...p, files: listFiles(p.slug) };
+  }
+
+  /** Streams a file from content/<slug>/ (supports Range for video seeking). */
+  @Get('content/:id/file')
+  async file(@Param('id') id: string, @Query('path') rel: string, @Res() res: Response) {
+    const p = await this.db.contentProject.findUnique({ where: { id } });
+    if (!p || !rel) throw new NotFoundException();
+    let full: string;
+    try { full = safeContentPath(p.slug, rel); } catch { throw new BadRequestException('invalid path'); }
+    if (!existsSync(full)) throw new NotFoundException();
+    res.sendFile(full, { acceptRanges: true, dotfiles: 'deny' });
+  }
+
+  @Get('ai-requests')
+  ai(@Query('status') status?: string) {
+    return this.db.aiRequest.findMany({ where: status ? { status: status as never } : {}, orderBy: { createdAt: 'desc' }, take: 100,
+      select: { id: true, kind: true, format: true, status: true, error: true, createdAt: true, answeredAt: true, answeredBy: true,
+        task: { select: { id: true, contentProject: { select: { id: true, slug: true, title: true } } } } } });
+  }
+}
+
 @Module({
-  controllers: [SystemController, AgentsController, TasksController],
+  controllers: [SystemController, AgentsController, TasksController, ContentController],
   providers: [{ provide: DB, useFactory: () => getDb() }, { provide: APP_GUARD, useClass: ApiKeyGuard }],
 })
 class AppModule {}

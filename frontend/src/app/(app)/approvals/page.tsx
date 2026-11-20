@@ -1,10 +1,11 @@
 import { api } from '@/lib/api';
 import { decide } from '@/lib/actions';
 import { Badge, Btn, Card, Json, ago } from '@/components/ui';
+import { ScriptView, VideoPlayer, media } from '@/components/content';
 
 type Approval = {
   id: string; type: string; subjectRef: string; contentHash: string; decision: string; feedback: string | null;
-  createdAt: string; decidedAt: string | null; task: { type: string; agentId: string; output: unknown; input: unknown } | null;
+  createdAt: string; decidedAt: string | null; task: { type: string; agentId: string; output: any; input: unknown; contentProjectId: string | null } | null; // eslint-disable-line @typescript-eslint/no-explicit-any
 };
 
 export default async function ApprovalsPage() {
@@ -21,7 +22,14 @@ export default async function ApprovalsPage() {
             <div><span className="font-medium">{a.type}</span> <span className="text-sm text-zinc-500">from {a.task?.agentId} · {ago(a.createdAt)}</span></div>
             <span className="font-mono text-xs text-zinc-500" title="Approval is valid only for this exact content">#{a.contentHash.slice(0, 12)}</span>
           </div>
-          <Json value={a.task?.output} />
+          {a.task?.type === 'script' && a.task.output?.scenes
+            ? <ScriptView scenes={a.task.output.scenes} titleOptions={a.task.output.titleOptions} words={a.task.output.words} targetWords={a.task.output.targetWords} />
+            : a.task?.type === 'final_video' && a.task.contentProjectId && a.task.output?.video
+            ? <div className="space-y-3">
+                <VideoPlayer src={media(a.task.contentProjectId, String(a.task.output.video).replace(/^content\/[^/]+\//, ''))} />
+                <ul className="text-sm">{(a.task.output.checks ?? []).map((c: { check: string; pass: boolean; detail: string }, i: number) => <li key={i}>{c.pass ? '✅' : '❌'} {c.check} <span className="text-zinc-500">{c.detail}</span></li>)}</ul>
+              </div>
+            : <Json value={a.task?.output} />}
           <form action={decide.bind(null, a.id)} className="mt-3 flex flex-col gap-2 sm:flex-row">
             <input name="feedback" placeholder="Feedback (optional)" className="flex-1 rounded-lg border border-zinc-300 bg-transparent px-3 py-1.5 text-sm dark:border-zinc-700" />
             <div className="flex gap-2">

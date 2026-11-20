@@ -8,6 +8,7 @@
     "test": "pnpm -r test",
     "worker": "pnpm --filter @creatoros/worker start",
     "api": "pnpm --filter @creatoros/api start:dev",
-    "web": "pnpm --filter @creatoros/web dev"
+    "web": "pnpm --filter @creatoros/web dev",
+    "ai": "pnpm --silent --filter @creatoros/core ai"
   }
 }

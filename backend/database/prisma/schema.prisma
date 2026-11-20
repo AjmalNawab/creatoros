@@ -26,6 +26,7 @@ model Brand {
 
   tasks     Task[]
   approvals Approval[]
+  projects  ContentProject[]
 }
 
 // ---------- Agents ----------
@@ -58,12 +59,15 @@ enum TaskStatus {
   DEAD              // retries exhausted: dead-letter
   CANCELLED
   BLOCKED           // needs human action
+  WAITING_AI        // waiting for an AI response (operator mode: Claude Code answers the AI queue)
 }
 
 model Task {
   id            String     @id @default(uuid())
   brandId       String?
   brand         Brand?     @relation(fields: [brandId], references: [id])
+  contentProjectId String?
+  contentProject   ContentProject? @relation(fields: [contentProjectId], references: [id])
   parentTaskId  String?
   parent        Task?      @relation("TaskTree", fields: [parentTaskId], references: [id])
   children      Task[]     @relation("TaskTree")
@@ -88,6 +92,7 @@ model Task {
   dependents TaskDependency[] @relation("prerequisite")
   runs       TaskRun[]
   approvals  Approval[]
+  aiRequests AiRequest[]
 
   @@index([status, priority, createdAt])
   @@index([brandId])
@@ -108,6 +113,7 @@ enum RunStatus {
   FAILED
   TIMED_OUT
   ABORTED   // emergency stop or lease lost
+  DEFERRED  // agent paused to wait for an AI response; lock released
 }
 
 // One row per execution attempt (append-only history)
@@ -189,4 +195,50 @@ model AuditLog {
 
   @@index([at])
   @@index([entity, entityId])
+}
+
+// ---------- Content ----------
+model ContentProject {
+  id        String   @id @default(uuid())
+  brandId   String?
+  brand     Brand?   @relation(fields: [brandId], references: [id])
+  key       String   @unique // renderer key, e.g. "p002"
+  slug      String   @unique // folder under content/, e.g. "002-volcanoes"
+  title     String
+  language  String   @default("ur")
+  status    String   @default("in_production")
+  params    Json     @default("{}")
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  tasks Task[]
+}
+
+// ---------- AI requests (provider-agnostic; operator mode = answered by Claude Code) ----------
+enum AiRequestStatus {
+  PENDING   // waiting for an answer
+  ANSWERED  // answer submitted, not yet consumed by the agent
+  CONSUMED  // validated and used by the agent
+  REJECTED  // answer failed validation; a new request is created with the error
+}
+
+model AiRequest {
+  id         String          @id @default(uuid())
+  taskId     String
+  task       Task            @relation(fields: [taskId], references: [id])
+  agentId    String
+  kind       String          // e.g. "research", "script", "visuals"
+  inputHash  String          // same task input → same request; changed input (feedback) → new request
+  format     String          // "json" | "text"
+  prompt     String
+  response   String?
+  status     AiRequestStatus @default(PENDING)
+  error      String?
+  provider   String          @default("operator")
+  answeredBy String?
+  createdAt  DateTime        @default(now())
+  answeredAt DateTime?
+
+  @@index([status])
+  @@index([taskId, kind, inputHash])
 }

@@ -2,6 +2,8 @@ export type Json = null | boolean | number | string | Json[] | { [k: string]: Js
 
 export interface AgentContext {
   taskId: string;
+  agentId: string;
+  contentProjectId: string | null;
   runId: string;
   brandId: string | null;
   input: Json;
@@ -32,4 +34,12 @@ export type TickResult =
   | { kind: 'stopped' }
   | { kind: 'idle' }
   | { kind: 'busy' }
-  | { kind: 'ran'; taskId: string; runId: string; outcome: 'succeeded' | 'failed' | 'dead' | 'awaiting_approval' | 'aborted' };
+  | { kind: 'ran'; taskId: string; runId: string; outcome: 'succeeded' | 'failed' | 'dead' | 'awaiting_approval' | 'aborted' | 'deferred' };
+
+/** Thrown by an agent to pause until an external dependency (e.g. an AI answer) is ready. Not a failure. */
+export class DeferError extends Error {
+  constructor(public readonly waitFor: 'ai', public readonly ref: string, message?: string) {
+    super(message ?? `waiting for ${waitFor} (${ref})`);
+    this.name = 'DeferError';
+  }
+}
