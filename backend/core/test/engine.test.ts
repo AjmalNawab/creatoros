@@ -89,7 +89,8 @@ describe('emergency stop', () => {
     await engine.register([slow]);
     await queue('slow', 2);
     const running = engine.tick();
-    await sleep(500);
+    // Wait until the agent is really running (robust under CPU load), then press stop.
+    for (let i = 0; i < 100 && !(await db.taskRun.count({ where: { status: 'RUNNING' } })); i++) await sleep(100);
     await setEmergencyStop(db, true, 'user:test');
     const r = await running;
     expect(r.kind === 'ran' && r.outcome).toBe('aborted');
