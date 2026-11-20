@@ -143,9 +143,9 @@ export class Engine {
         // Not a failure: pause the task (attempt not consumed) and free the lock for other work.
         await this.db.$transaction([
           this.db.taskRun.update({ where: { id: runId }, data: { status: 'DEFERRED', error: e.message, finishedAt: new Date() } }),
-          this.db.task.update({ where: { id: taskId }, data: { status: 'WAITING_AI', attempts: { decrement: 1 } } }),
+          this.db.task.update({ where: { id: taskId }, data: { status: e.waitFor === 'human' ? 'WAITING_HUMAN' : 'WAITING_AI', attempts: { decrement: 1 } } }),
         ]);
-        await audit(this.db, `agent:${task.agentId}`, 'task.waiting_ai', { entity: 'task', entityId: taskId, data: { runId, ref: e.ref } });
+        await audit(this.db, `agent:${task.agentId}`, `task.waiting_${e.waitFor}`, { entity: 'task', entityId: taskId, data: { runId, ref: e.ref } });
         return { kind: 'ran', taskId, runId, outcome: 'deferred' };
       }
       const msg = abortReason || (e as Error).message || String(e);

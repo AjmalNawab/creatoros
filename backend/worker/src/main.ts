@@ -1,9 +1,10 @@
 import { getDb } from '@creatoros/db';
-import { CONTENT_AGENTS, Engine, PLACEHOLDER_AGENTS, audit } from '@creatoros/core';
+import { Engine, audit } from '@creatoros/core';
+import { ALL_AGENTS } from '@creatoros/agents';
 
 // CreatorOS worker: the only process that executes agents (one at a time, under the global DB lock).
-// Real content agents replace the placeholders; the orchestrator placeholder owns workflow root tasks.
-const AGENTS = [...PLACEHOLDER_AGENTS.filter((a) => a.id === 'orchestrator'), ...CONTENT_AGENTS];
+// Agents: Main (orchestrator) → Production (makes the video) → Platforms (youtube, facebook, …).
+const AGENTS = ALL_AGENTS;
 
 async function main() {
   const db = getDb();

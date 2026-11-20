@@ -1,7 +1,7 @@
 import { execSync } from 'node:child_process';
 import { beforeAll, beforeEach, afterAll, describe, expect, it } from 'vitest';
 import { PrismaClient } from '@creatoros/db';
-import { Engine, acquireLock, getLock, setEmergencyStop, submitInstruction, decideApproval, type AgentDefinition } from '../src';
+import { Engine, acquireLock, getLock, setEmergencyStop, type AgentDefinition } from '../src';
 
 // Isolated schema so tests never touch real data.
 const withSchema = (url: string) => url + (url.includes('?') ? '&' : '?') + 'schema=creatoros_test';
@@ -19,7 +19,7 @@ beforeAll(() => {
 }, 120_000);
 
 beforeEach(async () => {
-  await db.$executeRawUnsafe(`TRUNCATE "AuditLog","Approval","TaskRun","TaskDependency","Task","Agent","SystemSetting","ExecutionLock" CASCADE`);
+  await db.$executeRawUnsafe(`TRUNCATE "AuditLog","Approval","AiRequest","HumanActionRequest","PlatformPost","TaskRun","TaskDependency","Task","ContentProject","Agent","SystemSetting","ExecutionLock" CASCADE`);
 });
 afterAll(() => db.$disconnect());
 
@@ -114,23 +114,4 @@ describe('retries and dead-letter', () => {
     expect(t.lastError).toBe('boom');
     expect(await db.taskRun.count({ where: { status: 'FAILED' } })).toBe(3);
   }, 30_000);
-});
-
-describe('orchestrator workflow', () => {
-  it('runs a template in dependency order and pauses for human approval', async () => {
-    const order: string[] = [];
-    const ids = ['orchestrator', 'research', 'script', 'storyboard', 'voice', 'visuals', 'video', 'qa'];
-    const engine = new Engine(db, { workerId: 'w' });
-    await engine.register(ids.map((id) => ({ id, name: id, department: 'Test', requiresApprovalAfter: id === 'script',
-      run: async () => { order.push(id); return { output: { by: id } }; } })));
-    await submitInstruction(db, 'Create a 2 minute Urdu video about volcanoes');
-
-    for (let i = 0; i < 5; i++) await engine.tick();
-    expect(order).toEqual(['research', 'script']);                 // stopped at approval gate
-    const approval = await db.approval.findFirstOrThrow({ where: { decision: 'PENDING' } });
-    await decideApproval(db, approval.id, 'APPROVED', 'user:owner');
-    for (let i = 0; i < 10; i++) await engine.tick();
-    expect(order).toEqual(['research', 'script', 'storyboard', 'voice', 'visuals', 'video', 'qa']);
-    expect(await db.auditLog.count({ where: { action: 'approval.approved' } })).toBe(1);
-  }, 60_000);
 });

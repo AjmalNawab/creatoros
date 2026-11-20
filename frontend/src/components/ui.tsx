@@ -16,6 +16,7 @@ export const STATUS_STYLE: Record<string, string> = {
   ABORTED: 'bg-red-100 text-red-800 dark:bg-red-950 dark:text-red-300',
   CANCELLED: 'bg-zinc-200 text-zinc-500 dark:bg-zinc-800 dark:text-zinc-400',
   WAITING_AI: 'bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300 animate-pulse',
+  WAITING_HUMAN: 'bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-950 dark:text-fuchsia-300 animate-pulse',
   DEFERRED: 'bg-sky-100 text-sky-800 dark:bg-sky-950 dark:text-sky-300',
   BLOCKED: 'bg-rose-100 text-rose-800 dark:bg-rose-950 dark:text-rose-300',
 };

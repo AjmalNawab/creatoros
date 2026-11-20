@@ -38,7 +38,7 @@ export type TickResult =
 
 /** Thrown by an agent to pause until an external dependency (e.g. an AI answer) is ready. Not a failure. */
 export class DeferError extends Error {
-  constructor(public readonly waitFor: 'ai', public readonly ref: string, message?: string) {
+  constructor(public readonly waitFor: 'ai' | 'human', public readonly ref: string, message?: string) {
     super(message ?? `waiting for ${waitFor} (${ref})`);
     this.name = 'DeferError';
   }

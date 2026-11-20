@@ -9,7 +9,8 @@ import {
 import { APP_GUARD, NestFactory } from '@nestjs/core';
 import { z } from 'zod';
 import { getDb, type PrismaClient } from '@creatoros/db';
-import { audit, decideApproval, getLock, isEmergencyStopped, paths, safeContentPath, setEmergencyStop, submitInstruction } from '@creatoros/core';
+import { audit, completeHumanAction, decideApproval, getLock, isEmergencyStopped, paths, safeContentPath, setEmergencyStop } from '@creatoros/core';
+import { PLATFORMS, addPlatform, submitInstruction, type PlatformId } from '@creatoros/agents';
 
 // BigInt (lock tokens, audit ids) → JSON string
 (BigInt.prototype as unknown as { toJSON: () => string }).toJSON = function () { return this.toString(); };
@@ -133,7 +134,7 @@ class TasksController {
 
   @Post('tasks/:id/cancel')
   async cancel(@Param('id') id: string) {
-    const r = await this.db.task.updateMany({ where: { id, status: { in: ['PENDING', 'QUEUED', 'FAILED', 'AWAITING_APPROVAL', 'BLOCKED'] } },
+    const r = await this.db.task.updateMany({ where: { id, status: { in: ['PENDING', 'QUEUED', 'FAILED', 'AWAITING_APPROVAL', 'BLOCKED', 'WAITING_AI', 'WAITING_HUMAN'] } },
       data: { status: 'CANCELLED' } });
     if (!r.count) throw new BadRequestException('task cannot be cancelled in its current state');
     // A cancelled task can no longer be approved: close its open approval requests.
@@ -186,7 +187,8 @@ class ContentController {
   @Get('content/:id')
   async get(@Param('id') id: string) {
     const p = await this.db.contentProject.findUnique({ where: { id }, include: {
-      tasks: { orderBy: { priority: 'asc' }, include: { approvals: { orderBy: { createdAt: 'desc' } }, aiRequests: { orderBy: { createdAt: 'desc' }, select: { id: true, kind: true, status: true, error: true, createdAt: true } } } } } });
+      tasks: { orderBy: { priority: 'asc' }, include: { approvals: { orderBy: { createdAt: 'desc' } }, aiRequests: { orderBy: { createdAt: 'desc' }, select: { id: true, kind: true, status: true, error: true, createdAt: true } } } },
+      posts: { orderBy: { publishedAt: 'desc' } } } });
     if (!p) throw new NotFoundException();
     return { ...p, files: listFiles(p.slug) };
   }
@@ -200,6 +202,35 @@ class ContentController {
     try { full = safeContentPath(p.slug, rel); } catch { throw new BadRequestException('invalid path'); }
     if (!existsSync(full)) throw new NotFoundException();
     res.sendFile(full, { acceptRanges: true, dotfiles: 'deny' });
+  }
+
+  @Post('content/:id/platforms')
+  async addPlatformToProject(@Param('id') id: string, @Body() body: unknown) {
+    const { platform } = parse(z.object({ platform: z.enum(Object.keys(PLATFORMS) as [PlatformId, ...PlatformId[]]) }), body);
+    try { return await addPlatform(this.db, id, platform, OWNER); } catch (e) { throw new BadRequestException((e as Error).message); }
+  }
+
+  @Get('platforms')
+  platforms() {
+    return Object.values(PLATFORMS).map(({ id, name, status, route, notes, agents }) => ({ id, name, status, route, notes, agents: agents.map((a) => a.id) }));
+  }
+
+  @Get('posts')
+  posts() {
+    return this.db.platformPost.findMany({ orderBy: { publishedAt: 'desc' }, take: 100, include: { contentProject: { select: { id: true, title: true, slug: true } } } });
+  }
+
+  @Get('human-actions')
+  humanActions(@Query('status') status?: string) {
+    return this.db.humanActionRequest.findMany({ where: status ? { status: status as never } : {}, orderBy: { createdAt: 'desc' }, take: 100,
+      include: { task: { select: { id: true, agentId: true, contentProject: { select: { id: true, slug: true, title: true } } } } } });
+  }
+
+  @Post('human-actions/:id/complete')
+  async completeAction(@Param('id') id: string, @Body() body: unknown) {
+    const { result } = parse(z.object({ result: z.record(z.unknown()) }), body);
+    try { await completeHumanAction(this.db, id, result as never, OWNER); return { ok: true }; }
+    catch (e) { throw new BadRequestException((e as Error).message); }
   }
 
   @Get('ai-requests')

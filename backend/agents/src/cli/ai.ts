@@ -6,7 +6,7 @@
  */
 import { readFile } from 'node:fs/promises';
 import { getDb } from '@creatoros/db';
-import { answerAiRequest } from '../ai';
+import { answerAiRequest } from '@creatoros/core';
 
 const db = getDb();
 const [cmd, id, file] = process.argv.slice(2);

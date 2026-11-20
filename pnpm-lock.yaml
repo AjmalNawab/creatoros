@@ -8,8 +8,39 @@ importers:
 
   .: {}
 
+  backend/agents:
+    dependencies:
+      '@creatoros/core':
+        specifier: workspace:*
+        version: link:../core
+      '@creatoros/db':
+        specifier: workspace:*
+        version: link:../database
+      zod:
+        specifier: ^3
+        version: 3.25.76
+    devDependencies:
+      '@types/node':
+        specifier: ^22
+        version: 22.20.5
+      dotenv-cli:
+        specifier: ^8
+        version: 8.0.0
+      tsx:
+        specifier: ^4
+        version: 4.23.15
+      typescript:
+        specifier: ^5
+        version: 5.9.3
+      vitest:
+        specifier: ^3
+        version: 3.2.7(@types/node@22.20.5)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.23.15)
+
   backend/api:
     dependencies:
+      '@creatoros/agents':
+        specifier: workspace:*
+        version: link:../agents
       '@creatoros/core':
         specifier: workspace:*
         version: link:../core
@@ -97,6 +128,9 @@ importers:
 
   backend/worker:
     dependencies:
+      '@creatoros/agents':
+        specifier: workspace:*
+        version: link:../agents
       '@creatoros/core':
         specifier: workspace:*
         version: link:../core

@@ -9,6 +9,7 @@
     "worker": "pnpm --filter @creatoros/worker start",
     "api": "pnpm --filter @creatoros/api start:dev",
     "web": "pnpm --filter @creatoros/web dev",
-    "ai": "pnpm --silent --filter @creatoros/core ai"
+    "ai": "pnpm --silent --filter @creatoros/agents ai",
+    "action": "pnpm --silent --filter @creatoros/agents action"
   }
 }

@@ -6,8 +6,7 @@
   "types": "src/index.ts",
   "scripts": {
     "test": "dotenv -e ../../.env -- vitest run",
-    "typecheck": "tsc --noEmit",
-    "ai": "dotenv -e ../../.env -- tsx src/cli/ai.ts"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@creatoros/db": "workspace:*",

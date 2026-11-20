@@ -60,6 +60,7 @@ enum TaskStatus {
   CANCELLED
   BLOCKED           // needs human action
   WAITING_AI        // waiting for an AI response (operator mode: Claude Code answers the AI queue)
+  WAITING_HUMAN     // waiting for a human/operator action (e.g. browser upload via Chrome DevTools)
 }
 
 model Task {
@@ -93,6 +94,7 @@ model Task {
   runs       TaskRun[]
   approvals  Approval[]
   aiRequests AiRequest[]
+  humanActions HumanActionRequest[]
 
   @@index([status, priority, createdAt])
   @@index([brandId])
@@ -113,7 +115,7 @@ enum RunStatus {
   FAILED
   TIMED_OUT
   ABORTED   // emergency stop or lease lost
-  DEFERRED  // agent paused to wait for an AI response; lock released
+  DEFERRED  // agent paused to wait for an AI response or human action; lock released
 }
 
 // One row per execution attempt (append-only history)
@@ -212,6 +214,7 @@ model ContentProject {
   updatedAt DateTime @updatedAt
 
   tasks Task[]
+  posts PlatformPost[]
 }
 
 // ---------- AI requests (provider-agnostic; operator mode = answered by Claude Code) ----------
@@ -241,4 +244,50 @@ model AiRequest {
 
   @@index([status])
   @@index([taskId, kind, inputHash])
+}
+
+// ---------- Human / operator actions (Rev 1.1 Human Action Handler) ----------
+enum HumanActionStatus {
+  PENDING
+  DONE
+  CANCELLED
+}
+
+model HumanActionRequest {
+  id          String            @id @default(uuid())
+  taskId      String
+  task        Task              @relation(fields: [taskId], references: [id])
+  kind        String            // e.g. "youtube_upload"
+  inputHash   String
+  title       String
+  instructions String           // markdown steps for the operator
+  payload     Json              @default("{}") // exact approved package to use
+  status      HumanActionStatus @default(PENDING)
+  result      Json?             // e.g. { "url": "...", "videoId": "..." }
+  completedBy String?
+  createdAt   DateTime          @default(now())
+  completedAt DateTime?
+
+  @@index([status])
+  @@index([taskId, kind, inputHash])
+}
+
+// ---------- Published posts (one row per platform publication) ----------
+model PlatformPost {
+  id               String         @id @default(uuid())
+  contentProjectId String
+  contentProject   ContentProject @relation(fields: [contentProjectId], references: [id])
+  platform         String         // youtube | facebook | instagram | tiktok | linkedin
+  route            String         // browser | api | manual
+  idempotencyKey   String         @unique // sha(video)+platform: prevents duplicate publishing
+  approvalId       String?
+  externalId       String?        // platform post/video id
+  url              String?
+  visibility       String?
+  status           String         @default("published") // published | processing | failed | removed
+  metadata         Json           @default("{}")        // title, description, tags actually used
+  evidence         Json           @default("{}")        // verification details
+  publishedAt      DateTime       @default(now())
+
+  @@index([contentProjectId])
 }

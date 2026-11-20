@@ -1,5 +1,6 @@
 import { api } from '@/lib/api';
-import { Badge, Card, ago } from '@/components/ui';
+import { Badge, Btn, Card, ago } from '@/components/ui';
+import { addPlatformToProject } from '@/lib/actions';
 import { ScriptView, VideoPlayer, media } from '@/components/content';
 
 type Task = {
@@ -7,7 +8,8 @@ type Task = {
   approvals: { id: string; decision: string; feedback: string | null }[];
   aiRequests: { id: string; kind: string; status: string; error: string | null; createdAt: string }[];
 };
-type Project = { id: string; slug: string; title: string; status: string; createdAt: string; tasks: Task[]; files: { path: string; bytes: number }[] };
+type Post = { id: string; platform: string; url: string | null; status: string; visibility: string | null; publishedAt: string };
+type Project = { id: string; slug: string; title: string; status: string; createdAt: string; tasks: Task[]; posts: Post[]; files: { path: string; bytes: number }[] };
 
 export default async function ProjectPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
@@ -32,11 +34,23 @@ export default async function ProjectPage({ params }: { params: Promise<{ id: st
             <li key={t.id} className="rounded-lg border border-zinc-200 p-3 dark:border-zinc-800">
               <div className="flex items-center justify-between gap-2 text-sm"><span>{i + 1}. {t.agentId}</span><Badge status={t.status} /></div>
               {t.status === 'WAITING_AI' && <div className="mt-1 text-xs text-sky-700 dark:text-sky-400">Waiting for Claude Code. Say “process the AI queue”.</div>}
+              {t.status === 'WAITING_HUMAN' && <div className="mt-1 text-xs text-fuchsia-700 dark:text-fuchsia-400">Ready to upload. See Browser actions.</div>}
               {t.lastError && <div className="mt-1 line-clamp-3 text-xs text-red-600" title={t.lastError}>{t.lastError}</div>}
               {t.aiRequests.find((r) => r.status === 'REJECTED') && <div className="mt-1 text-xs text-orange-600">AI answer rejected once: re-asked with the error</div>}
             </li>
           ))}
         </ol>
+      </Card>
+
+      <Card title="Platforms">
+        {p.posts.length ? (
+          <ul className="mb-3 space-y-1 text-sm">{p.posts.map((x) => (
+            <li key={x.id}><span className="font-medium capitalize">{x.platform}</span>: {x.url ? <a href={x.url} target="_blank" className="text-sky-600 hover:underline">{x.url}</a> : '—'} <span className="text-zinc-500">({x.status}, {x.visibility})</span></li>
+          ))}</ul>
+        ) : <p className="mb-3 text-sm text-zinc-500">Not published anywhere yet.</p>}
+        {!p.tasks.some((t) => t.agentId === 'youtube.package' && t.status !== 'CANCELLED') && (
+          <form action={addPlatformToProject.bind(null, p.id, 'youtube')}><Btn>+ Publish to YouTube</Btn></form>
+        )}
       </Card>
 
       {has(videoRel) && <Card title="Final video"><VideoPlayer src={media(p.id, videoRel)} /></Card>}
