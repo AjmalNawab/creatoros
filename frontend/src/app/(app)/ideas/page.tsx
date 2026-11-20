@@ -1,7 +1,8 @@
 import Link from 'next/link';
+import { Lightbulb, Search, Sparkles, Target, ThumbsDown, TrendingUp, Users, Wand2, Swords } from 'lucide-react';
 import { api } from '@/lib/api';
 import { rejectIdea, selectIdea, startIdeation } from '@/lib/actions';
-import { Badge, Btn, Card, ago } from '@/components/ui';
+import { Badge, Btn, Card, EmptyState, LanguageToggle, PageHeader, Pill, ago, inputCls } from '@/components/ui';
 
 type Idea = {
   id: string; taskId: string; rank: number; title: string; topic: string; angle: string; audience: string; whyNow: string;
@@ -10,79 +11,86 @@ type Idea = {
 };
 type Round = { id: string; agentId: string; status: string; createdAt: string; input: { focus?: string | null } };
 
+const scoreTone = (s: number) => (s >= 8 ? 'from-emerald-500 to-emerald-600' : s >= 6 ? 'from-amber-400 to-orange-500' : 'from-zinc-400 to-zinc-500');
+
 export default async function IdeasPage() {
-  const [{ ideas, rounds }, brands] = await Promise.all([api<{ ideas: Idea[]; rounds: Round[] }>('/ideas'), api<{ active: boolean; profile: { language: string } }[]>('/brands')]);
-  const lang = brands.find((b) => b.active)?.profile.language ?? 'en';
+  const [{ ideas, rounds }, brands] = await Promise.all([
+    api<{ ideas: Idea[]; rounds: Round[] }>('/ideas'), api<{ name: string; active: boolean; profile: { language: string } }[]>('/brands')]);
+  const brand = brands.find((b) => b.active);
+  const lang = brand?.profile.language ?? 'en';
   const busy = rounds.filter((r) => !['COMPLETED', 'CANCELLED', 'DEAD'].includes(r.status));
   const proposed = ideas.filter((i) => i.status === 'PROPOSED');
-  const decided = ideas.filter((i) => i.status !== 'PROPOSED');
+  const decided = ideas.filter((i) => i.status !== 'PROPOSED').slice(0, 20);
+
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Ideas</h1>
-      <Card title="Suggest next videos">
-        <p className="mb-3 text-sm text-zinc-500">The Trend agent finds what is trending now for your <Link href="/brand" className="underline">brand profile</Link>. The Strategy agent proposes ranked ideas with audience, angle, competition and evidence. Nothing is produced until you pick one.</p>
+      <PageHeader icon={Lightbulb} title="Ideas" description={<>The Trend agent scans what is timely for <b className="font-medium text-zinc-700 dark:text-zinc-200">{brand?.name}</b>, and the Strategy agent ranks ideas by fit, demand and competition. Nothing is produced until you pick one.</>} />
+
+      <Card>
         <form action={startIdeation} className="flex flex-col gap-2 sm:flex-row">
-          <input name="focus" placeholder="Optional focus, e.g. space, monsoon, exams season…" className="flex-1 rounded-lg border border-zinc-300 bg-transparent px-3 py-2 dark:border-zinc-700" />
-          <select name="count" defaultValue="5" className="rounded-lg border border-zinc-300 bg-transparent px-3 py-2 dark:border-zinc-700">
-            {[3, 5, 7, 10].map((n) => <option key={n} value={n}>{n} ideas</option>)}
-          </select>
-          <Btn tone="primary">Suggest ideas</Btn>
+          <div className="relative flex-1"><Search className="pointer-events-none absolute left-3 top-1/2 size-4 -translate-y-1/2 text-zinc-400" />
+            <input name="focus" placeholder="Optional focus: e.g. aviation, bridges, anniversaries this month…" className={`${inputCls} pl-9`} /></div>
+          <select name="count" defaultValue="5" className={`${inputCls} sm:w-32`}>{[3, 5, 7, 10].map((n) => <option key={n} value={n}>{n} ideas</option>)}</select>
+          <Btn tone="accent" icon={Wand2}>Suggest ideas</Btn>
         </form>
         {busy.length > 0 && (
-          <div className="mt-3 flex flex-wrap gap-2 text-sm">{busy.map((r) => <span key={r.id} className="flex items-center gap-2">{r.agentId} <Badge status={r.status} /></span>)}
-            {busy.some((r) => r.status === 'WAITING_AI') && <span className="text-sky-700 dark:text-sky-400">In Claude Code, say “process the AI queue”.</span>}
+          <div className="mt-3 flex flex-wrap items-center gap-2 rounded-lg bg-sky-50 px-3 py-2 text-sm text-sky-800 dark:bg-sky-950/40 dark:text-sky-300">
+            <Sparkles className="size-4" />{busy.map((r) => <Badge key={r.id} status={r.status} label={`${r.agentId}: ${r.status === 'WAITING_AI' ? 'needs AI' : r.status.toLowerCase()}`} />)}
+            {busy.some((r) => r.status === 'WAITING_AI') && <span>In Claude Code, say <b>“process the AI queue”</b>.</span>}
           </div>
         )}
       </Card>
 
-      {proposed.map((i) => (
-        <Card key={i.id}>
-          <div className="flex flex-wrap items-start justify-between gap-3">
-            <div>
-              <div className="text-xs text-zinc-500">#{i.rank} · {i.format} · {Math.round(i.durationSec / 60 * 10) / 10} min · {ago(i.createdAt)}</div>
-              <div className="text-lg font-medium" dir="auto">{i.title}</div>
-              <div className="text-sm text-zinc-500">{i.topic}</div>
-            </div>
-            <div className="text-right"><div className="text-3xl font-semibold tabular-nums">{i.score}</div><div className="text-xs text-zinc-500">score /10</div></div>
-          </div>
-          <dl className="mt-3 grid gap-3 text-sm md:grid-cols-2">
-            <div><dt className="text-xs uppercase text-zinc-500">Why now</dt><dd>{i.whyNow}</dd></div>
-            <div><dt className="text-xs uppercase text-zinc-500">Target audience</dt><dd>{i.audience}</dd></div>
-            <div><dt className="text-xs uppercase text-zinc-500">Our angle</dt><dd>{i.angle}</dd></div>
-            <div><dt className="text-xs uppercase text-zinc-500">Competition</dt><dd>{i.competition}</dd></div>
-          </dl>
-          <div className="mt-3 flex flex-wrap gap-1">{i.keywords.map((k) => <span key={k} dir="auto" className="rounded-full bg-zinc-100 px-2 py-0.5 text-xs dark:bg-zinc-800">{k}</span>)}</div>
-          <details className="mt-2 text-sm"><summary className="cursor-pointer text-zinc-500">Evidence ({i.evidence.length})</summary>
-            <ul className="mt-1 list-disc pl-5">{i.evidence.map((e, n) => <li key={n}>{e.source}: {e.detail} {e.url && <a href={e.url} target="_blank" className="text-sky-600 hover:underline">link</a>}</li>)}</ul>
-          </details>
-          <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-            <form action={selectIdea.bind(null, i.id)} className="flex gap-2">
-          <div role="radiogroup" aria-label="Language" className="flex overflow-hidden rounded-lg border border-zinc-300 text-sm dark:border-zinc-700">
-            {[['en', 'English'], ['ur', 'اردو Urdu']].map(([v, l]) => (
-              <label key={v} className="cursor-pointer px-3 py-2 has-[:checked]:bg-zinc-900 has-[:checked]:text-white dark:has-[:checked]:bg-white dark:has-[:checked]:text-zinc-900">
-                <input type="radio" name="language" value={v} defaultChecked={v === lang} className="sr-only" />{l}
-              </label>
-            ))}
-          </div>
-              <Btn tone="primary">Make this video</Btn>
-            </form>
-            <form action={rejectIdea.bind(null, i.id)} className="flex flex-1 gap-2">
-              <input name="feedback" placeholder="Why not? (teaches the next round)" className="flex-1 rounded-lg border border-zinc-300 bg-transparent px-3 py-1.5 text-sm dark:border-zinc-700" />
-              <Btn>Reject</Btn>
-            </form>
-          </div>
-        </Card>
-      ))}
+      {!proposed.length && !busy.length && <EmptyState icon={Lightbulb} title="No ideas waiting">Click “Suggest ideas” to get a fresh, ranked list.</EmptyState>}
 
-      {!!decided.length && (
-        <Card title="Decided">
-          <ul className="divide-y divide-zinc-200 text-sm dark:divide-zinc-800">
+      <div className="grid gap-4 xl:grid-cols-2">
+        {proposed.map((i) => (
+          <section key={i.id} className="flex flex-col overflow-hidden rounded-2xl border border-zinc-200/80 bg-white shadow-sm dark:border-zinc-800 dark:bg-zinc-900">
+            <div className="flex items-start gap-4 p-5">
+              <div className={`grid size-14 shrink-0 place-items-center rounded-2xl bg-gradient-to-br text-white shadow-sm ${scoreTone(i.score)}`}>
+                <div className="text-center leading-none"><div className="text-xl font-bold">{i.score}</div><div className="text-[9px] opacity-80">/10</div></div>
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-center gap-1.5 text-xs text-zinc-500"><Pill>#{i.rank}</Pill><Pill>{i.format}</Pill><Pill>{Math.round(i.durationSec / 6) / 10} min</Pill><span>{ago(i.createdAt)}</span></div>
+                <h3 dir="auto" className="mt-1.5 text-lg font-semibold leading-snug">{i.title}</h3>
+                <div className="text-sm text-zinc-500">{i.topic}</div>
+              </div>
+            </div>
+            <dl className="grid gap-3 border-t border-zinc-100 px-5 py-4 text-sm sm:grid-cols-2 dark:border-zinc-800">
+              {[[TrendingUp, 'Why now', i.whyNow], [Users, 'Audience', i.audience], [Target, 'Our angle', i.angle], [Swords, 'Competition', i.competition]].map(([Icon, l, v]) => {
+                const I = Icon as typeof Target;
+                return <div key={l as string}><dt className="flex items-center gap-1.5 text-xs font-medium text-zinc-500"><I className="size-3.5" />{l as string}</dt><dd className="mt-0.5 leading-relaxed">{v as string}</dd></div>;
+              })}
+            </dl>
+            <div className="space-y-2 px-5 pb-4">
+              <div className="flex flex-wrap gap-1">{i.keywords.map((k) => <Pill key={k}>{k}</Pill>)}</div>
+              <details className="text-sm"><summary className="cursor-pointer text-xs font-medium text-zinc-500 hover:text-zinc-800">Evidence ({i.evidence.length})</summary>
+                <ul className="mt-2 space-y-1 text-xs text-zinc-600 dark:text-zinc-400">{i.evidence.map((e, n) => <li key={n}>• <b className="font-medium">{e.source}</b>: {e.detail} {e.url && <a href={e.url} target="_blank" className="text-sky-600 hover:underline">source</a>}</li>)}</ul>
+              </details>
+            </div>
+            <div className="mt-auto flex flex-col gap-2 border-t border-zinc-100 bg-zinc-50/60 px-5 py-3 sm:flex-row dark:border-zinc-800 dark:bg-zinc-950/30">
+              <form action={rejectIdea.bind(null, i.id)} className="flex flex-1 gap-2">
+                <input name="feedback" placeholder="Why not? (teaches the next round)" className={`${inputCls} flex-1`} />
+                <Btn tone="ghost" icon={ThumbsDown}>Reject</Btn>
+              </form>
+              <form action={selectIdea.bind(null, i.id)} className="flex gap-2">
+                <LanguageToggle defaultValue={lang} />
+                <Btn tone="accent" icon={Wand2}>Make this</Btn>
+              </form>
+            </div>
+          </section>
+        ))}
+      </div>
+
+      {decided.length > 0 && (
+        <Card title="Decided" padded={false}>
+          <ul className="divide-y divide-zinc-100 text-sm dark:divide-zinc-800">
             {decided.map((i) => (
-              <li key={i.id} className="flex flex-wrap items-center justify-between gap-3 py-2">
-                <span dir="auto">{i.title} {i.feedback && <span className="text-zinc-500">· “{i.feedback}”</span>}</span>
+              <li key={i.id} className="flex flex-wrap items-center justify-between gap-3 px-5 py-2.5">
+                <span className="min-w-0 truncate" dir="auto">{i.title}{i.feedback && <span className="text-zinc-400"> · “{i.feedback}”</span>}</span>
                 <span className="flex items-center gap-3">
-                  {i.contentProjectId && <Link href={`/content/${i.contentProjectId}`} className="text-sky-600 hover:underline">project</Link>}
-                  <Badge status={i.status === 'SELECTED' ? 'APPROVED' : 'REJECTED'} />
+                  {i.contentProjectId && <Link href={`/content/${i.contentProjectId}`} className="text-xs font-medium text-sky-600 hover:underline">Open video</Link>}
+                  <Badge status={i.status} />
                 </span>
               </li>
             ))}

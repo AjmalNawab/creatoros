@@ -44,19 +44,25 @@ class SystemController {
 
   @Get('overview')
   async overview() {
-    const [byStatus, pendingApprovals, lock, stopped, agents, brands] = await Promise.all([
+    const [byStatus, pendingApprovals, lock, stopped, agents, brands, aiPending, actionsPending, ideasProposed, activeBrand, posts] = await Promise.all([
       this.db.task.groupBy({ by: ['status'], _count: true }),
       this.db.approval.count({ where: { decision: 'PENDING' } }),
       getLock(this.db),
       isEmergencyStopped(this.db),
       this.db.agent.count({ where: { enabled: true } }),
       this.db.brand.count(),
+      this.db.aiRequest.count({ where: { status: 'PENDING' } }),
+      this.db.humanActionRequest.count({ where: { status: 'PENDING' } }),
+      this.db.idea.count({ where: { status: 'PROPOSED' } }),
+      getDefaultBrand(this.db),
+      this.db.platformPost.count(),
     ]);
     const running = lock?.holder && lock.leaseUntil && lock.leaseUntil > new Date()
       ? await this.db.taskRun.findUnique({ where: { id: lock.holder }, include: { task: true } }) : null;
     return {
       tasks: Object.fromEntries(byStatus.map((s) => [s.status, s._count])),
-      pendingApprovals, emergencyStop: stopped, enabledAgents: agents, brands,
+      pendingApprovals, emergencyStop: stopped, enabledAgents: agents, brands, aiPending, actionsPending, ideasProposed, posts,
+      activeBrand: { name: activeBrand.name, slug: activeBrand.slug, language: profileOf(activeBrand).language, youtube: profileOf(activeBrand).channels.youtube ?? null },
       lock: { holder: lock?.holder ?? null, workerId: lock?.workerId ?? null, leaseUntil: lock?.leaseUntil ?? null, token: lock?.token ?? 0n },
       running: running ? { runId: running.id, taskId: running.taskId, agentId: running.agentId, type: running.task.type, startedAt: running.startedAt } : null,
     };
@@ -147,7 +153,7 @@ class TasksController {
   @Get('approvals')
   approvals(@Query('decision') decision?: string) {
     return this.db.approval.findMany({ where: decision ? { decision: decision as never } : {}, orderBy: { createdAt: 'desc' }, take: 100,
-      include: { task: { select: { type: true, agentId: true, output: true, input: true, contentProjectId: true } } } });
+      include: { task: { select: { type: true, agentId: true, output: true, input: true, contentProjectId: true, contentProject: { select: { title: true, slug: true, language: true } } } } } });
   }
 
   @Post('approvals/:id/decide')
@@ -180,6 +186,14 @@ function findVideo(slug: string): string | null {
   return (files.find((f) => f.path === `output/${slug}.mp4`) ?? files.sort((a, b) => b.path.localeCompare(a.path))[0])?.path ?? null;
 }
 
+/** A light preview image: YouTube thumbnail, else a middle scene still. */
+function findPoster(slug: string): string | null {
+  const files = listFiles(slug).map((f) => f.path);
+  if (files.includes('platforms/youtube/thumbnail.jpg')) return 'platforms/youtube/thumbnail.jpg';
+  const stills = files.filter((f) => /^(visuals\/stills|output\/stills)\/[^/]+\.(jpg|png)$/.test(f)).sort();
+  return stills[Math.min(2, stills.length - 1)] ?? null;
+}
+
 @Controller()
 class ContentController {
   constructor(@Inject(DB) private db: PrismaClient) {}
@@ -188,7 +202,7 @@ class ContentController {
   async list() {
     const projects = await this.db.contentProject.findMany({ orderBy: { createdAt: 'desc' },
       include: { tasks: { select: { agentId: true, status: true, type: true }, orderBy: { priority: 'asc' } } } });
-    return projects.map((p) => ({ ...p, video: findVideo(p.slug) }));
+    return projects.map((p) => ({ ...p, video: findVideo(p.slug), poster: findPoster(p.slug) }));
   }
 
   @Get('content/:id')

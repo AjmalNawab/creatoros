@@ -1,65 +1,97 @@
+import Link from 'next/link';
+import { Check, CheckCircle2, FileText, Film, MessageSquareWarning, Package, X } from 'lucide-react';
 import { api } from '@/lib/api';
 import { decide } from '@/lib/actions';
-import { Badge, Btn, Card, Json, ago } from '@/components/ui';
-import { ScriptView, VideoPlayer, media } from '@/components/content';
+import { Badge, Btn, Card, EmptyState, Json, PageHeader, Pill, ago, inputCls } from '@/components/ui';
+import { CheckRow, ScriptView, VideoPlayer, media } from '@/components/content';
 
+/* eslint-disable @typescript-eslint/no-explicit-any */
 type Approval = {
-  id: string; type: string; subjectRef: string; contentHash: string; decision: string; feedback: string | null;
-  createdAt: string; decidedAt: string | null; task: { type: string; agentId: string; output: any; input: unknown; contentProjectId: string | null } | null; // eslint-disable-line @typescript-eslint/no-explicit-any
+  id: string; type: string; subjectRef: string; contentHash: string; decision: string; feedback: string | null; createdAt: string; decidedAt: string | null;
+  task: { type: string; agentId: string; output: any; input: unknown; contentProjectId: string | null; contentProject: { title: string; slug: string; language: string } | null } | null;
+};
+
+const KIND: Record<string, { label: string; icon: typeof FileText; hint: string }> = {
+  script: { label: 'Script', icon: FileText, hint: 'Approve to start voice, visuals and rendering. Request changes to have the script rewritten with your feedback.' },
+  final_video: { label: 'Final video', icon: Film, hint: 'Watch it end to end. Approving marks the video as ready for publishing.' },
+  youtube_package: { label: 'YouTube upload package', icon: Package, hint: 'Approving allows uploading exactly this video, title, description, tags and thumbnail, and nothing else.' },
 };
 
 export default async function ApprovalsPage() {
   const all = await api<Approval[]>('/approvals');
   const pending = all.filter((a) => a.decision === 'PENDING');
-  const history = all.filter((a) => a.decision !== 'PENDING');
+  const history = all.filter((a) => a.decision !== 'PENDING').slice(0, 15);
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">Approval Centre</h1>
-      {!pending.length && <Card><p className="text-sm text-zinc-500">Nothing waiting for your approval.</p></Card>}
-      {pending.map((a) => (
-        <Card key={a.id}>
-          <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
-            <div><span className="font-medium">{a.type}</span> <span className="text-sm text-zinc-500">from {a.task?.agentId} · {ago(a.createdAt)}</span></div>
-            <span className="font-mono text-xs text-zinc-500" title="Approval is valid only for this exact content">#{a.contentHash.slice(0, 12)}</span>
-          </div>
-          {a.task?.type === 'script' && a.task.output?.scenes
-            ? <ScriptView scenes={a.task.output.scenes} titleOptions={a.task.output.titleOptions} words={a.task.output.words} targetWords={a.task.output.targetWords} />
-            : a.task?.type === 'final_video' && a.task.contentProjectId && a.task.output?.video
-            ? <div className="space-y-3">
-                <VideoPlayer src={media(a.task.contentProjectId, String(a.task.output.video).replace(/^content\/[^/]+\//, ''))} />
-                <ul className="text-sm">{(a.task.output.checks ?? []).map((c: { check: string; pass: boolean; detail: string }, i: number) => <li key={i}>{c.pass ? '✅' : '❌'} {c.check} <span className="text-zinc-500">{c.detail}</span></li>)}</ul>
-              </div>
-            : a.task?.type === 'youtube_package' && a.task.contentProjectId
-            ? <div className="space-y-3">
-                <div className="text-sm text-zinc-500">YouTube upload package. Approving allows uploading <b>exactly</b> this, and nothing else.</div>
-                <div className="grid gap-3 md:grid-cols-2">
-                  <VideoPlayer src={media(a.task.contentProjectId, a.task.output.video)} />
-                  {/* eslint-disable-next-line @next/next/no-img-element */}
-                  <img src={media(a.task.contentProjectId, a.task.output.thumbnail)} alt="Thumbnail" className="w-full rounded-lg" />
+      <PageHeader icon={CheckCircle2} title="Approvals" description="Nothing moves forward or goes public without your decision. Every approval is tied to the exact content shown here." />
+      {!pending.length && <EmptyState icon={CheckCircle2} title="You're all caught up">New scripts, final videos and upload packages will appear here.</EmptyState>}
+
+      {pending.map((a) => {
+        const k = KIND[a.task?.type ?? a.type] ?? { label: a.type, icon: FileText, hint: '' };
+        const o = a.task?.output;
+        const pid = a.task?.contentProjectId;
+        return (
+          <section key={a.id} className="overflow-hidden rounded-2xl border border-violet-200 bg-white shadow-sm dark:border-violet-900/60 dark:bg-zinc-900">
+            <header className="flex flex-wrap items-center justify-between gap-3 border-b border-zinc-100 bg-violet-50/50 px-5 py-3.5 dark:border-zinc-800 dark:bg-violet-950/20">
+              <div className="flex min-w-0 items-center gap-3">
+                <div className="grid size-9 shrink-0 place-items-center rounded-lg bg-violet-100 text-violet-700 dark:bg-violet-950 dark:text-violet-300"><k.icon className="size-4" /></div>
+                <div className="min-w-0">
+                  <div className="flex items-center gap-2 text-sm font-semibold">{k.label}<Badge status="AWAITING_APPROVAL" /></div>
+                  {a.task?.contentProject && pid && <Link href={`/content/${pid}`} dir="auto" className="block truncate text-xs text-zinc-500 hover:underline">{a.task.contentProject.title} · {a.task.contentProject.slug}</Link>}
                 </div>
-                <div><div className="text-xs uppercase text-zinc-500">Title</div><div dir="auto" className="font-medium">{a.task.output.title}</div></div>
-                <div><div className="text-xs uppercase text-zinc-500">Description</div><pre dir="auto" className="whitespace-pre-wrap rounded-lg bg-zinc-100 p-3 text-sm dark:bg-zinc-950">{a.task.output.description}</pre></div>
-                <div className="flex flex-wrap gap-1">{(a.task.output.tags ?? []).map((t: string) => <span key={t} dir="auto" className="rounded-full bg-zinc-100 px-2 py-0.5 text-xs dark:bg-zinc-800">{t}</span>)}</div>
-                <div className="text-sm">Visibility: <b>{a.task.output.visibility}</b> · Made for kids: <b>{a.task.output.madeForKids ? 'yes' : 'no'}</b> · Category: {a.task.output.category} · Language: {a.task.output.language}</div>
               </div>
-            : <Json value={a.task?.output} />}
-          <form action={decide.bind(null, a.id)} className="mt-3 flex flex-col gap-2 sm:flex-row">
-            <input name="feedback" placeholder="Feedback (optional)" className="flex-1 rounded-lg border border-zinc-300 bg-transparent px-3 py-1.5 text-sm dark:border-zinc-700" />
-            <div className="flex gap-2">
-              <Btn tone="primary" name="decision" value="APPROVED">Approve</Btn>
-              <Btn name="decision" value="CHANGES_REQUESTED">Request changes</Btn>
-              <Btn tone="danger" name="decision" value="REJECTED">Reject</Btn>
+              <div className="flex items-center gap-2 text-xs text-zinc-400"><span>{ago(a.createdAt)}</span><span className="font-mono" title="Approval is valid only for this exact content">#{a.contentHash.slice(0, 8)}</span></div>
+            </header>
+
+            <div className="space-y-4 p-5">
+              {k.hint && <p className="text-sm text-zinc-500">{k.hint}</p>}
+              {a.task?.type === 'script' && o?.scenes ? (
+                <ScriptView scenes={o.scenes} titleOptions={o.titleOptions} words={o.words} targetWords={o.targetWords} />
+              ) : a.task?.type === 'final_video' && pid && o?.video ? (
+                <div className="grid gap-5 lg:grid-cols-3">
+                  <div className="lg:col-span-2"><VideoPlayer src={media(pid, String(o.video).replace(/^content\/[^/]+\//, ''))} /></div>
+                  <ul className="space-y-2">{(o.checks ?? []).map((c: { check: string; pass: boolean; detail: string }, i: number) => <CheckRow key={i} pass={c.pass} label={c.check} detail={c.detail} />)}</ul>
+                </div>
+              ) : a.task?.type === 'youtube_package' && pid ? (
+                <div className="grid gap-5 lg:grid-cols-5">
+                  <div className="space-y-3 lg:col-span-2">
+                    <VideoPlayer src={media(pid, o.video)} />
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
+                    <img src={media(pid, o.thumbnail)} alt="Thumbnail" className="w-full rounded-xl ring-1 ring-zinc-200 dark:ring-zinc-700" />
+                  </div>
+                  <div className="space-y-4 lg:col-span-3">
+                    <div><div className="text-xs font-medium text-zinc-500">Title</div><div dir="auto" className="mt-1 text-lg font-semibold">{o.title}</div></div>
+                    <div><div className="text-xs font-medium text-zinc-500">Description</div><pre dir="auto" className="mt-1 max-h-72 overflow-auto whitespace-pre-wrap rounded-xl bg-zinc-50 p-3 font-sans text-sm ring-1 ring-zinc-200 dark:bg-zinc-950 dark:ring-zinc-800">{o.description}</pre></div>
+                    <div><div className="text-xs font-medium text-zinc-500">Tags</div><div className="mt-1.5 flex flex-wrap gap-1">{(o.tags ?? []).map((t: string) => <Pill key={t}>{t}</Pill>)}</div></div>
+                    <dl className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-3">
+                      {[['Channel', o.channel?.handle ?? '—'], ['Visibility', o.visibility], ['Made for kids', o.madeForKids ? 'Yes' : 'No'], ['Category', o.category], ['Language', o.language], ['Altered content', o.alteredContent ? 'Yes' : 'No']].map(([l, v]) => (
+                        <div key={l} className="rounded-lg bg-zinc-50 px-3 py-2 ring-1 ring-zinc-200 dark:bg-zinc-800/50 dark:ring-zinc-700"><dt className="text-[11px] text-zinc-500">{l}</dt><dd className="font-medium">{v}</dd></div>
+                      ))}
+                    </dl>
+                  </div>
+                </div>
+              ) : <Json value={o} />}
             </div>
-          </form>
-        </Card>
-      ))}
-      {!!history.length && (
-        <Card title="History">
-          <ul className="divide-y divide-zinc-200 text-sm dark:divide-zinc-800">
+
+            <form action={decide.bind(null, a.id)} className="sticky bottom-0 flex flex-col gap-2 border-t border-zinc-100 bg-white/95 px-5 py-3 backdrop-blur sm:flex-row sm:items-center dark:border-zinc-800 dark:bg-zinc-900/95">
+              <input name="feedback" placeholder="Feedback for the agent (required to request changes)" className={`${inputCls} flex-1`} />
+              <div className="flex gap-2">
+                <Btn name="decision" value="REJECTED" tone="ghost" icon={X}>Reject</Btn>
+                <Btn name="decision" value="CHANGES_REQUESTED" icon={MessageSquareWarning}>Request changes</Btn>
+                <Btn name="decision" value="APPROVED" tone="success" icon={Check}>Approve</Btn>
+              </div>
+            </form>
+          </section>
+        );
+      })}
+
+      {history.length > 0 && (
+        <Card title="Recent decisions" padded={false}>
+          <ul className="divide-y divide-zinc-100 text-sm dark:divide-zinc-800">
             {history.map((a) => (
-              <li key={a.id} className="flex items-center justify-between gap-3 py-2">
-                <span>{a.type} {a.feedback && <span className="text-zinc-500">· “{a.feedback}”</span>}</span>
-                <span className="flex items-center gap-3"><Badge status={a.decision} /><span className="text-xs text-zinc-500">{ago(a.decidedAt)}</span></span>
+              <li key={a.id} className="flex flex-wrap items-center justify-between gap-3 px-5 py-2.5">
+                <span className="min-w-0 truncate"><span className="font-medium">{KIND[a.task?.type ?? a.type]?.label ?? a.type}</span>{a.task?.contentProject && <span dir="auto" className="text-zinc-500"> · {a.task.contentProject.title}</span>}{a.feedback && <span className="text-zinc-400"> · “{a.feedback}”</span>}</span>
+                <span className="flex items-center gap-3"><Badge status={a.decision} /><span className="w-16 text-right text-xs text-zinc-400">{ago(a.decidedAt)}</span></span>
               </li>
             ))}
           </ul>

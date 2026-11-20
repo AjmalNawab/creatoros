@@ -1,0 +1,162 @@
+{
+ "key": "p002",
+ "language": "ur",
+ "fps": 30,
+ "width": 1920,
+ "height": 1080,
+ "totalFrames": 2175,
+ "scenes": [
+  {
+   "id": 1,
+   "title": "Hook",
+   "visual": "Grey rain clouds part, the sun comes out, a colourful rainbow arc grows across the sky above green fields; title text appears.",
+   "text": "بارش کے بعد جب سورج نکلتا ہے، تو کبھی کبھی آسمان پر رنگوں کی ایک خوبصورت کمان نظر آتی ہے۔ اسے قوسِ قزح یا دھنک کہتے ہیں۔ لیکن یہ رنگ آتے کہاں سے ہیں؟",
+   "audio": "p002/scene_1.mp3",
+   "audioSec": 11.4,
+   "startFrame": 0,
+   "durationFrames": 360,
+   "captions": [
+    {
+     "start": 0.1,
+     "end": 6.392,
+     "text": "بارش کے بعد جب سورج نکلتا ہے، تو کبھی کبھی آسمان پر رنگوں کی ایک خوبصورت کمان نظر آتی ہے"
+    },
+    {
+     "start": 6.342,
+     "end": 8.935,
+     "text": "اسے قوسِ قزح یا دھنک کہتے ہیں"
+    },
+    {
+     "start": 8.935,
+     "end": 11.367,
+     "text": "لیکن یہ رنگ آتے کہاں سے ہیں؟"
+    }
+   ]
+  },
+  {
+   "id": 2,
+   "title": "White light holds all colours",
+   "visual": "A white beam of sunlight enters from the left; as the narration lists colours, the beam splits into six coloured bands with Urdu colour labels appearing one by one.",
+   "text": "سورج کی روشنی ہمیں سفید لگتی ہے، لیکن اصل میں اس کے اندر سارے رنگ چھپے ہوتے ہیں۔ سرخ، نارنجی، پیلا، سبز، نیلا اور بنفشی۔",
+   "audio": "p002/scene_2.mp3",
+   "audioSec": 8.952,
+   "startFrame": 360,
+   "durationFrames": 287,
+   "captions": [
+    {
+     "start": 0.1,
+     "end": 5.536,
+     "text": "سورج کی روشنی ہمیں سفید لگتی ہے، لیکن اصل میں اس کے اندر سارے رنگ چھپے ہوتے ہیں"
+    },
+    {
+     "start": 5.486,
+     "end": 8.888,
+     "text": "سرخ، نارنجی، پیلا، سبز، نیلا اور بنفشی"
+    }
+   ]
+  },
+  {
+   "id": 3,
+   "title": "Inside a raindrop",
+   "visual": "A big close-up raindrop (circle). A white ray enters, bends (label: مڑنا), hits the back wall and reflects (label: ٹکرانا), then exits bending again. Animated arrow path.",
+   "text": "جب یہ روشنی بارش کے ایک قطرے میں داخل ہوتی ہے، تو تھوڑا سا مڑ جاتی ہے۔ پھر قطرے کی پچھلی دیوار سے ٹکرا کر واپس آتی ہے، اور باہر نکلتے ہوئے ایک بار پھر مڑتی ہے۔",
+   "audio": "p002/scene_3.mp3",
+   "audioSec": 10.992,
+   "startFrame": 647,
+   "durationFrames": 348,
+   "captions": [
+    {
+     "start": 0.1,
+     "end": 5.05,
+     "text": "جب یہ روشنی بارش کے ایک قطرے میں داخل ہوتی ہے، تو تھوڑا سا مڑ جاتی ہے"
+    },
+    {
+     "start": 5,
+     "end": 10.938,
+     "text": "پھر قطرے کی پچھلی دیوار سے ٹکرا کر واپس آتی ہے، اور باہر نکلتے ہوئے ایک بار پھر مڑتی ہے"
+    }
+   ]
+  },
+  {
+   "id": 4,
+   "title": "Colours spread out",
+   "visual": "Same raindrop; the exiting ray fans out into coloured rays, violet bending most and red least (labels). Then zoom out: many small drops, each sending colours, forming an arc.",
+   "text": "ہر رنگ تھوڑا مختلف مڑتا ہے۔ بنفشی سب سے زیادہ، اور سرخ سب سے کم۔ اسی لیے سفید روشنی بکھر کر رنگوں کی پٹی بن جاتی ہے۔ لاکھوں قطرے مل کر آسمان پر یہ کمان بنا دیتے ہیں۔",
+   "audio": "p002/scene_4.mp3",
+   "audioSec": 13.632,
+   "startFrame": 995,
+   "durationFrames": 427,
+   "captions": [
+    {
+     "start": 0.1,
+     "end": 2.584,
+     "text": "ہر رنگ تھوڑا مختلف مڑتا ہے"
+    },
+    {
+     "start": 2.534,
+     "end": 5.904,
+     "text": "بنفشی سب سے زیادہ، اور سرخ سب سے کم"
+    },
+    {
+     "start": 5.904,
+     "end": 9.918,
+     "text": "اسی لیے سفید روشنی بکھر کر رنگوں کی پٹی بن جاتی ہے"
+    },
+    {
+     "start": 9.918,
+     "end": 13.564,
+     "text": "لاکھوں قطرے مل کر آسمان پر یہ کمان بنا دیتے ہیں"
+    }
+   ]
+  },
+  {
+   "id": 5,
+   "title": "How to see one",
+   "visual": "Side view: sun low on the left behind a small person, rain curtain on the right, rainbow arc in front of the person; labels 'سورج پیچھے' and 'بارش سامنے'. A clock icon shows morning/evening.",
+   "text": "دھنک دیکھنے کے لیے سورج آپ کے پیچھے، اور بارش آپ کے سامنے ہونی چاہیے۔ اسی لیے یہ اکثر صبح یا شام کو نظر آتی ہے۔ اور ہاں، ہر شخص اپنی الگ دھنک دیکھتا ہے!",
+   "audio": "p002/scene_5.mp3",
+   "audioSec": 11.304,
+   "startFrame": 1422,
+   "durationFrames": 358,
+   "captions": [
+    {
+     "start": 0.1,
+     "end": 4.888,
+     "text": "دھنک دیکھنے کے لیے سورج آپ کے پیچھے، اور بارش آپ کے سامنے ہونی چاہیے"
+    },
+    {
+     "start": 4.838,
+     "end": 8.254,
+     "text": "اسی لیے یہ اکثر صبح یا شام کو نظر آتی ہے"
+    },
+    {
+     "start": 8.254,
+     "end": 11.25,
+     "text": "اور ہاں، ہر شخص اپنی الگ دھنک دیکھتا ہے!"
+    }
+   ]
+  },
+  {
+   "id": 6,
+   "title": "History and outro",
+   "visual": "A glass sphere filled with water on a wooden desk with a candle-lit study and a scroll; label 'کمال الدین فارسی — تقریباً 1300ء'. Then end card with subscribe button.",
+   "text": "تقریباً سات سو سال پہلے، فارسی سائنس دان کمال الدین فارسی نے پانی سے بھرے شیشے کے گولے سے یہ راز سمجھایا تھا۔ ویڈیو پسند آئی ہو تو سبسکرائب کریں، اور بتائیں اگلی ویڈیو کس موضوع پر ہو۔",
+   "audio": "p002/scene_6.mp3",
+   "audioSec": 12.552,
+   "startFrame": 1780,
+   "durationFrames": 395,
+   "captions": [
+    {
+     "start": 0.1,
+     "end": 7.445,
+     "text": "تقریباً سات سو سال پہلے، فارسی سائنس دان کمال الدین فارسی نے پانی سے بھرے شیشے کے گولے سے یہ راز سمجھایا تھا"
+    },
+    {
+     "start": 7.395,
+     "end": 12.525,
+     "text": "ویڈیو پسند آئی ہو تو سبسکرائب کریں، اور بتائیں اگلی ویڈیو کس موضوع پر ہو"
+    }
+   ]
+  }
+ ]
+}
