@@ -4,7 +4,7 @@ import path from 'node:path';
 import { z } from 'zod';
 import { getDb } from '@creatoros/db';
 import { askAi, parseJson, paths, run, type AgentDefinition } from '@creatoros/core';
-import { FPS, LANG_NAME, MP3_KBPS, TAIL_SEC, brandBlock, feedbackOf, project, projectWithBrand, readJson, withFeedback, writeJson } from './shared';
+import { FPS, LANG_NAME, voiceFor, MP3_KBPS, TAIL_SEC, brandBlock, feedbackOf, project, projectWithBrand, readJson, withFeedback, writeJson } from './shared';
 import type { Research } from './research';
 
 export const ScriptSchema = z.object({
@@ -19,7 +19,7 @@ export const script: AgentDefinition = {
     const { p, brand, profile } = await projectWithBrand(ctx);
     const params = p.params as { topic: string; language: string; durationSec: number; angle?: string; audience?: string; titleHint?: string };
     const r = await readJson<Research>(paths.content(p.slug, 'research', 'research.json'));
-    const target = Math.round((params.durationSec / 60) * profile.wordsPerMinute);
+    const target = Math.round((params.durationSec / 60) * voiceFor(profile, params.language).wpm);
     const s = await askAi(getDb(), ctx, {
       kind: 'script', format: 'json', promptDir: paths.content(p.slug, 'ai'),
       prompt: withFeedback(`You are the Script Writing Agent of CreatorOS. Write an ORIGINAL ${LANG_NAME[params.language as 'en' | 'ur'] ?? LANG_NAME.en} narration script for a ~${params.durationSec}s animated video.

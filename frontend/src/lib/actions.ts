@@ -8,7 +8,8 @@ export async function emergencyStop() { await post('/system/stop'); revalidatePa
 export async function resumeSystem() { await post('/system/resume'); revalidatePath('/', 'layout'); }
 export async function submitInstruction(form: FormData) {
   const text = String(form.get('text') ?? '').trim();
-  if (text.length >= 3) await post('/instructions', { text });
+  const language = String(form.get('language') ?? '') || undefined;
+  if (text.length >= 3) await post('/instructions', { text, language });
   revalidatePath('/', 'layout');
 }
 export async function setAgentEnabled(id: string, enabled: boolean) {
@@ -35,7 +36,9 @@ export async function startIdeation(form: FormData) {
   await post('/ideation', { count: Number(form.get('count') ?? 5), focus: focus || undefined });
   revalidatePath('/ideas');
 }
-export async function selectIdea(id: string) { await post(`/ideas/${id}/select`); revalidatePath('/', 'layout'); }
+export async function selectIdea(id: string, form: FormData) {
+  await post(`/ideas/${id}/select`, { language: String(form.get('language') ?? '') || undefined }); revalidatePath('/', 'layout');
+}
 export async function rejectIdea(id: string, form: FormData) {
   await post(`/ideas/${id}/reject`, { feedback: String(form.get('feedback') ?? '') || undefined }); revalidatePath('/ideas');
 }

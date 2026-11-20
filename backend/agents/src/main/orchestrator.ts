@@ -62,9 +62,11 @@ async function createSteps(tx: Tx, steps: WorkflowStep[], ctx: { projectId: stri
 }
 
 /** Instruction → content project + production workflow + platform workflows. */
-export async function submitInstruction(db: PrismaClient, text: string, opts: { brandId?: string; actor?: string } = {}) {
+export async function submitInstruction(db: PrismaClient, text: string, opts: { brandId?: string; actor?: string; language?: 'en' | 'ur' } = {}) {
   const brandId = opts.brandId ?? (await getDefaultBrand(db)).id;
-  return createContentWorkflow(db, planInstruction(text), { brandId, actor: opts.actor, instruction: text });
+  const plan = planInstruction(text);
+  // The owner's explicit choice wins over words in the instruction and over the brand default.
+  return createContentWorkflow(db, opts.language ? { ...plan, language: opts.language } : plan, { brandId, actor: opts.actor, instruction: text });
 }
 
 /** Plan → content project + production steps + active platform steps (one transaction). */
@@ -114,11 +116,11 @@ export async function submitIdeation(db: PrismaClient, opts: { brandId?: string;
 }
 
 /** Owner picks an idea → it becomes a content project with its angle/audience carried into research and script. */
-export async function selectIdea(db: PrismaClient, ideaId: string, opts: { actor?: string; platforms?: PlatformId[] } = {}) {
+export async function selectIdea(db: PrismaClient, ideaId: string, opts: { actor?: string; platforms?: PlatformId[]; language?: 'en' | 'ur' } = {}) {
   const idea = await db.idea.findUniqueOrThrow({ where: { id: ideaId } });
   if (idea.status !== 'PROPOSED') throw new Error(`idea is already ${idea.status}`);
   const plan: Plan = {
-    topic: idea.topic, language: '', durationSec: idea.durationSec,
+    topic: idea.topic, language: opts.language ?? '', durationSec: idea.durationSec,
     platforms: opts.platforms ?? (idea.platforms as PlatformId[]),
     angle: idea.angle, audience: idea.audience, keywords: idea.keywords as string[], titleHint: idea.title, ideaId: idea.id,
   };

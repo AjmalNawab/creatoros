@@ -11,7 +11,8 @@ type Idea = {
 type Round = { id: string; agentId: string; status: string; createdAt: string; input: { focus?: string | null } };
 
 export default async function IdeasPage() {
-  const { ideas, rounds } = await api<{ ideas: Idea[]; rounds: Round[] }>('/ideas');
+  const [{ ideas, rounds }, brands] = await Promise.all([api<{ ideas: Idea[]; rounds: Round[] }>('/ideas'), api<{ active: boolean; profile: { language: string } }[]>('/brands')]);
+  const lang = brands.find((b) => b.active)?.profile.language ?? 'en';
   const busy = rounds.filter((r) => !['COMPLETED', 'CANCELLED', 'DEAD'].includes(r.status));
   const proposed = ideas.filter((i) => i.status === 'PROPOSED');
   const decided = ideas.filter((i) => i.status !== 'PROPOSED');
@@ -55,7 +56,16 @@ export default async function IdeasPage() {
             <ul className="mt-1 list-disc pl-5">{i.evidence.map((e, n) => <li key={n}>{e.source}: {e.detail} {e.url && <a href={e.url} target="_blank" className="text-sky-600 hover:underline">link</a>}</li>)}</ul>
           </details>
           <div className="mt-4 flex flex-col gap-2 sm:flex-row">
-            <form action={selectIdea.bind(null, i.id)}><Btn tone="primary">Make this video</Btn></form>
+            <form action={selectIdea.bind(null, i.id)} className="flex gap-2">
+          <div role="radiogroup" aria-label="Language" className="flex overflow-hidden rounded-lg border border-zinc-300 text-sm dark:border-zinc-700">
+            {[['en', 'English'], ['ur', 'اردو Urdu']].map(([v, l]) => (
+              <label key={v} className="cursor-pointer px-3 py-2 has-[:checked]:bg-zinc-900 has-[:checked]:text-white dark:has-[:checked]:bg-white dark:has-[:checked]:text-zinc-900">
+                <input type="radio" name="language" value={v} defaultChecked={v === lang} className="sr-only" />{l}
+              </label>
+            ))}
+          </div>
+              <Btn tone="primary">Make this video</Btn>
+            </form>
             <form action={rejectIdea.bind(null, i.id)} className="flex flex-1 gap-2">
               <input name="feedback" placeholder="Why not? (teaches the next round)" className="flex-1 rounded-lg border border-zinc-300 bg-transparent px-3 py-1.5 text-sm dark:border-zinc-700" />
               <Btn>Reject</Btn>

@@ -4,13 +4,14 @@ import path from 'node:path';
 import { z } from 'zod';
 import { getDb } from '@creatoros/db';
 import { askAi, parseJson, paths, run, type AgentDefinition } from '@creatoros/core';
-import { FPS, LANG_NAME, MP3_KBPS, TAIL_SEC, brandBlock, feedbackOf, project, projectWithBrand, readJson, withFeedback, writeJson } from './shared';
+import { FPS, LANG_NAME, voiceFor, MP3_KBPS, TAIL_SEC, brandBlock, feedbackOf, project, projectWithBrand, readJson, withFeedback, writeJson } from './shared';
 import type { Script } from './script';
 
 export const voice: AgentDefinition = {
   id: 'voice', name: 'Voice Agent', department: 'Content Creation', timeoutSec: 600,
   async run(ctx) {
     const { p, profile } = await projectWithBrand(ctx);
+    const v = voiceFor(profile, p.language);
     const s = await readJson<Script>(paths.content(p.slug, 'script', 'script.json'));
     const dir = paths.content(p.slug, 'audio');
     await mkdir(dir, { recursive: true });
@@ -21,7 +22,7 @@ export const voice: AgentDefinition = {
       for (let attempt = 1; attempt <= 6 && !ok; attempt++) {
         try {
           // --text (not -f): the service intermittently returns no audio for file input.
-          await run(paths.venvBin('edge-tts'), ['--voice', profile.voice, `--rate=${profile.voiceRate}`, '--text', sc.text,
+          await run(paths.venvBin('edge-tts'), ['--voice', v.voice, `--rate=${v.rate}`, '--text', sc.text,
             '--write-media', `${base}.mp3`, '--write-subtitles', `${base}.srt`], { signal: ctx.signal });
           ok = (await stat(`${base}.mp3`)).size > 1000;
         } catch (e) { if (ctx.signal.aborted) throw e; }
@@ -31,6 +32,6 @@ export const voice: AgentDefinition = {
       files.push(`scene_${i + 1}.mp3`);
       await ctx.log(`voice scene ${i + 1}/${s.scenes.length} done`);
     }
-    return { output: { voice: profile.voice, rate: profile.voiceRate, files } };
+    return { output: { voice: v.voice, rate: v.rate, language: p.language, files } };
   },
 };

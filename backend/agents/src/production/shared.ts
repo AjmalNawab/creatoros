@@ -29,6 +29,16 @@ export async function projectWithBrand(ctx: AgentContext) {
   return { p, brand, profile: profileOf(brand) };
 }
 
+/** Voice for the video's language: the brand's own voice if it matches, otherwise the default for that language. */
+export const DEFAULT_VOICES: Record<'en' | 'ur', { voice: string; rate: string; wpm: number }> = {
+  en: { voice: 'en-GB-RyanNeural', rate: '-8%', wpm: 157 },
+  ur: { voice: 'ur-PK-AsadNeural', rate: '+8%', wpm: 175 },
+};
+export function voiceFor(profile: BrandProfile, language: string) {
+  const lang = (language === 'ur' ? 'ur' : 'en') as 'en' | 'ur';
+  return profile.language === lang ? { voice: profile.voice, rate: profile.voiceRate, wpm: profile.wordsPerMinute } : DEFAULT_VOICES[lang];
+}
+
 export const LANG_NAME: Record<BrandProfile['language'], string> = {
   en: 'English (clear, natural spoken documentary English)',
   ur: 'Urdu (natural spoken Pakistani Urdu, Urdu script)',

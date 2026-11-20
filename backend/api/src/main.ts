@@ -119,8 +119,8 @@ class TasksController {
 
   @Post('instructions')
   async instruct(@Body() body: unknown) {
-    const { text, brandId } = parse(z.object({ text: z.string().min(3).max(2000), brandId: z.string().uuid().optional() }), body);
-    return submitInstruction(this.db, text, { brandId, actor: OWNER });
+    const { text, brandId, language } = parse(z.object({ text: z.string().min(3).max(2000), brandId: z.string().uuid().optional(), language: z.enum(['en', 'ur']).optional() }), body);
+    return submitInstruction(this.db, text, { brandId, language, actor: OWNER });
   }
 
   @Post('tasks/:id/retry')
@@ -283,8 +283,9 @@ class ContentController {
   }
 
   @Post('ideas/:id/select')
-  async select(@Param('id') id: string) {
-    try { return await selectIdea(this.db, id, { actor: OWNER }); } catch (e) { throw new BadRequestException((e as Error).message); }
+  async select(@Param('id') id: string, @Body() body: unknown) {
+    const { language } = parse(z.object({ language: z.enum(['en', 'ur']).optional() }), body ?? {});
+    try { return await selectIdea(this.db, id, { actor: OWNER, language }); } catch (e) { throw new BadRequestException((e as Error).message); }
   }
 
   @Post('ideas/:id/reject')

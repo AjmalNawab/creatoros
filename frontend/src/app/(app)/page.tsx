@@ -11,16 +11,25 @@ type Overview = {
 type Task = { id: string; type: string; status: string; agentId: string; createdAt: string; agent: { name: string } };
 
 export default async function OverviewPage() {
-  const [ov, tasks] = await Promise.all([api<Overview>('/overview'), api<Task[]>('/tasks')]);
+  const [ov, tasks, brands] = await Promise.all([api<Overview>('/overview'), api<Task[]>('/tasks'), api<{ name: string; active: boolean; profile: { language: string } }[]>('/brands')]);
+  const brand = brands.find((b) => b.active);
+  const lang = brand?.profile.language ?? 'en';
   const t = (s: string) => ov.tasks[s] ?? 0;
   return (
     <div className="space-y-6">
       <h1 className="text-2xl font-semibold">Overview</h1>
 
-      <Card title="Instruct the Main Orchestrator">
+      <Card title={`Instruct the Main Orchestrator · ${brand?.name ?? ''}`}>
         <form action={submitInstruction} className="flex flex-col gap-2 sm:flex-row">
-          <input name="text" required minLength={3} placeholder='e.g. "Create a 2 minute Urdu video about volcanoes"'
+          <input name="text" required minLength={3} placeholder='e.g. "Create a 3 minute video about the Tacoma Narrows Bridge"'
             className="flex-1 rounded-lg border border-zinc-300 bg-transparent px-3 py-2 dark:border-zinc-700" />
+          <div role="radiogroup" aria-label="Language" className="flex overflow-hidden rounded-lg border border-zinc-300 text-sm dark:border-zinc-700">
+            {[['en', 'English'], ['ur', 'اردو Urdu']].map(([v, l]) => (
+              <label key={v} className="cursor-pointer px-3 py-2 has-[:checked]:bg-zinc-900 has-[:checked]:text-white dark:has-[:checked]:bg-white dark:has-[:checked]:text-zinc-900">
+                <input type="radio" name="language" value={v} defaultChecked={v === lang} className="sr-only" />{l}
+              </label>
+            ))}
+          </div>
           <Btn tone="primary" type="submit">Submit</Btn>
         </form>
       </Card>
