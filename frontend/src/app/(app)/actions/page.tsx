@@ -33,6 +33,7 @@ export default async function ActionsPage() {
             <pre className="whitespace-pre-wrap rounded-xl bg-zinc-50 p-4 font-sans text-sm leading-relaxed ring-1 ring-zinc-200 dark:bg-zinc-950 dark:ring-zinc-800">{a.instructions}</pre>
             <details><summary className="cursor-pointer text-xs font-medium text-zinc-500">Exact approved values</summary><div className="mt-2"><Json value={a.payload} /></div></details>
           </div>
+          <p className="border-t border-zinc-100 px-5 pt-3 text-xs text-zinc-500 dark:border-zinc-800">To have Claude post it for you, say <b>“post it”</b> in Claude Code, not in this box. Use the box below only to paste the link after the post is live.</p>
           <form action={completeHumanAction.bind(null, a.id)} className="flex flex-col gap-2 border-t border-zinc-100 px-5 py-3 sm:flex-row dark:border-zinc-800">
             {a.kind === 'facebook_upload'
               ? <input name="url" type="url" required pattern="https://(www\.|m\.|web\.)?facebook\.com/.+" title="A Facebook post link, e.g. https://www.facebook.com/reel/…" placeholder="Only after posting: paste the Facebook link (https://www.facebook.com/reel/…)" className={`${inputCls} flex-1`} />
