@@ -12,7 +12,7 @@ import type { FACEBOOK_PAGE } from './package';
  *  3. idempotency: the same video is never posted twice to Facebook.
  * Route "browser": Claude Code posts it in the owner's logged-in Chrome (DevTools) while the owner watches.
  */
-type Pkg = { page: typeof FACEBOOK_PAGE; video: string; videoSha256: string; format: string; postAs: 'reel' | 'video'; title: string; caption: string; audience: string; language: string; series: string };
+type Pkg = { page: typeof FACEBOOK_PAGE; video: string; videoSha256: string; format: string; postAs: 'reel' | 'video'; title: string; caption: string; audience: string; language: string; series: string; shareToStory?: boolean };
 
 /** Accepts Reel, video, watch and share links; returns a stable id-ish key. */
 export const FB_POST = /^https:\/\/(?:www\.|m\.|web\.)?facebook\.com\/(?:reel\/(\d+)|[^/?#]+\/videos\/(?:[^/?#]+\/)?(\d+)|watch\/?\?v=(\d+)|share\/[rv]\/([A-Za-z0-9]+))/;
@@ -52,7 +52,7 @@ export const facebookPublish: AgentDefinition = {
         `0. TARGET PAGE: open ${pkg.page.url} and make sure you are acting AS the Page "${pkg.page.name}" (switch profile if needed), never as the owner's personal profile.`,
         `1. ${pkg.postAs === 'reel' ? 'Create → Reel' : 'Create post → Photo/video'}; select file: ${videoPath}`,
         '2. Caption/description: payload.caption exactly. Title (if asked): payload.title.',
-        `3. Audience: ${pkg.audience}. If Meta asks about AI-generated content: the narration is AI; animation is stylised, not realistic (answer honestly).`,
+        `3. Audience: ${pkg.audience}. Share to story: ${pkg.shareToStory ? 'ON (also post it to the Page story)' : 'OFF'}. If Meta asks about AI-generated content: the narration is AI; animation is stylised, not realistic (answer honestly).`,
         '4. Share/Publish. Then open the post and copy its link (facebook.com/reel/<id> or …/videos/<id>).',
         '5. Complete this action with {"url": "<link>", "notes": "..."}.',
       ].join('\n'),

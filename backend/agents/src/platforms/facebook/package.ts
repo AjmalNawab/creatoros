@@ -77,6 +77,8 @@ Answer with ONLY a JSON object:
       title: meta.title,
       caption,
       audience: 'Public',
+      // Stories are full-screen vertical: share Reels (9:16) to the Page story too; never horizontal videos.
+      shareToStory: short,
       series: brand.name,
       language: ur ? 'Urdu' : 'English',
       aiDisclosure: 'AI narration, original animation (stylised; no realistic people or events depicted)',

@@ -78,7 +78,7 @@ export default async function ApprovalsPage() {
                     <div><div className="text-xs font-medium text-zinc-500">Title</div><div dir="auto" className="mt-1 text-lg font-semibold">{o.title}</div></div>
                     <div><div className="text-xs font-medium text-zinc-500">Caption</div><pre dir="auto" className="mt-1 max-h-72 overflow-auto whitespace-pre-wrap rounded-xl bg-zinc-50 p-3 font-sans text-sm ring-1 ring-zinc-200 dark:bg-zinc-950 dark:ring-zinc-800">{o.caption}</pre></div>
                     <dl className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-3">
-                      {[['Page', o.page?.name ?? '—'], ['Post as', o.postAs === 'reel' ? 'Reel (9:16)' : 'Video post'], ['Audience', o.audience], ['Series', o.series], ['Language', o.language], ['AI disclosure', o.aiDisclosure ? 'AI narration' : 'None']].map(([l, v]) => (
+                      {[['Page', o.page?.name ?? '—'], ['Post as', o.postAs === 'reel' ? 'Reel (9:16)' : 'Video post'], ['Audience', o.audience], ['Also to Story', o.shareToStory ? 'Yes' : 'No'], ['Series', o.series], ['Language', o.language], ['AI disclosure', o.aiDisclosure ? 'AI narration' : 'None']].map(([l, v]) => (
                         <div key={l} className="rounded-lg bg-zinc-50 px-3 py-2 ring-1 ring-zinc-200 dark:bg-zinc-800/50 dark:ring-zinc-700"><dt className="text-[11px] text-zinc-500">{l}</dt><dd className="font-medium">{v}</dd></div>
                       ))}
                     </dl>

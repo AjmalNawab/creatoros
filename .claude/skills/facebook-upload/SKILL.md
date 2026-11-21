@@ -15,7 +15,7 @@ description: Safely post an APPROVED CreatorOS Facebook package (Reel or video) 
 2. **Act as the Page, not the person.** The Page header must show `payload.page.name`. If Facebook is in the personal profile, use "Switch now" / switch profile to the Page first. Never post on the owner's personal timeline.
 3. `postAs = reel`: go to Reels → Create reel (or `https://www.facebook.com/reels/create`). `postAs = video`: on the Page, Create post → Photo/video. `upload_file` with `payload.videoPath`.
 4. Description/caption: `payload.caption`, exactly as given. Title, if a field asks for it: `payload.title`.
-5. Audience: Public. If Meta asks about AI-generated content, answer honestly: the narration is AI; the animation is stylised and not realistic.
+5. Audience: Public. **Share to story**: set it exactly as `payload.shareToStory` (Reel settings → Share to story). If Meta asks about AI-generated content, answer honestly: the narration is AI; the animation is stylised and not realistic.
 6. Do not boost, run ads, cross-post to Instagram, or invite friends unless the owner explicitly says so.
 7. Share/Publish. Open the published post and copy its link (`facebook.com/reel/<id>` or `…/videos/<id>`).
 8. Run `pnpm action complete <id> '{"url":"<link>","notes":"<anything unusual>"}'`. The agent records the post.
