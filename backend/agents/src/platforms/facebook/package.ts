@@ -31,14 +31,16 @@ export const facebookPackage: AgentDefinition = {
   async run(ctx) {
     const { p, brand, profile } = await projectWithBrand(ctx);
     const ur = p.language === 'ur';
-    const sb = await readJson<{ lines?: unknown[] }>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
+    const sb = await readJson<{ lines?: unknown[]; width?: number; height?: number }>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
     const short = !!sb.lines;
+    // Facebook posts every video as a Reel: any vertical video (Short or vertical long-form) goes up as a Reel + Story.
+    const vertical = short || (sb.height ?? 0) > (sb.width ?? 0);
     const script = await readJson<{ titleOptions: string[]; scenes: { text: string }[] }>(paths.content(p.slug, 'script', 'script.json'));
     const research = await readJson<{ sources: { name: string }[] }>(paths.content(p.slug, 'research', 'research.json'));
 
     const meta = await askAi(getDb(), ctx, {
       kind: 'facebook_metadata', format: 'json', promptDir: paths.content(p.slug, 'ai'),
-      prompt: withFeedback(`You are the Facebook Agent of CreatorOS. Write the Facebook ${short ? 'Reel' : 'video post'} for this original ${ur ? 'Urdu' : 'English'} animated video, posted on the Page "${FACEBOOK_PAGE.name}" (a mixed Page: stories, science and lighter moments in English and Urdu, "best enjoyed with a cup of chai").
+      prompt: withFeedback(`You are the Facebook Agent of CreatorOS. Write the Facebook ${vertical ? 'Reel' : 'video post'} for this original ${ur ? 'Urdu' : 'English'} animated video, posted on the Page "${FACEBOOK_PAGE.name}" (a mixed Page: stories, science and lighter moments in English and Urdu, "best enjoyed with a cup of chai").
 
 ${brandBlock(brand.name, profile)}
 
@@ -50,7 +52,7 @@ Facebook is not YouTube: people scroll a feed, mostly with sound off, and share 
 Rules:
 - title: ≤ 100 chars${ur ? ' (Urdu)' : ''}; used as the video title. Honest, must match what the video shows.
 - caption: ${ur ? 'Urdu' : 'English'}, 2-4 short lines. Line 1 is a hook that works without the video (a surprising fact or question). Then one line of context. End with a light, genuine question that invites comments (no "like and share" begging, no engagement bait). Conversational, a little warm. No links. Max 1500 chars.
-- hashtags: 2-5 relevant hashtags${short ? ' (include #reels)' : ''}.
+- hashtags: 2-5 relevant hashtags${vertical ? ' (include #reels)' : ''}.
 
 Answer with ONLY a JSON object:
 {"title": string, "caption": string, "hashtags": [string]}`, ctx),
@@ -73,12 +75,12 @@ Answer with ONLY a JSON object:
       video: videoRel,
       videoSha256: await sha256File(paths.content(p.slug, videoRel)),
       format: short ? 'short' : 'long',
-      postAs: short ? 'reel' : 'video',
+      postAs: vertical ? 'reel' : 'video',
       title: meta.title,
       caption,
       audience: 'Public',
       // Stories are full-screen vertical: share Reels (9:16) to the Page story too; never horizontal videos.
-      shareToStory: short,
+      shareToStory: vertical,
       series: brand.name,
       language: ur ? 'Urdu' : 'English',
       aiDisclosure: 'AI narration, original animation (stylised; no realistic people or events depicted)',

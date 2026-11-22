@@ -29,6 +29,8 @@ export interface Plan {
   topic: string; language: string; durationSec: number; platforms: PlatformId[];
   /** 'short' = vertical 9:16 YouTube Short (20-60 s); 'long' = 16:9 video. */
   format?: 'short' | 'long';
+  /** Frame shape for long videos: 'vertical' = 9:16 long-form (e.g. Facebook, where every video is a Reel). */
+  orientation?: 'horizontal' | 'vertical';
   // Set when the project comes from a selected strategy idea:
   angle?: string; audience?: string; keywords?: string[]; titleHint?: string; ideaId?: string;
 }
@@ -49,7 +51,9 @@ export function planInstruction(text: string): Plan {
     .replace(/\s+/g, ' ').trim() || text.trim();
   // Explicit language wins; otherwise the brand's language is applied in createContentWorkflow.
   const language = /english/i.test(text) ? 'en' : /urdu|اردو|[\u0600-\u06FF]/i.test(text) ? 'ur' : '';
-  return { topic, language, durationSec: isShort ? Math.min(60, durationSec) : durationSec, format: isShort ? 'short' : 'long', platforms: mentioned.length ? mentioned : ['youtube'] };
+  const orientation = /\bvertical\b|9\s*:\s*16/i.test(text) ? 'vertical' : 'horizontal';
+  return { topic, language, durationSec: isShort ? Math.min(60, durationSec) : durationSec, format: isShort ? 'short' : 'long', orientation,
+    platforms: mentioned.length ? mentioned : ['youtube'] };
 }
 
 type Tx = Parameters<Parameters<PrismaClient['$transaction']>[0]>[0];
@@ -73,7 +77,9 @@ export async function submitInstruction(db: PrismaClient, text: string, opts: { 
   if (opts.format && opts.format !== plan.format) {
     // Explicit Short/Long choice from the dashboard wins; keep a stated duration, else use the format default.
     const stated = /\d+\s*-?\s*(min|minute|s|sec|second)/i.test(text);
-    plan = { ...plan, format: opts.format, durationSec: opts.format === 'short' ? Math.min(60, stated ? plan.durationSec : 40) : stated ? plan.durationSec : 120 };
+    // Re-read the stated length: planInstruction may have clamped it to 60 s when it guessed "short".
+    const raw = planInstruction(text.replace(/\b(shorts?|reels?|tiktok|vertical)\b/gi, '')).durationSec;
+    plan = { ...plan, format: opts.format, durationSec: opts.format === 'short' ? Math.min(60, stated ? raw : 40) : stated ? raw : 120 };
   }
   // The owner's explicit choice wins over words in the instruction and over the brand default.
   return createContentWorkflow(db, opts.language ? { ...plan, language: opts.language } : plan, { brandId, actor: opts.actor, instruction: text });

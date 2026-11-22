@@ -13,4 +13,8 @@ function withConnectionLimit(url: string | undefined): string | undefined {
 }
 
 let client: PrismaClient | undefined;
-export const getDb = () => (client ??= new PrismaClient({ datasourceUrl: withConnectionLimit(process.env.DATABASE_URL) }));
+export const getDb = () => (client ??= new PrismaClient({
+  datasourceUrl: withConnectionLimit(process.env.DATABASE_URL),
+  // The pooler is a network hop away and each process has few connections: give multi-step transactions room.
+  transactionOptions: { maxWait: 15_000, timeout: 30_000 },
+}));

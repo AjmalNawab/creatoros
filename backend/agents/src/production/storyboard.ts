@@ -60,7 +60,9 @@ export const storyboard: AgentDefinition = {
           lines: scenes.map(({ id, text, audio, startFrame, durationFrames, words, visual, title }) => ({ id, text, title, audio, startFrame, durationFrames, words, visual })),
           brand: { name: brand.name, handle: profile.channels.youtube?.handle, accent: p.language === 'ur' ? '#fdd835' : '#ff7a1a' },
           endCard: s.endCard }
-      : { key: p.key, language: p.language, fps: FPS, width: 1920, height: 1080, totalFrames: cursor, scenes };
+      : (p.params as { orientation?: string }).orientation === 'vertical'
+        ? { key: p.key, language: p.language, fps: FPS, width: 1080, height: 1920, totalFrames: cursor, scenes }
+        : { key: p.key, language: p.language, fps: FPS, width: 1920, height: 1080, totalFrames: cursor, scenes };
     await mkdir(paths.content(p.slug, 'storyboard'), { recursive: true });
     await writeJson(paths.content(p.slug, 'storyboard', 'storyboard.json'), data);
     await writeJson(paths.content(p.slug, 'storyboard', 'props.json'), { data });
