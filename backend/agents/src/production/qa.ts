@@ -11,16 +11,17 @@ export const qa: AgentDefinition = {
   async run(ctx) {
     const p = await project(ctx);
     const file = paths.content(p.slug, 'output', `${p.slug}.mp4`);
-    const sb = await readJson<{ totalFrames: number; scenes?: { captions: unknown[] }[]; lines?: { words: unknown[] }[] }>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
+    const sb = await readJson<{ totalFrames: number; width?: number; height?: number; scenes?: { captions: unknown[] }[]; lines?: { words: unknown[] }[] }>(paths.content(p.slug, 'storyboard', 'storyboard.json'));
     const short = !!sb.lines;
-    const [W, H] = short ? [1080, 1920] : [1920, 1080];
+    // The storyboard decides the frame (Short, vertical long-form or 16:9); fall back to the format default.
+    const [W, H] = sb.width && sb.height ? [sb.width, sb.height] : short ? [1080, 1920] : [1920, 1080];
     const probe = JSON.parse(await run('npx', ['remotion', 'ffprobe', '-v', 'error', '-show_entries', 'format=duration:stream=codec_type,width,height', '-of', 'json', file],
       { cwd: paths.renderer(), signal: ctx.signal })) as { format: { duration: string }; streams: { codec_type: string; width?: number; height?: number }[] };
     const v = probe.streams.find((s) => s.codec_type === 'video');
     const duration = Number(probe.format.duration);
     const expected = sb.totalFrames / FPS;
     const checks = [
-      { check: `Video stream ${W}x${H}${short ? ' (vertical Short)' : ''}`, pass: v?.width === W && v?.height === H, detail: `${v?.width}x${v?.height}` },
+      { check: `Video stream ${W}x${H}${short ? ' (vertical Short)' : H > W ? ' (vertical)' : ''}`, pass: v?.width === W && v?.height === H, detail: `${v?.width}x${v?.height}` },
       { check: 'Audio stream present', pass: probe.streams.some((s) => s.codec_type === 'audio'), detail: '' },
       { check: 'Duration matches storyboard (±2s)', pass: Math.abs(duration - expected) <= 2, detail: `${duration.toFixed(1)}s vs ${expected.toFixed(1)}s` },
       ...(short ? [{ check: 'Short length 15-60 s', pass: duration >= 15 && duration <= 60, detail: `${duration.toFixed(1)}s` }] : []),
