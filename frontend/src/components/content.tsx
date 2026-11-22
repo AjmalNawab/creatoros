@@ -103,11 +103,7 @@ export function ScriptView({ scenes, titleOptions, words, targetWords }: { scene
   );
 }
 
-export function VideoPlayer({ src, poster, vertical }: { src: string; poster?: string; vertical?: boolean }) {
-  return vertical
-    ? <div className="flex justify-center rounded-xl bg-zinc-950 p-3"><video src={src} poster={poster} controls preload="metadata" className="aspect-[9/16] max-h-[70vh] rounded-lg bg-black" /></div>
-    : <video src={src} poster={poster} controls preload="metadata" className="aspect-video w-full rounded-xl bg-black shadow-lg shadow-zinc-950/10" />;
-}
+export { VideoPlayer } from './video-player';
 
 export const CheckRow = ({ pass, label, detail }: { pass: boolean; label: string; detail?: string }) => (
   <li className="flex items-start gap-2 text-sm">
