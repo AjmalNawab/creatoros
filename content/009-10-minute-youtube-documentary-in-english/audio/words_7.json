@@ -1,0 +1,887 @@
+[
+ {
+  "text": "NASA",
+  "start": 0.4,
+  "end": 0.46
+ },
+ {
+  "text": "listened.",
+  "start": 0.46,
+  "end": 1.74
+ },
+ {
+  "text": "The",
+  "start": 1.74,
+  "end": 1.95
+ },
+ {
+  "text": "Mars",
+  "start": 1.95,
+  "end": 2.19
+ },
+ {
+  "text": "programme",
+  "start": 2.19,
+  "end": 2.72
+ },
+ {
+  "text": "was",
+  "start": 2.72,
+  "end": 2.94
+ },
+ {
+  "text": "restructured.",
+  "start": 2.94,
+  "end": 3.75
+ },
+ {
+  "text": "Missions",
+  "start": 4.19,
+  "end": 4.51
+ },
+ {
+  "text": "got",
+  "start": 4.51,
+  "end": 4.71
+ },
+ {
+  "text": "more",
+  "start": 4.71,
+  "end": 5
+ },
+ {
+  "text": "people,",
+  "start": 5,
+  "end": 5.44
+ },
+ {
+  "text": "more",
+  "start": 5.44,
+  "end": 5.92
+ },
+ {
+  "text": "money",
+  "start": 5.92,
+  "end": 6.16
+ },
+ {
+  "text": "for",
+  "start": 6.16,
+  "end": 6.36
+ },
+ {
+  "text": "testing,",
+  "start": 6.36,
+  "end": 7
+ },
+ {
+  "text": "and",
+  "start": 7,
+  "end": 7.1
+ },
+ {
+  "text": "more",
+  "start": 7.1,
+  "end": 7.24
+ },
+ {
+  "text": "independent",
+  "start": 7.24,
+  "end": 7.99
+ },
+ {
+  "text": "review.",
+  "start": 7.99,
+  "end": 8.42
+ },
+ {
+  "text": "Engineers",
+  "start": 9.4,
+  "end": 9.73
+ },
+ {
+  "text": "took",
+  "start": 9.73,
+  "end": 10.05
+ },
+ {
+  "text": "a",
+  "start": 10.05,
+  "end": 10.12
+ },
+ {
+  "text": "phrase",
+  "start": 10.12,
+  "end": 10.24
+ },
+ {
+  "text": "to",
+  "start": 10.72,
+  "end": 10.78
+ },
+ {
+  "text": "heart:",
+  "start": 10.78,
+  "end": 11.19
+ },
+ {
+  "text": "test",
+  "start": 11.35,
+  "end": 11.74
+ },
+ {
+  "text": "as",
+  "start": 11.74,
+  "end": 11.9
+ },
+ {
+  "text": "you",
+  "start": 11.9,
+  "end": 12.14
+ },
+ {
+  "text": "fly,",
+  "start": 12.14,
+  "end": 12.38
+ },
+ {
+  "text": "and",
+  "start": 12.38,
+  "end": 12.62
+ },
+ {
+  "text": "fly",
+  "start": 12.62,
+  "end": 12.72
+ },
+ {
+  "text": "as",
+  "start": 12.9,
+  "end": 13.02
+ },
+ {
+  "text": "you",
+  "start": 13.19,
+  "end": 13.26
+ },
+ {
+  "text": "test.",
+  "start": 13.26,
+  "end": 14
+ },
+ {
+  "text": "If",
+  "start": 14.14,
+  "end": 14.14
+ },
+ {
+  "text": "a",
+  "start": 14.2,
+  "end": 14.21
+ },
+ {
+  "text": "spacecraft",
+  "start": 14.4,
+  "end": 14.94
+ },
+ {
+  "text": "will",
+  "start": 14.94,
+  "end": 15.09
+ },
+ {
+  "text": "shake",
+  "start": 15.23,
+  "end": 15.59
+ },
+ {
+  "text": "when",
+  "start": 15.72,
+  "end": 15.88
+ },
+ {
+  "text": "its",
+  "start": 15.88,
+  "end": 16.09
+ },
+ {
+  "text": "legs",
+  "start": 16.09,
+  "end": 16.38
+ },
+ {
+  "text": "deploy,",
+  "start": 16.38,
+  "end": 16.98
+ },
+ {
+  "text": "then",
+  "start": 16.99,
+  "end": 17.38
+ },
+ {
+  "text": "test",
+  "start": 17.46,
+  "end": 17.72
+ },
+ {
+  "text": "it",
+  "start": 17.93,
+  "end": 18.05
+ },
+ {
+  "text": "while",
+  "start": 18.19,
+  "end": 18.58
+ },
+ {
+  "text": "its",
+  "start": 18.58,
+  "end": 18.9
+ },
+ {
+  "text": "legs",
+  "start": 18.9,
+  "end": 19.28
+ },
+ {
+  "text": "deploy,",
+  "start": 19.36,
+  "end": 20.14
+ },
+ {
+  "text": "with",
+  "start": 20.14,
+  "end": 20.44
+ },
+ {
+  "text": "the",
+  "start": 20.44,
+  "end": 20.66
+ },
+ {
+  "text": "real",
+  "start": 20.66,
+  "end": 20.96
+ },
+ {
+  "text": "wiring",
+  "start": 20.96,
+  "end": 21.4
+ },
+ {
+  "text": "and",
+  "start": 21.4,
+  "end": 21.58
+ },
+ {
+  "text": "the",
+  "start": 21.65,
+  "end": 21.84
+ },
+ {
+  "text": "real",
+  "start": 21.84,
+  "end": 22.14
+ },
+ {
+  "text": "software.",
+  "start": 22.14,
+  "end": 23
+ },
+ {
+  "text": "There",
+  "start": 23.39,
+  "end": 23.45
+ },
+ {
+  "text": "was",
+  "start": 23.45,
+  "end": 23.72
+ },
+ {
+  "text": "also",
+  "start": 23.72,
+  "end": 24.07
+ },
+ {
+  "text": "a",
+  "start": 24.07,
+  "end": 24.14
+ },
+ {
+  "text": "quiet",
+  "start": 24.16,
+  "end": 24.24
+ },
+ {
+  "text": "second",
+  "start": 24.72,
+  "end": 25.16
+ },
+ {
+  "text": "chance.",
+  "start": 25.16,
+  "end": 25.98
+ },
+ {
+  "text": "A",
+  "start": 26,
+  "end": 26
+ },
+ {
+  "text": "nearly",
+  "start": 26.39,
+  "end": 26.45
+ },
+ {
+  "text": "identical",
+  "start": 26.45,
+  "end": 27.02
+ },
+ {
+  "text": "lander",
+  "start": 27.02,
+  "end": 27.43
+ },
+ {
+  "text": "had",
+  "start": 27.63,
+  "end": 27.63
+ },
+ {
+  "text": "been",
+  "start": 27.72,
+  "end": 27.89
+ },
+ {
+  "text": "built",
+  "start": 27.89,
+  "end": 28.19
+ },
+ {
+  "text": "for",
+  "start": 28.35,
+  "end": 28.42
+ },
+ {
+  "text": "a",
+  "start": 28.42,
+  "end": 28.48
+ },
+ {
+  "text": "2001",
+  "start": 28.48,
+  "end": 29.19
+ },
+ {
+  "text": "mission.",
+  "start": 29.26,
+  "end": 29.98
+ },
+ {
+  "text": "After",
+  "start": 30.35,
+  "end": 30.35
+ },
+ {
+  "text": "the",
+  "start": 30.4,
+  "end": 30.56
+ },
+ {
+  "text": "losses,",
+  "start": 30.56,
+  "end": 31.09
+ },
+ {
+  "text": "that",
+  "start": 31.12,
+  "end": 31.24
+ },
+ {
+  "text": "mission",
+  "start": 31.72,
+  "end": 31.89
+ },
+ {
+  "text": "was",
+  "start": 31.89,
+  "end": 32.1
+ },
+ {
+  "text": "cancelled,",
+  "start": 32.1,
+  "end": 32.81
+ },
+ {
+  "text": "and",
+  "start": 32.81,
+  "end": 33.01
+ },
+ {
+  "text": "the",
+  "start": 33.02,
+  "end": 33.19
+ },
+ {
+  "text": "lander",
+  "start": 33.29,
+  "end": 33.62
+ },
+ {
+  "text": "went",
+  "start": 33.64,
+  "end": 33.72
+ },
+ {
+  "text": "into",
+  "start": 34.19,
+  "end": 34.21
+ },
+ {
+  "text": "storage.",
+  "start": 34.21,
+  "end": 35
+ },
+ {
+  "text": "Years",
+  "start": 35.37,
+  "end": 35.37
+ },
+ {
+  "text": "later",
+  "start": 35.4,
+  "end": 35.89
+ },
+ {
+  "text": "it",
+  "start": 35.89,
+  "end": 36.02
+ },
+ {
+  "text": "was",
+  "start": 36.02,
+  "end": 36.14
+ },
+ {
+  "text": "brought",
+  "start": 36.7,
+  "end": 36.78
+ },
+ {
+  "text": "back,",
+  "start": 36.78,
+  "end": 37.19
+ },
+ {
+  "text": "studied,",
+  "start": 37.29,
+  "end": 37.9
+ },
+ {
+  "text": "and",
+  "start": 37.9,
+  "end": 38.12
+ },
+ {
+  "text": "modified.",
+  "start": 38.12,
+  "end": 38.74
+ },
+ {
+  "text": "Reviewers",
+  "start": 39.39,
+  "end": 39.64
+ },
+ {
+  "text": "went",
+  "start": 39.64,
+  "end": 39.93
+ },
+ {
+  "text": "through",
+  "start": 39.93,
+  "end": 40.12
+ },
+ {
+  "text": "it",
+  "start": 40.45,
+  "end": 40.57
+ },
+ {
+  "text": "and",
+  "start": 40.72,
+  "end": 40.78
+ },
+ {
+  "text": "produced",
+  "start": 40.78,
+  "end": 41.19
+ },
+ {
+  "text": "forty-two",
+  "start": 41.19,
+  "end": 41.78
+ },
+ {
+  "text": "corrective",
+  "start": 41.78,
+  "end": 42.5
+ },
+ {
+  "text": "actions",
+  "start": 42.5,
+  "end": 42.72
+ },
+ {
+  "text": "for",
+  "start": 43.19,
+  "end": 43.21
+ },
+ {
+  "text": "weaknesses",
+  "start": 43.21,
+  "end": 44
+ },
+ {
+  "text": "that",
+  "start": 44,
+  "end": 44.26
+ },
+ {
+  "text": "could",
+  "start": 44.26,
+  "end": 44.49
+ },
+ {
+  "text": "explain",
+  "start": 44.75,
+  "end": 45.05
+ },
+ {
+  "text": "what",
+  "start": 45.05,
+  "end": 45.21
+ },
+ {
+  "text": "happened",
+  "start": 45.3,
+  "end": 45.84
+ },
+ {
+  "text": "in",
+  "start": 45.84,
+  "end": 45.97
+ },
+ {
+  "text": "1999.",
+  "start": 45.97,
+  "end": 46.99
+ },
+ {
+  "text": "Then",
+  "start": 47.38,
+  "end": 47.38
+ },
+ {
+  "text": "it",
+  "start": 47.4,
+  "end": 47.57
+ },
+ {
+  "text": "flew",
+  "start": 47.57,
+  "end": 47.95
+ },
+ {
+  "text": "again,",
+  "start": 47.95,
+  "end": 48.61
+ },
+ {
+  "text": "under",
+  "start": 48.72,
+  "end": 49.08
+ },
+ {
+  "text": "a",
+  "start": 49.08,
+  "end": 49.17
+ },
+ {
+  "text": "new",
+  "start": 49.17,
+  "end": 49.45
+ },
+ {
+  "text": "name:",
+  "start": 49.45,
+  "end": 50.01
+ },
+ {
+  "text": "Phoenix.",
+  "start": 50.01,
+  "end": 50.73
+ },
+ {
+  "text": "In",
+  "start": 51.15,
+  "end": 51.15
+ },
+ {
+  "text": "May",
+  "start": 51.38,
+  "end": 51.38
+ },
+ {
+  "text": "2008,",
+  "start": 51.4,
+  "end": 52.47
+ },
+ {
+  "text": "Phoenix",
+  "start": 52.72,
+  "end": 53.03
+ },
+ {
+  "text": "landed",
+  "start": 53.03,
+  "end": 53.49
+ },
+ {
+  "text": "safely",
+  "start": 53.49,
+  "end": 53.97
+ },
+ {
+  "text": "near",
+  "start": 53.97,
+  "end": 54.19
+ },
+ {
+  "text": "the",
+  "start": 54.29,
+  "end": 54.51
+ },
+ {
+  "text": "north",
+  "start": 54.51,
+  "end": 54.72
+ },
+ {
+  "text": "pole",
+  "start": 55.19,
+  "end": 55.21
+ },
+ {
+  "text": "of",
+  "start": 55.21,
+  "end": 55.36
+ },
+ {
+  "text": "Mars.",
+  "start": 55.36,
+  "end": 56
+ },
+ {
+  "text": "It",
+  "start": 56.17,
+  "end": 56.17
+ },
+ {
+  "text": "dug",
+  "start": 56.39,
+  "end": 56.42
+ },
+ {
+  "text": "into",
+  "start": 56.42,
+  "end": 56.76
+ },
+ {
+  "text": "the",
+  "start": 56.76,
+  "end": 57.01
+ },
+ {
+  "text": "soil",
+  "start": 57.01,
+  "end": 57.13
+ },
+ {
+  "text": "and",
+  "start": 57.49,
+  "end": 57.6
+ },
+ {
+  "text": "confirmed",
+  "start": 57.72,
+  "end": 58.37
+ },
+ {
+  "text": "water",
+  "start": 58.37,
+  "end": 58.8
+ },
+ {
+  "text": "ice",
+  "start": 58.8,
+  "end": 59.05
+ },
+ {
+  "text": "just",
+  "start": 59.05,
+  "end": 59.38
+ },
+ {
+  "text": "below",
+  "start": 59.38,
+  "end": 59.72
+ },
+ {
+  "text": "the",
+  "start": 59.95,
+  "end": 60.07
+ },
+ {
+  "text": "surface.",
+  "start": 60.19,
+  "end": 61
+ },
+ {
+  "text": "The",
+  "start": 61.2,
+  "end": 61.23
+ },
+ {
+  "text": "same",
+  "start": 61.4,
+  "end": 61.53
+ },
+ {
+  "text": "basic",
+  "start": 61.53,
+  "end": 61.91
+ },
+ {
+  "text": "machine",
+  "start": 61.91,
+  "end": 62.12
+ },
+ {
+  "text": "that",
+  "start": 62.7,
+  "end": 62.74
+ },
+ {
+  "text": "had",
+  "start": 62.74,
+  "end": 62.97
+ },
+ {
+  "text": "failed",
+  "start": 62.97,
+  "end": 63.43
+ },
+ {
+  "text": "at",
+  "start": 63.43,
+  "end": 63.58
+ },
+ {
+  "text": "the",
+  "start": 63.58,
+  "end": 63.81
+ },
+ {
+  "text": "south",
+  "start": 63.81,
+  "end": 64.19
+ },
+ {
+  "text": "pole",
+  "start": 64.19,
+  "end": 64.49
+ },
+ {
+  "text": "succeeded",
+  "start": 64.49,
+  "end": 64.72
+ },
+ {
+  "text": "at",
+  "start": 65.19,
+  "end": 65.33
+ },
+ {
+  "text": "the",
+  "start": 65.33,
+  "end": 65.56
+ },
+ {
+  "text": "north,",
+  "start": 65.56,
+  "end": 66.13
+ },
+ {
+  "text": "because",
+  "start": 66.14,
+  "end": 66.49
+ },
+ {
+  "text": "the",
+  "start": 66.75,
+  "end": 66.93
+ },
+ {
+  "text": "people",
+  "start": 66.93,
+  "end": 67.36
+ },
+ {
+  "text": "around",
+  "start": 67.43,
+  "end": 67.87
+ },
+ {
+  "text": "it",
+  "start": 67.87,
+  "end": 68.02
+ },
+ {
+  "text": "had",
+  "start": 68.02,
+  "end": 68.25
+ },
+ {
+  "text": "changed",
+  "start": 68.25,
+  "end": 68.8
+ },
+ {
+  "text": "how",
+  "start": 68.8,
+  "end": 69.03
+ },
+ {
+  "text": "they",
+  "start": 69.03,
+  "end": 69.34
+ },
+ {
+  "text": "checked",
+  "start": 69.34,
+  "end": 69.48
+ },
+ {
+  "text": "their",
+  "start": 70.01,
+  "end": 70.28
+ },
+ {
+  "text": "work.",
+  "start": 70.28,
+  "end": 70.89
+ }
+]

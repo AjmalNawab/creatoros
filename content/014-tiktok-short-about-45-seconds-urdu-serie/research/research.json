@@ -1,0 +1,75 @@
+{
+ "summary": "The hottest place on Earth depends on what you measure. Air temperature: the official World Meteorological Organization record is 56.7°C (134°F) at Furnace Creek, Death Valley, USA, on 10 July 1913 (some scientists question that reading; Libya's 58°C El Azizia record was disqualified by the WMO in 2012). Ground (land surface) temperature: NASA satellites (MODIS) measured 70.7°C in Iran's Lut Desert in 2005, the highest in their seven-year survey; a later study suggests the true peaks may be even higher. The ground gets far hotter than the air because dark, dry surfaces absorb sunlight. Pakistan's own Jacobabad is one of the hottest cities on Earth.",
+ "audience": "Pakistani viewers who live through extreme summers and love record facts",
+ "facts": [
+  {
+   "fact": "NASA satellites measured a land surface temperature of 70.7°C (159.3°F) in Iran's Lut Desert in 2005, the highest in a seven-year survey.",
+   "confidence": "high",
+   "source": "NASA Earth Observatory: Where is the hottest place on Earth?"
+  },
+  {
+   "fact": "The Lut Desert was the hottest place in five of the seven years NASA studied.",
+   "confidence": "high",
+   "source": "NASA Earth Observatory"
+  },
+  {
+   "fact": "Satellites measure the temperature of the ground surface, which can be much hotter than the air temperature measured by weather stations in the shade.",
+   "confidence": "high",
+   "source": "NASA Earth Observatory: What does it mean to be hot?"
+  },
+  {
+   "fact": "The Lut Desert's dark rocks and sand absorb sunlight strongly, which heats the ground.",
+   "confidence": "medium",
+   "source": "NASA Earth Observatory"
+  },
+  {
+   "fact": "The official highest air temperature recognised by the World Meteorological Organization is 56.7°C (134°F), recorded at Furnace Creek in Death Valley, USA, on 10 July 1913.",
+   "confidence": "high",
+   "source": "WMO Weather and Climate Extremes Archive"
+  },
+  {
+   "fact": "Some scientists question the 1913 Death Valley reading, but it remains the official WMO record.",
+   "confidence": "medium",
+   "source": "Weather/climate press coverage"
+  },
+  {
+   "fact": "A 58°C reading from El Azizia, Libya (1922) was disqualified by the WMO in 2012.",
+   "confidence": "high",
+   "source": "WMO (2012)"
+  },
+  {
+   "fact": "A later study using newer satellite data suggests land surface temperatures in the Lut Desert and Sonoran Desert may reach around 80°C.",
+   "confidence": "low",
+   "source": "NSF PAR paper (single source)"
+  },
+  {
+   "fact": "Jacobabad in Pakistan is regularly described as one of the hottest cities on Earth.",
+   "confidence": "medium",
+   "source": "BBC / Amnesty reporting on Jacobabad heat"
+  }
+ ],
+ "sources": [
+  {
+   "name": "NASA Earth Observatory: Where is the hottest place on Earth?",
+   "url": "https://science.nasa.gov/earth/earth-observatory/where-is-the-hottest-place-on-earth"
+  },
+  {
+   "name": "NASA Earth Observatory: The hottest spot on Earth",
+   "url": "https://earthobservatory.nasa.gov/features/HottestSpot"
+  },
+  {
+   "name": "NASA SVS: Hottest place on Earth?",
+   "url": "https://svs.gsfc.nasa.gov/10946"
+  },
+  {
+   "name": "WMO Weather and Climate Extremes Archive",
+   "url": "https://wmo.asu.edu/"
+  }
+ ],
+ "avoid": [
+  "Mixing up ground temperature with air temperature",
+  "Saying Libya's 58°C is the record (disqualified in 2012)",
+  "Stating the ~80°C study as fact",
+  "Fear-mongering about heat; keep it wonder plus a light Jacobabad link"
+ ]
+}

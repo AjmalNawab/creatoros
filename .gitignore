@@ -17,3 +17,10 @@ media/renderer/node_modules/
 media/whisper.cpp/
 content/_samples/
 *.wav
+
+# licensed footage clips (re-downloadable; licence + source kept in content/*/footage/manifest.json)
+content/*/footage/*
+!content/*/footage/manifest.json
+media/renderer/public/reframe/
+media/renderer/public/styletest/
+content/_tests/

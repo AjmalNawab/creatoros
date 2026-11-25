@@ -2,7 +2,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { z } from 'zod';
 import { getDb } from '@creatoros/db';
 import { askAi, parseJson, paths, type AgentDefinition } from '@creatoros/core';
-import { brandBlock, projectWithBrand, readJson, withFeedback, writeJson } from '../../production/shared';
+import { brandBlock, footageCredits, projectWithBrand, readJson, withFeedback, writeJson } from '../../production/shared';
 import { sha256File } from '../youtube/package';
 
 /**
@@ -63,8 +63,9 @@ Answer with ONLY a JSON object:
       },
     });
 
+    const footage = await footageCredits(p.slug);
     const caption = [meta.caption.trim(), '', `📚 Sources: ${research.sources.map((s) => s.name).join(' · ')}`,
-      '🎙️ AI narration · original animation', '', meta.hashtags.join(' ')].join('\n');
+      '🎙️ AI narration · original animation', ...(footage.used ? [footage.line] : []), '', meta.hashtags.join(' ')].join('\n');
 
     const dir = paths.content(p.slug, 'platforms', 'facebook');
     await mkdir(dir, { recursive: true });

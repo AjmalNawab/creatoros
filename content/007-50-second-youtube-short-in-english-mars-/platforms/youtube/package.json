@@ -1,0 +1,36 @@
+{
+ "platform": "youtube",
+ "video": "output/007-50-second-youtube-short-in-english-mars-.mp4",
+ "videoSha256": "c49ad06129c65429a930096a4f61e0f27b7302aaeb1f0c03ddbf0d8c9672660b",
+ "thumbnail": null,
+ "format": "short",
+ "title": "Its Engines Shut Off 40 Metres Above Mars",
+ "description": "On 3 December 1999, NASA's Mars Polar Lander went silent during its final descent. Investigators concluded a brief false touchdown signal from its own landing legs most likely shut the engines off about 40 metres up. Its twin later flew as Phoenix and landed safely in 2008.\n\n📚 Sources: JPL Special Review Board: Report on the Loss of the Mars Polar Lander and Deep Space 2 Missions (2000) · CBS News: Mars lander reports rip NASA · NASA APPEL: Zealots and skeptics (Phoenix case study) · NASA: 15 years ago, Phoenix Mars Lander launches · NASA Image and Video Library: KSC-99pc05 launch photo\n🎙️ Narration: AI voice. Animation: original.\n\n#Shorts #Engineering #Mars",
+ "tags": [
+  "Mars Polar Lander",
+  "Mars Polar Lander failure",
+  "NASA Mars 1999",
+  "Mars lander crash",
+  "software bug spacecraft",
+  "touchdown sensor",
+  "engineering disaster",
+  "space engineering failure",
+  "Phoenix Mars lander",
+  "JPL review board",
+  "software testing failure",
+  "Mars mission failure"
+ ],
+ "visibility": "public",
+ "madeForKids": false,
+ "category": "Science & Technology",
+ "playlist": "Engineering Stories (English)",
+ "series": "Margin of Safety",
+ "language": "English",
+ "channel": {
+  "id": "UCvugPJLIN5Wr5JeddlTrvKg",
+  "name": "Margin of Safety",
+  "handle": "@MarginOfSafetyTV"
+ },
+ "alteredContent": false,
+ "route": "browser"
+}

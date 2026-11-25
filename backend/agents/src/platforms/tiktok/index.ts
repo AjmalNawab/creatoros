@@ -1,11 +1,18 @@
 import type { PlatformModule } from '..';
+import { tiktokPackage } from './package';
+import { tiktokPublish } from './publish';
 
 /**
- * TikTok agent: PLANNED (not built yet).
- * Vertical 9:16 video, caption + hashtags. Route: owner's Chrome first (API posts are private-only until audit).
- * To activate: add package + publish agents (see ../youtube), list them in agents/steps, set status 'active'.
+ * TikTok agent: ACTIVE. Separate anonymous account "Chai & Curiosity" (TIKTOK_HANDLE in .env).
+ * package → owner approves exact package → publish (owner's Chrome via DevTools; API posts stay private until audit).
+ * Vertical (9:16) videos only.
  */
 export const tiktok: PlatformModule = {
-  id: 'tiktok', name: 'TikTok', status: 'planned', route: 'browser', agents: [], steps: [],
-  notes: "Vertical 9:16 video, caption + hashtags. Route: owner's Chrome first (API posts are private-only until audit).",
+  id: 'tiktok', name: 'TikTok', status: 'active', route: 'browser',
+  agents: [tiktokPackage, tiktokPublish],
+  steps: [
+    { key: 'tiktok_package', agentId: 'tiktok.package', type: 'tiktok_package', dependsOn: ['qa'] },
+    { key: 'tiktok_publish', agentId: 'tiktok.publish', type: 'tiktok_publish', dependsOn: ['tiktok_package'] },
+  ],
+  notes: "Anonymous account \"Chai & Curiosity\": vertical videos, caption + hashtags, AI-content label on. Route: owner's Chrome.",
 };

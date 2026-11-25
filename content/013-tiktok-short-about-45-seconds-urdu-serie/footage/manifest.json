@@ -1,0 +1,59 @@
+{
+ "clips": [
+  {
+   "file": "p013/footage/great-wall-drone.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "199127",
+   "page": "https://pixabay.com/videos/id-199127/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "Great Wall over mountains (stock)",
+   "sha256": "78a76e632876d1f8eb67488c6caf8aacc0de009aa46805f751408f5fd5b2b0fc",
+   "addedAt": "2026-11-25T07:52:11.689Z",
+   "normalised": true
+  },
+  {
+   "file": "p013/footage/great-wall.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "1540",
+   "page": "https://pixabay.com/videos/id-1540/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "Great Wall close (stock)",
+   "sha256": "92e20e197f11e5cfb663e1e686496eb0f8d87f7f04c96248ddda4bc72c304500",
+   "addedAt": "2026-11-25T07:52:13.735Z",
+   "normalised": true
+  },
+  {
+   "file": "p013/footage/chiao-great-wall-2004.jpg",
+   "kind": "image",
+   "source": "nasa",
+   "id": "iss010e08497",
+   "page": "https://images.nasa.gov/details/iss010e08497",
+   "licence": "Public domain (NASA)",
+   "credit": "NASA",
+   "note": "Leroy Chiao's first verifiable photo of the Great Wall from the ISS, 24 Nov 2004",
+   "sha256": "15576073a80e5718cbcf36a53893a446dae85309f2803e444863de732c59d3b1",
+   "addedAt": "2026-11-25T07:52:15.700Z"
+  },
+  {
+   "file": "p013/footage/iss-earth-view.mp4",
+   "kind": "video",
+   "source": "nasa",
+   "id": "jsc2024m000174_Cameras_On_The_International_Space_Station_Capture_New_Views_Of_Hurricane_Milton-241009",
+   "page": "https://images.nasa.gov/details/jsc2024m000174_Cameras_On_The_International_Space_Station_Capture_New_Views_Of_Hurricane_Milton-241009",
+   "licence": "Public domain (NASA)",
+   "credit": "NASA",
+   "note": "Earth from the ISS",
+   "segment": {
+    "start": 20,
+    "dur": 30
+   },
+   "sha256": "75255b6217f67eca4d93796cff98dc9a41a9bdbad2885d7c3ababab69fcbeadd",
+   "addedAt": "2026-11-25T07:52:23.988Z",
+   "normalised": true
+  }
+ ]
+}

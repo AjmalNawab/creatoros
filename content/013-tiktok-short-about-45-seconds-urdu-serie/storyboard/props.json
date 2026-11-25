@@ -1,0 +1,674 @@
+{
+ "data": {
+  "key": "p013",
+  "language": "ur",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 1165,
+  "lines": [
+   {
+    "id": 1,
+    "text": "سچ یا جھوٹ؟ دیوارِ چین خلا سے آنکھوں سے نظر آتی ہے۔",
+    "title": "Hook",
+    "audio": "p013/scene_1.mp3",
+    "startFrame": 0,
+    "durationFrames": 148,
+    "words": [
+     {
+      "text": "سچ",
+      "start": 0.08,
+      "end": 0.31
+     },
+     {
+      "text": "یا",
+      "start": 0.31,
+      "end": 0.54
+     },
+     {
+      "text": "جھوٹ؟",
+      "start": 0.54,
+      "end": 1.115
+     },
+     {
+      "text": "دیوارِ",
+      "start": 1.115,
+      "end": 1.805
+     },
+     {
+      "text": "چین",
+      "start": 1.805,
+      "end": 2.15
+     },
+     {
+      "text": "خلا",
+      "start": 2.15,
+      "end": 2.495
+     },
+     {
+      "text": "سے",
+      "start": 2.495,
+      "end": 2.725
+     },
+     {
+      "text": "آنکھوں",
+      "start": 2.725,
+      "end": 3.415
+     },
+     {
+      "text": "سے",
+      "start": 3.415,
+      "end": 3.645
+     },
+     {
+      "text": "نظر",
+      "start": 3.645,
+      "end": 3.99
+     },
+     {
+      "text": "آتی",
+      "start": 3.99,
+      "end": 4.335
+     },
+     {
+      "text": "ہے۔",
+      "start": 4.335,
+      "end": 4.68
+     }
+    ],
+    "visual": "Big stamp: سچ یا جھوٹ؟ over Earth-from-ISS footage"
+   },
+   {
+    "id": 2,
+    "text": "یہ بات ہم سب نے بچپن سے کتابوں اور باتوں میں سنی ہے۔",
+    "title": "The belief",
+    "audio": "p013/scene_2.mp3",
+    "startFrame": 148,
+    "durationFrames": 119,
+    "words": [
+     {
+      "text": "یہ",
+      "start": 0.08,
+      "end": 0.262
+     },
+     {
+      "text": "بات",
+      "start": 0.262,
+      "end": 0.535
+     },
+     {
+      "text": "ہم",
+      "start": 0.535,
+      "end": 0.717
+     },
+     {
+      "text": "سب",
+      "start": 0.717,
+      "end": 0.899
+     },
+     {
+      "text": "نے",
+      "start": 0.899,
+      "end": 1.081
+     },
+     {
+      "text": "بچپن",
+      "start": 1.081,
+      "end": 1.445
+     },
+     {
+      "text": "سے",
+      "start": 1.445,
+      "end": 1.627
+     },
+     {
+      "text": "کتابوں",
+      "start": 1.627,
+      "end": 2.173
+     },
+     {
+      "text": "اور",
+      "start": 2.173,
+      "end": 2.446
+     },
+     {
+      "text": "باتوں",
+      "start": 2.446,
+      "end": 2.901
+     },
+     {
+      "text": "میں",
+      "start": 2.901,
+      "end": 3.174
+     },
+     {
+      "text": "سنی",
+      "start": 3.174,
+      "end": 3.447
+     },
+     {
+      "text": "ہے۔",
+      "start": 3.447,
+      "end": 3.72
+     }
+    ],
+    "visual": "Great Wall stock footage; book icon"
+   },
+   {
+    "id": 3,
+    "text": "تو جواب ہے جھوٹ! کم از کم عام آنکھ سے تو نہیں۔",
+    "title": "Verdict",
+    "audio": "p013/scene_3.mp3",
+    "startFrame": 267,
+    "durationFrames": 132,
+    "words": [
+     {
+      "text": "تو",
+      "start": 0.08,
+      "end": 0.311
+     },
+     {
+      "text": "جواب",
+      "start": 0.311,
+      "end": 0.774
+     },
+     {
+      "text": "ہے",
+      "start": 0.774,
+      "end": 1.005
+     },
+     {
+      "text": "جھوٹ!",
+      "start": 1.005,
+      "end": 1.584
+     },
+     {
+      "text": "کم",
+      "start": 1.584,
+      "end": 1.815
+     },
+     {
+      "text": "از",
+      "start": 1.815,
+      "end": 2.046
+     },
+     {
+      "text": "کم",
+      "start": 2.046,
+      "end": 2.277
+     },
+     {
+      "text": "عام",
+      "start": 2.277,
+      "end": 2.624
+     },
+     {
+      "text": "آنکھ",
+      "start": 2.624,
+      "end": 3.087
+     },
+     {
+      "text": "سے",
+      "start": 3.087,
+      "end": 3.318
+     },
+     {
+      "text": "تو",
+      "start": 3.318,
+      "end": 3.55
+     },
+     {
+      "text": "نہیں۔",
+      "start": 3.55,
+      "end": 4.128
+     }
+    ],
+    "visual": "Red stamp: جھوٹ"
+   },
+   {
+    "id": 4,
+    "text": "دو ہزار تین میں چین کے پہلے خلا باز نے خود کہا: مجھے دیوار نظر نہیں آئی۔",
+    "title": "Yang Liwei",
+    "audio": "p013/scene_4.mp3",
+    "startFrame": 399,
+    "durationFrames": 170,
+    "words": [
+     {
+      "text": "دو",
+      "start": 0.08,
+      "end": 0.27
+     },
+     {
+      "text": "ہزار",
+      "start": 0.27,
+      "end": 0.65
+     },
+     {
+      "text": "تین",
+      "start": 0.65,
+      "end": 0.935
+     },
+     {
+      "text": "میں",
+      "start": 0.935,
+      "end": 1.22
+     },
+     {
+      "text": "چین",
+      "start": 1.22,
+      "end": 1.505
+     },
+     {
+      "text": "کے",
+      "start": 1.505,
+      "end": 1.695
+     },
+     {
+      "text": "پہلے",
+      "start": 1.695,
+      "end": 2.075
+     },
+     {
+      "text": "خلا",
+      "start": 2.075,
+      "end": 2.36
+     },
+     {
+      "text": "باز",
+      "start": 2.36,
+      "end": 2.645
+     },
+     {
+      "text": "نے",
+      "start": 2.645,
+      "end": 2.835
+     },
+     {
+      "text": "خود",
+      "start": 2.835,
+      "end": 3.12
+     },
+     {
+      "text": "کہا:",
+      "start": 3.12,
+      "end": 3.5
+     },
+     {
+      "text": "مجھے",
+      "start": 3.5,
+      "end": 3.88
+     },
+     {
+      "text": "دیوار",
+      "start": 3.88,
+      "end": 4.355
+     },
+     {
+      "text": "نظر",
+      "start": 4.355,
+      "end": 4.64
+     },
+     {
+      "text": "نہیں",
+      "start": 4.64,
+      "end": 5.02
+     },
+     {
+      "text": "آئی۔",
+      "start": 5.02,
+      "end": 5.4
+     }
+    ],
+    "visual": "Card: 2003 · China's first astronaut · 'I could not see it' (no photo)"
+   },
+   {
+    "id": 5,
+    "text": "وجہ یہ ہے کہ دیوار بہت لمبی ہے، مگر صرف چند میٹر چوڑی۔",
+    "title": "Too narrow",
+    "audio": "p013/scene_5.mp3",
+    "startFrame": 569,
+    "durationFrames": 138,
+    "words": [
+     {
+      "text": "وجہ",
+      "start": 0.08,
+      "end": 0.385
+     },
+     {
+      "text": "یہ",
+      "start": 0.385,
+      "end": 0.588
+     },
+     {
+      "text": "ہے",
+      "start": 0.588,
+      "end": 0.791
+     },
+     {
+      "text": "کہ",
+      "start": 0.791,
+      "end": 0.994
+     },
+     {
+      "text": "دیوار",
+      "start": 0.994,
+      "end": 1.501
+     },
+     {
+      "text": "بہت",
+      "start": 1.501,
+      "end": 1.806
+     },
+     {
+      "text": "لمبی",
+      "start": 1.806,
+      "end": 2.212
+     },
+     {
+      "text": "ہے،",
+      "start": 2.212,
+      "end": 2.517
+     },
+     {
+      "text": "مگر",
+      "start": 2.517,
+      "end": 2.821
+     },
+     {
+      "text": "صرف",
+      "start": 2.821,
+      "end": 3.126
+     },
+     {
+      "text": "چند",
+      "start": 3.126,
+      "end": 3.43
+     },
+     {
+      "text": "میٹر",
+      "start": 3.43,
+      "end": 3.836
+     },
+     {
+      "text": "چوڑی۔",
+      "start": 3.836,
+      "end": 4.344
+     }
+    ],
+    "visual": "Diagram: wall a few metres wide vs 400 km height"
+   },
+   {
+    "id": 6,
+    "text": "اور اس کا رنگ آس پاس کی زمین جیسا ہے، اس لیے وہ چھپ جاتی ہے۔",
+    "title": "Same colour",
+    "audio": "p013/scene_6.mp3",
+    "startFrame": 707,
+    "durationFrames": 134,
+    "words": [
+     {
+      "text": "اور",
+      "start": 0.08,
+      "end": 0.356
+     },
+     {
+      "text": "اس",
+      "start": 0.356,
+      "end": 0.54
+     },
+     {
+      "text": "کا",
+      "start": 0.54,
+      "end": 0.725
+     },
+     {
+      "text": "رنگ",
+      "start": 0.725,
+      "end": 1.001
+     },
+     {
+      "text": "آس",
+      "start": 1.001,
+      "end": 1.185
+     },
+     {
+      "text": "پاس",
+      "start": 1.185,
+      "end": 1.461
+     },
+     {
+      "text": "کی",
+      "start": 1.461,
+      "end": 1.646
+     },
+     {
+      "text": "زمین",
+      "start": 1.646,
+      "end": 2.014
+     },
+     {
+      "text": "جیسا",
+      "start": 2.014,
+      "end": 2.382
+     },
+     {
+      "text": "ہے،",
+      "start": 2.382,
+      "end": 2.658
+     },
+     {
+      "text": "اس",
+      "start": 2.658,
+      "end": 2.843
+     },
+     {
+      "text": "لیے",
+      "start": 2.843,
+      "end": 3.119
+     },
+     {
+      "text": "وہ",
+      "start": 3.119,
+      "end": 3.303
+     },
+     {
+      "text": "چھپ",
+      "start": 3.303,
+      "end": 3.579
+     },
+     {
+      "text": "جاتی",
+      "start": 3.579,
+      "end": 3.948
+     },
+     {
+      "text": "ہے۔",
+      "start": 3.948,
+      "end": 4.224
+     }
+    ],
+    "visual": "Wall blending into hills, colour swatches"
+   },
+   {
+    "id": 7,
+    "text": "خلائی اسٹیشن سے اس کی تصویر صرف طاقتور لینز سے لی گئی ہے، اور چاند سے تو ناممکن۔",
+    "title": "Only with lenses",
+    "audio": "p013/scene_7.mp3",
+    "startFrame": 841,
+    "durationFrames": 178,
+    "words": [
+     {
+      "text": "خلائی",
+      "start": 0.08,
+      "end": 0.523
+     },
+     {
+      "text": "اسٹیشن",
+      "start": 0.523,
+      "end": 1.055
+     },
+     {
+      "text": "سے",
+      "start": 1.055,
+      "end": 1.232
+     },
+     {
+      "text": "اس",
+      "start": 1.232,
+      "end": 1.41
+     },
+     {
+      "text": "کی",
+      "start": 1.41,
+      "end": 1.587
+     },
+     {
+      "text": "تصویر",
+      "start": 1.587,
+      "end": 2.03
+     },
+     {
+      "text": "صرف",
+      "start": 2.03,
+      "end": 2.296
+     },
+     {
+      "text": "طاقتور",
+      "start": 2.296,
+      "end": 2.828
+     },
+     {
+      "text": "لینز",
+      "start": 2.828,
+      "end": 3.182
+     },
+     {
+      "text": "سے",
+      "start": 3.182,
+      "end": 3.359
+     },
+     {
+      "text": "لی",
+      "start": 3.359,
+      "end": 3.537
+     },
+     {
+      "text": "گئی",
+      "start": 3.537,
+      "end": 3.803
+     },
+     {
+      "text": "ہے،",
+      "start": 3.803,
+      "end": 4.069
+     },
+     {
+      "text": "اور",
+      "start": 4.069,
+      "end": 4.334
+     },
+     {
+      "text": "چاند",
+      "start": 4.334,
+      "end": 4.689
+     },
+     {
+      "text": "سے",
+      "start": 4.689,
+      "end": 4.866
+     },
+     {
+      "text": "تو",
+      "start": 4.866,
+      "end": 5.044
+     },
+     {
+      "text": "ناممکن۔",
+      "start": 5.044,
+      "end": 5.664
+     }
+    ],
+    "visual": "Camera lens zoom diagram 180mm/800mm over ISS footage"
+   },
+   {
+    "id": 8,
+    "text": "آپ کو پہلے کیا لگتا تھا، سچ یا جھوٹ؟ کمنٹ میں بتائیں۔",
+    "title": "Question",
+    "audio": "p013/scene_8.mp3",
+    "startFrame": 1019,
+    "durationFrames": 146,
+    "words": [
+     {
+      "text": "آپ",
+      "start": 0.08,
+      "end": 0.296
+     },
+     {
+      "text": "کو",
+      "start": 0.296,
+      "end": 0.511
+     },
+     {
+      "text": "پہلے",
+      "start": 0.511,
+      "end": 0.942
+     },
+     {
+      "text": "کیا",
+      "start": 0.942,
+      "end": 1.266
+     },
+     {
+      "text": "لگتا",
+      "start": 1.266,
+      "end": 1.697
+     },
+     {
+      "text": "تھا،",
+      "start": 1.697,
+      "end": 2.128
+     },
+     {
+      "text": "سچ",
+      "start": 2.128,
+      "end": 2.344
+     },
+     {
+      "text": "یا",
+      "start": 2.344,
+      "end": 2.56
+     },
+     {
+      "text": "جھوٹ؟",
+      "start": 2.56,
+      "end": 3.099
+     },
+     {
+      "text": "کمنٹ",
+      "start": 3.099,
+      "end": 3.53
+     },
+     {
+      "text": "میں",
+      "start": 3.53,
+      "end": 3.853
+     },
+     {
+      "text": "بتائیں۔",
+      "start": 3.853,
+      "end": 4.608
+     }
+    ],
+    "visual": "Split poll: سچ / جھوٹ"
+   }
+  ],
+  "brand": {
+   "name": "Chai & Curiosity",
+   "handle": "facebook.com · Chai & Curiosity",
+   "accent": "#ffd27a"
+  },
+  "endCard": {
+   "title": "سچ یا جھوٹ؟ جھوٹ!",
+   "cta": "اگلا سوال آپ بتائیں"
+  }
+ }
+}

@@ -1,0 +1,892 @@
+[
+ {
+  "text": "Investigators",
+  "start": 0.4,
+  "end": 1.02
+ },
+ {
+  "text": "were",
+  "start": 1.02,
+  "end": 1.33
+ },
+ {
+  "text": "careful",
+  "start": 1.33,
+  "end": 1.88
+ },
+ {
+  "text": "with",
+  "start": 1.88,
+  "end": 2.19
+ },
+ {
+  "text": "their",
+  "start": 2.19,
+  "end": 2.52
+ },
+ {
+  "text": "words.",
+  "start": 2.57,
+  "end": 3
+ },
+ {
+  "text": "For",
+  "start": 3.2,
+  "end": 3.21
+ },
+ {
+  "text": "the",
+  "start": 3.4,
+  "end": 3.42
+ },
+ {
+  "text": "lander,",
+  "start": 3.42,
+  "end": 4
+ },
+ {
+  "text": "there",
+  "start": 4,
+  "end": 4.25
+ },
+ {
+  "text": "was",
+  "start": 4.29,
+  "end": 4.48
+ },
+ {
+  "text": "no",
+  "start": 4.48,
+  "end": 4.6
+ },
+ {
+  "text": "data",
+  "start": 4.6,
+  "end": 4.84
+ },
+ {
+  "text": "from",
+  "start": 4.84,
+  "end": 5
+ },
+ {
+  "text": "the",
+  "start": 5.1,
+  "end": 5.26
+ },
+ {
+  "text": "final",
+  "start": 5.26,
+  "end": 5.49
+ },
+ {
+  "text": "descent,",
+  "start": 5.55,
+  "end": 6.5
+ },
+ {
+  "text": "so",
+  "start": 6.62,
+  "end": 6.62
+ },
+ {
+  "text": "the",
+  "start": 6.81,
+  "end": 6.81
+ },
+ {
+  "text": "board",
+  "start": 6.9,
+  "end": 7.13
+ },
+ {
+  "text": "called",
+  "start": 7.13,
+  "end": 7.51
+ },
+ {
+  "text": "premature",
+  "start": 7.51,
+  "end": 8.09
+ },
+ {
+  "text": "engine",
+  "start": 8.09,
+  "end": 8.5
+ },
+ {
+  "text": "shutdown",
+  "start": 8.5,
+  "end": 9.01
+ },
+ {
+  "text": "the",
+  "start": 9.01,
+  "end": 9.25
+ },
+ {
+  "text": "most",
+  "start": 9.25,
+  "end": 9.27
+ },
+ {
+  "text": "probable",
+  "start": 9.79,
+  "end": 10.25
+ },
+ {
+  "text": "cause,",
+  "start": 10.25,
+  "end": 10.81
+ },
+ {
+  "text": "not",
+  "start": 10.81,
+  "end": 11
+ },
+ {
+  "text": "a",
+  "start": 11,
+  "end": 11.1
+ },
+ {
+  "text": "certainty.",
+  "start": 11.1,
+  "end": 12
+ },
+ {
+  "text": "But",
+  "start": 12.2,
+  "end": 12.27
+ },
+ {
+  "text": "they",
+  "start": 12.4,
+  "end": 12.64
+ },
+ {
+  "text": "had",
+  "start": 12.64,
+  "end": 12.91
+ },
+ {
+  "text": "strong",
+  "start": 12.91,
+  "end": 13.38
+ },
+ {
+  "text": "evidence.",
+  "start": 13.46,
+  "end": 14.49
+ },
+ {
+  "text": "In",
+  "start": 14.66,
+  "end": 14.66
+ },
+ {
+  "text": "tests,",
+  "start": 14.9,
+  "end": 15.22
+ },
+ {
+  "text": "the",
+  "start": 15.22,
+  "end": 15.46
+ },
+ {
+  "text": "touchdown",
+  "start": 15.46,
+  "end": 16.17
+ },
+ {
+  "text": "sensors",
+  "start": 16.28,
+  "end": 16.74
+ },
+ {
+  "text": "really",
+  "start": 16.74,
+  "end": 17.22
+ },
+ {
+  "text": "did",
+  "start": 17.22,
+  "end": 17.27
+ },
+ {
+  "text": "produce",
+  "start": 17.79,
+  "end": 18.05
+ },
+ {
+  "text": "false",
+  "start": 18.05,
+  "end": 18.39
+ },
+ {
+  "text": "signals",
+  "start": 18.67,
+  "end": 19
+ },
+ {
+  "text": "when",
+  "start": 19,
+  "end": 19.31
+ },
+ {
+  "text": "the",
+  "start": 19.31,
+  "end": 19.52
+ },
+ {
+  "text": "legs",
+  "start": 19.58,
+  "end": 19.8
+ },
+ {
+  "text": "deployed.",
+  "start": 19.95,
+  "end": 20.5
+ },
+ {
+  "text": "And",
+  "start": 20.7,
+  "end": 20.7
+ },
+ {
+  "text": "the",
+  "start": 20.9,
+  "end": 20.9
+ },
+ {
+  "text": "board",
+  "start": 20.9,
+  "end": 21.22
+ },
+ {
+  "text": "found",
+  "start": 21.3,
+  "end": 21.58
+ },
+ {
+  "text": "that",
+  "start": 21.58,
+  "end": 21.85
+ },
+ {
+  "text": "the",
+  "start": 21.85,
+  "end": 22.05
+ },
+ {
+  "text": "system",
+  "start": 22.05,
+  "end": 22.46
+ },
+ {
+  "text": "tests",
+  "start": 22.46,
+  "end": 22.8
+ },
+ {
+  "text": "that",
+  "start": 22.8,
+  "end": 23.02
+ },
+ {
+  "text": "should",
+  "start": 23.07,
+  "end": 23.27
+ },
+ {
+  "text": "have",
+  "start": 23.75,
+  "end": 23.75
+ },
+ {
+  "text": "caught",
+  "start": 23.79,
+  "end": 24.16
+ },
+ {
+  "text": "it",
+  "start": 24.16,
+  "end": 24.28
+ },
+ {
+  "text": "were",
+  "start": 24.28,
+  "end": 24.41
+ },
+ {
+  "text": "incomplete.",
+  "start": 24.67,
+  "end": 25.5
+ },
+ {
+  "text": "One",
+  "start": 25.7,
+  "end": 25.71
+ },
+ {
+  "text": "test",
+  "start": 25.9,
+  "end": 25.99
+ },
+ {
+  "text": "that",
+  "start": 25.99,
+  "end": 26.22
+ },
+ {
+  "text": "could",
+  "start": 26.3,
+  "end": 26.62
+ },
+ {
+  "text": "have",
+  "start": 26.62,
+  "end": 26.88
+ },
+ {
+  "text": "revealed",
+  "start": 26.96,
+  "end": 27.46
+ },
+ {
+  "text": "the",
+  "start": 27.46,
+  "end": 27.67
+ },
+ {
+  "text": "problem",
+  "start": 27.67,
+  "end": 28.02
+ },
+ {
+  "text": "had",
+  "start": 28.16,
+  "end": 28.27
+ },
+ {
+  "text": "been",
+  "start": 28.65,
+  "end": 28.65
+ },
+ {
+  "text": "run",
+  "start": 28.77,
+  "end": 28.86
+ },
+ {
+  "text": "with",
+  "start": 28.86,
+  "end": 29.14
+ },
+ {
+  "text": "the",
+  "start": 29.14,
+  "end": 29.35
+ },
+ {
+  "text": "sensors",
+  "start": 29.35,
+  "end": 29.84
+ },
+ {
+  "text": "wired",
+  "start": 29.84,
+  "end": 30.16
+ },
+ {
+  "text": "incorrectly,",
+  "start": 30.19,
+  "end": 31
+ },
+ {
+  "text": "and",
+  "start": 31.2,
+  "end": 31.27
+ },
+ {
+  "text": "it",
+  "start": 31.4,
+  "end": 31.45
+ },
+ {
+  "text": "was",
+  "start": 31.45,
+  "end": 31.72
+ },
+ {
+  "text": "not",
+  "start": 31.72,
+  "end": 31.99
+ },
+ {
+  "text": "repeated",
+  "start": 31.99,
+  "end": 32.67
+ },
+ {
+  "text": "after",
+  "start": 32.78,
+  "end": 33.16
+ },
+ {
+  "text": "the",
+  "start": 33.16,
+  "end": 33.43
+ },
+ {
+  "text": "wiring",
+  "start": 33.43,
+  "end": 33.75
+ },
+ {
+  "text": "was",
+  "start": 34.24,
+  "end": 34.24
+ },
+ {
+  "text": "fixed.",
+  "start": 34.29,
+  "end": 34.9
+ },
+ {
+  "text": "The",
+  "start": 35.19,
+  "end": 35.19
+ },
+ {
+  "text": "board",
+  "start": 35.4,
+  "end": 35.51
+ },
+ {
+  "text": "called",
+  "start": 35.51,
+  "end": 35.84
+ },
+ {
+  "text": "the",
+  "start": 35.9,
+  "end": 36.09
+ },
+ {
+  "text": "underlying",
+  "start": 36.09,
+  "end": 36.67
+ },
+ {
+  "text": "cause",
+  "start": 36.78,
+  "end": 37
+ },
+ {
+  "text": "inadequate",
+  "start": 37.08,
+  "end": 37.71
+ },
+ {
+  "text": "software",
+  "start": 37.71,
+  "end": 37.76
+ },
+ {
+  "text": "design",
+  "start": 38.29,
+  "end": 38.62
+ },
+ {
+  "text": "and",
+  "start": 38.62,
+  "end": 38.81
+ },
+ {
+  "text": "systems",
+  "start": 38.81,
+  "end": 39.27
+ },
+ {
+  "text": "testing.",
+  "start": 39.27,
+  "end": 40
+ },
+ {
+  "text": "Then",
+  "start": 40.31,
+  "end": 40.31
+ },
+ {
+  "text": "a",
+  "start": 40.38,
+  "end": 40.38
+ },
+ {
+  "text": "wider",
+  "start": 40.4,
+  "end": 40.72
+ },
+ {
+  "text": "review",
+  "start": 40.78,
+  "end": 41.22
+ },
+ {
+  "text": "looked",
+  "start": 41.22,
+  "end": 41.67
+ },
+ {
+  "text": "at",
+  "start": 41.78,
+  "end": 41.83
+ },
+ {
+  "text": "both",
+  "start": 41.83,
+  "end": 42.14
+ },
+ {
+  "text": "losses",
+  "start": 42.14,
+  "end": 42.52
+ },
+ {
+  "text": "together.",
+  "start": 42.59,
+  "end": 43.5
+ },
+ {
+  "text": "It",
+  "start": 43.68,
+  "end": 43.68
+ },
+ {
+  "text": "was",
+  "start": 43.9,
+  "end": 43.96
+ },
+ {
+  "text": "led",
+  "start": 43.96,
+  "end": 44.22
+ },
+ {
+  "text": "by",
+  "start": 44.3,
+  "end": 44.42
+ },
+ {
+  "text": "Thomas",
+  "start": 44.42,
+  "end": 44.98
+ },
+ {
+  "text": "Young,",
+  "start": 44.98,
+  "end": 45.63
+ },
+ {
+  "text": "a",
+  "start": 45.63,
+  "end": 45.72
+ },
+ {
+  "text": "veteran",
+  "start": 45.72,
+  "end": 46.25
+ },
+ {
+  "text": "of",
+  "start": 46.55,
+  "end": 46.55
+ },
+ {
+  "text": "the",
+  "start": 46.76,
+  "end": 46.83
+ },
+ {
+  "text": "Viking",
+  "start": 46.83,
+  "end": 47.38
+ },
+ {
+  "text": "missions.",
+  "start": 47.39,
+  "end": 48.5
+ },
+ {
+  "text": "His",
+  "start": 48.7,
+  "end": 48.73
+ },
+ {
+  "text": "team",
+  "start": 48.9,
+  "end": 49.04
+ },
+ {
+  "text": "found",
+  "start": 49.04,
+  "end": 49.43
+ },
+ {
+  "text": "that",
+  "start": 49.43,
+  "end": 49.74
+ },
+ {
+  "text": "the",
+  "start": 49.74,
+  "end": 49.96
+ },
+ {
+  "text": "Mars",
+  "start": 49.97,
+  "end": 50.2
+ },
+ {
+  "text": "programme",
+  "start": 50.2,
+  "end": 50.83
+ },
+ {
+  "text": "had",
+  "start": 50.83,
+  "end": 51.02
+ },
+ {
+  "text": "been",
+  "start": 51.05,
+  "end": 51.26
+ },
+ {
+  "text": "under-funded",
+  "start": 51.75,
+  "end": 52.23
+ },
+ {
+  "text": "and",
+  "start": 52.23,
+  "end": 52.4
+ },
+ {
+  "text": "under-staffed,",
+  "start": 52.67,
+  "end": 53.5
+ },
+ {
+  "text": "and",
+  "start": 53.7,
+  "end": 53.71
+ },
+ {
+  "text": "that",
+  "start": 53.9,
+  "end": 53.99
+ },
+ {
+  "text": "communication",
+  "start": 53.99,
+  "end": 54.88
+ },
+ {
+  "text": "between",
+  "start": 54.96,
+  "end": 55.42
+ },
+ {
+  "text": "NASA,",
+  "start": 55.42,
+  "end": 55.84
+ },
+ {
+  "text": "the",
+  "start": 55.84,
+  "end": 56.02
+ },
+ {
+  "text": "laboratory",
+  "start": 56.04,
+  "end": 56.77
+ },
+ {
+  "text": "and",
+  "start": 56.79,
+  "end": 56.98
+ },
+ {
+  "text": "the",
+  "start": 56.98,
+  "end": 57.19
+ },
+ {
+  "text": "contractor",
+  "start": 57.19,
+  "end": 57.91
+ },
+ {
+  "text": "had",
+  "start": 57.91,
+  "end": 58.12
+ },
+ {
+  "text": "been",
+  "start": 58.12,
+  "end": 58.4
+ },
+ {
+  "text": "poor.",
+  "start": 58.4,
+  "end": 59
+ },
+ {
+  "text": "But",
+  "start": 59.2,
+  "end": 59.23
+ },
+ {
+  "text": "they",
+  "start": 59.4,
+  "end": 59.53
+ },
+ {
+  "text": "did",
+  "start": 59.53,
+  "end": 59.72
+ },
+ {
+  "text": "not",
+  "start": 59.8,
+  "end": 59.99
+ },
+ {
+  "text": "say",
+  "start": 59.99,
+  "end": 60.22
+ },
+ {
+  "text": "faster,",
+  "start": 60.22,
+  "end": 60.83
+ },
+ {
+  "text": "better,",
+  "start": 60.83,
+  "end": 61.44
+ },
+ {
+  "text": "cheaper",
+  "start": 61.44,
+  "end": 62.12
+ },
+ {
+  "text": "was",
+  "start": 62.27,
+  "end": 62.35
+ },
+ {
+  "text": "wrong.",
+  "start": 62.35,
+  "end": 62.9
+ },
+ {
+  "text": "They",
+  "start": 63.2,
+  "end": 63.26
+ },
+ {
+  "text": "said",
+  "start": 63.4,
+  "end": 63.52
+ },
+ {
+  "text": "it",
+  "start": 63.52,
+  "end": 63.65
+ },
+ {
+  "text": "could",
+  "start": 63.65,
+  "end": 63.98
+ },
+ {
+  "text": "work,",
+  "start": 63.98,
+  "end": 64.24
+ },
+ {
+  "text": "if",
+  "start": 64.24,
+  "end": 64.37
+ },
+ {
+  "text": "it",
+  "start": 64.37,
+  "end": 64.49
+ },
+ {
+  "text": "was",
+  "start": 64.5,
+  "end": 64.69
+ },
+ {
+  "text": "properly",
+  "start": 64.78,
+  "end": 65.23
+ },
+ {
+  "text": "implemented.",
+  "start": 65.23,
+  "end": 66
+ },
+ {
+  "text": "And",
+  "start": 66.2,
+  "end": 66.22
+ },
+ {
+  "text": "they",
+  "start": 66.4,
+  "end": 66.52
+ },
+ {
+  "text": "said",
+  "start": 66.52,
+  "end": 66.82
+ },
+ {
+  "text": "every",
+  "start": 66.82,
+  "end": 67.2
+ },
+ {
+  "text": "flaw",
+  "start": 67.2,
+  "end": 67.49
+ },
+ {
+  "text": "they",
+  "start": 67.51,
+  "end": 67.8
+ },
+ {
+  "text": "found",
+  "start": 67.8,
+  "end": 68.18
+ },
+ {
+  "text": "was",
+  "start": 68.18,
+  "end": 68.4
+ },
+ {
+  "text": "correctable.",
+  "start": 68.4,
+  "end": 69.5
+ }
+]

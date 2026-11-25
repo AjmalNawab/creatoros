@@ -15,6 +15,7 @@ const KIND: Record<string, { label: string; icon: typeof FileText; hint: string 
   script: { label: 'Script', icon: FileText, hint: 'Approve to start voice, visuals and rendering. Request changes to have the script rewritten with your feedback.' },
   final_video: { label: 'Final video', icon: Film, hint: 'Watch it end to end. Approving marks the video as ready for publishing.' },
   facebook_package: { label: 'Facebook post package', icon: Package, hint: 'Approving allows posting exactly this video and caption to the Facebook Page shown, and nothing else.' },
+  tiktok_package: { label: 'TikTok post package', icon: Package, hint: 'Approving allows posting exactly this video and caption to the TikTok account shown, and nothing else.' },
   youtube_package: { label: 'YouTube upload package', icon: Package, hint: 'Approving allows uploading exactly this video, title, description, tags and thumbnail, and nothing else.' },
 };
 
@@ -80,6 +81,18 @@ export default async function ApprovalsPage() {
                     <dl className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-3">
                       {[['Page', o.page?.name ?? '—'], ['Post as', o.postAs === 'reel' ? 'Reel (9:16)' : 'Video post'], ['Audience', o.audience], ['Also to Story', o.shareToStory ? 'Yes' : 'No'], ['Series', o.series], ['Language', o.language], ['AI disclosure', o.aiDisclosure ? 'AI narration' : 'None']].map(([l, v]) => (
                         <div key={l} className="rounded-lg bg-zinc-50 px-3 py-2 ring-1 ring-zinc-200 dark:bg-zinc-800/50 dark:ring-zinc-700"><dt className="text-[11px] text-zinc-500">{l}</dt><dd className="font-medium">{v}</dd></div>
+                      ))}
+                    </dl>
+                  </div>
+                </div>
+              ) : a.task?.type === 'tiktok_package' && pid ? (
+                <div className="grid gap-5 lg:grid-cols-5">
+                  <div className="lg:col-span-2"><VideoPlayer vertical src={media(pid, o.video)} /></div>
+                  <div className="space-y-4 lg:col-span-3">
+                    <div><div className="text-xs font-medium text-zinc-500">Caption</div><pre dir="auto" className="mt-1 max-h-72 overflow-auto whitespace-pre-wrap rounded-xl bg-zinc-50 p-3 font-sans text-sm ring-1 ring-zinc-200 dark:bg-zinc-950 dark:ring-zinc-800">{o.caption}</pre></div>
+                    <dl className="grid grid-cols-2 gap-2 text-sm sm:grid-cols-3">
+                      {[['Account', o.account?.handle ?? '—'], ['Cover text', o.coverText], ['Who can watch', o.visibility], ['Comments', o.allowComments ? 'On' : 'Off'], ['AI-generated label', o.aiGeneratedLabel ? 'On (AI voice)' : 'Off'], ['Language', o.language]].map(([l, v]) => (
+                        <div key={l} className="rounded-lg bg-zinc-50 px-3 py-2 ring-1 ring-zinc-200 dark:bg-zinc-800/50 dark:ring-zinc-700"><dt className="text-[11px] text-zinc-500">{l}</dt><dd dir="auto" className="font-medium">{v}</dd></div>
                       ))}
                     </dl>
                   </div>

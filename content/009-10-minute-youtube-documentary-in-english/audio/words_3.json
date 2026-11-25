@@ -1,0 +1,822 @@
+[
+ {
+  "text": "Mars",
+  "start": 0.33,
+  "end": 0.33
+ },
+ {
+  "text": "Climate",
+  "start": 0.4,
+  "end": 0.92
+ },
+ {
+  "text": "Orbiter",
+  "start": 0.92,
+  "end": 1.49
+ },
+ {
+  "text": "launched",
+  "start": 1.5,
+  "end": 2.19
+ },
+ {
+  "text": "on",
+  "start": 2.26,
+  "end": 2.31
+ },
+ {
+  "text": "the",
+  "start": 2.31,
+  "end": 2.48
+ },
+ {
+  "text": "eleventh",
+  "start": 2.48,
+  "end": 2.94
+ },
+ {
+  "text": "of",
+  "start": 2.94,
+  "end": 3.05
+ },
+ {
+  "text": "December,",
+  "start": 3.05,
+  "end": 3.68
+ },
+ {
+  "text": "1998.",
+  "start": 3.85,
+  "end": 5
+ },
+ {
+  "text": "For",
+  "start": 5.2,
+  "end": 5.28
+ },
+ {
+  "text": "nine",
+  "start": 5.4,
+  "end": 5.65
+ },
+ {
+  "text": "months",
+  "start": 5.65,
+  "end": 6.19
+ },
+ {
+  "text": "it",
+  "start": 6.3,
+  "end": 6.39
+ },
+ {
+  "text": "cruised",
+  "start": 6.39,
+  "end": 7.04
+ },
+ {
+  "text": "toward",
+  "start": 7.04,
+  "end": 7.6
+ },
+ {
+  "text": "Mars.",
+  "start": 7.6,
+  "end": 8
+ },
+ {
+  "text": "Along",
+  "start": 8.31,
+  "end": 8.31
+ },
+ {
+  "text": "the",
+  "start": 8.4,
+  "end": 8.49
+ },
+ {
+  "text": "way,",
+  "start": 8.49,
+  "end": 8.75
+ },
+ {
+  "text": "small",
+  "start": 8.82,
+  "end": 9.1
+ },
+ {
+  "text": "thrusters",
+  "start": 9.1,
+  "end": 9.65
+ },
+ {
+  "text": "fired",
+  "start": 9.65,
+  "end": 10
+ },
+ {
+  "text": "from",
+  "start": 10,
+  "end": 10.5
+ },
+ {
+  "text": "time",
+  "start": 10.5,
+  "end": 10.99
+ },
+ {
+  "text": "to",
+  "start": 11,
+  "end": 11.33
+ },
+ {
+  "text": "time",
+  "start": 11.33,
+  "end": 12
+ },
+ {
+  "text": "to",
+  "start": 12,
+  "end": 12.1
+ },
+ {
+  "text": "keep",
+  "start": 12.1,
+  "end": 12.31
+ },
+ {
+  "text": "the",
+  "start": 12.31,
+  "end": 12.46
+ },
+ {
+  "text": "spacecraft",
+  "start": 12.46,
+  "end": 12.78
+ },
+ {
+  "text": "pointed",
+  "start": 13.31,
+  "end": 13.36
+ },
+ {
+  "text": "correctly.",
+  "start": 13.49,
+  "end": 14
+ },
+ {
+  "text": "Each",
+  "start": 14.4,
+  "end": 14.41
+ },
+ {
+  "text": "firing",
+  "start": 14.41,
+  "end": 15.02
+ },
+ {
+  "text": "gave",
+  "start": 15.02,
+  "end": 15.43
+ },
+ {
+  "text": "the",
+  "start": 15.43,
+  "end": 15.73
+ },
+ {
+  "text": "spacecraft",
+  "start": 15.73,
+  "end": 16.75
+ },
+ {
+  "text": "a",
+  "start": 16.75,
+  "end": 16.85
+ },
+ {
+  "text": "tiny",
+  "start": 16.85,
+  "end": 17.26
+ },
+ {
+  "text": "push.",
+  "start": 17.26,
+  "end": 18
+ },
+ {
+  "text": "The",
+  "start": 18.2,
+  "end": 18.21
+ },
+ {
+  "text": "navigation",
+  "start": 18.4,
+  "end": 18.92
+ },
+ {
+  "text": "team",
+  "start": 18.92,
+  "end": 19.19
+ },
+ {
+  "text": "on",
+  "start": 19.3,
+  "end": 19.34
+ },
+ {
+  "text": "the",
+  "start": 19.34,
+  "end": 19.55
+ },
+ {
+  "text": "ground",
+  "start": 19.55,
+  "end": 20
+ },
+ {
+  "text": "had",
+  "start": 20,
+  "end": 20.19
+ },
+ {
+  "text": "to",
+  "start": 20.26,
+  "end": 20.41
+ },
+ {
+  "text": "account",
+  "start": 20.41,
+  "end": 20.99
+ },
+ {
+  "text": "for",
+  "start": 21,
+  "end": 21.16
+ },
+ {
+  "text": "every",
+  "start": 21.16,
+  "end": 21.42
+ },
+ {
+  "text": "one",
+  "start": 21.42,
+  "end": 21.5
+ },
+ {
+  "text": "of",
+  "start": 21.58,
+  "end": 21.69
+ },
+ {
+  "text": "those",
+  "start": 21.85,
+  "end": 22
+ },
+ {
+  "text": "pushes",
+  "start": 22,
+  "end": 22.39
+ },
+ {
+  "text": "to",
+  "start": 22.39,
+  "end": 22.52
+ },
+ {
+  "text": "predict",
+  "start": 22.52,
+  "end": 22.79
+ },
+ {
+  "text": "exactly",
+  "start": 23.43,
+  "end": 23.43
+ },
+ {
+  "text": "where",
+  "start": 23.49,
+  "end": 23.74
+ },
+ {
+  "text": "the",
+  "start": 23.74,
+  "end": 23.92
+ },
+ {
+  "text": "orbiter",
+  "start": 23.92,
+  "end": 24.33
+ },
+ {
+  "text": "would",
+  "start": 24.44,
+  "end": 24.66
+ },
+ {
+  "text": "be.",
+  "start": 24.66,
+  "end": 25
+ },
+ {
+  "text": "On",
+  "start": 25.17,
+  "end": 25.17
+ },
+ {
+  "text": "the",
+  "start": 25.4,
+  "end": 25.43
+ },
+ {
+  "text": "twenty-third",
+  "start": 25.43,
+  "end": 26.12
+ },
+ {
+  "text": "of",
+  "start": 26.12,
+  "end": 26.17
+ },
+ {
+  "text": "September,",
+  "start": 26.3,
+  "end": 27.19
+ },
+ {
+  "text": "1999,",
+  "start": 27.26,
+  "end": 28.47
+ },
+ {
+  "text": "the",
+  "start": 28.47,
+  "end": 28.51
+ },
+ {
+  "text": "orbiter",
+  "start": 28.85,
+  "end": 29.34
+ },
+ {
+  "text": "fired",
+  "start": 29.34,
+  "end": 29.77
+ },
+ {
+  "text": "its",
+  "start": 29.78,
+  "end": 29.79
+ },
+ {
+  "text": "main",
+  "start": 30.39,
+  "end": 30.39
+ },
+ {
+  "text": "engine",
+  "start": 30.5,
+  "end": 31
+ },
+ {
+  "text": "to",
+  "start": 31,
+  "end": 31.14
+ },
+ {
+  "text": "slow",
+  "start": 31.19,
+  "end": 31.59
+ },
+ {
+  "text": "down",
+  "start": 31.59,
+  "end": 32
+ },
+ {
+  "text": "and",
+  "start": 32,
+  "end": 32.14
+ },
+ {
+  "text": "slip",
+  "start": 32.15,
+  "end": 32.36
+ },
+ {
+  "text": "into",
+  "start": 32.36,
+  "end": 32.44
+ },
+ {
+  "text": "orbit.",
+  "start": 32.62,
+  "end": 33
+ },
+ {
+  "text": "It",
+  "start": 33.16,
+  "end": 33.16
+ },
+ {
+  "text": "passed",
+  "start": 33.4,
+  "end": 33.64
+ },
+ {
+  "text": "behind",
+  "start": 33.64,
+  "end": 34.12
+ },
+ {
+  "text": "the",
+  "start": 34.12,
+  "end": 34.36
+ },
+ {
+  "text": "planet,",
+  "start": 34.36,
+  "end": 35
+ },
+ {
+  "text": "as",
+  "start": 35,
+  "end": 35.16
+ },
+ {
+  "text": "planned.",
+  "start": 35.16,
+  "end": 35.99
+ },
+ {
+  "text": "It",
+  "start": 36.12,
+  "end": 36.12
+ },
+ {
+  "text": "was",
+  "start": 36.3,
+  "end": 36.3
+ },
+ {
+  "text": "supposed",
+  "start": 36.4,
+  "end": 36.75
+ },
+ {
+  "text": "to",
+  "start": 36.82,
+  "end": 36.9
+ },
+ {
+  "text": "reappear",
+  "start": 36.9,
+  "end": 37.38
+ },
+ {
+  "text": "about",
+  "start": 37.38,
+  "end": 37.68
+ },
+ {
+  "text": "twenty",
+  "start": 37.68,
+  "end": 38.04
+ },
+ {
+  "text": "minutes",
+  "start": 38.04,
+  "end": 38.46
+ },
+ {
+  "text": "later.",
+  "start": 38.46,
+  "end": 38.99
+ },
+ {
+  "text": "It",
+  "start": 39,
+  "end": 39.3
+ },
+ {
+  "text": "never",
+  "start": 39.3,
+  "end": 40.05
+ },
+ {
+  "text": "did.",
+  "start": 40.08,
+  "end": 40.79
+ },
+ {
+  "text": "The",
+  "start": 41.2,
+  "end": 41.22
+ },
+ {
+  "text": "investigators",
+  "start": 41.4,
+  "end": 42.19
+ },
+ {
+  "text": "concluded",
+  "start": 42.3,
+  "end": 42.88
+ },
+ {
+  "text": "that",
+  "start": 42.88,
+  "end": 43.18
+ },
+ {
+  "text": "the",
+  "start": 43.18,
+  "end": 43.4
+ },
+ {
+  "text": "orbiter",
+  "start": 43.4,
+  "end": 43.91
+ },
+ {
+  "text": "had",
+  "start": 43.92,
+  "end": 44.14
+ },
+ {
+  "text": "approached",
+  "start": 44.14,
+  "end": 44.89
+ },
+ {
+  "text": "Mars",
+  "start": 44.89,
+  "end": 45.19
+ },
+ {
+  "text": "far",
+  "start": 45.19,
+  "end": 45.41
+ },
+ {
+  "text": "lower",
+  "start": 45.41,
+  "end": 45.77
+ },
+ {
+  "text": "than",
+  "start": 45.77,
+  "end": 45.79
+ },
+ {
+  "text": "intended.",
+  "start": 46.47,
+  "end": 47
+ },
+ {
+  "text": "Instead",
+  "start": 47.4,
+  "end": 47.54
+ },
+ {
+  "text": "of",
+  "start": 47.54,
+  "end": 47.69
+ },
+ {
+  "text": "skimming",
+  "start": 47.69,
+  "end": 48.21
+ },
+ {
+  "text": "safely",
+  "start": 48.3,
+  "end": 48.76
+ },
+ {
+  "text": "above",
+  "start": 48.76,
+  "end": 49.15
+ },
+ {
+  "text": "the",
+  "start": 49.15,
+  "end": 49.38
+ },
+ {
+  "text": "atmosphere,",
+  "start": 49.38,
+  "end": 50.31
+ },
+ {
+  "text": "it",
+  "start": 50.31,
+  "end": 50.45
+ },
+ {
+  "text": "dipped",
+  "start": 50.46,
+  "end": 50.92
+ },
+ {
+  "text": "deep",
+  "start": 50.92,
+  "end": 51.23
+ },
+ {
+  "text": "into",
+  "start": 51.23,
+  "end": 51.54
+ },
+ {
+  "text": "it.",
+  "start": 51.54,
+  "end": 51.79
+ },
+ {
+  "text": "The",
+  "start": 52.2,
+  "end": 52.23
+ },
+ {
+  "text": "heat",
+  "start": 52.4,
+  "end": 52.54
+ },
+ {
+  "text": "and",
+  "start": 52.54,
+  "end": 52.75
+ },
+ {
+  "text": "drag",
+  "start": 52.82,
+  "end": 53.08
+ },
+ {
+  "text": "would",
+  "start": 53.08,
+  "end": 53.46
+ },
+ {
+  "text": "almost",
+  "start": 53.47,
+  "end": 53.94
+ },
+ {
+  "text": "certainly",
+  "start": 53.94,
+  "end": 54.64
+ },
+ {
+  "text": "have",
+  "start": 54.64,
+  "end": 54.95
+ },
+ {
+  "text": "destroyed",
+  "start": 54.95,
+  "end": 55.48
+ },
+ {
+  "text": "it.",
+  "start": 55.8,
+  "end": 56
+ },
+ {
+  "text": "So",
+  "start": 56,
+  "end": 56.15
+ },
+ {
+  "text": "the",
+  "start": 56.15,
+  "end": 56.38
+ },
+ {
+  "text": "question",
+  "start": 56.38,
+  "end": 56.78
+ },
+ {
+  "text": "became",
+  "start": 57.45,
+  "end": 57.48
+ },
+ {
+  "text": "simple",
+  "start": 57.5,
+  "end": 57.95
+ },
+ {
+  "text": "and",
+  "start": 57.95,
+  "end": 58.14
+ },
+ {
+  "text": "painful.",
+  "start": 58.19,
+  "end": 59
+ },
+ {
+  "text": "How",
+  "start": 59.2,
+  "end": 59.21
+ },
+ {
+  "text": "did",
+  "start": 59.4,
+  "end": 59.42
+ },
+ {
+  "text": "a",
+  "start": 59.42,
+  "end": 59.49
+ },
+ {
+  "text": "team",
+  "start": 59.49,
+  "end": 59.75
+ },
+ {
+  "text": "of",
+  "start": 59.82,
+  "end": 59.91
+ },
+ {
+  "text": "experienced",
+  "start": 59.91,
+  "end": 60.68
+ },
+ {
+  "text": "navigators",
+  "start": 60.68,
+  "end": 61.38
+ },
+ {
+  "text": "get",
+  "start": 61.38,
+  "end": 61.59
+ },
+ {
+  "text": "the",
+  "start": 61.59,
+  "end": 61.8
+ },
+ {
+  "text": "trajectory",
+  "start": 61.8,
+  "end": 62.47
+ },
+ {
+  "text": "so",
+  "start": 62.47,
+  "end": 62.51
+ },
+ {
+  "text": "wrong,",
+  "start": 62.85,
+  "end": 63
+ },
+ {
+  "text": "without",
+  "start": 63,
+  "end": 63.55
+ },
+ {
+  "text": "realising",
+  "start": 63.55,
+  "end": 64.49
+ },
+ {
+  "text": "it",
+  "start": 64.49,
+  "end": 64.64
+ },
+ {
+  "text": "until",
+  "start": 64.64,
+  "end": 65.09
+ },
+ {
+  "text": "it",
+  "start": 65.09,
+  "end": 65.25
+ },
+ {
+  "text": "was",
+  "start": 65.27,
+  "end": 65.54
+ },
+ {
+  "text": "too",
+  "start": 65.54,
+  "end": 65.79
+ },
+ {
+  "text": "late?",
+  "start": 65.84,
+  "end": 66.42
+ }
+]

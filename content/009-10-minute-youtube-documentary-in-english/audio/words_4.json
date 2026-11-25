@@ -1,0 +1,817 @@
+[
+ {
+  "text": "The",
+  "start": 0.2,
+  "end": 0.22
+ },
+ {
+  "text": "answer",
+  "start": 0.38,
+  "end": 0.66
+ },
+ {
+  "text": "was",
+  "start": 0.66,
+  "end": 0.88
+ },
+ {
+  "text": "in",
+  "start": 0.88,
+  "end": 1.02
+ },
+ {
+  "text": "the",
+  "start": 1.02,
+  "end": 1.24
+ },
+ {
+  "text": "data",
+  "start": 1.24,
+  "end": 1.53
+ },
+ {
+  "text": "passed",
+  "start": 1.53,
+  "end": 1.99
+ },
+ {
+  "text": "between",
+  "start": 1.99,
+  "end": 2.16
+ },
+ {
+  "text": "two",
+  "start": 2.23,
+  "end": 2.48
+ },
+ {
+  "text": "pieces",
+  "start": 2.48,
+  "end": 3.04
+ },
+ {
+  "text": "of",
+  "start": 3.04,
+  "end": 3.23
+ },
+ {
+  "text": "software.",
+  "start": 3.23,
+  "end": 4
+ },
+ {
+  "text": "One",
+  "start": 4.28,
+  "end": 4.28
+ },
+ {
+  "text": "program",
+  "start": 4.38,
+  "end": 4.93
+ },
+ {
+  "text": "on",
+  "start": 4.94,
+  "end": 5.13
+ },
+ {
+  "text": "the",
+  "start": 5.13,
+  "end": 5.41
+ },
+ {
+  "text": "ground",
+  "start": 5.41,
+  "end": 5.99
+ },
+ {
+  "text": "calculated",
+  "start": 5.99,
+  "end": 6.67
+ },
+ {
+  "text": "the",
+  "start": 6.74,
+  "end": 6.9
+ },
+ {
+  "text": "effect",
+  "start": 6.9,
+  "end": 7
+ },
+ {
+  "text": "of",
+  "start": 7,
+  "end": 7.2
+ },
+ {
+  "text": "each",
+  "start": 7.2,
+  "end": 7.47
+ },
+ {
+  "text": "thruster",
+  "start": 7.61,
+  "end": 8.39
+ },
+ {
+  "text": "firing.",
+  "start": 8.4,
+  "end": 9
+ },
+ {
+  "text": "Its",
+  "start": 9.28,
+  "end": 9.28
+ },
+ {
+  "text": "output",
+  "start": 9.38,
+  "end": 9.84
+ },
+ {
+  "text": "was",
+  "start": 9.84,
+  "end": 10.12
+ },
+ {
+  "text": "supposed",
+  "start": 10.12,
+  "end": 10.87
+ },
+ {
+  "text": "to",
+  "start": 10.87,
+  "end": 11
+ },
+ {
+  "text": "be",
+  "start": 11.09,
+  "end": 11.16
+ },
+ {
+  "text": "in",
+  "start": 11.23,
+  "end": 11.41
+ },
+ {
+  "text": "metric",
+  "start": 11.41,
+  "end": 11.97
+ },
+ {
+  "text": "units,",
+  "start": 11.97,
+  "end": 12.69
+ },
+ {
+  "text": "newton-seconds,",
+  "start": 12.69,
+  "end": 14.06
+ },
+ {
+  "text": "as",
+  "start": 14.06,
+  "end": 14.11
+ },
+ {
+  "text": "the",
+  "start": 14.11,
+  "end": 14.22
+ },
+ {
+  "text": "interface",
+  "start": 14.22,
+  "end": 14.53
+ },
+ {
+  "text": "specification",
+  "start": 14.53,
+  "end": 14.81
+ },
+ {
+  "text": "required.",
+  "start": 15.14,
+  "end": 15.95
+ },
+ {
+  "text": "Instead,",
+  "start": 16.37,
+  "end": 16.83
+ },
+ {
+  "text": "it",
+  "start": 16.83,
+  "end": 17.01
+ },
+ {
+  "text": "produced",
+  "start": 17.01,
+  "end": 17.75
+ },
+ {
+  "text": "the",
+  "start": 17.75,
+  "end": 18
+ },
+ {
+  "text": "numbers",
+  "start": 18.09,
+  "end": 18.67
+ },
+ {
+  "text": "in",
+  "start": 18.74,
+  "end": 18.86
+ },
+ {
+  "text": "English",
+  "start": 18.86,
+  "end": 19.47
+ },
+ {
+  "text": "units,",
+  "start": 19.47,
+  "end": 20.15
+ },
+ {
+  "text": "pound-force",
+  "start": 20.15,
+  "end": 20.98
+ },
+ {
+  "text": "seconds.",
+  "start": 20.98,
+  "end": 21.81
+ },
+ {
+  "text": "The",
+  "start": 22.2,
+  "end": 22.21
+ },
+ {
+  "text": "navigation",
+  "start": 22.38,
+  "end": 22.92
+ },
+ {
+  "text": "software",
+  "start": 22.93,
+  "end": 23.51
+ },
+ {
+  "text": "read",
+  "start": 23.51,
+  "end": 23.8
+ },
+ {
+  "text": "those",
+  "start": 23.8,
+  "end": 24.14
+ },
+ {
+  "text": "numbers",
+  "start": 24.16,
+  "end": 24.66
+ },
+ {
+  "text": "as",
+  "start": 24.66,
+  "end": 24.76
+ },
+ {
+  "text": "if",
+  "start": 24.8,
+  "end": 24.94
+ },
+ {
+  "text": "they",
+  "start": 24.94,
+  "end": 25.23
+ },
+ {
+  "text": "were",
+  "start": 25.23,
+  "end": 25.47
+ },
+ {
+  "text": "metric.",
+  "start": 25.47,
+  "end": 26
+ },
+ {
+  "text": "One",
+  "start": 26.3,
+  "end": 26.3
+ },
+ {
+  "text": "pound-force",
+  "start": 26.3,
+  "end": 27.2
+ },
+ {
+  "text": "second",
+  "start": 27.2,
+  "end": 27.79
+ },
+ {
+  "text": "is",
+  "start": 27.79,
+  "end": 27.99
+ },
+ {
+  "text": "about",
+  "start": 27.99,
+  "end": 28.49
+ },
+ {
+  "text": "four",
+  "start": 28.49,
+  "end": 29.014
+ },
+ {
+  "text": "point",
+  "start": 29.014,
+  "end": 29.538
+ },
+ {
+  "text": "four",
+  "start": 29.538,
+  "end": 30.062
+ },
+ {
+  "text": "five",
+  "start": 30.062,
+  "end": 30.586
+ },
+ {
+  "text": "newton-seconds.",
+  "start": 30.586,
+  "end": 31.11
+ },
+ {
+  "text": "So",
+  "start": 31.11,
+  "end": 31.22
+ },
+ {
+  "text": "every",
+  "start": 31.22,
+  "end": 31.49
+ },
+ {
+  "text": "small",
+  "start": 31.49,
+  "end": 31.76
+ },
+ {
+  "text": "push",
+  "start": 31.76,
+  "end": 31.82
+ },
+ {
+  "text": "was",
+  "start": 32.14,
+  "end": 32.31
+ },
+ {
+  "text": "underestimated",
+  "start": 32.37,
+  "end": 34
+ },
+ {
+  "text": "by",
+  "start": 34,
+  "end": 34.06
+ },
+ {
+  "text": "a",
+  "start": 34.12,
+  "end": 34.18
+ },
+ {
+  "text": "factor",
+  "start": 34.18,
+  "end": 34.56
+ },
+ {
+  "text": "of",
+  "start": 34.56,
+  "end": 34.67
+ },
+ {
+  "text": "about",
+  "start": 34.67,
+  "end": 34.83
+ },
+ {
+  "text": "four",
+  "start": 34.83,
+  "end": 35.24
+ },
+ {
+  "text": "and",
+  "start": 35.44,
+  "end": 35.44
+ },
+ {
+  "text": "a",
+  "start": 35.5,
+  "end": 35.5
+ },
+ {
+  "text": "half.",
+  "start": 35.75,
+  "end": 36
+ },
+ {
+  "text": "Each",
+  "start": 36.32,
+  "end": 36.32
+ },
+ {
+  "text": "error",
+  "start": 36.38,
+  "end": 36.71
+ },
+ {
+  "text": "was",
+  "start": 36.71,
+  "end": 36.94
+ },
+ {
+  "text": "tiny.",
+  "start": 36.94,
+  "end": 37.42
+ },
+ {
+  "text": "But",
+  "start": 37.42,
+  "end": 37.65
+ },
+ {
+  "text": "they",
+  "start": 37.72,
+  "end": 37.98
+ },
+ {
+  "text": "added",
+  "start": 37.98,
+  "end": 38.37
+ },
+ {
+  "text": "up",
+  "start": 38.37,
+  "end": 38.51
+ },
+ {
+  "text": "over",
+  "start": 38.53,
+  "end": 38.85
+ },
+ {
+  "text": "months",
+  "start": 38.85,
+  "end": 39.31
+ },
+ {
+  "text": "of",
+  "start": 39.32,
+  "end": 39.47
+ },
+ {
+  "text": "cruise,",
+  "start": 39.47,
+  "end": 40.11
+ },
+ {
+  "text": "and",
+  "start": 40.11,
+  "end": 40.11
+ },
+ {
+  "text": "the",
+  "start": 40.35,
+  "end": 40.35
+ },
+ {
+  "text": "trajectory",
+  "start": 40.4,
+  "end": 41.14
+ },
+ {
+  "text": "drifted.",
+  "start": 41.14,
+  "end": 41.81
+ },
+ {
+  "text": "Here",
+  "start": 42.36,
+  "end": 42.41
+ },
+ {
+  "text": "is",
+  "start": 42.41,
+  "end": 42.61
+ },
+ {
+  "text": "the",
+  "start": 42.61,
+  "end": 42.91
+ },
+ {
+  "text": "uncomfortable",
+  "start": 42.92,
+  "end": 44.26
+ },
+ {
+  "text": "part.",
+  "start": 44.26,
+  "end": 45
+ },
+ {
+  "text": "Investigators",
+  "start": 45,
+  "end": 45.73
+ },
+ {
+  "text": "found",
+  "start": 46.16,
+  "end": 46.19
+ },
+ {
+  "text": "that",
+  "start": 46.4,
+  "end": 46.45
+ },
+ {
+  "text": "the",
+  "start": 46.45,
+  "end": 46.61
+ },
+ {
+  "text": "mismatch",
+  "start": 46.72,
+  "end": 47.18
+ },
+ {
+  "text": "was",
+  "start": 47.18,
+  "end": 47.33
+ },
+ {
+  "text": "not",
+  "start": 47.38,
+  "end": 47.58
+ },
+ {
+  "text": "caught",
+  "start": 47.58,
+  "end": 47.81
+ },
+ {
+  "text": "by",
+  "start": 48.11,
+  "end": 48.11
+ },
+ {
+  "text": "verification",
+  "start": 48.14,
+  "end": 48.9
+ },
+ {
+  "text": "and",
+  "start": 48.9,
+  "end": 49.1
+ },
+ {
+  "text": "validation.",
+  "start": 49.1,
+  "end": 50
+ },
+ {
+  "text": "Nobody",
+  "start": 50.37,
+  "end": 50.51
+ },
+ {
+  "text": "confirmed",
+  "start": 50.51,
+  "end": 51.28
+ },
+ {
+  "text": "the",
+  "start": 51.28,
+  "end": 51.53
+ },
+ {
+  "text": "software",
+  "start": 51.53,
+  "end": 52.14
+ },
+ {
+  "text": "matched",
+  "start": 52.23,
+  "end": 52.75
+ },
+ {
+  "text": "its",
+  "start": 52.8,
+  "end": 53.05
+ },
+ {
+  "text": "specification.",
+  "start": 53.05,
+  "end": 54.33
+ },
+ {
+  "text": "And",
+  "start": 54.4,
+  "end": 54.58
+ },
+ {
+  "text": "during",
+  "start": 54.58,
+  "end": 55.09
+ },
+ {
+  "text": "the",
+  "start": 55.09,
+  "end": 55.33
+ },
+ {
+  "text": "cruise,",
+  "start": 55.33,
+  "end": 56.14
+ },
+ {
+  "text": "there",
+  "start": 56.14,
+  "end": 56.27
+ },
+ {
+  "text": "were",
+  "start": 56.27,
+  "end": 56.49
+ },
+ {
+  "text": "signs",
+  "start": 56.49,
+  "end": 56.76
+ },
+ {
+  "text": "the",
+  "start": 56.76,
+  "end": 56.92
+ },
+ {
+  "text": "trajectory",
+  "start": 56.92,
+  "end": 57.45
+ },
+ {
+  "text": "was",
+  "start": 57.53,
+  "end": 57.63
+ },
+ {
+  "text": "off.",
+  "start": 57.63,
+  "end": 58
+ },
+ {
+  "text": "Those",
+  "start": 58.36,
+  "end": 58.41
+ },
+ {
+  "text": "concerns",
+  "start": 58.41,
+  "end": 59.06
+ },
+ {
+  "text": "were",
+  "start": 59.06,
+  "end": 59.35
+ },
+ {
+  "text": "raised,",
+  "start": 59.39,
+  "end": 60
+ },
+ {
+  "text": "but",
+  "start": 60.1,
+  "end": 60.27
+ },
+ {
+  "text": "they",
+  "start": 60.27,
+  "end": 60.59
+ },
+ {
+  "text": "were",
+  "start": 60.59,
+  "end": 60.91
+ },
+ {
+  "text": "not",
+  "start": 60.91,
+  "end": 61.15
+ },
+ {
+  "text": "escalated",
+  "start": 61.15,
+  "end": 61.73
+ },
+ {
+  "text": "in",
+  "start": 62.04,
+  "end": 62.04
+ },
+ {
+  "text": "a",
+  "start": 62.05,
+  "end": 62.12
+ },
+ {
+  "text": "way",
+  "start": 62.36,
+  "end": 62.36
+ },
+ {
+  "text": "that",
+  "start": 62.4,
+  "end": 62.61
+ },
+ {
+  "text": "forced",
+  "start": 62.72,
+  "end": 63.17
+ },
+ {
+  "text": "action.",
+  "start": 63.17,
+  "end": 63.81
+ },
+ {
+  "text": "The",
+  "start": 64.2,
+  "end": 64.23
+ },
+ {
+  "text": "unit",
+  "start": 64.38,
+  "end": 64.53
+ },
+ {
+  "text": "mix-up",
+  "start": 64.53,
+  "end": 64.98
+ },
+ {
+  "text": "started",
+  "start": 64.98,
+  "end": 65.51
+ },
+ {
+  "text": "the",
+  "start": 65.51,
+  "end": 65.73
+ },
+ {
+  "text": "problem.",
+  "start": 65.73,
+  "end": 66.42
+ },
+ {
+  "text": "The",
+  "start": 66.42,
+  "end": 66.65
+ },
+ {
+  "text": "missing",
+  "start": 66.65,
+  "end": 67.18
+ },
+ {
+  "text": "checks",
+  "start": 67.18,
+  "end": 67.62
+ },
+ {
+  "text": "let",
+  "start": 67.62,
+  "end": 67.81
+ },
+ {
+  "text": "it",
+  "start": 68.01,
+  "end": 68.01
+ },
+ {
+  "text": "finish.",
+  "start": 68.39,
+  "end": 68.75
+ }
+]

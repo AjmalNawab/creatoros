@@ -1,0 +1,63 @@
+{
+ "titleOptions": [
+  "Its Engines Shut Off 40 Metres Above Mars",
+  "The Mars Lander Killed by One Software Glitch",
+  "Why NASA's Mars Polar Lander Fell From the Sky"
+ ],
+ "scenes": [
+  {
+   "title": "Hook",
+   "visual": "Painted lander descending over the Martian south pole; altimeter HUD frozen at 40 m; engines cut.",
+   "text": "Forty metres above Mars, its engines simply switched off."
+  },
+  {
+   "title": "The descent",
+   "visual": "Real NASA launch photo, then the painted lander under its parachute; date tag 3 Dec 1999.",
+   "text": "On December third, 1999, NASA's Mars Polar Lander began its final descent."
+  },
+  {
+   "title": "No one listening",
+   "visual": "Painted mission control at night, NO SIGNAL on the big screen.",
+   "text": "Nobody on Earth was listening. The landing was never designed to send live data."
+  },
+  {
+   "title": "Legs deploy",
+   "visual": "Lander under parachute, three legs swing down; small cyan blueprint callout of a leg.",
+   "text": "Under its parachute, the lander's three legs snapped out into position."
+  },
+  {
+   "title": "False touchdown",
+   "visual": "Blueprint callout: touchdown sensor flickers red for an instant; label SPURIOUS SIGNAL.",
+   "text": "That jolt made the touchdown sensors flicker, just for a moment."
+  },
+  {
+   "title": "The software remembered",
+   "visual": "A memory register lights up and stays lit: TOUCHDOWN = TRUE.",
+   "text": "The software should have ignored it. Instead, it remembered."
+  },
+  {
+   "title": "Forty metres",
+   "visual": "Altimeter counts down 1500 to 40 m; sensing ON; the stored flag triggers.",
+   "text": "At forty metres, sensing switched on, and the lander believed it had landed."
+  },
+  {
+   "title": "Engines off",
+   "visual": "Thruster plumes fade; lander drops; speed readout ~50 mph / 22 m/s.",
+   "text": "Engines off. It likely hit the ground at about fifty miles per hour."
+  },
+  {
+   "title": "The real cause",
+   "visual": "Report page icon: MOST PROBABLE CAUSE, software design and testing.",
+   "text": "Investigators concluded the deeper cause was software design and testing."
+  },
+  {
+   "title": "Payoff",
+   "visual": "Painted Phoenix lander standing safely on icy northern plains, 2008.",
+   "text": "Its twin later flew as Phoenix, and this time it touched down safely."
+  }
+ ],
+ "endCard": {
+  "title": "Test the whole sequence",
+  "cta": "Follow for a new engineering story every week"
+ }
+}

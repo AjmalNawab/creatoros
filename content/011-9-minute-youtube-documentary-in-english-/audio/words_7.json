@@ -1,0 +1,792 @@
+[
+ {
+  "text": "Which",
+  "start": 0.38,
+  "end": 0.48
+ },
+ {
+  "text": "brings",
+  "start": 0.48,
+  "end": 0.99
+ },
+ {
+  "text": "us",
+  "start": 1.06,
+  "end": 1.25
+ },
+ {
+  "text": "to",
+  "start": 1.25,
+  "end": 1.44
+ },
+ {
+  "text": "Shenzhou-24.",
+  "start": 1.44,
+  "end": 2.9
+ },
+ {
+  "text": "On",
+  "start": 2.9,
+  "end": 2.9
+ },
+ {
+  "text": "the",
+  "start": 3.11,
+  "end": 3.11
+ },
+ {
+  "text": "twenty-fifth",
+  "start": 3.11,
+  "end": 3.67
+ },
+ {
+  "text": "of",
+  "start": 3.67,
+  "end": 3.75
+ },
+ {
+  "text": "November",
+  "start": 3.82,
+  "end": 4.42
+ },
+ {
+  "text": "2026,",
+  "start": 4.53,
+  "end": 5.6
+ },
+ {
+  "text": "at",
+  "start": 5.74,
+  "end": 5.74
+ },
+ {
+  "text": "eight",
+  "start": 5.74,
+  "end": 6.2
+ },
+ {
+  "text": "eighteen",
+  "start": 6.2,
+  "end": 6.66
+ },
+ {
+  "text": "in",
+  "start": 6.66,
+  "end": 6.76
+ },
+ {
+  "text": "the",
+  "start": 6.76,
+  "end": 6.98
+ },
+ {
+  "text": "morning",
+  "start": 6.98,
+  "end": 7.5
+ },
+ {
+  "text": "Beijing",
+  "start": 7.5,
+  "end": 7.97
+ },
+ {
+  "text": "time,",
+  "start": 8,
+  "end": 8.5
+ },
+ {
+  "text": "a",
+  "start": 8.6,
+  "end": 8.6
+ },
+ {
+  "text": "Long",
+  "start": 8.88,
+  "end": 9.02
+ },
+ {
+  "text": "March",
+  "start": 9.11,
+  "end": 9.49
+ },
+ {
+  "text": "2F",
+  "start": 9.56,
+  "end": 9.97
+ },
+ {
+  "text": "rocket",
+  "start": 9.97,
+  "end": 10.53
+ },
+ {
+  "text": "lifted",
+  "start": 10.67,
+  "end": 10.88
+ },
+ {
+  "text": "off",
+  "start": 11.07,
+  "end": 11.29
+ },
+ {
+  "text": "from",
+  "start": 11.62,
+  "end": 11.62
+ },
+ {
+  "text": "the",
+  "start": 11.68,
+  "end": 11.81
+ },
+ {
+  "text": "Jiuquan",
+  "start": 11.81,
+  "end": 12.36
+ },
+ {
+  "text": "launch",
+  "start": 12.36,
+  "end": 12.83
+ },
+ {
+  "text": "centre.",
+  "start": 12.83,
+  "end": 13.46
+ },
+ {
+  "text": "Aboard",
+  "start": 13.46,
+  "end": 14.09
+ },
+ {
+  "text": "were",
+  "start": 14.09,
+  "end": 14.42
+ },
+ {
+  "text": "commander",
+  "start": 14.42,
+  "end": 15.16
+ },
+ {
+  "text": "Tang",
+  "start": 15.16,
+  "end": 15.49
+ },
+ {
+  "text": "Hongbo,",
+  "start": 15.49,
+  "end": 16
+ },
+ {
+  "text": "flight",
+  "start": 16.38,
+  "end": 16.44
+ },
+ {
+  "text": "engineer",
+  "start": 16.44,
+  "end": 16.99
+ },
+ {
+  "text": "Wu",
+  "start": 17.06,
+  "end": 17.18
+ },
+ {
+  "text": "Yi,",
+  "start": 17.18,
+  "end": 17.5
+ },
+ {
+  "text": "and",
+  "start": 17.7,
+  "end": 17.71
+ },
+ {
+  "text": "a",
+  "start": 17.78,
+  "end": 17.78
+ },
+ {
+  "text": "payload",
+  "start": 17.88,
+  "end": 18.27
+ },
+ {
+  "text": "specialist",
+  "start": 18.27,
+  "end": 18.99
+ },
+ {
+  "text": "from",
+  "start": 18.99,
+  "end": 19.28
+ },
+ {
+  "text": "Pakistan,",
+  "start": 19.28,
+  "end": 19.88
+ },
+ {
+  "text": "Muhammad",
+  "start": 20.38,
+  "end": 20.79
+ },
+ {
+  "text": "Zeeshan",
+  "start": 20.79,
+  "end": 21.37
+ },
+ {
+  "text": "Ali.",
+  "start": 21.37,
+  "end": 22
+ },
+ {
+  "text": "Three",
+  "start": 22.38,
+  "end": 22.4
+ },
+ {
+  "text": "hours",
+  "start": 22.4,
+  "end": 22.8
+ },
+ {
+  "text": "and",
+  "start": 22.8,
+  "end": 22.99
+ },
+ {
+  "text": "thirty-eight",
+  "start": 22.99,
+  "end": 23.52
+ },
+ {
+  "text": "minutes",
+  "start": 23.52,
+  "end": 24.04
+ },
+ {
+  "text": "later,",
+  "start": 24.17,
+  "end": 24.5
+ },
+ {
+  "text": "the",
+  "start": 24.7,
+  "end": 24.76
+ },
+ {
+  "text": "spacecraft",
+  "start": 24.88,
+  "end": 25.64
+ },
+ {
+  "text": "docked",
+  "start": 25.64,
+  "end": 26.15
+ },
+ {
+  "text": "with",
+  "start": 26.15,
+  "end": 26.51
+ },
+ {
+  "text": "Tiangong.",
+  "start": 26.51,
+  "end": 27.5
+ },
+ {
+  "text": "Ali",
+  "start": 27.77,
+  "end": 27.77
+ },
+ {
+  "text": "became",
+  "start": 27.88,
+  "end": 28.31
+ },
+ {
+  "text": "the",
+  "start": 28.31,
+  "end": 28.57
+ },
+ {
+  "text": "first",
+  "start": 28.58,
+  "end": 29.03
+ },
+ {
+  "text": "Pakistani",
+  "start": 29.03,
+  "end": 29.83
+ },
+ {
+  "text": "in",
+  "start": 29.83,
+  "end": 29.88
+ },
+ {
+  "text": "orbit,",
+  "start": 30.02,
+  "end": 30.02
+ },
+ {
+  "text": "and",
+  "start": 30.7,
+  "end": 30.72
+ },
+ {
+  "text": "the",
+  "start": 30.88,
+  "end": 30.94
+ },
+ {
+  "text": "first",
+  "start": 30.94,
+  "end": 31.31
+ },
+ {
+  "text": "foreign",
+  "start": 31.31,
+  "end": 31.82
+ },
+ {
+  "text": "astronaut",
+  "start": 31.82,
+  "end": 32.5
+ },
+ {
+  "text": "to",
+  "start": 32.5,
+  "end": 32.53
+ },
+ {
+  "text": "visit",
+  "start": 32.67,
+  "end": 32.8
+ },
+ {
+  "text": "China's",
+  "start": 32.8,
+  "end": 33.63
+ },
+ {
+  "text": "station.",
+  "start": 33.63,
+  "end": 34
+ },
+ {
+  "text": "Look",
+  "start": 34.31,
+  "end": 34.31
+ },
+ {
+  "text": "at",
+  "start": 34.38,
+  "end": 34.47
+ },
+ {
+  "text": "how",
+  "start": 34.47,
+  "end": 34.71
+ },
+ {
+  "text": "his",
+  "start": 34.71,
+  "end": 34.95
+ },
+ {
+  "text": "trip",
+  "start": 34.95,
+  "end": 35.26
+ },
+ {
+  "text": "is",
+  "start": 35.26,
+  "end": 35.42
+ },
+ {
+  "text": "planned,",
+  "start": 35.42,
+  "end": 36
+ },
+ {
+  "text": "and",
+  "start": 36.28,
+  "end": 36.28
+ },
+ {
+  "text": "you",
+  "start": 36.38,
+  "end": 36.52
+ },
+ {
+  "text": "can",
+  "start": 36.61,
+  "end": 36.84
+ },
+ {
+  "text": "see",
+  "start": 36.84,
+  "end": 37.12
+ },
+ {
+  "text": "the",
+  "start": 37.12,
+  "end": 37.4
+ },
+ {
+  "text": "lifeboat",
+  "start": 37.4,
+  "end": 38.03
+ },
+ {
+  "text": "logic",
+  "start": 38.17,
+  "end": 38.38
+ },
+ {
+  "text": "at",
+  "start": 38.6,
+  "end": 38.78
+ },
+ {
+  "text": "work.",
+  "start": 39.13,
+  "end": 39.5
+ },
+ {
+  "text": "He",
+  "start": 39.66,
+  "end": 39.66
+ },
+ {
+  "text": "is",
+  "start": 39.82,
+  "end": 39.82
+ },
+ {
+  "text": "expected",
+  "start": 39.88,
+  "end": 40.48
+ },
+ {
+  "text": "to",
+  "start": 40.48,
+  "end": 40.64
+ },
+ {
+  "text": "stay",
+  "start": 40.64,
+  "end": 41
+ },
+ {
+  "text": "for",
+  "start": 41,
+  "end": 41.16
+ },
+ {
+  "text": "about",
+  "start": 41.27,
+  "end": 41.54
+ },
+ {
+  "text": "a",
+  "start": 41.67,
+  "end": 41.68
+ },
+ {
+  "text": "week",
+  "start": 41.68,
+  "end": 41.88
+ },
+ {
+  "text": "and",
+  "start": 41.88,
+  "end": 42.01
+ },
+ {
+  "text": "run",
+  "start": 42.22,
+  "end": 42.44
+ },
+ {
+  "text": "experiments.",
+  "start": 42.63,
+  "end": 43.49
+ },
+ {
+  "text": "He",
+  "start": 43.65,
+  "end": 43.65
+ },
+ {
+  "text": "will",
+  "start": 43.88,
+  "end": 43.94
+ },
+ {
+  "text": "not",
+  "start": 43.94,
+  "end": 44.16
+ },
+ {
+  "text": "come",
+  "start": 44.16,
+  "end": 44.45
+ },
+ {
+  "text": "home",
+  "start": 44.45,
+  "end": 44.74
+ },
+ {
+  "text": "in",
+  "start": 44.74,
+  "end": 44.89
+ },
+ {
+  "text": "the",
+  "start": 44.89,
+  "end": 45.11
+ },
+ {
+  "text": "ship",
+  "start": 45.11,
+  "end": 45.4
+ },
+ {
+  "text": "he",
+  "start": 45.4,
+  "end": 45.54
+ },
+ {
+  "text": "arrived",
+  "start": 45.67,
+  "end": 45.88
+ },
+ {
+  "text": "in.",
+  "start": 46.07,
+  "end": 46.5
+ },
+ {
+  "text": "One",
+  "start": 46.7,
+  "end": 46.75
+ },
+ {
+  "text": "of",
+  "start": 46.88,
+  "end": 46.91
+ },
+ {
+  "text": "the",
+  "start": 46.91,
+  "end": 47.16
+ },
+ {
+  "text": "Shenzhou-23",
+  "start": 47.16,
+  "end": 48.14
+ },
+ {
+  "text": "astronauts",
+  "start": 48.14,
+  "end": 48.88
+ },
+ {
+  "text": "already",
+  "start": 48.88,
+  "end": 49.02
+ },
+ {
+  "text": "on",
+  "start": 49.63,
+  "end": 49.66
+ },
+ {
+  "text": "the",
+  "start": 49.66,
+  "end": 49.88
+ },
+ {
+  "text": "station",
+  "start": 49.93,
+  "end": 50.49
+ },
+ {
+  "text": "is",
+  "start": 50.65,
+  "end": 50.65
+ },
+ {
+  "text": "staying",
+  "start": 50.88,
+  "end": 51.17
+ },
+ {
+  "text": "for",
+  "start": 51.17,
+  "end": 51.39
+ },
+ {
+  "text": "China's",
+  "start": 51.39,
+  "end": 51.9
+ },
+ {
+  "text": "first",
+  "start": 51.9,
+  "end": 52.16
+ },
+ {
+  "text": "year-long",
+  "start": 52.27,
+  "end": 52.87
+ },
+ {
+  "text": "mission,",
+  "start": 52.87,
+  "end": 53.5
+ },
+ {
+  "text": "which",
+  "start": 53.88,
+  "end": 54.02
+ },
+ {
+  "text": "frees",
+  "start": 54.11,
+  "end": 54.6
+ },
+ {
+  "text": "a",
+  "start": 54.6,
+  "end": 54.71
+ },
+ {
+  "text": "seat.",
+  "start": 54.71,
+  "end": 55.5
+ },
+ {
+  "text": "Ali",
+  "start": 55.87,
+  "end": 55.87
+ },
+ {
+  "text": "takes",
+  "start": 55.88,
+  "end": 56.49
+ },
+ {
+  "text": "that",
+  "start": 56.49,
+  "end": 56.99
+ },
+ {
+  "text": "seat",
+  "start": 56.99,
+  "end": 57.5
+ },
+ {
+  "text": "and",
+  "start": 57.5,
+  "end": 57.53
+ },
+ {
+  "text": "returns",
+  "start": 57.67,
+  "end": 57.88
+ },
+ {
+  "text": "with",
+  "start": 57.88,
+  "end": 58.01
+ },
+ {
+  "text": "two",
+  "start": 58.27,
+  "end": 58.47
+ },
+ {
+  "text": "Shenzhou-23",
+  "start": 58.47,
+  "end": 59.46
+ },
+ {
+  "text": "crew",
+  "start": 59.46,
+  "end": 59.83
+ },
+ {
+  "text": "members,",
+  "start": 59.83,
+  "end": 60.5
+ },
+ {
+  "text": "while",
+  "start": 60.88,
+  "end": 60.94
+ },
+ {
+  "text": "Shenzhou-24",
+  "start": 60.94,
+  "end": 61.99
+ },
+ {
+  "text": "stays",
+  "start": 61.99,
+  "end": 62.43
+ },
+ {
+  "text": "docked",
+  "start": 62.43,
+  "end": 62.87
+ },
+ {
+  "text": "as",
+  "start": 62.87,
+  "end": 63.01
+ },
+ {
+  "text": "the",
+  "start": 63.01,
+  "end": 63.38
+ },
+ {
+  "text": "lifeboat",
+  "start": 63.63,
+  "end": 64
+ },
+ {
+  "text": "for",
+  "start": 64,
+  "end": 64.09
+ },
+ {
+  "text": "the",
+  "start": 64.21,
+  "end": 64.28
+ },
+ {
+  "text": "people",
+  "start": 64.39,
+  "end": 64.73
+ },
+ {
+  "text": "who",
+  "start": 64.73,
+  "end": 64.91
+ },
+ {
+  "text": "remain.",
+  "start": 64.91,
+  "end": 65.5
+ }
+]

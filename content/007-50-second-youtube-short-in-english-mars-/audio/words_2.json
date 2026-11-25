@@ -1,0 +1,62 @@
+[
+ {
+  "text": "On",
+  "start": 0.2,
+  "end": 0.22
+ },
+ {
+  "text": "December",
+  "start": 0.39,
+  "end": 1.1
+ },
+ {
+  "text": "third,",
+  "start": 1.1,
+  "end": 1.65
+ },
+ {
+  "text": "1999,",
+  "start": 1.65,
+  "end": 3.18
+ },
+ {
+  "text": "NASA's",
+  "start": 3.18,
+  "end": 3.54
+ },
+ {
+  "text": "Mars",
+  "start": 3.54,
+  "end": 3.89
+ },
+ {
+  "text": "Polar",
+  "start": 3.98,
+  "end": 4.36
+ },
+ {
+  "text": "Lander",
+  "start": 4.36,
+  "end": 4.77
+ },
+ {
+  "text": "began",
+  "start": 4.82,
+  "end": 5.06
+ },
+ {
+  "text": "its",
+  "start": 5.06,
+  "end": 5.21
+ },
+ {
+  "text": "final",
+  "start": 5.21,
+  "end": 5.47
+ },
+ {
+  "text": "descent.",
+  "start": 5.47,
+  "end": 6
+ }
+]

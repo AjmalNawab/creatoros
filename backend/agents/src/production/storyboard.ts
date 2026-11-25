@@ -7,6 +7,7 @@ import { askAi, parseJson, paths, run, type AgentDefinition } from '@creatoros/c
 import { FPS, TAIL_SEC, projectWithBrand, readJson, writeJson } from './shared';
 import { audioSeconds, type Word } from './voice';
 import type { Script } from './script';
+import { FACEBOOK_PAGE } from '../platforms/facebook/package';
 
 const ts = (s: string) => { const [h, m, rest] = s.split(':'); const [sec, ms] = rest.split(','); return +h * 3600 + +m * 60 + +sec + +ms / 1000; };
 function parseSrt(text: string) {
@@ -55,10 +56,14 @@ export const storyboard: AgentDefinition = {
         audioSec: Math.round(audioSec * 1000) / 1000, startFrame: cursor, durationFrames, captions, words });
       cursor += durationFrames;
     }
+    const platforms = ((p.params as { platforms?: string[] }).platforms ?? []);
+    const fbOnly = platforms.includes('facebook') && !platforms.includes('youtube');
     const data = short
       ? { key: p.key, language: p.language, fps: FPS, width: 1080, height: 1920, totalFrames: cursor,
           lines: scenes.map(({ id, text, audio, startFrame, durationFrames, words, visual, title }) => ({ id, text, title, audio, startFrame, durationFrames, words, visual })),
-          brand: { name: brand.name, handle: profile.channels.youtube?.handle, accent: p.language === 'ur' ? '#fdd835' : '#ff7a1a' },
+          // The end card names where the video is posted: Facebook-only videos go to the Page, not the YouTube channel.
+          brand: fbOnly ? { name: FACEBOOK_PAGE.name, handle: 'facebook.com · Chai & Curiosity', accent: '#ffd27a' }
+            : { name: brand.name, handle: profile.channels.youtube?.handle, accent: p.language === 'ur' ? '#fdd835' : '#ff7a1a' },
           endCard: s.endCard }
       : (p.params as { orientation?: string }).orientation === 'vertical'
         ? { key: p.key, language: p.language, fps: FPS, width: 1080, height: 1920, totalFrames: cursor, scenes }

@@ -1,0 +1,20 @@
+In 1999 NASA lost two Mars spacecraft in less than three months. Here is how a unit mix-up and a single false signal caused both losses, and what changed.
+
+Mars Climate Orbiter was lost in September 1999 when one piece of ground software produced thruster data in pound-force seconds while the navigation software expected newton-seconds. Every small push was underestimated by a factor of about 4.45, and the orbiter approached Mars far too low. In December, Mars Polar Lander went silent during its descent. The review board concluded the most probable cause was a brief false touchdown signal from the landing legs that the software remembered, cutting the engines about 40 metres (130 feet) above the surface.
+
+We follow what the investigation boards and the Mars Program Independent Assessment Team found: thin checks, stretched teams and incomplete testing. Then we look at the fix: more review, honest testing, and the stored sister lander that flew again as Phoenix and landed safely near the Martian north pole in 2008.
+
+⏱️ Chapters
+0:00 The silence
+0:59 Faster, better, cheaper
+2:06 Climate Orbiter's approach
+3:13 The unit mix-up
+4:22 Polar Lander's descent
+5:33 What investigators found
+6:43 The fix and Phoenix
+7:55 The lesson
+
+📚 Sources: Mars Climate Orbiter Mishap Investigation Board Phase I Report (1999) · NASA Safety Message: The Mars Climate Orbiter Mishap (2009) · MCO Mishap Investigation Board Phase II Report (2000) · Mars Program Independent Assessment Team Report (2000) · NASA press release 00-46: Mars program assessment reports (28 March 2000) · JPL Special Review Board: Report on the Loss of the Mars Polar Lander and Deep Space 2 Missions (2000) · CBS News: Mars lander reports rip NASA · NASA APPEL: Zealots and skeptics (Phoenix case study) · NASA: 15 years ago, Phoenix Mars Lander launches · NASA Image and Video Library: KSC-99pc05 launch photo
+🎙️ Narration: AI voice. Animation: original.
+
+#engineering #space #NASA

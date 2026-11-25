@@ -1,0 +1,674 @@
+{
+ "data": {
+  "key": "p014",
+  "language": "ur",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 1173,
+  "lines": [
+   {
+    "id": 1,
+    "text": "دنیا کی گرم ترین جگہ پر زمین ستر ڈگری تک تپتی ہے۔",
+    "title": "Hook",
+    "audio": "p014/scene_1.mp3",
+    "startFrame": 0,
+    "durationFrames": 129,
+    "words": [
+     {
+      "text": "دنیا",
+      "start": 0.08,
+      "end": 0.496
+     },
+     {
+      "text": "کی",
+      "start": 0.496,
+      "end": 0.704
+     },
+     {
+      "text": "گرم",
+      "start": 0.704,
+      "end": 1.016
+     },
+     {
+      "text": "ترین",
+      "start": 1.016,
+      "end": 1.432
+     },
+     {
+      "text": "جگہ",
+      "start": 1.432,
+      "end": 1.744
+     },
+     {
+      "text": "پر",
+      "start": 1.744,
+      "end": 1.952
+     },
+     {
+      "text": "زمین",
+      "start": 1.952,
+      "end": 2.368
+     },
+     {
+      "text": "ستر",
+      "start": 2.368,
+      "end": 2.68
+     },
+     {
+      "text": "ڈگری",
+      "start": 2.68,
+      "end": 3.096
+     },
+     {
+      "text": "تک",
+      "start": 3.096,
+      "end": 3.304
+     },
+     {
+      "text": "تپتی",
+      "start": 3.304,
+      "end": 3.72
+     },
+     {
+      "text": "ہے۔",
+      "start": 3.72,
+      "end": 4.032
+     }
+    ],
+    "visual": "Desert heat-shimmer footage; counter to 70°"
+   },
+   {
+    "id": 2,
+    "text": "یہ جگہ ہے ایران کا دشتِ لوت، اور اسے ناسا کے سیٹلائٹ نے ناپا۔",
+    "title": "Where",
+    "audio": "p014/scene_2.mp3",
+    "startFrame": 129,
+    "durationFrames": 137,
+    "words": [
+     {
+      "text": "یہ",
+      "start": 0.08,
+      "end": 0.256
+     },
+     {
+      "text": "جگہ",
+      "start": 0.256,
+      "end": 0.519
+     },
+     {
+      "text": "ہے",
+      "start": 0.519,
+      "end": 0.695
+     },
+     {
+      "text": "ایران",
+      "start": 0.695,
+      "end": 1.134
+     },
+     {
+      "text": "کا",
+      "start": 1.134,
+      "end": 1.31
+     },
+     {
+      "text": "دشتِ",
+      "start": 1.31,
+      "end": 1.661
+     },
+     {
+      "text": "لوت،",
+      "start": 1.661,
+      "end": 2.012
+     },
+     {
+      "text": "اور",
+      "start": 2.012,
+      "end": 2.276
+     },
+     {
+      "text": "اسے",
+      "start": 2.276,
+      "end": 2.539
+     },
+     {
+      "text": "ناسا",
+      "start": 2.539,
+      "end": 2.891
+     },
+     {
+      "text": "کے",
+      "start": 2.891,
+      "end": 3.066
+     },
+     {
+      "text": "سیٹلائٹ",
+      "start": 3.066,
+      "end": 3.681
+     },
+     {
+      "text": "نے",
+      "start": 3.681,
+      "end": 3.857
+     },
+     {
+      "text": "ناپا۔",
+      "start": 3.857,
+      "end": 4.296
+     }
+    ],
+    "visual": "Map pin Lut Desert, Iran; NASA satellite icon"
+   },
+   {
+    "id": 3,
+    "text": "دو ہزار پانچ میں یہاں زمین کا درجۂ حرارت ستر اعشاریہ سات ڈگری تھا۔",
+    "title": "The number",
+    "audio": "p014/scene_3.mp3",
+    "startFrame": 266,
+    "durationFrames": 150,
+    "words": [
+     {
+      "text": "دو",
+      "start": 0.08,
+      "end": 0.256
+     },
+     {
+      "text": "ہزار",
+      "start": 0.256,
+      "end": 0.609
+     },
+     {
+      "text": "پانچ",
+      "start": 0.609,
+      "end": 0.962
+     },
+     {
+      "text": "میں",
+      "start": 0.962,
+      "end": 1.226
+     },
+     {
+      "text": "یہاں",
+      "start": 1.226,
+      "end": 1.579
+     },
+     {
+      "text": "زمین",
+      "start": 1.579,
+      "end": 1.931
+     },
+     {
+      "text": "کا",
+      "start": 1.931,
+      "end": 2.107
+     },
+     {
+      "text": "درجۂ",
+      "start": 2.107,
+      "end": 2.46
+     },
+     {
+      "text": "حرارت",
+      "start": 2.46,
+      "end": 2.901
+     },
+     {
+      "text": "ستر",
+      "start": 2.901,
+      "end": 3.165
+     },
+     {
+      "text": "اعشاریہ",
+      "start": 3.165,
+      "end": 3.782
+     },
+     {
+      "text": "سات",
+      "start": 3.782,
+      "end": 4.047
+     },
+     {
+      "text": "ڈگری",
+      "start": 4.047,
+      "end": 4.399
+     },
+     {
+      "text": "تھا۔",
+      "start": 4.399,
+      "end": 4.752
+     }
+    ],
+    "visual": "Big 70.7°C, 2005, thermometer fills"
+   },
+   {
+    "id": 4,
+    "text": "مگر ٹھہریں، یہ ہوا کا نہیں، زمین کی سطح کا درجۂ حرارت ہے۔",
+    "title": "Ground vs air",
+    "audio": "p014/scene_4.mp3",
+    "startFrame": 416,
+    "durationFrames": 129,
+    "words": [
+     {
+      "text": "مگر",
+      "start": 0.08,
+      "end": 0.343
+     },
+     {
+      "text": "ٹھہریں،",
+      "start": 0.343,
+      "end": 0.958
+     },
+     {
+      "text": "یہ",
+      "start": 0.958,
+      "end": 1.134
+     },
+     {
+      "text": "ہوا",
+      "start": 1.134,
+      "end": 1.397
+     },
+     {
+      "text": "کا",
+      "start": 1.397,
+      "end": 1.573
+     },
+     {
+      "text": "نہیں،",
+      "start": 1.573,
+      "end": 2.012
+     },
+     {
+      "text": "زمین",
+      "start": 2.012,
+      "end": 2.363
+     },
+     {
+      "text": "کی",
+      "start": 2.363,
+      "end": 2.539
+     },
+     {
+      "text": "سطح",
+      "start": 2.539,
+      "end": 2.802
+     },
+     {
+      "text": "کا",
+      "start": 2.802,
+      "end": 2.978
+     },
+     {
+      "text": "درجۂ",
+      "start": 2.978,
+      "end": 3.329
+     },
+     {
+      "text": "حرارت",
+      "start": 3.329,
+      "end": 3.769
+     },
+     {
+      "text": "ہے۔",
+      "start": 3.769,
+      "end": 4.032
+     }
+    ],
+    "visual": "Diagram: ground layer hot red, air above cooler"
+   },
+   {
+    "id": 5,
+    "text": "سیاہ پتھر اور ریت دھوپ جذب کرتے ہیں، اسی لیے زمین ہوا سے کہیں زیادہ گرم ہوتی ہے۔",
+    "title": "Why",
+    "audio": "p014/scene_5.mp3",
+    "startFrame": 545,
+    "durationFrames": 175,
+    "words": [
+     {
+      "text": "سیاہ",
+      "start": 0.08,
+      "end": 0.43
+     },
+     {
+      "text": "پتھر",
+      "start": 0.43,
+      "end": 0.78
+     },
+     {
+      "text": "اور",
+      "start": 0.78,
+      "end": 1.042
+     },
+     {
+      "text": "ریت",
+      "start": 1.042,
+      "end": 1.305
+     },
+     {
+      "text": "دھوپ",
+      "start": 1.305,
+      "end": 1.655
+     },
+     {
+      "text": "جذب",
+      "start": 1.655,
+      "end": 1.917
+     },
+     {
+      "text": "کرتے",
+      "start": 1.917,
+      "end": 2.267
+     },
+     {
+      "text": "ہیں،",
+      "start": 2.267,
+      "end": 2.617
+     },
+     {
+      "text": "اسی",
+      "start": 2.617,
+      "end": 2.88
+     },
+     {
+      "text": "لیے",
+      "start": 2.88,
+      "end": 3.142
+     },
+     {
+      "text": "زمین",
+      "start": 3.142,
+      "end": 3.492
+     },
+     {
+      "text": "ہوا",
+      "start": 3.492,
+      "end": 3.755
+     },
+     {
+      "text": "سے",
+      "start": 3.755,
+      "end": 3.93
+     },
+     {
+      "text": "کہیں",
+      "start": 3.93,
+      "end": 4.28
+     },
+     {
+      "text": "زیادہ",
+      "start": 4.28,
+      "end": 4.717
+     },
+     {
+      "text": "گرم",
+      "start": 4.717,
+      "end": 4.98
+     },
+     {
+      "text": "ہوتی",
+      "start": 4.98,
+      "end": 5.33
+     },
+     {
+      "text": "ہے۔",
+      "start": 5.33,
+      "end": 5.592
+     }
+    ],
+    "visual": "Dark rocks absorbing sun arrows"
+   },
+   {
+    "id": 6,
+    "text": "ہوا کا ریکارڈ امریکہ کی ڈیتھ ویلی کے پاس ہے: چھپن اعشاریہ سات ڈگری۔",
+    "title": "Air record",
+    "audio": "p014/scene_6.mp3",
+    "startFrame": 720,
+    "durationFrames": 155,
+    "words": [
+     {
+      "text": "ہوا",
+      "start": 0.08,
+      "end": 0.348
+     },
+     {
+      "text": "کا",
+      "start": 0.348,
+      "end": 0.526
+     },
+     {
+      "text": "ریکارڈ",
+      "start": 0.526,
+      "end": 1.061
+     },
+     {
+      "text": "امریکہ",
+      "start": 1.061,
+      "end": 1.596
+     },
+     {
+      "text": "کی",
+      "start": 1.596,
+      "end": 1.775
+     },
+     {
+      "text": "ڈیتھ",
+      "start": 1.775,
+      "end": 2.131
+     },
+     {
+      "text": "ویلی",
+      "start": 2.131,
+      "end": 2.488
+     },
+     {
+      "text": "کے",
+      "start": 2.488,
+      "end": 2.666
+     },
+     {
+      "text": "پاس",
+      "start": 2.666,
+      "end": 2.934
+     },
+     {
+      "text": "ہے:",
+      "start": 2.934,
+      "end": 3.201
+     },
+     {
+      "text": "چھپن",
+      "start": 3.201,
+      "end": 3.558
+     },
+     {
+      "text": "اعشاریہ",
+      "start": 3.558,
+      "end": 4.183
+     },
+     {
+      "text": "سات",
+      "start": 4.183,
+      "end": 4.45
+     },
+     {
+      "text": "ڈگری۔",
+      "start": 4.45,
+      "end": 4.896
+     }
+    ],
+    "visual": "Death Valley footage; 56.7°C 1913"
+   },
+   {
+    "id": 7,
+    "text": "اور ہمارا جیکب آباد بھی دنیا کے گرم ترین شہروں میں گنا جاتا ہے۔",
+    "title": "Pakistan",
+    "audio": "p014/scene_7.mp3",
+    "startFrame": 875,
+    "durationFrames": 139,
+    "words": [
+     {
+      "text": "اور",
+      "start": 0.08,
+      "end": 0.339
+     },
+     {
+      "text": "ہمارا",
+      "start": 0.339,
+      "end": 0.77
+     },
+     {
+      "text": "جیکب",
+      "start": 0.77,
+      "end": 1.115
+     },
+     {
+      "text": "آباد",
+      "start": 1.115,
+      "end": 1.46
+     },
+     {
+      "text": "بھی",
+      "start": 1.46,
+      "end": 1.719
+     },
+     {
+      "text": "دنیا",
+      "start": 1.719,
+      "end": 2.064
+     },
+     {
+      "text": "کے",
+      "start": 2.064,
+      "end": 2.236
+     },
+     {
+      "text": "گرم",
+      "start": 2.236,
+      "end": 2.495
+     },
+     {
+      "text": "ترین",
+      "start": 2.495,
+      "end": 2.84
+     },
+     {
+      "text": "شہروں",
+      "start": 2.84,
+      "end": 3.271
+     },
+     {
+      "text": "میں",
+      "start": 3.271,
+      "end": 3.53
+     },
+     {
+      "text": "گنا",
+      "start": 3.53,
+      "end": 3.788
+     },
+     {
+      "text": "جاتا",
+      "start": 3.788,
+      "end": 4.133
+     },
+     {
+      "text": "ہے۔",
+      "start": 4.133,
+      "end": 4.392
+     }
+    ],
+    "visual": "Pakistan map pin Jacobabad; sun"
+   },
+   {
+    "id": 8,
+    "text": "آپ کے شہر میں سب سے زیادہ گرمی کتنی پڑی ہے؟ کمنٹ میں لکھیں۔",
+    "title": "Question",
+    "audio": "p014/scene_8.mp3",
+    "startFrame": 1014,
+    "durationFrames": 159,
+    "words": [
+     {
+      "text": "آپ",
+      "start": 0.08,
+      "end": 0.296
+     },
+     {
+      "text": "کے",
+      "start": 0.296,
+      "end": 0.511
+     },
+     {
+      "text": "شہر",
+      "start": 0.511,
+      "end": 0.835
+     },
+     {
+      "text": "میں",
+      "start": 0.835,
+      "end": 1.158
+     },
+     {
+      "text": "سب",
+      "start": 1.158,
+      "end": 1.374
+     },
+     {
+      "text": "سے",
+      "start": 1.374,
+      "end": 1.59
+     },
+     {
+      "text": "زیادہ",
+      "start": 1.59,
+      "end": 2.129
+     },
+     {
+      "text": "گرمی",
+      "start": 2.129,
+      "end": 2.56
+     },
+     {
+      "text": "کتنی",
+      "start": 2.56,
+      "end": 2.991
+     },
+     {
+      "text": "پڑی",
+      "start": 2.991,
+      "end": 3.315
+     },
+     {
+      "text": "ہے؟",
+      "start": 3.315,
+      "end": 3.638
+     },
+     {
+      "text": "کمنٹ",
+      "start": 3.638,
+      "end": 4.07
+     },
+     {
+      "text": "میں",
+      "start": 4.07,
+      "end": 4.393
+     },
+     {
+      "text": "لکھیں۔",
+      "start": 4.393,
+      "end": 5.04
+     }
+    ],
+    "visual": "Thermometer with question mark"
+   }
+  ],
+  "brand": {
+   "name": "Chai & Curiosity",
+   "handle": "facebook.com · Chai & Curiosity",
+   "accent": "#ffd27a"
+  },
+  "endCard": {
+   "title": "دنیا کا گرم ترین ریکارڈ",
+   "cta": "اگلا ریکارڈ کون سا ہو؟"
+  }
+ }
+}

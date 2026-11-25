@@ -1,0 +1,50 @@
+# Research: 10 minute YouTube documentary in English: Mars Polar Lander and Mars Climate Orbiter, two Mars losses in three months (1999). Climate Orbiter lost to a unit mix-up; Polar Lander engines shut off about 40 metres up because leg-deployment vibration was read as touchdown. Near-miss and fix framing: what the review boards found and what NASA changed (Faster Better Cheaper, testing, Phoenix 2008 success). Platforms: youtube
+
+In 1999 NASA lost two Mars spacecraft in under three months. Mars Climate Orbiter was lost on 23 September 1999 during orbit insertion because ground software produced thruster data in pound-force seconds while the spacecraft's navigation expected newton-seconds, so the trajectory effect of small thruster firings was underestimated by a factor of about 4.45 and the orbiter flew far too deep into the Martian atmosphere. Mars Polar Lander was lost on 3 December 1999; the JPL Special Review Board found the most probable cause was a false touchdown signal from leg deployment that shut the engines about 40 metres above the surface. The Mars Program Independent Assessment Team (Young report, March 2000) concluded the programme was under-funded, under-staffed and under-tested, but that 'faster, better, cheaper' could work if properly implemented, and that all identified flaws were correctable. NASA restructured the Mars programme; the cancelled 2001 lander became Phoenix, which landed safely in 2008 after 42 corrective actions.
+
+**Audience:** Curious adults 18-45 who like engineering failures, space and software stories; viewers of long-form engineering documentaries
+
+## Facts
+
+| # | Fact | Confidence | Source |
+|---|---|---|---|
+| 1 | Mars Climate Orbiter launched on 11 December 1998 and was lost on 23 September 1999 as it fired its engine to enter orbit around Mars. | high | Mars Climate Orbiter Mishap Investigation Board Phase I report (Nov 1999) |
+| 2 | The root cause was that ground software produced thruster impulse data in English units (pound-force seconds) while the navigation software expected metric units (newton-seconds), as the interface specification required. | high | MCO Mishap Investigation Board Phase I report; NASA safety message (2009) |
+| 3 | Because of the units mismatch, the effect of small thruster firings on the trajectory was underestimated by a factor of about 4.45, so the orbiter approached Mars far lower than planned and was presumably destroyed by atmospheric heating and drag. | high | NASA Safety Message 2009-08-01: The Mars Climate Orbiter mishap |
+| 4 | Verification and validation did not confirm the navigation software complied with the interface specification, and signs of trajectory problems during cruise were not escalated effectively. | high | NASA safety message (2009); MCO board report |
+| 5 | The second MCO board report (March 2000) found the project had faced significant cuts in money and people compared with earlier projects. | medium | MCO Mishap Investigation Board Phase II report (13 March 2000) |
+| 6 | Mars Polar Lander launched from Cape Canaveral on 3 January 1999 aboard a Delta II rocket. | high | NASA image archive KSC-99pc05; JPL Special Review Board report |
+| 7 | On 3 December 1999 the lander began its descent toward Mars' south polar region, and no signal was ever received from it afterwards. | high | JPL Special Review Board report (JPL D-18709, 2000) |
+| 8 | Communication was not planned during the final descent, so there is no telemetry of what happened. | high | JPL Special Review Board report |
+| 9 | The review board concluded the most probable cause was premature shutdown of the descent engines. | high | JPL Special Review Board report; CBS News (2000) |
+| 10 | Tests showed the landing-leg touchdown sensors produce a brief false touchdown signal when the legs deploy during parachute descent. | high | JPL Special Review Board report |
+| 11 | The software was supposed to ignore touchdown signals before sensing was enabled, but it kept the false signal in memory. | high | JPL Special Review Board report |
+| 12 | Touchdown sensing was enabled at about 40 metres (about 130 feet) above the surface, and the software would then have cut the engines immediately. | high | JPL Special Review Board report |
+| 13 | The board estimated the lander would then hit the surface at about 50 mph (about 22 metres per second), fast enough to destroy it. | high | CBS News summarising the review board (2000) |
+| 14 | The board said the underlying cause was inadequate software design and systems testing. | high | JPL Special Review Board report |
+| 15 | NASA cancelled the 2001 lander mission after the loss; that nearly complete sister lander was later modified and flew as Phoenix. | high | NASA / JPL Phoenix fact sheet; Wikipedia: Phoenix (spacecraft) |
+| 16 | Phoenix landed safely near Mars' north pole in May 2008, after reviews generated 42 corrective actions for weaknesses that could explain the Polar Lander loss. | high | NASA APPEL case study; JPL Phoenix fact sheet |
+| 17 | The Mars Program Independent Assessment Team led by Thomas Young (March 2000) found significant errors in how the Mars programme was formulated and executed: it was under-funded, and communication among NASA, JPL and Lockheed Martin was poor. | high | MPIAT report and NASA press release 28 March 2000 |
+| 18 | The Young team concluded that 'faster, better, cheaper' is effective if properly implemented, and that all identified flaws were correctable in time for Mars exploration to continue. | high | MPIAT summary; Young testimony to the House Science Committee (April 2000) |
+
+## Sources
+- Mars Climate Orbiter Mishap Investigation Board Phase I Report (1999): https://www.dcs.gla.ac.uk/~johnson/Mars/MCO_report.pdf
+- NASA Safety Message: The Mars Climate Orbiter Mishap (2009): https://sma.nasa.gov/docs/default-source/safety-messages/safetymessage-2009-08-01-themarsclimateorbitermishap.pdf
+- MCO Mishap Investigation Board Phase II Report (2000): https://discovery.larc.nasa.gov/PDF_FILES/mars_climate_orbiter_phaseII.pdf
+- Mars Program Independent Assessment Team Report (2000): https://www.cs.washington.edu/homes/leveson/accidents/mpiat_report_1.pdf
+- NASA press release 00-46: Mars program assessment reports (28 March 2000): https://nssdc.gsfc.nasa.gov/planetary/text/nasa_pr_20000328.txt
+- JPL Special Review Board: Report on the Loss of the Mars Polar Lander and Deep Space 2 Missions (2000): https://www.cs.washington.edu/homes/leveson/accidents/mpl_report_1.pdf
+- CBS News: Mars lander reports rip NASA: https://www.cbsnews.com/news/mars-lander-reports-rip-nasa
+- NASA APPEL: Zealots and skeptics (Phoenix case study): https://appel.nasa.gov/wp-content/uploads/2013/05/NASA_APPEL_ASK_33s_zealots_and_skeptics.pdf
+- NASA: 15 years ago, Phoenix Mars Lander launches: https://www.nasa.gov/history/15-years-ago-phoenix-mars-lander-launches-to-the-red-planet
+- NASA Image and Video Library: KSC-99pc05 launch photo: https://images.nasa.gov/details/KSC-99pc05
+
+## Avoid
+- Saying the cause is certain (the board said 'most probable'; there is no telemetry)
+- Blaming named individuals
+- Confusing it with Mars Climate Orbiter's metric/imperial units error (a different mission, same year)
+- Claiming the wreck has been found
+- Saying 'a metric conversion error' as if someone forgot to convert once; it was an interface mismatch that verification failed to catch
+- Quoting an exact closest-approach altitude for Climate Orbiter unless sourced
+- Saying Faster Better Cheaper was abandoned or condemned (the Young team said it works if properly implemented)
+- Mocking the engineers; frame as system and process lessons

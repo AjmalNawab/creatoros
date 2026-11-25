@@ -1,0 +1,63 @@
+{
+ "titleOptions": [
+  "لاہور کی سموگ سردیوں میں ہی کیوں آتی ہے؟",
+  "سموگ کا ڈھکن: لاہور کا دھواں کہاں پھنس جاتا ہے",
+  "مینارِ پاکستان غائب کیوں ہو جاتا ہے؟"
+ ],
+ "scenes": [
+  {
+   "title": "Hook",
+   "visual": "Minar-e-Pakistan painted at dusk, slowly vanishing behind a grey-yellow haze; headline band asks the question",
+   "text": "مینارِ پاکستان سامنے کھڑا ہے، مگر نظر کیوں نہیں آ رہا؟"
+  },
+  {
+   "title": "Not fog",
+   "visual": "Close-up: water droplets (fog) vs dark soot particles (smog) side by side with Urdu labels",
+   "text": "ہر سردی لاہور پر یہ سرمئی چادر آتی ہے، مگر یہ صرف دھند نہیں، دھواں ہے۔"
+  },
+  {
+   "title": "Smoke all year",
+   "visual": "City painting with cars, factories and brick kilns sending smoke upward on a clear summer day",
+   "text": "حیرت کی بات یہ ہے کہ گاڑیوں، کارخانوں اور بھٹوں کا دھواں سارا سال نکلتا ہے۔"
+  },
+  {
+   "title": "Summer escape",
+   "visual": "Animated arrows carry smoke high into the sky and away; warm sun",
+   "text": "گرمیوں میں گرم ہوا اوپر اٹھتی ہے، اور یہ دھواں اپنے ساتھ آسمان میں لے جاتی ہے۔"
+  },
+  {
+   "title": "Winter nights",
+   "visual": "Night scene: ground glowing blue-cold, a warm orange layer slides in above the city",
+   "text": "مگر سردی کی راتوں میں زمین جلد ٹھنڈی ہوتی ہے، اور اوپر گرم ہوا کی تہہ آتی ہے۔"
+  },
+  {
+   "title": "The lid",
+   "visual": "Diagram: cold air box at bottom, warm layer drawn as a pot lid; smoke arrows bounce off it; label: ڈھکن",
+   "text": "یہ گرم تہہ ایک ڈھکن بن جاتی ہے، اور ٹھنڈی ہوا کو نیچے قید کر دیتی ہے۔"
+  },
+  {
+   "title": "Still air",
+   "visual": "Wind-sock hanging limp; smoke piles up under the lid layer by layer",
+   "text": "ہوا بھی تقریباً رک جاتی ہے، تو دھواں نہ اوپر جا سکتا ہے، نہ دور۔"
+  },
+  {
+   "title": "Crop fires",
+   "visual": "Map of Punjab with small fire dots appearing on both sides of the border in November; smoke drifts toward Lahore",
+   "text": "نومبر میں سرحد کے دونوں طرف فصلوں کی باقیات جلتی ہیں، دھواں اسی ڈھکن تلے جمع ہوتا ہے۔"
+  },
+  {
+   "title": "Record",
+   "visual": "Big counter counts up to 1000 over the haze; school bag and closed gate icon",
+   "text": "دو ہزار چوبیس میں لاہور کا ایئر کوالٹی انڈیکس ایک ہزار سے اوپر گیا، اور اسکول بند ہوئے۔"
+  },
+  {
+   "title": "Payoff",
+   "visual": "Lid stays; smoke sources dim one by one; Minar-e-Pakistan slowly reappears",
+   "text": "موسم کا ڈھکن ہم نہیں ہٹا سکتے، مگر اس کے نیچے کا دھواں کم کر سکتے ہیں۔"
+  }
+ ],
+ "endCard": {
+  "title": "ڈھکن نہیں، دھواں کم کریں",
+  "cta": "آپ کے شہر میں سموگ کب شروع ہوتی ہے؟"
+ }
+}

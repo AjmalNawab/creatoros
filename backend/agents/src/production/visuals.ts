@@ -24,6 +24,17 @@ export const visuals: AgentDefinition = {
     const short = !!raw.lines;
     const sb = { totalFrames: raw.totalFrames, scenes: (raw.scenes ?? raw.lines)! };
     const file = paths.renderer('src', 'videos', `${p.key}.tsx`);
+    // Licensed real footage collected for this project (media/renderer/scripts/footage.mjs → content/<slug>/footage/manifest.json).
+    type Clip = { file: string; kind: 'video' | 'image'; licence: string; credit: string; note: string; page: string };
+    const manifestFile = paths.content(p.slug, 'footage', 'manifest.json');
+    const clips = existsSync(manifestFile) ? (await readJson<{ clips: Clip[] }>(manifestFile)).clips : [];
+    const footageBlock = clips.length ? `
+Licensed REAL FOOTAGE for this video (use it as the main picture where it fits; draw diagrams/labels on top):
+${JSON.stringify(clips.map((c) => ({ file: c.file, kind: c.kind, note: c.note, licence: c.licence })), null, 1)}
+- Load with staticFile('<file>'): videos via <OffthreadVideo src={staticFile(..)} muted style={{width:'100%',height:'100%',objectFit:'cover'}} />, images via <Img>. Both from 'remotion'.
+- Slow push-in (scale 1.04→1.12) for life; cut between clips inside a long scene; keep each clip muted (narration is the audio).
+- Tag every real clip in a corner: "NASA ARCHIVE" / "ARCHIVE FOOTAGE" / "STOCK FOOTAGE" (small, honest), and never present a clip as something it is not (no fake "live" or wrong place/date).
+` : '';
     const code = await askAi(getDb(), ctx, {
       kind: 'visuals', format: 'text', promptDir: paths.content(p.slug, 'ai'),
       prompt: withFeedback(`You are the Visual Generation Agent of CreatorOS. Write a Remotion (React + inline SVG) TSX module with one animated scene component per storyboard scene, for a ${short ? 'VERTICAL 1080x1920 YouTube Short' : '1920x1080 educational video'}.
@@ -34,13 +45,13 @@ Study the reference implementation first: media/renderer/src/videos/p001.tsx (st
 Rules:
 - export const SCENES: React.FC[] = [Scene1, ..., Scene${sb.scenes.length}];  (exactly ${sb.scenes.length}, in order)
 - Visual style for this brand: ${profile.visualStyle}
-- Import helpers only from '../common' (C, NightSky, Blueprint, Particles, Tag, Label, UrduText, ease, prog) and from 'remotion'. No external images, fonts, or network.
+- Import helpers only from '../common' (C, NightSky, Blueprint, Particles, Tag, Label, UrduText, ease, prog) and from 'remotion'. No network URLs or external fonts; images/video only from this project's licensed footage list${clips.length ? ' below' : ' (none collected: draw everything)'} via staticFile().
 - Animate with useCurrentFrame()/useVideoConfig() (durationInFrames = scene length). Deterministic: use remotion's random(seed), never Math.random.
 ${short ? `- VERTICAL canvas 1080x1920 (use <svg width={1080} height={1920}>). Safe zones: keep text and key shapes out of the top 220px, the bottom 480px and the right 140px (platform UI). The band y=1000-1400 is reserved for big word-by-word captions drawn on top: put the main diagram in y=260-980.
 - Shorts pace: motion in the first 3 frames of every scene; each scene is one quick visual beat (2-6 s). Big, bold, simple shapes readable on a phone.
 - Numbers can count up: import { CountUp } from '../Short' and use <CountUp to={1940} /> inside a positioned <div>.` : '- Keep the bottom 170px clear of important content (subtitles are drawn there).'} On-screen labels in ${p.language === 'ur' ? 'Urdu via <UrduText>/<Tag lang="ur">' : 'English via <Label>/<Tag lang="en">'}.
 - Each scene must visually explain its narration (diagram, labels appearing in sync).
-
+${footageBlock}
 Storyboard:
 ${JSON.stringify(sb.scenes.map((s) => ({ scene: s.id, title: s.title, seconds: +(s.durationFrames / 30).toFixed(1), visual: s.visual, narration: s.text })), null, 1)}
 

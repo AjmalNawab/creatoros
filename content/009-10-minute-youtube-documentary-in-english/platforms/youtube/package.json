@@ -1,0 +1,37 @@
+{
+ "platform": "youtube",
+ "video": "output/009-10-minute-youtube-documentary-in-english.mp4",
+ "videoSha256": "287f8a5bc073e10d5a58303b7d0f128f522823d27edf6c93090bb00b221e87be",
+ "thumbnail": "platforms/youtube/thumbnail.jpg",
+ "format": "long",
+ "title": "The Year NASA Lost Mars Twice: A Unit Mix-Up and a False Signal (1999)",
+ "description": "In 1999 NASA lost two Mars spacecraft in less than three months. Here is how a unit mix-up and a single false signal caused both losses, and what changed.\n\nMars Climate Orbiter was lost in September 1999 when one piece of ground software produced thruster data in pound-force seconds while the navigation software expected newton-seconds. Every small push was underestimated by a factor of about 4.45, and the orbiter approached Mars far too low. In December, Mars Polar Lander went silent during its descent. The review board concluded the most probable cause was a brief false touchdown signal from the landing legs that the software remembered, cutting the engines about 40 metres (130 feet) above the surface.\n\nWe follow what the investigation boards and the Mars Program Independent Assessment Team found: thin checks, stretched teams and incomplete testing. Then we look at the fix: more review, honest testing, and the stored sister lander that flew again as Phoenix and landed safely near the Martian north pole in 2008.\n\n⏱️ Chapters\n0:00 The silence\n0:59 Faster, better, cheaper\n2:06 Climate Orbiter's approach\n3:13 The unit mix-up\n4:22 Polar Lander's descent\n5:33 What investigators found\n6:43 The fix and Phoenix\n7:55 The lesson\n\n📚 Sources: Mars Climate Orbiter Mishap Investigation Board Phase I Report (1999) · NASA Safety Message: The Mars Climate Orbiter Mishap (2009) · MCO Mishap Investigation Board Phase II Report (2000) · Mars Program Independent Assessment Team Report (2000) · NASA press release 00-46: Mars program assessment reports (28 March 2000) · JPL Special Review Board: Report on the Loss of the Mars Polar Lander and Deep Space 2 Missions (2000) · CBS News: Mars lander reports rip NASA · NASA APPEL: Zealots and skeptics (Phoenix case study) · NASA: 15 years ago, Phoenix Mars Lander launches · NASA Image and Video Library: KSC-99pc05 launch photo\n🎙️ Narration: AI voice. Animation: original.\n\n#engineering #space #NASA",
+ "tags": [
+  "Mars Climate Orbiter",
+  "Mars Polar Lander",
+  "Mars Climate Orbiter unit error",
+  "metric imperial mistake NASA",
+  "NASA Mars 1999",
+  "Mars lander crash",
+  "faster better cheaper NASA",
+  "Phoenix Mars lander",
+  "engineering disaster",
+  "software testing failure",
+  "space engineering failure",
+  "JPL review board",
+  "Mars mission failure"
+ ],
+ "visibility": "public",
+ "madeForKids": false,
+ "category": "Science & Technology",
+ "playlist": "Engineering Stories (English)",
+ "series": "Margin of Safety",
+ "language": "English",
+ "channel": {
+  "id": "UCvugPJLIN5Wr5JeddlTrvKg",
+  "name": "Margin of Safety",
+  "handle": "@MarginOfSafetyTV"
+ },
+ "alteredContent": false,
+ "route": "browser"
+}

@@ -1,0 +1,47 @@
+[
+ {
+  "text": "Forty",
+  "start": 0.05,
+  "end": 0.595
+ },
+ {
+  "text": "metres",
+  "start": 0.595,
+  "end": 1.14
+ },
+ {
+  "text": "above",
+  "start": 1.14,
+  "end": 1.6
+ },
+ {
+  "text": "Mars,",
+  "start": 1.6,
+  "end": 2.1
+ },
+ {
+  "text": "its",
+  "start": 2.15,
+  "end": 2.29
+ },
+ {
+  "text": "engines",
+  "start": 2.29,
+  "end": 2.74
+ },
+ {
+  "text": "simply",
+  "start": 2.74,
+  "end": 3.17
+ },
+ {
+  "text": "switched",
+  "start": 3.17,
+  "end": 3.67
+ },
+ {
+  "text": "off.",
+  "start": 3.77,
+  "end": 4.03
+ }
+]

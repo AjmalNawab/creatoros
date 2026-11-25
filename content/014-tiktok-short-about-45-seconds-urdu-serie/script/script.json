@@ -1,0 +1,53 @@
+{
+ "titleOptions": [
+  "دنیا کی سب سے گرم جگہ: ستر ڈگری!",
+  "زمین ستر ڈگری تک کہاں تپتی ہے؟",
+  "دنیا کا گرم ترین ریکارڈ"
+ ],
+ "scenes": [
+  {
+   "title": "Hook",
+   "visual": "Desert heat-shimmer footage; counter to 70°",
+   "text": "دنیا کی گرم ترین جگہ پر زمین ستر ڈگری تک تپتی ہے۔"
+  },
+  {
+   "title": "Where",
+   "visual": "Map pin Lut Desert, Iran; NASA satellite icon",
+   "text": "یہ جگہ ہے ایران کا دشتِ لوت، اور اسے ناسا کے سیٹلائٹ نے ناپا۔"
+  },
+  {
+   "title": "The number",
+   "visual": "Big 70.7°C, 2005, thermometer fills",
+   "text": "دو ہزار پانچ میں یہاں زمین کا درجۂ حرارت ستر اعشاریہ سات ڈگری تھا۔"
+  },
+  {
+   "title": "Ground vs air",
+   "visual": "Diagram: ground layer hot red, air above cooler",
+   "text": "مگر ٹھہریں، یہ ہوا کا نہیں، زمین کی سطح کا درجۂ حرارت ہے۔"
+  },
+  {
+   "title": "Why",
+   "visual": "Dark rocks absorbing sun arrows",
+   "text": "سیاہ پتھر اور ریت دھوپ جذب کرتے ہیں، اسی لیے زمین ہوا سے کہیں زیادہ گرم ہوتی ہے۔"
+  },
+  {
+   "title": "Air record",
+   "visual": "Death Valley footage; 56.7°C 1913",
+   "text": "ہوا کا ریکارڈ امریکہ کی ڈیتھ ویلی کے پاس ہے: چھپن اعشاریہ سات ڈگری۔"
+  },
+  {
+   "title": "Pakistan",
+   "visual": "Pakistan map pin Jacobabad; sun",
+   "text": "اور ہمارا جیکب آباد بھی دنیا کے گرم ترین شہروں میں گنا جاتا ہے۔"
+  },
+  {
+   "title": "Question",
+   "visual": "Thermometer with question mark",
+   "text": "آپ کے شہر میں سب سے زیادہ گرمی کتنی پڑی ہے؟ کمنٹ میں لکھیں۔"
+  }
+ ],
+ "endCard": {
+  "title": "دنیا کا گرم ترین ریکارڈ",
+  "cta": "اگلا ریکارڈ کون سا ہو؟"
+ }
+}

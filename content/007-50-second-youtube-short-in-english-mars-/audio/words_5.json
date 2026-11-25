@@ -1,0 +1,57 @@
+[
+ {
+  "text": "That",
+  "start": 0.3,
+  "end": 0.3
+ },
+ {
+  "text": "jolt",
+  "start": 0.37,
+  "end": 0.59
+ },
+ {
+  "text": "made",
+  "start": 0.59,
+  "end": 0.84
+ },
+ {
+  "text": "the",
+  "start": 0.92,
+  "end": 1.11
+ },
+ {
+  "text": "touchdown",
+  "start": 1.11,
+  "end": 1.79
+ },
+ {
+  "text": "sensors",
+  "start": 1.79,
+  "end": 2.26
+ },
+ {
+  "text": "flicker,",
+  "start": 2.38,
+  "end": 3
+ },
+ {
+  "text": "just",
+  "start": 3.07,
+  "end": 3.28
+ },
+ {
+  "text": "for",
+  "start": 3.28,
+  "end": 3.49
+ },
+ {
+  "text": "a",
+  "start": 3.49,
+  "end": 3.56
+ },
+ {
+  "text": "moment.",
+  "start": 3.56,
+  "end": 4
+ }
+]

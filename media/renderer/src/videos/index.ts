@@ -5,6 +5,13 @@ import { SCENES as p002 } from './p002';
 import { SCENES as p003 } from './p003';
 import { SCENES as p006 } from './p006';
 import { SCENES as p007 } from './p007';
+import { SCENES as p008 } from './p008';
+import { SCENES as p009 } from './p009';
+import { SCENES as p010 } from './p010';
+import { SCENES as p011 } from './p011';
+import { SCENES as p012 } from './p012';
+import { SCENES as p013 } from './p013';
+import { SCENES as p014 } from './p014';
 
 export const VIDEOS: Record<string, React.FC[]> = {
   p001,
@@ -12,4 +19,11 @@ export const VIDEOS: Record<string, React.FC[]> = {
   p003,
   p006,
   p007,
+  p008,
+  p009,
+  p010,
+  p011,
+  p012,
+  p013,
+  p014,
 };

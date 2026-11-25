@@ -1,0 +1,787 @@
+[
+ {
+  "text": "China's",
+  "start": 0.35,
+  "end": 0.54
+ },
+ {
+  "text": "answer",
+  "start": 0.54,
+  "end": 0.96
+ },
+ {
+  "text": "was",
+  "start": 1.01,
+  "end": 1.24
+ },
+ {
+  "text": "to",
+  "start": 1.24,
+  "end": 1.34
+ },
+ {
+  "text": "send",
+  "start": 1.41,
+  "end": 1.7
+ },
+ {
+  "text": "a",
+  "start": 1.7,
+  "end": 1.77
+ },
+ {
+  "text": "new",
+  "start": 1.78,
+  "end": 2.01
+ },
+ {
+  "text": "ship",
+  "start": 2.01,
+  "end": 2.32
+ },
+ {
+  "text": "with",
+  "start": 2.32,
+  "end": 2.61
+ },
+ {
+  "text": "nobody",
+  "start": 2.66,
+  "end": 3.08
+ },
+ {
+  "text": "in",
+  "start": 3.09,
+  "end": 3.24
+ },
+ {
+  "text": "it.",
+  "start": 3.24,
+  "end": 3.88
+ },
+ {
+  "text": "Around",
+  "start": 4.24,
+  "end": 4.34
+ },
+ {
+  "text": "the",
+  "start": 4.34,
+  "end": 4.57
+ },
+ {
+  "text": "twenty-fifth",
+  "start": 4.57,
+  "end": 5.18
+ },
+ {
+  "text": "of",
+  "start": 5.18,
+  "end": 5.33
+ },
+ {
+  "text": "November",
+  "start": 5.33,
+  "end": 5.94
+ },
+ {
+  "text": "2025,",
+  "start": 5.94,
+  "end": 7.03
+ },
+ {
+  "text": "about",
+  "start": 7.03,
+  "end": 7.22
+ },
+ {
+  "text": "eleven",
+  "start": 7.22,
+  "end": 7.88
+ },
+ {
+  "text": "days",
+  "start": 7.88,
+  "end": 8.04
+ },
+ {
+  "text": "after",
+  "start": 8.04,
+  "end": 8.32
+ },
+ {
+  "text": "the",
+  "start": 8.4,
+  "end": 8.52
+ },
+ {
+  "text": "crew",
+  "start": 8.52,
+  "end": 8.76
+ },
+ {
+  "text": "swap,",
+  "start": 8.76,
+  "end": 9.68
+ },
+ {
+  "text": "China",
+  "start": 9.68,
+  "end": 9.75
+ },
+ {
+  "text": "launched",
+  "start": 9.75,
+  "end": 10.44
+ },
+ {
+  "text": "Shenzhou-22",
+  "start": 10.44,
+  "end": 11.71
+ },
+ {
+  "text": "without",
+  "start": 11.71,
+  "end": 12.31
+ },
+ {
+  "text": "a",
+  "start": 12.31,
+  "end": 12.39
+ },
+ {
+  "text": "crew.",
+  "start": 12.39,
+  "end": 12.74
+ },
+ {
+  "text": "Its",
+  "start": 13.33,
+  "end": 13.33
+ },
+ {
+  "text": "job",
+  "start": 13.4,
+  "end": 13.62
+ },
+ {
+  "text": "was",
+  "start": 13.62,
+  "end": 13.91
+ },
+ {
+  "text": "simple",
+  "start": 13.91,
+  "end": 14.49
+ },
+ {
+  "text": "and",
+  "start": 14.49,
+  "end": 14.78
+ },
+ {
+  "text": "vital:",
+  "start": 14.78,
+  "end": 15.43
+ },
+ {
+  "text": "dock",
+  "start": 15.56,
+  "end": 15.74
+ },
+ {
+  "text": "with",
+  "start": 15.74,
+  "end": 16
+ },
+ {
+  "text": "the",
+  "start": 16,
+  "end": 16.19
+ },
+ {
+  "text": "station",
+  "start": 16.19,
+  "end": 16.38
+ },
+ {
+  "text": "and",
+  "start": 16.68,
+  "end": 16.87
+ },
+ {
+  "text": "be",
+  "start": 17.01,
+  "end": 17.01
+ },
+ {
+  "text": "the",
+  "start": 17.04,
+  "end": 17.22
+ },
+ {
+  "text": "lifeboat.",
+  "start": 17.22,
+  "end": 18.04
+ },
+ {
+  "text": "It",
+  "start": 18.18,
+  "end": 18.18
+ },
+ {
+  "text": "also",
+  "start": 18.4,
+  "end": 18.46
+ },
+ {
+  "text": "carried",
+  "start": 18.46,
+  "end": 18.95
+ },
+ {
+  "text": "a",
+  "start": 18.95,
+  "end": 19
+ },
+ {
+  "text": "device",
+  "start": 19.03,
+  "end": 19.38
+ },
+ {
+  "text": "for",
+  "start": 19.45,
+  "end": 19.64
+ },
+ {
+  "text": "repairing",
+  "start": 19.65,
+  "end": 20.31
+ },
+ {
+  "text": "the",
+  "start": 20.32,
+  "end": 20.43
+ },
+ {
+  "text": "cracked",
+  "start": 20.56,
+  "end": 20.91
+ },
+ {
+  "text": "porthole",
+  "start": 20.91,
+  "end": 21.38
+ },
+ {
+  "text": "on",
+  "start": 21.39,
+  "end": 21.43
+ },
+ {
+  "text": "Shenzhou-20.",
+  "start": 21.58,
+  "end": 22.93
+ },
+ {
+  "text": "The",
+  "start": 23.28,
+  "end": 23.28
+ },
+ {
+  "text": "speed",
+  "start": 23.36,
+  "end": 23.74
+ },
+ {
+  "text": "of",
+  "start": 23.74,
+  "end": 23.92
+ },
+ {
+  "text": "this",
+  "start": 23.92,
+  "end": 24.29
+ },
+ {
+  "text": "matters.",
+  "start": 24.29,
+  "end": 25.24
+ },
+ {
+  "text": "A",
+  "start": 25.24,
+  "end": 25.24
+ },
+ {
+  "text": "spacecraft",
+  "start": 25.6,
+  "end": 26.08
+ },
+ {
+  "text": "and",
+  "start": 26.08,
+  "end": 26.23
+ },
+ {
+  "text": "its",
+  "start": 26.23,
+  "end": 26.46
+ },
+ {
+  "text": "rocket",
+  "start": 26.46,
+  "end": 26.92
+ },
+ {
+  "text": "normally",
+  "start": 26.92,
+  "end": 27.54
+ },
+ {
+  "text": "take",
+  "start": 27.54,
+  "end": 27.85
+ },
+ {
+  "text": "months",
+  "start": 27.9,
+  "end": 28.31
+ },
+ {
+  "text": "of",
+  "start": 28.31,
+  "end": 28.46
+ },
+ {
+  "text": "preparation.",
+  "start": 28.46,
+  "end": 29.36
+ },
+ {
+  "text": "Having",
+  "start": 29.72,
+  "end": 29.83
+ },
+ {
+  "text": "a",
+  "start": 29.83,
+  "end": 29.9
+ },
+ {
+  "text": "ship",
+  "start": 29.9,
+  "end": 30.21
+ },
+ {
+  "text": "ready",
+  "start": 30.21,
+  "end": 30.6
+ },
+ {
+  "text": "to",
+  "start": 30.6,
+  "end": 30.7
+ },
+ {
+  "text": "fly",
+  "start": 30.77,
+  "end": 30.98
+ },
+ {
+  "text": "quickly",
+  "start": 30.98,
+  "end": 31.56
+ },
+ {
+  "text": "meant",
+  "start": 31.56,
+  "end": 31.9
+ },
+ {
+  "text": "the",
+  "start": 31.9,
+  "end": 32.1
+ },
+ {
+  "text": "gap",
+  "start": 32.1,
+  "end": 32.32
+ },
+ {
+  "text": "without",
+  "start": 32.32,
+  "end": 32.52
+ },
+ {
+  "text": "a",
+  "start": 32.52,
+  "end": 32.6
+ },
+ {
+  "text": "certified",
+  "start": 32.6,
+  "end": 32.7
+ },
+ {
+  "text": "lifeboat",
+  "start": 33.36,
+  "end": 33.8
+ },
+ {
+  "text": "lasted",
+  "start": 33.8,
+  "end": 34.5
+ },
+ {
+  "text": "days,",
+  "start": 34.5,
+  "end": 34.96
+ },
+ {
+  "text": "not",
+  "start": 35.29,
+  "end": 35.29
+ },
+ {
+  "text": "months.",
+  "start": 35.32,
+  "end": 36.2
+ },
+ {
+  "text": "Then",
+  "start": 36.2,
+  "end": 36.6
+ },
+ {
+  "text": "came",
+  "start": 36.6,
+  "end": 37
+ },
+ {
+  "text": "the",
+  "start": 37,
+  "end": 37.3
+ },
+ {
+  "text": "investigation",
+  "start": 37.3,
+  "end": 38.24
+ },
+ {
+  "text": "in",
+  "start": 38.6,
+  "end": 38.79
+ },
+ {
+  "text": "orbit.",
+  "start": 38.96,
+  "end": 39.6
+ },
+ {
+  "text": "In",
+  "start": 39.77,
+  "end": 39.77
+ },
+ {
+  "text": "early",
+  "start": 39.96,
+  "end": 40.21
+ },
+ {
+  "text": "December,",
+  "start": 40.21,
+  "end": 41.12
+ },
+ {
+  "text": "astronauts",
+  "start": 41.12,
+  "end": 41.86
+ },
+ {
+  "text": "on",
+  "start": 41.86,
+  "end": 41.99
+ },
+ {
+  "text": "a",
+  "start": 42.07,
+  "end": 42.07
+ },
+ {
+  "text": "spacewalk",
+  "start": 42.12,
+  "end": 42.76
+ },
+ {
+  "text": "took",
+  "start": 42.76,
+  "end": 42.94
+ },
+ {
+  "text": "high-resolution",
+  "start": 42.99,
+  "end": 44.05
+ },
+ {
+  "text": "photos",
+  "start": 44.12,
+  "end": 44.49
+ },
+ {
+  "text": "of",
+  "start": 44.59,
+  "end": 44.72
+ },
+ {
+  "text": "the",
+  "start": 44.72,
+  "end": 44.97
+ },
+ {
+  "text": "damaged",
+  "start": 44.97,
+  "end": 45.56
+ },
+ {
+  "text": "window,",
+  "start": 45.56,
+  "end": 46.08
+ },
+ {
+  "text": "so",
+  "start": 46.24,
+  "end": 46.24
+ },
+ {
+  "text": "engineers",
+  "start": 46.44,
+  "end": 46.98
+ },
+ {
+  "text": "on",
+  "start": 46.98,
+  "end": 47.14
+ },
+ {
+  "text": "the",
+  "start": 47.14,
+  "end": 47.38
+ },
+ {
+  "text": "ground",
+  "start": 47.38,
+  "end": 47.86
+ },
+ {
+  "text": "could",
+  "start": 47.87,
+  "end": 48.28
+ },
+ {
+  "text": "study",
+  "start": 48.28,
+  "end": 48.69
+ },
+ {
+  "text": "the",
+  "start": 48.74,
+  "end": 48.93
+ },
+ {
+  "text": "cracks.",
+  "start": 48.93,
+  "end": 49.47
+ },
+ {
+  "text": "Finally,",
+  "start": 50.08,
+  "end": 50.46
+ },
+ {
+  "text": "on",
+  "start": 50.46,
+  "end": 50.62
+ },
+ {
+  "text": "the",
+  "start": 50.62,
+  "end": 50.87
+ },
+ {
+  "text": "nineteenth",
+  "start": 50.87,
+  "end": 51.53
+ },
+ {
+  "text": "of",
+  "start": 51.53,
+  "end": 51.69
+ },
+ {
+  "text": "January",
+  "start": 51.69,
+  "end": 52.27
+ },
+ {
+  "text": "2026,",
+  "start": 52.27,
+  "end": 53.45
+ },
+ {
+  "text": "the",
+  "start": 53.64,
+  "end": 53.64
+ },
+ {
+  "text": "damaged",
+  "start": 53.72,
+  "end": 54.07
+ },
+ {
+  "text": "Shenzhou-20",
+  "start": 54.14,
+  "end": 55.05
+ },
+ {
+  "text": "came",
+  "start": 55.05,
+  "end": 55.32
+ },
+ {
+  "text": "home",
+  "start": 55.32,
+  "end": 55.6
+ },
+ {
+  "text": "on",
+  "start": 55.6,
+  "end": 55.79
+ },
+ {
+  "text": "its",
+  "start": 55.79,
+  "end": 56.07
+ },
+ {
+  "text": "own,",
+  "start": 56.07,
+  "end": 56.56
+ },
+ {
+  "text": "with",
+  "start": 56.9,
+  "end": 56.9
+ },
+ {
+  "text": "nobody",
+  "start": 56.92,
+  "end": 57.41
+ },
+ {
+  "text": "aboard,",
+  "start": 57.41,
+  "end": 58.09
+ },
+ {
+  "text": "and",
+  "start": 58.09,
+  "end": 58.33
+ },
+ {
+  "text": "parachuted",
+  "start": 58.34,
+  "end": 59.17
+ },
+ {
+  "text": "down",
+  "start": 59.22,
+  "end": 59.53
+ },
+ {
+  "text": "to",
+  "start": 59.53,
+  "end": 59.7
+ },
+ {
+  "text": "the",
+  "start": 59.7,
+  "end": 59.89
+ },
+ {
+  "text": "landing",
+  "start": 60.55,
+  "end": 60.55
+ },
+ {
+  "text": "site",
+  "start": 60.56,
+  "end": 60.89
+ },
+ {
+  "text": "in",
+  "start": 60.89,
+  "end": 61
+ },
+ {
+  "text": "Inner",
+  "start": 61.08,
+  "end": 61.44
+ },
+ {
+  "text": "Mongolia.",
+  "start": 61.55,
+  "end": 62.52
+ },
+ {
+  "text": "Its",
+  "start": 62.72,
+  "end": 62.73
+ },
+ {
+  "text": "window",
+  "start": 62.88,
+  "end": 63.19
+ },
+ {
+  "text": "could",
+  "start": 63.19,
+  "end": 63.57
+ },
+ {
+  "text": "now",
+  "start": 63.57,
+  "end": 63.79
+ },
+ {
+  "text": "be",
+  "start": 63.79,
+  "end": 63.94
+ },
+ {
+  "text": "examined",
+  "start": 63.94,
+  "end": 64.55
+ },
+ {
+  "text": "directly",
+  "start": 64.55,
+  "end": 65.13
+ },
+ {
+  "text": "on",
+  "start": 65.19,
+  "end": 65.31
+ },
+ {
+  "text": "the",
+  "start": 65.31,
+  "end": 65.53
+ },
+ {
+  "text": "ground.",
+  "start": 65.53,
+  "end": 66.26
+ }
+]

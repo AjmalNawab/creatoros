@@ -1,0 +1,100 @@
+{
+ "clips": [
+  {
+   "file": "p012/footage/k2-peak.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "1407",
+   "page": "https://pixabay.com/videos/id-1407/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "K2 summit pyramid (tagged k2)",
+   "sha256": "d96b61d3b7c0d4526d342b7b7b6d549caa8a92c4e3a82c64bf17ad5f5887c4df",
+   "addedAt": "2026-11-25T07:05:03.995Z"
+  },
+  {
+   "file": "p012/footage/k2-basecamp.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "376392",
+   "page": "https://pixabay.com/videos/id-376392/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "K2 base camp tents",
+   "sha256": "0feb1fc9100dbebd920fea7d33acb1e1fa74aed0d3f80ac6012fec63599c847d",
+   "addedAt": "2026-11-25T07:05:06.266Z"
+  },
+  {
+   "file": "p012/footage/k2-climber-crampons.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "1408",
+   "page": "https://pixabay.com/videos/id-1408/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "climber with crampons/ice gear (tagged k2)",
+   "sha256": "2530e5b411a6a5151c2808b06659acdb4f8fe7de6d27bf7961590b03f1732b9a",
+   "addedAt": "2026-11-25T07:05:07.386Z"
+  },
+  {
+   "file": "p012/footage/ice-climbing.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "1409",
+   "page": "https://pixabay.com/videos/id-1409/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "ice climbing high Himalaya (generic)",
+   "sha256": "ade26da86900c595be3c69044a9a84f53fd213cfc4492f1ac415cbf5ae40e314",
+   "addedAt": "2026-11-25T07:05:08.747Z"
+  },
+  {
+   "file": "p012/footage/everest.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "242380",
+   "page": "https://pixabay.com/videos/id-242380/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "Mount Everest landscape (for comparison)",
+   "sha256": "639287a919f954ba63c750ed6c1e211497ee676da899c3ef1f6c5ce97077505b",
+   "addedAt": "2026-11-25T07:05:13.429Z"
+  },
+  {
+   "file": "p012/footage/steep-wall.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "20579",
+   "page": "https://pixabay.com/videos/id-20579/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "steep high-altitude wall with avalanche (generic)",
+   "sha256": "4e86cd0466fd3ad715d41232a4a6a638ec81084bff0faab04980c61f835fffe0",
+   "addedAt": "2026-11-25T07:05:16.376Z"
+  },
+  {
+   "file": "p012/footage/blizzard-peak.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "1701",
+   "page": "https://pixabay.com/videos/id-1701/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "blizzard on a peak (generic weather)",
+   "sha256": "705855c84075aa2c65436035ac897a32874d7869fb8eb6c269db7eccd64bf9e0",
+   "addedAt": "2026-11-25T07:05:18.261Z"
+  },
+  {
+   "file": "p012/footage/pakistan-flag.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "128740",
+   "page": "https://pixabay.com/videos/id-128740/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "Pakistan flag",
+   "sha256": "143dfa17d329a747a455ccd7e77c6d4464f32551b0820c1e38f4ade27d3faf77",
+   "addedAt": "2026-11-25T07:05:19.240Z"
+  }
+ ]
+}

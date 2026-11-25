@@ -35,7 +35,9 @@ export default async function ActionsPage() {
           </div>
           <p className="border-t border-zinc-100 px-5 pt-3 text-xs text-zinc-500 dark:border-zinc-800">To have Claude post it for you, say <b>“post it”</b> in Claude Code, not in this box. Use the box below only to paste the link after the post is live.</p>
           <form action={completeHumanAction.bind(null, a.id)} className="flex flex-col gap-2 border-t border-zinc-100 px-5 py-3 sm:flex-row dark:border-zinc-800">
-            {a.kind === 'facebook_upload'
+            {a.kind === 'tiktok_upload'
+              ? <input name="url" type="url" required pattern="https://(www\.)?tiktok\.com/@.+/video/.+" title="A TikTok video link, e.g. https://www.tiktok.com/@handle/video/…" placeholder="Only after posting: paste the TikTok link (https://www.tiktok.com/@…/video/…)" className={`${inputCls} flex-1`} />
+              : a.kind === 'facebook_upload'
               ? <input name="url" type="url" required pattern="https://(www\.|m\.|web\.)?facebook\.com/.+" title="A Facebook post link, e.g. https://www.facebook.com/reel/…" placeholder="Only after posting: paste the Facebook link (https://www.facebook.com/reel/…)" className={`${inputCls} flex-1`} />
               : <input name="url" type="url" required pattern="https://(www\.)?(youtube\.com/(watch\?v=|shorts/)|youtu\.be/|studio\.youtube\.com/video/).+" title="A YouTube video link, e.g. https://youtube.com/shorts/…" placeholder="Only after uploading: paste the YouTube link (https://youtube.com/shorts/…)" className={`${inputCls} flex-1`} />}
             <input name="notes" placeholder="Notes (optional)" className={`${inputCls} sm:w-56`} />

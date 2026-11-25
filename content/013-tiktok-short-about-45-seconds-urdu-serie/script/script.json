@@ -1,0 +1,53 @@
+{
+ "titleOptions": [
+  "سچ یا جھوٹ؟ دیوارِ چین خلا سے نظر آتی ہے",
+  "کیا خلا سے دیوارِ چین دکھائی دیتی ہے؟",
+  "دیوارِ چین اور خلا: بچپن کی سب سے بڑی غلط فہمی"
+ ],
+ "scenes": [
+  {
+   "title": "Hook",
+   "visual": "Big stamp: سچ یا جھوٹ؟ over Earth-from-ISS footage",
+   "text": "سچ یا جھوٹ؟ دیوارِ چین خلا سے آنکھوں سے نظر آتی ہے۔"
+  },
+  {
+   "title": "The belief",
+   "visual": "Great Wall stock footage; book icon",
+   "text": "یہ بات ہم سب نے بچپن سے کتابوں اور باتوں میں سنی ہے۔"
+  },
+  {
+   "title": "Verdict",
+   "visual": "Red stamp: جھوٹ",
+   "text": "تو جواب ہے جھوٹ! کم از کم عام آنکھ سے تو نہیں۔"
+  },
+  {
+   "title": "Yang Liwei",
+   "visual": "Card: 2003 · China's first astronaut · 'I could not see it' (no photo)",
+   "text": "دو ہزار تین میں چین کے پہلے خلا باز نے خود کہا: مجھے دیوار نظر نہیں آئی۔"
+  },
+  {
+   "title": "Too narrow",
+   "visual": "Diagram: wall a few metres wide vs 400 km height",
+   "text": "وجہ یہ ہے کہ دیوار بہت لمبی ہے، مگر صرف چند میٹر چوڑی۔"
+  },
+  {
+   "title": "Same colour",
+   "visual": "Wall blending into hills, colour swatches",
+   "text": "اور اس کا رنگ آس پاس کی زمین جیسا ہے، اس لیے وہ چھپ جاتی ہے۔"
+  },
+  {
+   "title": "Only with lenses",
+   "visual": "Camera lens zoom diagram 180mm/800mm over ISS footage",
+   "text": "خلائی اسٹیشن سے اس کی تصویر صرف طاقتور لینز سے لی گئی ہے، اور چاند سے تو ناممکن۔"
+  },
+  {
+   "title": "Question",
+   "visual": "Split poll: سچ / جھوٹ",
+   "text": "آپ کو پہلے کیا لگتا تھا، سچ یا جھوٹ؟ کمنٹ میں بتائیں۔"
+  }
+ ],
+ "endCard": {
+  "title": "سچ یا جھوٹ؟ جھوٹ!",
+  "cta": "اگلا سوال آپ بتائیں"
+ }
+}

@@ -1,6 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 import { getDb } from '@creatoros/db';
-import { type AgentContext } from '@creatoros/core';
+import { existsSync } from 'node:fs';
+import { paths, type AgentContext } from '@creatoros/core';
 import { brandForProject, profileOf, type BrandProfile } from '../strategy/brand';
 
 /**
@@ -56,3 +57,17 @@ Tone: ${b.tone}
 Editorial rules (mandatory):
 ${b.rules.map((r) => `- ${r}`).join('\n')}
 Never: ${b.avoid.join('; ')}`;
+
+/**
+ * Credit line for licensed real footage (content/<slug>/footage/manifest.json). Public-domain/stock clips need no
+ * attribution but are still disclosed as "archive/stock footage"; CC BY / CC BY-SA clips list their required credit.
+ */
+export async function footageCredits(slug: string): Promise<{ used: boolean; line: string }> {
+  const f = paths.content(slug, 'footage', 'manifest.json');
+  if (!existsSync(f)) return { used: false, line: '' };
+  const { clips } = await readJson<{ clips: { source: string; credit: string }[] }>(f);
+  if (!clips.length) return { used: false, line: '' };
+  const kinds = [...new Set(clips.map((c) => (c.source === 'nasa' ? 'NASA archive' : c.source === 'pexels' || c.source === 'pixabay' ? 'stock' : 'archive')))];
+  const credits = [...new Set(clips.map((c) => c.credit).filter(Boolean))];
+  return { used: true, line: `🎞️ Footage: ${kinds.join(', ')}${credits.length ? ` (${credits.join(' · ')})` : ''}` };
+}

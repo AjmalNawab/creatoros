@@ -1,0 +1,52 @@
+[
+ {
+  "text": "Investigators",
+  "start": 0.39,
+  "end": 0.99
+ },
+ {
+  "text": "concluded",
+  "start": 0.99,
+  "end": 1.67
+ },
+ {
+  "text": "the",
+  "start": 1.67,
+  "end": 1.88
+ },
+ {
+  "text": "deeper",
+  "start": 1.92,
+  "end": 2.36
+ },
+ {
+  "text": "cause",
+  "start": 2.36,
+  "end": 2.61
+ },
+ {
+  "text": "was",
+  "start": 2.97,
+  "end": 3.08
+ },
+ {
+  "text": "software",
+  "start": 3.08,
+  "end": 3.64
+ },
+ {
+  "text": "design",
+  "start": 3.65,
+  "end": 4.08
+ },
+ {
+  "text": "and",
+  "start": 4.08,
+  "end": 4.29
+ },
+ {
+  "text": "testing.",
+  "start": 4.29,
+  "end": 4.82
+ }
+]

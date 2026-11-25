@@ -1,0 +1,706 @@
+{
+ "data": {
+  "key": "p007",
+  "language": "en",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 1565,
+  "lines": [
+   {
+    "id": 1,
+    "text": "Forty metres above Mars, its engines simply switched off.",
+    "title": "Hook",
+    "audio": "p007/scene_1.wav",
+    "startFrame": 0,
+    "durationFrames": 135,
+    "words": [
+     {
+      "text": "Forty",
+      "start": 0.05,
+      "end": 0.595
+     },
+     {
+      "text": "metres",
+      "start": 0.595,
+      "end": 1.14
+     },
+     {
+      "text": "above",
+      "start": 1.14,
+      "end": 1.6
+     },
+     {
+      "text": "Mars,",
+      "start": 1.6,
+      "end": 2.1
+     },
+     {
+      "text": "its",
+      "start": 2.15,
+      "end": 2.29
+     },
+     {
+      "text": "engines",
+      "start": 2.29,
+      "end": 2.74
+     },
+     {
+      "text": "simply",
+      "start": 2.74,
+      "end": 3.17
+     },
+     {
+      "text": "switched",
+      "start": 3.17,
+      "end": 3.67
+     },
+     {
+      "text": "off.",
+      "start": 3.77,
+      "end": 4.03
+     }
+    ],
+    "visual": "Painted lander descending over the Martian south pole; altimeter HUD frozen at 40 m; engines cut."
+   },
+   {
+    "id": 2,
+    "text": "On December third, 1999, NASA's Mars Polar Lander began its final descent.",
+    "title": "The descent",
+    "audio": "p007/scene_2.wav",
+    "startFrame": 135,
+    "durationFrames": 207,
+    "words": [
+     {
+      "text": "On",
+      "start": 0.2,
+      "end": 0.22
+     },
+     {
+      "text": "December",
+      "start": 0.39,
+      "end": 1.1
+     },
+     {
+      "text": "third,",
+      "start": 1.1,
+      "end": 1.65
+     },
+     {
+      "text": "1999,",
+      "start": 1.65,
+      "end": 3.18
+     },
+     {
+      "text": "NASA's",
+      "start": 3.18,
+      "end": 3.54
+     },
+     {
+      "text": "Mars",
+      "start": 3.54,
+      "end": 3.89
+     },
+     {
+      "text": "Polar",
+      "start": 3.98,
+      "end": 4.36
+     },
+     {
+      "text": "Lander",
+      "start": 4.36,
+      "end": 4.77
+     },
+     {
+      "text": "began",
+      "start": 4.82,
+      "end": 5.06
+     },
+     {
+      "text": "its",
+      "start": 5.06,
+      "end": 5.21
+     },
+     {
+      "text": "final",
+      "start": 5.21,
+      "end": 5.47
+     },
+     {
+      "text": "descent.",
+      "start": 5.47,
+      "end": 6
+     }
+    ],
+    "visual": "Real NASA launch photo, then the painted lander under its parachute; date tag 3 Dec 1999."
+   },
+   {
+    "id": 3,
+    "text": "Nobody on Earth was listening. The landing was never designed to send live data.",
+    "title": "No one listening",
+    "audio": "p007/scene_3.wav",
+    "startFrame": 342,
+    "durationFrames": 183,
+    "words": [
+     {
+      "text": "Nobody",
+      "start": 0.41,
+      "end": 0.5
+     },
+     {
+      "text": "on",
+      "start": 0.5,
+      "end": 0.59
+     },
+     {
+      "text": "Earth",
+      "start": 0.66,
+      "end": 1.07
+     },
+     {
+      "text": "was",
+      "start": 1.07,
+      "end": 1.32
+     },
+     {
+      "text": "listening.",
+      "start": 1.32,
+      "end": 2.19
+     },
+     {
+      "text": "The",
+      "start": 2.54,
+      "end": 2.56
+     },
+     {
+      "text": "landing",
+      "start": 2.75,
+      "end": 3.08
+     },
+     {
+      "text": "was",
+      "start": 3.08,
+      "end": 3.29
+     },
+     {
+      "text": "never",
+      "start": 3.3,
+      "end": 3.67
+     },
+     {
+      "text": "designed",
+      "start": 3.67,
+      "end": 4.3
+     },
+     {
+      "text": "to",
+      "start": 4.3,
+      "end": 4.42
+     },
+     {
+      "text": "send",
+      "start": 4.42,
+      "end": 4.53
+     },
+     {
+      "text": "live",
+      "start": 5.02,
+      "end": 5.02
+     },
+     {
+      "text": "data.",
+      "start": 5.05,
+      "end": 5.6
+     }
+    ],
+    "visual": "Painted mission control at night, NO SIGNAL on the big screen."
+   },
+   {
+    "id": 4,
+    "text": "Under its parachute, the lander's three legs snapped out into position.",
+    "title": "Legs deploy",
+    "audio": "p007/scene_4.wav",
+    "startFrame": 525,
+    "durationFrames": 147,
+    "words": [
+     {
+      "text": "Under",
+      "start": 0.37,
+      "end": 0.42
+     },
+     {
+      "text": "its",
+      "start": 0.42,
+      "end": 0.63
+     },
+     {
+      "text": "parachute,",
+      "start": 0.68,
+      "end": 1.6
+     },
+     {
+      "text": "the",
+      "start": 1.72,
+      "end": 1.79
+     },
+     {
+      "text": "lander's",
+      "start": 1.79,
+      "end": 2.23
+     },
+     {
+      "text": "three",
+      "start": 2.35,
+      "end": 2.64
+     },
+     {
+      "text": "legs",
+      "start": 2.64,
+      "end": 2.92
+     },
+     {
+      "text": "snapped",
+      "start": 2.92,
+      "end": 3.19
+     },
+     {
+      "text": "out",
+      "start": 3.3,
+      "end": 3.46
+     },
+     {
+      "text": "into",
+      "start": 3.46,
+      "end": 3.65
+     },
+     {
+      "text": "position.",
+      "start": 3.72,
+      "end": 4.44
+     }
+    ],
+    "visual": "Lander under parachute, three legs swing down; small cyan blueprint callout of a leg."
+   },
+   {
+    "id": 5,
+    "text": "That jolt made the touchdown sensors flicker, just for a moment.",
+    "title": "False touchdown",
+    "audio": "p007/scene_5.wav",
+    "startFrame": 672,
+    "durationFrames": 140,
+    "words": [
+     {
+      "text": "That",
+      "start": 0.3,
+      "end": 0.3
+     },
+     {
+      "text": "jolt",
+      "start": 0.37,
+      "end": 0.59
+     },
+     {
+      "text": "made",
+      "start": 0.59,
+      "end": 0.84
+     },
+     {
+      "text": "the",
+      "start": 0.92,
+      "end": 1.11
+     },
+     {
+      "text": "touchdown",
+      "start": 1.11,
+      "end": 1.79
+     },
+     {
+      "text": "sensors",
+      "start": 1.79,
+      "end": 2.26
+     },
+     {
+      "text": "flicker,",
+      "start": 2.38,
+      "end": 3
+     },
+     {
+      "text": "just",
+      "start": 3.07,
+      "end": 3.28
+     },
+     {
+      "text": "for",
+      "start": 3.28,
+      "end": 3.49
+     },
+     {
+      "text": "a",
+      "start": 3.49,
+      "end": 3.56
+     },
+     {
+      "text": "moment.",
+      "start": 3.56,
+      "end": 4
+     }
+    ],
+    "visual": "Blueprint callout: touchdown sensor flickers red for an instant; label SPURIOUS SIGNAL."
+   },
+   {
+    "id": 6,
+    "text": "The software should have ignored it. Instead, it remembered.",
+    "title": "The software remembered",
+    "audio": "p007/scene_6.wav",
+    "startFrame": 812,
+    "durationFrames": 123,
+    "words": [
+     {
+      "text": "The",
+      "start": 0.2,
+      "end": 0.2
+     },
+     {
+      "text": "software",
+      "start": 0.37,
+      "end": 0.65
+     },
+     {
+      "text": "should",
+      "start": 0.78,
+      "end": 1.12
+     },
+     {
+      "text": "have",
+      "start": 1.12,
+      "end": 1.38
+     },
+     {
+      "text": "ignored",
+      "start": 1.38,
+      "end": 1.69
+     },
+     {
+      "text": "it.",
+      "start": 1.93,
+      "end": 2.13
+     },
+     {
+      "text": "Instead,",
+      "start": 2.13,
+      "end": 2.58
+     },
+     {
+      "text": "it",
+      "start": 2.59,
+      "end": 2.72
+     },
+     {
+      "text": "remembered.",
+      "start": 2.72,
+      "end": 3.43
+     }
+    ],
+    "visual": "A memory register lights up and stays lit: TOUCHDOWN = TRUE."
+   },
+   {
+    "id": 7,
+    "text": "At forty metres, sensing switched on, and the lander believed it had landed.",
+    "title": "Forty metres",
+    "audio": "p007/scene_7.wav",
+    "startFrame": 935,
+    "durationFrames": 162,
+    "words": [
+     {
+      "text": "At",
+      "start": 0.17,
+      "end": 0.17
+     },
+     {
+      "text": "forty",
+      "start": 0.17,
+      "end": 0.905
+     },
+     {
+      "text": "metres,",
+      "start": 0.905,
+      "end": 1.64
+     },
+     {
+      "text": "sensing",
+      "start": 1.64,
+      "end": 1.95
+     },
+     {
+      "text": "switched",
+      "start": 1.96,
+      "end": 2.61
+     },
+     {
+      "text": "on,",
+      "start": 2.61,
+      "end": 2.72
+     },
+     {
+      "text": "and",
+      "start": 2.96,
+      "end": 2.96
+     },
+     {
+      "text": "the",
+      "start": 2.97,
+      "end": 3.08
+     },
+     {
+      "text": "lander",
+      "start": 3.08,
+      "end": 3.47
+     },
+     {
+      "text": "believed",
+      "start": 3.47,
+      "end": 3.98
+     },
+     {
+      "text": "it",
+      "start": 4.02,
+      "end": 4.18
+     },
+     {
+      "text": "had",
+      "start": 4.18,
+      "end": 4.34
+     },
+     {
+      "text": "landed.",
+      "start": 4.34,
+      "end": 4.72
+     }
+    ],
+    "visual": "Altimeter counts down 1500 to 40 m; sensing ON; the stored flag triggers."
+   },
+   {
+    "id": 8,
+    "text": "Engines off. It likely hit the ground at about fifty miles per hour.",
+    "title": "Engines off",
+    "audio": "p007/scene_8.wav",
+    "startFrame": 1097,
+    "durationFrames": 156,
+    "words": [
+     {
+      "text": "Engines",
+      "start": 0.3,
+      "end": 0.71
+     },
+     {
+      "text": "off.",
+      "start": 0.71,
+      "end": 1.04
+     },
+     {
+      "text": "It",
+      "start": 1.44,
+      "end": 1.46
+     },
+     {
+      "text": "likely",
+      "start": 1.64,
+      "end": 1.88
+     },
+     {
+      "text": "hit",
+      "start": 1.88,
+      "end": 2.08
+     },
+     {
+      "text": "the",
+      "start": 2.08,
+      "end": 2.25
+     },
+     {
+      "text": "ground",
+      "start": 2.34,
+      "end": 2.72
+     },
+     {
+      "text": "at",
+      "start": 2.72,
+      "end": 2.86
+     },
+     {
+      "text": "about",
+      "start": 2.86,
+      "end": 3.22
+     },
+     {
+      "text": "fifty",
+      "start": 3.22,
+      "end": 3.65
+     },
+     {
+      "text": "miles",
+      "start": 3.65,
+      "end": 4.01
+     },
+     {
+      "text": "per",
+      "start": 4.01,
+      "end": 4.22
+     },
+     {
+      "text": "hour.",
+      "start": 4.22,
+      "end": 4.52
+     }
+    ],
+    "visual": "Thruster plumes fade; lander drops; speed readout ~50 mph / 22 m/s."
+   },
+   {
+    "id": 9,
+    "text": "Investigators concluded the deeper cause was software design and testing.",
+    "title": "The real cause",
+    "audio": "p007/scene_9.wav",
+    "startFrame": 1253,
+    "durationFrames": 165,
+    "words": [
+     {
+      "text": "Investigators",
+      "start": 0.39,
+      "end": 0.99
+     },
+     {
+      "text": "concluded",
+      "start": 0.99,
+      "end": 1.67
+     },
+     {
+      "text": "the",
+      "start": 1.67,
+      "end": 1.88
+     },
+     {
+      "text": "deeper",
+      "start": 1.92,
+      "end": 2.36
+     },
+     {
+      "text": "cause",
+      "start": 2.36,
+      "end": 2.61
+     },
+     {
+      "text": "was",
+      "start": 2.97,
+      "end": 3.08
+     },
+     {
+      "text": "software",
+      "start": 3.08,
+      "end": 3.64
+     },
+     {
+      "text": "design",
+      "start": 3.65,
+      "end": 4.08
+     },
+     {
+      "text": "and",
+      "start": 4.08,
+      "end": 4.29
+     },
+     {
+      "text": "testing.",
+      "start": 4.29,
+      "end": 4.82
+     }
+    ],
+    "visual": "Report page icon: MOST PROBABLE CAUSE, software design and testing."
+   },
+   {
+    "id": 10,
+    "text": "Its twin later flew as Phoenix, and this time it touched down safely.",
+    "title": "Payoff",
+    "audio": "p007/scene_10.wav",
+    "startFrame": 1418,
+    "durationFrames": 147,
+    "words": [
+     {
+      "text": "Its",
+      "start": 0.15,
+      "end": 0.3
+     },
+     {
+      "text": "twin",
+      "start": 0.38,
+      "end": 0.6
+     },
+     {
+      "text": "later",
+      "start": 0.6,
+      "end": 0.98
+     },
+     {
+      "text": "flew",
+      "start": 0.98,
+      "end": 1.28
+     },
+     {
+      "text": "as",
+      "start": 1.28,
+      "end": 1.43
+     },
+     {
+      "text": "Phoenix,",
+      "start": 1.43,
+      "end": 2.08
+     },
+     {
+      "text": "and",
+      "start": 2.34,
+      "end": 2.34
+     },
+     {
+      "text": "this",
+      "start": 2.41,
+      "end": 2.62
+     },
+     {
+      "text": "time",
+      "start": 2.62,
+      "end": 2.9
+     },
+     {
+      "text": "it",
+      "start": 2.9,
+      "end": 3.04
+     },
+     {
+      "text": "touched",
+      "start": 3.04,
+      "end": 3.52
+     },
+     {
+      "text": "down",
+      "start": 3.52,
+      "end": 3.79
+     },
+     {
+      "text": "safely.",
+      "start": 3.79,
+      "end": 4.24
+     }
+    ],
+    "visual": "Painted Phoenix lander standing safely on icy northern plains, 2008."
+   }
+  ],
+  "brand": {
+   "name": "Margin of Safety",
+   "handle": "@MarginOfSafetyTV",
+   "accent": "#ff7a1a"
+  },
+  "endCard": {
+   "title": "Test the whole sequence",
+   "cta": "Follow for a new engineering story every week"
+  }
+ }
+}

@@ -1,0 +1,63 @@
+{
+ "titleOptions": [
+  "ایورسٹ سے چھوٹا، مگر کہیں زیادہ خطرناک: کے ٹو",
+  "کے ٹو کو وحشی پہاڑ کیوں کہتے ہیں؟",
+  "پاکستان کا کے ٹو، کوہ پیماؤں کا اصل امتحان"
+ ],
+ "scenes": [
+  {
+   "title": "Hook",
+   "visual": "Real K2-region footage at night, slow push-in; headline band; big pill: 8611 m",
+   "text": "ایورسٹ سے چھوٹا، مگر کہیں زیادہ خطرناک پہاڑ، پاکستان میں ہے۔"
+  },
+  {
+   "title": "The Savage Mountain",
+   "visual": "K2 base camp footage; label: وحشی پہاڑ; map pin Gilgit-Baltistan",
+   "text": "اس کا نام ہے کے ٹو، اور کوہ پیما اسے وحشی پہاڑ کہتے ہیں۔"
+  },
+  {
+   "title": "Shorter than Everest",
+   "visual": "Height comparison diagram: Everest 8849 m vs K2 8611 m bars, gap labelled 240 m; Everest footage inset",
+   "text": "مزے کی بات یہ ہے کہ کے ٹو ایورسٹ سے تقریباً دو سو چالیس میٹر چھوٹا ہے۔"
+  },
+  {
+   "title": "The grim ratio",
+   "visual": "Four climber icons, one fades; counter 1 : 4; labelled 'historically'",
+   "text": "پھر بھی کئی دہائیوں تک، ہر چار کامیاب چڑھائیوں پر تقریباً ایک کوہ پیما جان سے گیا۔"
+  },
+  {
+   "title": "Everest comparison",
+   "visual": "Bar: K2 risk bar much taller than Everest risk bar",
+   "text": "ایورسٹ پر یہ شرح اس سے کہیں کم ہے۔"
+  },
+  {
+   "title": "Steeper and technical",
+   "visual": "Steep-wall climbing footage with slope-angle diagram overlay",
+   "text": "وجہ؟ کے ٹو زیادہ ڈھلوان والا ہے، اور اس پر چڑھنا کہیں زیادہ تکنیکی کام ہے۔"
+  },
+  {
+   "title": "Weather and descent",
+   "visual": "Blizzard footage; arrow down labelled واپسی",
+   "text": "یہاں کا موسم اچانک بدلتا ہے، اور زیادہ تر حادثے چوٹی سے واپسی پر ہوتے ہیں۔"
+  },
+  {
+   "title": "Last in winter",
+   "visual": "Ice-climbing footage; badge: سردیوں میں آخری ۲۰۲۱",
+   "text": "اسی لیے سردیوں میں کے ٹو دنیا کی بڑی چوٹیوں میں سب سے آخر میں سر ہوا۔"
+  },
+  {
+   "title": "Ali Sadpara",
+   "visual": "Quiet K2 night footage; simple tribute card with name, no photo",
+   "text": "اور اسی پہاڑ پر پاکستان کے ہیرو علی سدپارہ نے اپنی جان دی۔"
+  },
+  {
+   "title": "Payoff",
+   "visual": "Pakistan flag footage then K2 peak; question pill",
+   "text": "تو اگلی بار کوئی ایورسٹ کا ذکر کرے، تو بتائیے گا: اصل امتحان پاکستان میں ہے۔"
+  }
+ ],
+ "endCard": {
+  "title": "اصل امتحان: کے ٹو",
+  "cta": "آپ کون سا پہاڑ دیکھنا چاہیں گے؟"
+ }
+}

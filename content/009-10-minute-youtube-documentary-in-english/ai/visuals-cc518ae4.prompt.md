@@ -1,0 +1,74 @@
+You are the Visual Generation Agent of CreatorOS. Write a Remotion (React + inline SVG) TSX module with one animated scene component per storyboard scene, for a 1920x1080 educational video.
+
+Write the file content for: media/renderer/src/videos/p009.tsx
+Study the reference implementation first: media/renderer/src/videos/p001.tsx (style, helpers, quality bar) and media/renderer/src/common.tsx (helpers).
+
+Rules:
+- export const SCENES: React.FC[] = [Scene1, ..., Scene8];  (exactly 8, in order)
+- Visual style for this brand: Engineering blueprint look: deep navy background with faint grid, white/cyan line drawings, orange/red for stress, failure and warnings, clean sans-serif labels, cross-sections, force arrows, diagrams and timelines. No photos or real people.
+- Import helpers only from '../common' (C, NightSky, Blueprint, Particles, Tag, Label, UrduText, ease, prog) and from 'remotion'. No external images, fonts, or network.
+- Animate with useCurrentFrame()/useVideoConfig() (durationInFrames = scene length). Deterministic: use remotion's random(seed), never Math.random.
+- Keep the bottom 170px clear of important content (subtitles are drawn there). On-screen labels in English via <Label>/<Tag lang="en">.
+- Each scene must visually explain its narration (diagram, labels appearing in sync).
+
+Storyboard:
+[
+ {
+  "scene": 1,
+  "title": "Cold open: silence",
+  "seconds": 28,
+  "visual": "Blueprint mission-control timeline on a navy grid; two spacecraft icons heading to Mars; first icon blinks out on 23 Sep 1999, second on 3 Dec 1999; a flat signal line",
+  "narration": "On the third of December, 1999, a room full of engineers in California waited for a signal from Mars. It was supposed to arrive a few minutes after landing. It never came. They waited through the night. They waited for weeks. Nothing. What made that silence so hard was the date on the calendar. Less than three months earlier, the same programme had lost another spacecraft at Mars. Two missions, two failures, one year. And neither one was destroyed by anything exotic. No meteor. No mystery from deep space. One was lost to a mismatch in units between two pieces of software. The other was most likely lost to a tiny false signal that the software remembered when it should have forgotten. This is the story of how both happened, what the investigators found, and how NASA turned the worst year in its Mars programme into the foundation for the landings that followed."
+ },
+ {
+  "scene": 2,
+  "title": "The plan: faster, better, cheaper",
+  "seconds": 28.2,
+  "visual": "Cost bar chart: big 1970s Viking bar vs small 1990s mission bars; label 'Faster, Better, Cheaper'; Mars Climate Orbiter and Mars Polar Lander line drawings side by side",
+  "narration": "To understand the losses, start with the plan. In the 1990s NASA wanted more missions for less money. The motto was faster, better, cheaper. Instead of one giant, expensive spacecraft every decade, send smaller ones often, and accept a bit more risk. The Mars programme was built around that idea. In late 1998 and early 1999, two spacecraft left Earth as a pair. Mars Climate Orbiter would circle the planet and study its weather. It would also relay radio signals for its partner. Mars Polar Lander would set down near the edge of the south polar ice, dig into the soil, and look for signs of water. They were built by the same industrial team and run by the same laboratory. On paper it was efficient. Shared designs, shared people, shared budgets. But as investigators would later find, shared also meant stretched. Fewer people were checking more work, and some of the checks that catch small mistakes were the ones that got squeezed."
+ },
+ {
+  "scene": 3,
+  "title": "Climate Orbiter: the approach",
+  "seconds": 27.7,
+  "visual": "Trajectory diagram: planned arc to orbit insertion vs actual arc drifting lower toward the atmosphere; small thruster puffs along the path with arrows; altitude band shaded orange",
+  "narration": "Mars Climate Orbiter launched on the eleventh of December, 1998. For nine months it cruised toward Mars. Along the way, small thrusters fired from time to time to keep the spacecraft pointed correctly. Each firing gave the spacecraft a tiny push. The navigation team on the ground had to account for every one of those pushes to predict exactly where the orbiter would be. On the twenty-third of September, 1999, the orbiter fired its main engine to slow down and slip into orbit. It passed behind the planet, as planned. It was supposed to reappear about twenty minutes later. It never did. The investigators concluded that the orbiter had approached Mars far lower than intended. Instead of skimming safely above the atmosphere, it dipped deep into it. The heat and drag would almost certainly have destroyed it. So the question became simple and painful. How did a team of experienced navigators get the trajectory so wrong, without realising it until it was too late?"
+ },
+ {
+  "scene": 4,
+  "title": "The unit mismatch",
+  "seconds": 28.8,
+  "visual": "Two software boxes linked by a data pipe: left box labelled 'ground software: pound-force seconds', right box 'navigation: newton-seconds'; a value passes through unchanged; magnifier shows 1 lbf·s = 4.45 N·s; error arrow grows",
+  "narration": "The answer was in the data passed between two pieces of software. One program on the ground calculated the effect of each thruster firing. Its output was supposed to be in metric units, newton-seconds, as the interface specification required. Instead, it produced the numbers in English units, pound-force seconds. The navigation software read those numbers as if they were metric. One pound-force second is about four point four five newton-seconds. So every small push was underestimated by a factor of about four and a half. Each error was tiny. But they added up over months of cruise, and the trajectory drifted. Here is the uncomfortable part. Investigators found that the mismatch was not caught by verification and validation. Nobody confirmed the software matched its specification. And during the cruise, there were signs the trajectory was off. Those concerns were raised, but they were not escalated in a way that forced action. The unit mix-up started the problem. The missing checks let it finish."
+ },
+ {
+  "scene": 5,
+  "title": "Polar Lander: the descent",
+  "seconds": 27.6,
+  "visual": "Vertical descent profile: entry, parachute, legs swinging out (flash at each leg sensor), radar lock, engine burn, altitude counter 1,500 m down to 40 m, then engines cut; impact speed label 22 m/s (50 mph)",
+  "narration": "Less than three months later, all eyes turned to Mars Polar Lander. On the third of December it began its descent. There was no live link during the final minutes, so nobody could watch it happen. The plan went like this. Heat shield through the upper atmosphere. Parachute. Then the three landing legs swing out and lock. Then the descent engines take over to slow the lander for a gentle touchdown. On each leg was a small sensor. Its job was to feel the moment of touchdown and tell the computer to cut the engines. Here is the catch. When the legs snapped open on the parachute, high above the ground, the jolt could trigger those sensors for a split second. The software was meant to ignore any signal before it started listening for touchdown. But it kept that brief false signal in memory. At about forty metres above the surface, the software started listening. It saw the remembered signal. And it shut the engines down. The review board estimated the lander then fell to the surface at about twenty-two metres per second, roughly fifty miles per hour."
+ },
+ {
+  "scene": 6,
+  "title": "What the boards found",
+  "seconds": 28.2,
+  "visual": "Two investigation report covers drawn as blueprint cards; a list of findings ticking in: 'under-funded', 'under-staffed', 'inadequate testing', 'poor communication'; a test-rig drawing of a leg sensor flashing",
+  "narration": "Investigators were careful with their words. For the lander, there was no data from the final descent, so the board called premature engine shutdown the most probable cause, not a certainty. But they had strong evidence. In tests, the touchdown sensors really did produce false signals when the legs deployed. And the board found that the system tests that should have caught it were incomplete. One test that could have revealed the problem had been run with the sensors wired incorrectly, and it was not repeated after the wiring was fixed. The board called the underlying cause inadequate software design and systems testing. Then a wider review looked at both losses together. It was led by Thomas Young, a veteran of the Viking missions. His team found that the Mars programme had been under-funded and under-staffed, and that communication between NASA, the laboratory and the contractor had been poor. But they did not say faster, better, cheaper was wrong. They said it could work, if it was properly implemented. And they said every flaw they found was correctable."
+ },
+ {
+  "scene": 7,
+  "title": "The fix and Phoenix",
+  "seconds": 27.9,
+  "visual": "Before/after checklist: 'test as you fly', 'independent review', 'margins restored'; the cancelled 2001 lander drawing gets a new name label 'Phoenix'; north-pole landing arc with successful touchdown in May 2008, green signal line",
+  "narration": "NASA listened. The Mars programme was restructured. Missions got more people, more money for testing, and more independent review. Engineers took a phrase to heart: test as you fly, and fly as you test. If a spacecraft will shake when its legs deploy, then test it while its legs deploy, with the real wiring and the real software. There was also a quiet second chance. A nearly identical lander had been built for a 2001 mission. After the losses, that mission was cancelled, and the lander went into storage. Years later it was brought back, studied, and modified. Reviewers went through it and produced forty-two corrective actions for weaknesses that could explain what happened in 1999. Then it flew again, under a new name: Phoenix. In May 2008, Phoenix landed safely near the north pole of Mars. It dug into the soil and confirmed water ice just below the surface. The same basic machine that had failed at the south pole succeeded at the north, because the people around it had changed how they checked their work."
+ },
+ {
+  "scene": 8,
+  "title": "The lesson",
+  "seconds": 27.9,
+  "visual": "Final blueprint card: two failure icons connected by a line to one success icon; text 'Small errors + missing checks'; margin-of-safety gauge needle moves from red to green",
+  "narration": "So what did 1999 really teach? Not that space is impossible. Both spacecraft were brought down by small, ordinary problems. A unit label. A remembered signal. Problems that engineers on any project could make on any day. The real failure was in the safety net. The checks that should have caught those mistakes were thin, because time, money and people had been stretched too far. The fix was not a genius invention. It was discipline: clear interfaces, honest testing, and a culture where a worried engineer is heard and acted on. Every successful Mars landing since then has carried a little of that lesson. Have you ever seen a tiny mistake slip through because the checks were rushed? Tell me in the comments. And if you like stories about how engineers learn from failure, subscribe for a new one every week."
+ }
+]
+
+Answer with ONLY the complete TSX file content.

@@ -1,0 +1,31 @@
+{
+ "passed": true,
+ "checks": [
+  {
+   "check": "Video stream 1080x1920 (vertical)",
+   "pass": true,
+   "detail": "1080x1920"
+  },
+  {
+   "check": "Audio stream present",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Duration matches storyboard (±2s)",
+   "pass": true,
+   "detail": "245.8s vs 245.8s"
+  },
+  {
+   "check": "Every scene has subtitles",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "All facts from research (no unsourced claims)",
+   "pass": true,
+   "detail": "script approved by owner against research"
+  }
+ ],
+ "at": "2026-11-22T16:39:21.823Z"
+}

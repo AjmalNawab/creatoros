@@ -18,6 +18,7 @@ CreatorOS: an AI multi-agent system for producing and publishing content. It run
 Project skills in `.claude/skills/` hold the playbooks. Load them; don't improvise:
 - **"process the AI queue"** → `process-queue`, which routes by request kind to `trend-ideas`, `research`, `script-writing`, `scene-visuals` or `youtube-metadata`.
 - **"upload it"** → `youtube-upload`: owner's Chrome via chrome-devtools MCP, approved payload only. Stop on login, CAPTCHA or 2FA.
+- **"check stats"** → `post-stats`: read numbers on the platforms (read-only) and record snapshots with `pnpm stats record`.
 - **"what should we make next?"** → suggest starting an ideation round from the dashboard's Ideas page (or `POST /ideation`), then answer the queue with `trend-ideas`.
 
 ## Commands
@@ -30,6 +31,7 @@ pnpm db:generate | pnpm db:migrate     # prisma (migrate needs DATABASE_URL/DIRE
 pnpm worker | pnpm api | pnpm web      # agent runner | API on 127.0.0.1:4000 | dashboard on :3000
 pnpm ai list|show|answer               # AI queue (operator mode)
 pnpm action list|show|complete         # human/browser actions
+pnpm stats list|youtube|record         # post engagement snapshots (Published & stats page)
 
 pnpm test                                                     # core + agents suites (run in parallel)
 pnpm --filter @creatoros/core test -t "emergency stop"         # single test by name

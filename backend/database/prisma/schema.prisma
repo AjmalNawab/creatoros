@@ -289,8 +289,31 @@ model PlatformPost {
   metadata         Json           @default("{}")        // title, description, tags actually used
   evidence         Json           @default("{}")        // verification details
   publishedAt      DateTime       @default(now())
+  metrics          PostMetric[]
 
   @@index([contentProjectId])
+}
+
+// Engagement snapshot of one published post (append-only history: never updated or overwritten).
+// null = unavailable / not shown by the platform; 0 = really zero.
+model PostMetric {
+  id             String       @id @default(uuid())
+  platformPostId String
+  platformPost   PlatformPost @relation(fields: [platformPostId], references: [id])
+  brandId        String?
+  source         String       // youtube_api | browser | manual
+  views          Int?
+  likes          Int?
+  comments       Int?
+  shares         Int?
+  saves          Int?
+  reach          Int?         // unique viewers / accounts reached
+  watchTimeSec   Int?
+  raw            Json         @default("{}")
+  note           String?
+  capturedAt     DateTime     @default(now())
+
+  @@index([platformPostId, capturedAt])
 }
 
 // ---------- Strategy: proposed content ideas (Trend + Idea agents) ----------

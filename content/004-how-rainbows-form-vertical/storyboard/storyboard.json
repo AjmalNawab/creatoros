@@ -1,0 +1,40 @@
+{
+ "key": "p004",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "totalFrames": 2175,
+ "derivedFrom": "002-how-rainbows-form",
+ "lines": [
+  {
+   "title": "Hook",
+   "startFrame": 0,
+   "durationFrames": 360
+  },
+  {
+   "title": "White light holds all colours",
+   "startFrame": 360,
+   "durationFrames": 287
+  },
+  {
+   "title": "Inside a raindrop",
+   "startFrame": 647,
+   "durationFrames": 348
+  },
+  {
+   "title": "Colours spread out",
+   "startFrame": 995,
+   "durationFrames": 427
+  },
+  {
+   "title": "How to see one",
+   "startFrame": 1422,
+   "durationFrames": 358
+  },
+  {
+   "title": "History and outro",
+   "startFrame": 1780,
+   "durationFrames": 395
+  }
+ ]
+}

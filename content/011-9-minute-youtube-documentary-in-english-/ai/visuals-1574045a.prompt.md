@@ -1,0 +1,105 @@
+You are the Visual Generation Agent of CreatorOS. Write a Remotion (React + inline SVG) TSX module with one animated scene component per storyboard scene, for a 1920x1080 educational video.
+
+Write the file content for: media/renderer/src/videos/p011.tsx
+Study the reference implementation first: media/renderer/src/videos/p001.tsx (style, helpers, quality bar) and media/renderer/src/common.tsx (helpers).
+
+Rules:
+- export const SCENES: React.FC[] = [Scene1, ..., Scene8];  (exactly 8, in order)
+- Visual style for this brand: Engineering blueprint look: deep navy background with faint grid, white/cyan line drawings, orange/red for stress, failure and warnings, clean sans-serif labels, cross-sections, force arrows, diagrams and timelines. No photos or real people.
+- Import helpers only from '../common' (C, NightSky, Blueprint, Particles, Tag, Label, UrduText, ease, prog) and from 'remotion'. No network URLs or external fonts; images/video only from this project's licensed footage list below via staticFile().
+- Animate with useCurrentFrame()/useVideoConfig() (durationInFrames = scene length). Deterministic: use remotion's random(seed), never Math.random.
+- Keep the bottom 170px clear of important content (subtitles are drawn there). On-screen labels in English via <Label>/<Tag lang="en">.
+- Each scene must visually explain its narration (diagram, labels appearing in sync).
+
+Licensed REAL FOOTAGE for this video (use it as the main picture where it fits; draw diagrams/labels on top):
+[
+ {
+  "file": "p011/footage/impact-testing.mp4",
+  "kind": "video",
+  "note": "scene 3: hypervelocity impact tests incl. STS-7 Shuttle window debris pit (~33s)",
+  "licence": "Public domain (NASA)"
+ },
+ {
+  "file": "p011/footage/iss-earth-view.mp4",
+  "kind": "video",
+  "note": "scenes 1/8: Earth seen from the ISS (generic orbital view)",
+  "licence": "Public domain (NASA)"
+ },
+ {
+  "file": "p011/footage/houston-mcc-ms23.mp4",
+  "kind": "video",
+  "note": "scene 6: NASA Mission Control Houston during the uncrewed Soyuz MS-23 lifeboat docking, Feb 2023",
+  "licence": "Public domain (NASA)"
+ },
+ {
+  "file": "p011/footage/nasa-groundtrack-ms23.mp4",
+  "kind": "video",
+  "note": "scene 6: NASA ground-track map, Soyuz MS-23 docking coming up",
+  "licence": "Public domain (NASA)"
+ }
+]
+- Load with staticFile('<file>'): videos via <OffthreadVideo src={staticFile(..)} muted style={{width:'100%',height:'100%',objectFit:'cover'}} />, images via <Img>. Both from 'remotion'.
+- Slow push-in (scale 1.04→1.12) for life; cut between clips inside a long scene; keep each clip muted (narration is the audio).
+- Tag every real clip in a corner: "NASA ARCHIVE" / "ARCHIVE FOOTAGE" / "STOCK FOOTAGE" (small, honest), and never present a clip as something it is not (no fake "live" or wrong place/date).
+
+Storyboard:
+[
+ {
+  "scene": 1,
+  "title": "Cold open: a leaf on the window",
+  "seconds": 63.5,
+  "visual": "Blueprint cutaway of a return capsule window; a tiny dark speck appears on the outer pane, then resolves into a branching crack pattern drawn in red; label 'Final checks · Nov 2025'",
+  "narration": "In early November 2025, three astronauts on China's Tiangong space station were packing to go home. Their spacecraft, Shenzhou-20, was docked outside. The commander, Chen Dong, was running the final checks on the return capsule. Then he noticed something on one of the windows. A small dark mark. His first thought, he said later, was that a leaf had somehow stuck to the outside of the glass. There are no leaves in orbit. When the crew looked closer, they saw cracks. Under a microscope, there were several long ones and a shorter one. And later the crew revealed that some of those cracks went all the way through the pane. The window of the capsule meant to carry them through re-entry had been hit by something. This is the story of what China did next. It is a story about lifeboats, about a risk that grows every year, and about why the next crew to fly there, including the first astronaut from Pakistan, flies the way it does."
+ },
+ {
+  "scene": 2,
+  "title": "Why the window matters",
+  "seconds": 66.2,
+  "visual": "Cross-section of a Shenzhou return capsule: heat shield, crew seats, window with multiple panes; re-entry plasma arrows in orange hitting the outer surface; label 'must survive re-entry heat and pressure'",
+  "narration": "To understand why a crack mattered so much, think about what a return capsule has to do. It is the only part of the spacecraft that comes home. It falls into the atmosphere at enormous speed, wrapped in a shell of superheated air. Everything on its outside has to survive that heat and those loads. A window is a hole in that shell, sealed with layers of glass. It is designed with margin, but the margin assumes the glass is whole. A crack is a starting point. Under heat and pressure, a crack can grow. Engineers can calculate how strong a perfect pane is. A damaged pane is a different question, and the honest answer is often that nobody can be sure. China's space agency announced that the return had been postponed because of a suspected debris impact. Its officials said the window had a crack that failed to meet the requirements for a safe crewed return. In other words, the capsule might be fine. But might is not a standard anyone uses for carrying people home."
+ },
+ {
+  "scene": 3,
+  "title": "The likely culprit: debris",
+  "seconds": 58.7,
+  "visual": "Earth with orbital shells; thousands of tiny dots on crossing orbits; a single dot intersects the station's path; inset: 'size unknown · estimates range from <1 mm to 1-10 cm'",
+  "narration": "What hit the window? Nobody knows for certain. The most likely explanation was a tiny piece of space debris. Low Earth orbit is crowded with fragments: flecks of paint, bits of old rockets, shards from past collisions. Most are far too small to track. But even a speck can be dangerous, because in orbit, objects cross paths at many kilometres per second. Sources disagreed about how big this one was. One report said it was smaller than a millimetre. An expert quoted by Scientific American speculated it could have been between one and ten centimetres. The truth is that we do not know, and it is worth being honest about that. What we do know is that the damage was real, and that it happened to the one part of the spacecraft that had to be perfect. The crew was safe inside the station. The station itself was not leaking. The problem was the ride home."
+ },
+ {
+  "scene": 4,
+  "title": "The lifeboat swap",
+  "seconds": 60.8,
+  "visual": "Docking diagram of Tiangong with two Shenzhou ships: Shenzhou-20 (red, damaged) and Shenzhou-21 (cyan); arrows show the Shenzhou-20 crew boarding Shenzhou-21 and undocking; Shenzhou-21 crew left with a dashed 'no ride' marker",
+  "narration": "Here is how China's station normally works. When a new crew arrives, the old crew stays for a few days to hand over. Then the old crew flies home in its own ship, and the new crew's ship stays docked as their lifeboat, ready to leave at any moment in an emergency. In November 2025, the new crew, Shenzhou-21, had just arrived. So China made a decision. On the fourteenth of November, the Shenzhou-20 crew climbed into the Shenzhou-21 capsule, the newer, undamaged ship, and flew home in it. They landed safely. But think about what that left behind. The Shenzhou-21 crew was now aboard the station with only the damaged Shenzhou-20 docked outside. For a while, they had no spacecraft certified to bring them home with people inside. A space station without a working lifeboat is exactly the situation every crewed programme tries hardest to avoid."
+ },
+ {
+  "scene": 5,
+  "title": "An empty ship to the rescue",
+  "seconds": 66.9,
+  "visual": "Timeline from 14 Nov 2025 to 25 Nov 2025; a Long March rocket launches an uncrewed Shenzhou-22 (green); docking arrow; inset of a repair kit labelled 'porthole crack repair device'",
+  "narration": "China's answer was to send a new ship with nobody in it. Around the twenty-fifth of November 2025, about eleven days after the crew swap, China launched Shenzhou-22 without a crew. Its job was simple and vital: dock with the station and be the lifeboat. It also carried a device for repairing the cracked porthole on Shenzhou-20. The speed of this matters. A spacecraft and its rocket normally take months of preparation. Having a ship ready to fly quickly meant the gap without a certified lifeboat lasted days, not months. Then came the investigation in orbit. In early December, astronauts on a spacewalk took high-resolution photos of the damaged window, so engineers on the ground could study the cracks. Finally, on the nineteenth of January 2026, the damaged Shenzhou-20 came home on its own, with nobody aboard, and parachuted down to the landing site in Inner Mongolia. Its window could now be examined directly on the ground."
+ },
+ {
+  "scene": 6,
+  "title": "It has happened before",
+  "seconds": 62.9,
+  "visual": "Split screen: left, ISS with Soyuz MS-22 venting coolant (orange spray); right, uncrewed Soyuz MS-23 launching; caption 'Dec 2022 leak · Feb 2023 empty replacement'",
+  "narration": "If this sounds familiar, it should. The International Space Station faced almost the same problem a few years earlier. In December 2022, a Russian Soyuz spacecraft docked to the station, Soyuz MS-22, suddenly sprayed coolant into space from a leak. The suspected cause was a strike by a tiny object. The crew was fine, but their ride home was now in doubt. Russia's answer was the same as China's. In February 2023, it launched Soyuz MS-23 with nobody aboard, as a replacement lifeboat, and the crew came home in it. Two different countries, two different stations, the same engineering logic. When the vehicle that must keep people alive during the most violent part of the trip is in question, you do not gamble. You bring up a new one, and you bring the damaged one home empty to learn from it. That logic is the margin of safety, built into how stations are run."
+ },
+ {
+  "scene": 7,
+  "title": "Shenzhou-24 and Pakistan's first astronaut",
+  "seconds": 66.6,
+  "visual": "Blueprint seat map of three Shenzhou-24 seats labelled Tang Hongbo, Wu Yi, Muhammad Zeeshan Ali; launch arc from Jiuquan; docking timer stops at 3 h 38 min; a second arrow shows Ali returning on Shenzhou-23 while one Shenzhou-23 astronaut stays for a year",
+  "narration": "Which brings us to Shenzhou-24. On the twenty-fifth of November 2026, at eight eighteen in the morning Beijing time, a Long March 2F rocket lifted off from the Jiuquan launch centre. Aboard were commander Tang Hongbo, flight engineer Wu Yi, and a payload specialist from Pakistan, Muhammad Zeeshan Ali. Three hours and thirty-eight minutes later, the spacecraft docked with Tiangong. Ali became the first Pakistani in orbit, and the first foreign astronaut to visit China's station. Look at how his trip is planned, and you can see the lifeboat logic at work. He is expected to stay for about a week and run experiments. He will not come home in the ship he arrived in. One of the Shenzhou-23 astronauts already on the station is staying for China's first year-long mission, which frees a seat. Ali takes that seat and returns with two Shenzhou-23 crew members, while Shenzhou-24 stays docked as the lifeboat for the people who remain."
+ },
+ {
+  "scene": 8,
+  "title": "The lesson",
+  "seconds": 58.3,
+  "visual": "Final blueprint card: station with two docked ships, one labelled 'lifeboat ready'; a margin-of-safety gauge moving to green; text 'Never be without a ride home'",
+  "narration": "So what did the cracked window teach? First, that the threat is real and growing. Orbit is getting more crowded, and a fragment too small to see can ground a spacecraft. Second, that the right response to uncertainty is not optimism. Nobody could prove the cracked window would fail, but nobody could prove it would hold, and that was enough. Third, that a good system has a plan for the bad day before it comes. A spare ship that can fly quickly, a crew that can swap seats, and a damaged vehicle brought home empty so engineers can learn. No one was hurt. Not because nothing went wrong, but because the people running the station had built in room for something to go wrong. Would you have flown home in the cracked capsule, or waited for the empty ship? Tell me in the comments. And if you like stories about how engineers stay ahead of failure, subscribe for a new one every week."
+ }
+]
+
+Answer with ONLY the complete TSX file content.

@@ -1,0 +1,21 @@
+{
+ "platform": "facebook",
+ "page": {
+  "name": "Chai & Curiosity",
+  "profileId": "61596576848668",
+  "pageId": "1391534190718152",
+  "url": "https://www.facebook.com/profile.php?id=61596576848668"
+ },
+ "video": "output/003-voyager-1-remote-code-fix.mp4",
+ "videoSha256": "ae249d327e6f28091e96585eff38bb29fd65aa0215110c373789ec4b871db947",
+ "format": "short",
+ "postAs": "reel",
+ "title": "NASA Fixed a 1977 Computer 15 Billion Miles Away",
+ "caption": "One memory chip died inside a computer built in 1977, now 15 billion miles from Earth. ☕\nVoyager 1 started sending gibberish, so NASA engineers split its code into pieces and hid them in free memory, waiting about 22.5 hours for every command to arrive.\nWould you have had the patience to debug code with a 45-hour round trip?\n\n📚 Sources: NASA Voyager blog: Voyager 1 resumes sending engineering updates (Apr 2024) · JPL news: Voyager 1 resumes sending engineering updates · IEEE Spectrum: Voyager 1 fix · NASA Voyager blog (Nov 18, 2026)\n🎙️ AI narration · original animation\n\n#Voyager1 #NASA #Engineering #Space #reels",
+ "audience": "Public",
+ "shareToStory": true,
+ "series": "Margin of Safety",
+ "language": "English",
+ "aiDisclosure": "AI narration, original animation (stylised; no realistic people or events depicted)",
+ "route": "browser"
+}

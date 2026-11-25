@@ -13,3 +13,6 @@ export { PLATFORMS, PLATFORM_AGENTS, type PlatformId, type PlatformModule } from
 export const ALL_AGENTS = [MAIN_AGENT, ...STRATEGY_AGENTS, ...PRODUCTION_AGENTS, ...PLATFORM_AGENTS];
 export { FACEBOOK_PAGE } from './platforms/facebook/package';
 export { FB_POST } from './platforms/facebook/publish';
+export { TIKTOK_ACCOUNT } from './platforms/tiktok/package';
+export { TT_POST } from './platforms/tiktok/publish';
+export * from './platforms/metrics';

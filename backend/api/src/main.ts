@@ -10,7 +10,7 @@ import { APP_GUARD, NestFactory } from '@nestjs/core';
 import { z } from 'zod';
 import { getDb, type PrismaClient } from '@creatoros/db';
 import { audit, completeHumanAction, decideApproval, getLock, isEmergencyStopped, paths, safeContentPath, setEmergencyStop } from '@creatoros/core';
-import { FB_POST, PLATFORMS, addPlatform, ensureBrands, getDefaultBrand, profileOf, rejectIdea, selectIdea, setActiveBrand, submitIdeation, submitInstruction, type PlatformId } from '@creatoros/agents';
+import { FB_POST, TT_POST, PLATFORMS, addPlatform, publishedOverview, recordPostMetric, refreshYouTubeMetrics, ensureBrands, getDefaultBrand, profileOf, rejectIdea, selectIdea, setActiveBrand, submitIdeation, submitInstruction, type PlatformId } from '@creatoros/agents';
 
 // BigInt (lock tokens, audit ids) → JSON string
 (BigInt.prototype as unknown as { toJSON: () => string }).toJSON = function () { return this.toString(); };
@@ -238,6 +238,23 @@ class ContentController {
     return Object.values(PLATFORMS).map(({ id, name, status, route, notes, agents }) => ({ id, name, status, route, notes, agents: agents.map((a) => a.id) }));
   }
 
+  @Get('published')
+  published() { return publishedOverview(this.db); }
+
+  @Post('published/youtube/refresh')
+  async refreshYouTube() {
+    try { return await refreshYouTubeMetrics(this.db, OWNER); }
+    catch (e) { throw new BadRequestException((e as Error).message); }
+  }
+
+  @Post('posts/:id/metrics')
+  async recordMetrics(@Param('id') id: string, @Body() body: unknown) {
+    const n = z.number().int().min(0).nullable().optional();
+    const { note, ...values } = parse(z.object({ views: n, likes: n, comments: n, shares: n, saves: n, reach: n, watchTimeSec: n, note: z.string().max(500).optional() }), body);
+    try { return await recordPostMetric(this.db, id, values, { source: 'manual', actor: OWNER, note }); }
+    catch (e) { throw new BadRequestException((e as Error).message); }
+  }
+
   @Get('posts')
   posts() {
     return this.db.platformPost.findMany({ orderBy: { publishedAt: 'desc' }, take: 100, include: { contentProject: { select: { id: true, title: true, slug: true } } } });
@@ -258,6 +275,9 @@ class ContentController {
     }
     if (action?.kind === 'facebook_upload' && !FB_POST.test(String(result.url ?? ''))) {
       throw new BadRequestException('Paste the Facebook post link (e.g. https://www.facebook.com/reel/… or …/videos/…).');
+    }
+    if (action?.kind === 'tiktok_upload' && !TT_POST.test(String(result.url ?? ''))) {
+      throw new BadRequestException('Paste the TikTok video link (e.g. https://www.tiktok.com/@handle/video/…).');
     }
     try { await completeHumanAction(this.db, id, result as never, OWNER); return { ok: true }; }
     catch (e) { throw new BadRequestException((e as Error).message); }

@@ -1,0 +1,817 @@
+[
+ {
+  "text": "To",
+  "start": 0.13,
+  "end": 0.13
+ },
+ {
+  "text": "understand",
+  "start": 0.34,
+  "end": 0.82
+ },
+ {
+  "text": "the",
+  "start": 0.82,
+  "end": 1.01
+ },
+ {
+  "text": "losses,",
+  "start": 1.02,
+  "end": 1.59
+ },
+ {
+  "text": "start",
+  "start": 1.6,
+  "end": 1.98
+ },
+ {
+  "text": "with",
+  "start": 2.04,
+  "end": 2.38
+ },
+ {
+  "text": "the",
+  "start": 2.38,
+  "end": 2.6
+ },
+ {
+  "text": "plan.",
+  "start": 2.65,
+  "end": 3.01
+ },
+ {
+  "text": "In",
+  "start": 3.42,
+  "end": 3.42
+ },
+ {
+  "text": "the",
+  "start": 3.61,
+  "end": 3.61
+ },
+ {
+  "text": "1990s",
+  "start": 3.65,
+  "end": 4.56
+ },
+ {
+  "text": "NASA",
+  "start": 4.56,
+  "end": 4.79
+ },
+ {
+  "text": "wanted",
+  "start": 4.81,
+  "end": 4.95
+ },
+ {
+  "text": "more",
+  "start": 5.22,
+  "end": 5.44
+ },
+ {
+  "text": "missions",
+  "start": 5.44,
+  "end": 6
+ },
+ {
+  "text": "for",
+  "start": 6,
+  "end": 6.19
+ },
+ {
+  "text": "less",
+  "start": 6.19,
+  "end": 6.27
+ },
+ {
+  "text": "money.",
+  "start": 6.79,
+  "end": 7
+ },
+ {
+  "text": "The",
+  "start": 7.26,
+  "end": 7.26
+ },
+ {
+  "text": "motto",
+  "start": 7.34,
+  "end": 7.7
+ },
+ {
+  "text": "was",
+  "start": 7.7,
+  "end": 7.96
+ },
+ {
+  "text": "faster,",
+  "start": 7.96,
+  "end": 8.65
+ },
+ {
+  "text": "better,",
+  "start": 8.91,
+  "end": 9.36
+ },
+ {
+  "text": "cheaper.",
+  "start": 9.36,
+  "end": 10.01
+ },
+ {
+  "text": "Instead",
+  "start": 10.64,
+  "end": 10.79
+ },
+ {
+  "text": "of",
+  "start": 10.79,
+  "end": 10.93
+ },
+ {
+  "text": "one",
+  "start": 10.93,
+  "end": 11.14
+ },
+ {
+  "text": "giant,",
+  "start": 11.14,
+  "end": 11.63
+ },
+ {
+  "text": "expensive",
+  "start": 11.63,
+  "end": 12.26
+ },
+ {
+  "text": "spacecraft",
+  "start": 12.26,
+  "end": 13
+ },
+ {
+  "text": "every",
+  "start": 13,
+  "end": 13.22
+ },
+ {
+  "text": "decade,",
+  "start": 13.82,
+  "end": 14.3
+ },
+ {
+  "text": "send",
+  "start": 14.3,
+  "end": 14.77
+ },
+ {
+  "text": "smaller",
+  "start": 14.77,
+  "end": 15.43
+ },
+ {
+  "text": "ones",
+  "start": 15.43,
+  "end": 15.79
+ },
+ {
+  "text": "often,",
+  "start": 15.81,
+  "end": 16.28
+ },
+ {
+  "text": "and",
+  "start": 16.34,
+  "end": 16.54
+ },
+ {
+  "text": "accept",
+  "start": 16.63,
+  "end": 17.08
+ },
+ {
+  "text": "a",
+  "start": 17.08,
+  "end": 17.15
+ },
+ {
+  "text": "bit",
+  "start": 17.15,
+  "end": 17.22
+ },
+ {
+  "text": "more",
+  "start": 17.76,
+  "end": 17.76
+ },
+ {
+  "text": "risk.",
+  "start": 17.82,
+  "end": 18.27
+ },
+ {
+  "text": "The",
+  "start": 18.58,
+  "end": 18.58
+ },
+ {
+  "text": "Mars",
+  "start": 18.64,
+  "end": 18.95
+ },
+ {
+  "text": "programme",
+  "start": 18.95,
+  "end": 19.61
+ },
+ {
+  "text": "was",
+  "start": 19.61,
+  "end": 19.8
+ },
+ {
+  "text": "built",
+  "start": 19.9,
+  "end": 20.36
+ },
+ {
+  "text": "around",
+  "start": 20.36,
+  "end": 20.88
+ },
+ {
+  "text": "that",
+  "start": 20.95,
+  "end": 21.2
+ },
+ {
+  "text": "idea.",
+  "start": 21.2,
+  "end": 22
+ },
+ {
+  "text": "In",
+  "start": 22.18,
+  "end": 22.18
+ },
+ {
+  "text": "late",
+  "start": 22.34,
+  "end": 22.54
+ },
+ {
+  "text": "1998",
+  "start": 22.54,
+  "end": 23.63
+ },
+ {
+  "text": "and",
+  "start": 23.63,
+  "end": 23.91
+ },
+ {
+  "text": "early",
+  "start": 23.91,
+  "end": 24.37
+ },
+ {
+  "text": "1999,",
+  "start": 24.37,
+  "end": 25.5
+ },
+ {
+  "text": "two",
+  "start": 25.76,
+  "end": 25.76
+ },
+ {
+  "text": "spacecraft",
+  "start": 25.85,
+  "end": 26.63
+ },
+ {
+  "text": "left",
+  "start": 26.63,
+  "end": 26.98
+ },
+ {
+  "text": "Earth",
+  "start": 26.98,
+  "end": 27.41
+ },
+ {
+  "text": "as",
+  "start": 27.42,
+  "end": 27.58
+ },
+ {
+  "text": "a",
+  "start": 27.58,
+  "end": 27.66
+ },
+ {
+  "text": "pair.",
+  "start": 27.66,
+  "end": 28.3
+ },
+ {
+  "text": "Mars",
+  "start": 28.58,
+  "end": 28.64
+ },
+ {
+  "text": "Climate",
+  "start": 28.65,
+  "end": 29.12
+ },
+ {
+  "text": "Orbiter",
+  "start": 29.12,
+  "end": 29.6
+ },
+ {
+  "text": "would",
+  "start": 29.6,
+  "end": 29.94
+ },
+ {
+  "text": "circle",
+  "start": 30.21,
+  "end": 30.4
+ },
+ {
+  "text": "the",
+  "start": 30.4,
+  "end": 30.54
+ },
+ {
+  "text": "planet",
+  "start": 30.63,
+  "end": 31.1
+ },
+ {
+  "text": "and",
+  "start": 31.1,
+  "end": 31.19
+ },
+ {
+  "text": "study",
+  "start": 31.26,
+  "end": 31.31
+ },
+ {
+  "text": "its",
+  "start": 31.72,
+  "end": 31.72
+ },
+ {
+  "text": "weather.",
+  "start": 31.82,
+  "end": 32.27
+ },
+ {
+  "text": "It",
+  "start": 32.47,
+  "end": 32.47
+ },
+ {
+  "text": "would",
+  "start": 32.64,
+  "end": 32.91
+ },
+ {
+  "text": "also",
+  "start": 32.91,
+  "end": 33.26
+ },
+ {
+  "text": "relay",
+  "start": 33.26,
+  "end": 33.7
+ },
+ {
+  "text": "radio",
+  "start": 33.7,
+  "end": 33.95
+ },
+ {
+  "text": "signals",
+  "start": 34.21,
+  "end": 34.7
+ },
+ {
+  "text": "for",
+  "start": 34.76,
+  "end": 35.02
+ },
+ {
+  "text": "its",
+  "start": 35.02,
+  "end": 35.19
+ },
+ {
+  "text": "partner.",
+  "start": 35.82,
+  "end": 36.19
+ },
+ {
+  "text": "Mars",
+  "start": 36.52,
+  "end": 36.6
+ },
+ {
+  "text": "Polar",
+  "start": 36.6,
+  "end": 37.01
+ },
+ {
+  "text": "Lander",
+  "start": 37.01,
+  "end": 37.49
+ },
+ {
+  "text": "would",
+  "start": 37.49,
+  "end": 37.84
+ },
+ {
+  "text": "set",
+  "start": 38.1,
+  "end": 38.14
+ },
+ {
+  "text": "down",
+  "start": 38.14,
+  "end": 38.44
+ },
+ {
+  "text": "near",
+  "start": 38.51,
+  "end": 38.71
+ },
+ {
+  "text": "the",
+  "start": 38.71,
+  "end": 38.87
+ },
+ {
+  "text": "edge",
+  "start": 38.87,
+  "end": 39.09
+ },
+ {
+  "text": "of",
+  "start": 39.09,
+  "end": 39.12
+ },
+ {
+  "text": "the",
+  "start": 39.31,
+  "end": 39.56
+ },
+ {
+  "text": "south",
+  "start": 39.72,
+  "end": 40.03
+ },
+ {
+  "text": "polar",
+  "start": 40.03,
+  "end": 40.5
+ },
+ {
+  "text": "ice,",
+  "start": 40.5,
+  "end": 40.8
+ },
+ {
+  "text": "dig",
+  "start": 41.06,
+  "end": 41.06
+ },
+ {
+  "text": "into",
+  "start": 41.14,
+  "end": 41.41
+ },
+ {
+  "text": "the",
+  "start": 41.41,
+  "end": 41.67
+ },
+ {
+  "text": "soil,",
+  "start": 41.67,
+  "end": 42.2
+ },
+ {
+  "text": "and",
+  "start": 42.2,
+  "end": 42.45
+ },
+ {
+  "text": "look",
+  "start": 42.71,
+  "end": 42.78
+ },
+ {
+  "text": "for",
+  "start": 42.78,
+  "end": 43.03
+ },
+ {
+  "text": "signs",
+  "start": 43.03,
+  "end": 43.39
+ },
+ {
+  "text": "of",
+  "start": 43.46,
+  "end": 43.6
+ },
+ {
+  "text": "water.",
+  "start": 43.6,
+  "end": 44.3
+ },
+ {
+  "text": "They",
+  "start": 44.57,
+  "end": 44.57
+ },
+ {
+  "text": "were",
+  "start": 44.64,
+  "end": 44.84
+ },
+ {
+  "text": "built",
+  "start": 44.84,
+  "end": 45.18
+ },
+ {
+  "text": "by",
+  "start": 45.18,
+  "end": 45.3
+ },
+ {
+  "text": "the",
+  "start": 45.31,
+  "end": 45.51
+ },
+ {
+  "text": "same",
+  "start": 45.51,
+  "end": 45.78
+ },
+ {
+  "text": "industrial",
+  "start": 45.78,
+  "end": 46.47
+ },
+ {
+  "text": "team",
+  "start": 46.47,
+  "end": 46.8
+ },
+ {
+  "text": "and",
+  "start": 46.8,
+  "end": 47.1
+ },
+ {
+  "text": "run",
+  "start": 47.1,
+  "end": 47.2
+ },
+ {
+  "text": "by",
+  "start": 47.41,
+  "end": 47.6
+ },
+ {
+  "text": "the",
+  "start": 47.82,
+  "end": 47.9
+ },
+ {
+  "text": "same",
+  "start": 47.9,
+  "end": 48.27
+ },
+ {
+  "text": "laboratory.",
+  "start": 48.31,
+  "end": 49.6
+ },
+ {
+  "text": "On",
+  "start": 49.75,
+  "end": 49.75
+ },
+ {
+  "text": "paper",
+  "start": 49.94,
+  "end": 50.12
+ },
+ {
+  "text": "it",
+  "start": 50.12,
+  "end": 50.27
+ },
+ {
+  "text": "was",
+  "start": 50.27,
+  "end": 50.49
+ },
+ {
+  "text": "efficient.",
+  "start": 50.49,
+  "end": 51.26
+ },
+ {
+  "text": "Shared",
+  "start": 51.74,
+  "end": 51.84
+ },
+ {
+  "text": "designs,",
+  "start": 51.87,
+  "end": 52.53
+ },
+ {
+  "text": "shared",
+  "start": 52.53,
+  "end": 52.89
+ },
+ {
+  "text": "people,",
+  "start": 53,
+  "end": 53.58
+ },
+ {
+  "text": "shared",
+  "start": 53.58,
+  "end": 53.98
+ },
+ {
+  "text": "budgets.",
+  "start": 54.05,
+  "end": 54.6
+ },
+ {
+  "text": "But",
+  "start": 54.8,
+  "end": 54.82
+ },
+ {
+  "text": "as",
+  "start": 54.94,
+  "end": 54.96
+ },
+ {
+  "text": "investigators",
+  "start": 54.98,
+  "end": 55.91
+ },
+ {
+  "text": "would",
+  "start": 55.91,
+  "end": 56.24
+ },
+ {
+  "text": "later",
+  "start": 56.51,
+  "end": 56.58
+ },
+ {
+  "text": "find,",
+  "start": 56.64,
+  "end": 57
+ },
+ {
+  "text": "shared",
+  "start": 57.06,
+  "end": 57.49
+ },
+ {
+  "text": "also",
+  "start": 57.49,
+  "end": 57.57
+ },
+ {
+  "text": "meant",
+  "start": 58.12,
+  "end": 58.15
+ },
+ {
+  "text": "stretched.",
+  "start": 58.15,
+  "end": 59.1
+ },
+ {
+  "text": "Fewer",
+  "start": 59.34,
+  "end": 59.5
+ },
+ {
+  "text": "people",
+  "start": 59.5,
+  "end": 59.98
+ },
+ {
+  "text": "were",
+  "start": 59.98,
+  "end": 60.3
+ },
+ {
+  "text": "checking",
+  "start": 60.3,
+  "end": 60.74
+ },
+ {
+  "text": "more",
+  "start": 61.02,
+  "end": 61.26
+ },
+ {
+  "text": "work,",
+  "start": 61.26,
+  "end": 61.6
+ },
+ {
+  "text": "and",
+  "start": 61.78,
+  "end": 61.78
+ },
+ {
+  "text": "some",
+  "start": 61.94,
+  "end": 62.03
+ },
+ {
+  "text": "of",
+  "start": 62.03,
+  "end": 62.15
+ },
+ {
+  "text": "the",
+  "start": 62.15,
+  "end": 62.33
+ },
+ {
+  "text": "checks",
+  "start": 62.33,
+  "end": 62.7
+ },
+ {
+  "text": "that",
+  "start": 62.7,
+  "end": 62.95
+ },
+ {
+  "text": "catch",
+  "start": 62.95,
+  "end": 63.24
+ },
+ {
+  "text": "small",
+  "start": 63.5,
+  "end": 63.57
+ },
+ {
+  "text": "mistakes",
+  "start": 63.57,
+  "end": 64.1
+ },
+ {
+  "text": "were",
+  "start": 64.1,
+  "end": 64.42
+ },
+ {
+  "text": "the",
+  "start": 64.42,
+  "end": 64.5
+ },
+ {
+  "text": "ones",
+  "start": 64.88,
+  "end": 64.98
+ },
+ {
+  "text": "that",
+  "start": 65.12,
+  "end": 65.3
+ },
+ {
+  "text": "got",
+  "start": 65.3,
+  "end": 65.49
+ },
+ {
+  "text": "squeezed.",
+  "start": 65.56,
+  "end": 66.42
+ }
+]

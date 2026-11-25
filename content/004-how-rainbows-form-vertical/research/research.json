@@ -1,0 +1,90 @@
+{
+ "summary": "A rainbow appears when sunlight shines into falling raindrops while the Sun is behind the viewer. Each drop bends (refracts) the light as it enters, reflects it off the back of the drop, and bends it again as it leaves. Because each colour bends by a slightly different amount, white sunlight spreads into a band of colours, seen as an arc about 42 degrees from the point directly opposite the Sun.",
+ "audience": "General Pakistani audience, curious families and students (10+), watching on YouTube/Facebook; simple spoken Urdu.",
+ "facts": [
+  {
+   "fact": "Sunlight looks white but is a mix of all colours of light.",
+   "confidence": "high",
+   "source": "NOAA SciJinks"
+  },
+  {
+   "fact": "Light bends (refracts) when it passes from air into water and back into air.",
+   "confidence": "high",
+   "source": "NOAA SciJinks"
+  },
+  {
+   "fact": "Inside a raindrop, light refracts on entry, reflects off the back of the drop, and refracts again on exit.",
+   "confidence": "high",
+   "source": "Met Office"
+  },
+  {
+   "fact": "Each colour bends by a slightly different amount (dispersion), so the colours separate; violet bends most, red least.",
+   "confidence": "high",
+   "source": "Britannica"
+  },
+  {
+   "fact": "To see a rainbow the Sun must be behind you and rain in front of you.",
+   "confidence": "high",
+   "source": "Met Office"
+  },
+  {
+   "fact": "The main rainbow forms an arc about 42 degrees from the point directly opposite the Sun, with red on the outside and violet on the inside.",
+   "confidence": "high",
+   "source": "Britannica"
+  },
+  {
+   "fact": "Rainbows are most often seen in the early morning or late afternoon, when the Sun is low in the sky.",
+   "confidence": "high",
+   "source": "Met Office"
+  },
+  {
+   "fact": "Every person sees their own rainbow, made by a different set of raindrops.",
+   "confidence": "high",
+   "source": "NOAA SciJinks"
+  },
+  {
+   "fact": "A rainbow is really a full circle; from the ground the horizon hides the lower part, but it can be seen as a circle from an aeroplane.",
+   "confidence": "high",
+   "source": "Met Office"
+  },
+  {
+   "fact": "In a double rainbow, light reflects twice inside the drops; the second bow is fainter and its colours are reversed.",
+   "confidence": "high",
+   "source": "Met Office"
+  },
+  {
+   "fact": "Around 1300 CE the Persian scientist Kamal al-Din al-Farisi explained the rainbow using a water-filled glass sphere as a model raindrop (Theodoric of Freiberg did similar work in Europe at about the same time).",
+   "confidence": "high",
+   "source": "Britannica"
+  },
+  {
+   "fact": "In Urdu a rainbow is called qaus-e-qazah or dhanak; in Pakistan rainbows are often seen after monsoon showers when the Sun comes out.",
+   "confidence": "medium",
+   "source": "General knowledge (language); Met Office (sun-after-showers condition)"
+  }
+ ],
+ "sources": [
+  {
+   "name": "NOAA SciJinks: How is a rainbow formed?",
+   "url": "https://scijinks.gov/rainbow/"
+  },
+  {
+   "name": "Met Office: Rainbows",
+   "url": "https://www.metoffice.gov.uk/weather/learn-about/weather/optical-effects/rainbows"
+  },
+  {
+   "name": "Britannica: Rainbow",
+   "url": "https://www.britannica.com/science/rainbow-atmospheric-phenomenon"
+  },
+  {
+   "name": "Britannica: Kamal al-Din al-Farisi",
+   "url": "https://www.britannica.com/biography/Kamal-al-Din-al-Farisi"
+  }
+ ],
+ "avoid": [
+  "Saying raindrops 'contain' colours or are coloured; the colours come from sunlight.",
+  "Saying a rainbow is a physical object at a fixed place that can be reached.",
+  "Claiming exactly seven colours exist; seven is a naming convention for a continuous spectrum.",
+  "Myths presented as fact (pot of gold, etc.)."
+ ]
+}

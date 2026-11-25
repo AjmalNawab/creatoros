@@ -10,6 +10,7 @@
     "api": "pnpm --filter @creatoros/api start:dev",
     "web": "pnpm --filter @creatoros/web dev",
     "ai": "pnpm --silent --filter @creatoros/agents ai",
-    "action": "pnpm --silent --filter @creatoros/agents action"
+    "action": "pnpm --silent --filter @creatoros/agents action",
+    "stats": "pnpm --silent --filter @creatoros/agents stats"
   }
 }

@@ -1,0 +1,899 @@
+{
+ "key": "p005",
+ "language": "ur",
+ "fps": 30,
+ "width": 1080,
+ "height": 1920,
+ "totalFrames": 1490,
+ "lines": [
+  {
+   "id": 1,
+   "text": "مرنے کے بعد انگلی اکثر فون کیوں نہیں کھولتی؟",
+   "title": "Hook",
+   "audio": "p005/scene_1.mp3",
+   "startFrame": 0,
+   "durationFrames": 106,
+   "words": [
+    {
+     "text": "مرنے",
+     "start": 0.08,
+     "end": 0.436
+    },
+    {
+     "text": "کے",
+     "start": 0.436,
+     "end": 0.615
+    },
+    {
+     "text": "بعد",
+     "start": 0.615,
+     "end": 0.882
+    },
+    {
+     "text": "انگلی",
+     "start": 0.882,
+     "end": 1.328
+    },
+    {
+     "text": "اکثر",
+     "start": 1.328,
+     "end": 1.684
+    },
+    {
+     "text": "فون",
+     "start": 1.684,
+     "end": 1.951
+    },
+    {
+     "text": "کیوں",
+     "start": 1.951,
+     "end": 2.308
+    },
+    {
+     "text": "نہیں",
+     "start": 2.308,
+     "end": 2.664
+    },
+    {
+     "text": "کھولتی؟",
+     "start": 2.664,
+     "end": 3.288
+    }
+   ],
+   "visual": "Close-up of a glowing phone fingerprint sensor in a dark room; a pale, still hand hovers above it; the sensor stays red: LOCKED."
+  },
+  {
+   "id": 2,
+   "text": "اصل وجہ انگلی کے نشان نہیں، بلکہ زندہ جلد کی ہلکی سی بجلی ہے۔",
+   "title": "Not the pattern",
+   "audio": "p005/scene_2.mp3",
+   "startFrame": 106,
+   "durationFrames": 145,
+   "words": [
+    {
+     "text": "اصل",
+     "start": 0.08,
+     "end": 0.361
+    },
+    {
+     "text": "وجہ",
+     "start": 0.361,
+     "end": 0.643
+    },
+    {
+     "text": "انگلی",
+     "start": 0.643,
+     "end": 1.112
+    },
+    {
+     "text": "کے",
+     "start": 1.112,
+     "end": 1.3
+    },
+    {
+     "text": "نشان",
+     "start": 1.3,
+     "end": 1.675
+    },
+    {
+     "text": "نہیں،",
+     "start": 1.675,
+     "end": 2.144
+    },
+    {
+     "text": "بلکہ",
+     "start": 2.144,
+     "end": 2.52
+    },
+    {
+     "text": "زندہ",
+     "start": 2.52,
+     "end": 2.895
+    },
+    {
+     "text": "جلد",
+     "start": 2.895,
+     "end": 3.176
+    },
+    {
+     "text": "کی",
+     "start": 3.176,
+     "end": 3.364
+    },
+    {
+     "text": "ہلکی",
+     "start": 3.364,
+     "end": 3.739
+    },
+    {
+     "text": "سی",
+     "start": 3.739,
+     "end": 3.927
+    },
+    {
+     "text": "بجلی",
+     "start": 3.927,
+     "end": 4.302
+    },
+    {
+     "text": "ہے۔",
+     "start": 4.302,
+     "end": 4.584
+    }
+   ],
+   "visual": "A fingertip with its ridge pattern glowing, tiny blue sparks running along the skin; label: زندہ جلد"
+  },
+  {
+   "id": 3,
+   "text": "زیادہ تر فونز کا سینسر بہت سے ننھے ننھے خانوں کا ایک جال ہوتا ہے۔",
+   "title": "The sensor grid",
+   "audio": "p005/scene_3.mp3",
+   "startFrame": 251,
+   "durationFrames": 144,
+   "words": [
+    {
+     "text": "زیادہ",
+     "start": 0.08,
+     "end": 0.517
+    },
+    {
+     "text": "تر",
+     "start": 0.517,
+     "end": 0.692
+    },
+    {
+     "text": "فونز",
+     "start": 0.692,
+     "end": 1.041
+    },
+    {
+     "text": "کا",
+     "start": 1.041,
+     "end": 1.216
+    },
+    {
+     "text": "سینسر",
+     "start": 1.216,
+     "end": 1.653
+    },
+    {
+     "text": "بہت",
+     "start": 1.653,
+     "end": 1.915
+    },
+    {
+     "text": "سے",
+     "start": 1.915,
+     "end": 2.09
+    },
+    {
+     "text": "ننھے",
+     "start": 2.09,
+     "end": 2.439
+    },
+    {
+     "text": "ننھے",
+     "start": 2.439,
+     "end": 2.789
+    },
+    {
+     "text": "خانوں",
+     "start": 2.789,
+     "end": 3.225
+    },
+    {
+     "text": "کا",
+     "start": 3.225,
+     "end": 3.4
+    },
+    {
+     "text": "ایک",
+     "start": 3.4,
+     "end": 3.662
+    },
+    {
+     "text": "جال",
+     "start": 3.662,
+     "end": 3.924
+    },
+    {
+     "text": "ہوتا",
+     "start": 3.924,
+     "end": 4.274
+    },
+    {
+     "text": "ہے۔",
+     "start": 4.274,
+     "end": 4.536
+    }
+   ],
+   "visual": "Zoom into the phone sensor: a grid of tiny glowing cells like a city seen from above."
+  },
+  {
+   "id": 4,
+   "text": "آپ کی انگلی کی لکیریں سینسر کو چھوتی ہیں، اور بیچ میں ہوا کا باریک خلا رہتا ہے۔",
+   "title": "Ridges and valleys",
+   "audio": "p005/scene_4.mp3",
+   "startFrame": 395,
+   "durationFrames": 165,
+   "words": [
+    {
+     "text": "آپ",
+     "start": 0.08,
+     "end": 0.246
+    },
+    {
+     "text": "کی",
+     "start": 0.246,
+     "end": 0.412
+    },
+    {
+     "text": "انگلی",
+     "start": 0.412,
+     "end": 0.828
+    },
+    {
+     "text": "کی",
+     "start": 0.828,
+     "end": 0.994
+    },
+    {
+     "text": "لکیریں",
+     "start": 0.994,
+     "end": 1.493
+    },
+    {
+     "text": "سینسر",
+     "start": 1.493,
+     "end": 1.908
+    },
+    {
+     "text": "کو",
+     "start": 1.908,
+     "end": 2.074
+    },
+    {
+     "text": "چھوتی",
+     "start": 2.074,
+     "end": 2.49
+    },
+    {
+     "text": "ہیں،",
+     "start": 2.49,
+     "end": 2.822
+    },
+    {
+     "text": "اور",
+     "start": 2.822,
+     "end": 3.071
+    },
+    {
+     "text": "بیچ",
+     "start": 3.071,
+     "end": 3.321
+    },
+    {
+     "text": "میں",
+     "start": 3.321,
+     "end": 3.57
+    },
+    {
+     "text": "ہوا",
+     "start": 3.57,
+     "end": 3.819
+    },
+    {
+     "text": "کا",
+     "start": 3.819,
+     "end": 3.986
+    },
+    {
+     "text": "باریک",
+     "start": 3.986,
+     "end": 4.401
+    },
+    {
+     "text": "خلا",
+     "start": 4.401,
+     "end": 4.65
+    },
+    {
+     "text": "رہتا",
+     "start": 4.65,
+     "end": 4.983
+    },
+    {
+     "text": "ہے۔",
+     "start": 4.983,
+     "end": 5.232
+    }
+   ],
+   "visual": "Side cross-section: finger ridges touch the cells, small air gaps under the valleys; labels: لکیر / خلا"
+  },
+  {
+   "id": 5,
+   "text": "یہ فرق برقی طور پر ناپ کر سینسر آپ کی انگلی کا پورا نقشہ بنا لیتا ہے۔",
+   "title": "The map",
+   "audio": "p005/scene_5.mp3",
+   "startFrame": 560,
+   "durationFrames": 149,
+   "words": [
+    {
+     "text": "یہ",
+     "start": 0.08,
+     "end": 0.254
+    },
+    {
+     "text": "فرق",
+     "start": 0.254,
+     "end": 0.516
+    },
+    {
+     "text": "برقی",
+     "start": 0.516,
+     "end": 0.865
+    },
+    {
+     "text": "طور",
+     "start": 0.865,
+     "end": 1.127
+    },
+    {
+     "text": "پر",
+     "start": 1.127,
+     "end": 1.301
+    },
+    {
+     "text": "ناپ",
+     "start": 1.301,
+     "end": 1.563
+    },
+    {
+     "text": "کر",
+     "start": 1.563,
+     "end": 1.738
+    },
+    {
+     "text": "سینسر",
+     "start": 1.738,
+     "end": 2.174
+    },
+    {
+     "text": "آپ",
+     "start": 2.174,
+     "end": 2.348
+    },
+    {
+     "text": "کی",
+     "start": 2.348,
+     "end": 2.523
+    },
+    {
+     "text": "انگلی",
+     "start": 2.523,
+     "end": 2.959
+    },
+    {
+     "text": "کا",
+     "start": 2.959,
+     "end": 3.134
+    },
+    {
+     "text": "پورا",
+     "start": 3.134,
+     "end": 3.483
+    },
+    {
+     "text": "نقشہ",
+     "start": 3.483,
+     "end": 3.832
+    },
+    {
+     "text": "بنا",
+     "start": 3.832,
+     "end": 4.093
+    },
+    {
+     "text": "لیتا",
+     "start": 4.093,
+     "end": 4.442
+    },
+    {
+     "text": "ہے۔",
+     "start": 4.442,
+     "end": 4.704
+    }
+   ],
+   "visual": "Cells light up brighter under ridges, dimmer under valleys, assembling a glowing fingerprint map."
+  },
+  {
+   "id": 6,
+   "text": "زندہ جلد میں خون دوڑتا ہے، اس لیے وہ بجلی کو اچھی طرح گزرنے دیتی ہے۔",
+   "title": "Living skin",
+   "audio": "p005/scene_6.mp3",
+   "startFrame": 709,
+   "durationFrames": 155,
+   "words": [
+    {
+     "text": "زندہ",
+     "start": 0.08,
+     "end": 0.445
+    },
+    {
+     "text": "جلد",
+     "start": 0.445,
+     "end": 0.719
+    },
+    {
+     "text": "میں",
+     "start": 0.719,
+     "end": 0.993
+    },
+    {
+     "text": "خون",
+     "start": 0.993,
+     "end": 1.267
+    },
+    {
+     "text": "دوڑتا",
+     "start": 1.267,
+     "end": 1.724
+    },
+    {
+     "text": "ہے،",
+     "start": 1.724,
+     "end": 1.998
+    },
+    {
+     "text": "اس",
+     "start": 1.998,
+     "end": 2.18
+    },
+    {
+     "text": "لیے",
+     "start": 2.18,
+     "end": 2.454
+    },
+    {
+     "text": "وہ",
+     "start": 2.454,
+     "end": 2.637
+    },
+    {
+     "text": "بجلی",
+     "start": 2.637,
+     "end": 3.002
+    },
+    {
+     "text": "کو",
+     "start": 3.002,
+     "end": 3.185
+    },
+    {
+     "text": "اچھی",
+     "start": 3.185,
+     "end": 3.55
+    },
+    {
+     "text": "طرح",
+     "start": 3.55,
+     "end": 3.824
+    },
+    {
+     "text": "گزرنے",
+     "start": 3.824,
+     "end": 4.281
+    },
+    {
+     "text": "دیتی",
+     "start": 4.281,
+     "end": 4.646
+    },
+    {
+     "text": "ہے۔",
+     "start": 4.646,
+     "end": 4.92
+    }
+   ],
+   "visual": "Inside a living fingertip: warm red blood flowing, the skin glowing warm, current flowing easily."
+  },
+  {
+   "id": 7,
+   "text": "موت کے بعد خون رک جاتا ہے، جلد سوکھنے اور سکڑنے لگتی ہے، اور نقشہ بدل جاتا ہے۔",
+   "title": "After death",
+   "audio": "p005/scene_7.mp3",
+   "startFrame": 864,
+   "durationFrames": 175,
+   "words": [
+    {
+     "text": "موت",
+     "start": 0.08,
+     "end": 0.35
+    },
+    {
+     "text": "کے",
+     "start": 0.35,
+     "end": 0.53
+    },
+    {
+     "text": "بعد",
+     "start": 0.53,
+     "end": 0.8
+    },
+    {
+     "text": "خون",
+     "start": 0.8,
+     "end": 1.07
+    },
+    {
+     "text": "رک",
+     "start": 1.07,
+     "end": 1.25
+    },
+    {
+     "text": "جاتا",
+     "start": 1.25,
+     "end": 1.609
+    },
+    {
+     "text": "ہے،",
+     "start": 1.609,
+     "end": 1.879
+    },
+    {
+     "text": "جلد",
+     "start": 1.879,
+     "end": 2.149
+    },
+    {
+     "text": "سوکھنے",
+     "start": 2.149,
+     "end": 2.689
+    },
+    {
+     "text": "اور",
+     "start": 2.689,
+     "end": 2.959
+    },
+    {
+     "text": "سکڑنے",
+     "start": 2.959,
+     "end": 3.409
+    },
+    {
+     "text": "لگتی",
+     "start": 3.409,
+     "end": 3.769
+    },
+    {
+     "text": "ہے،",
+     "start": 3.769,
+     "end": 4.039
+    },
+    {
+     "text": "اور",
+     "start": 4.039,
+     "end": 4.308
+    },
+    {
+     "text": "نقشہ",
+     "start": 4.308,
+     "end": 4.668
+    },
+    {
+     "text": "بدل",
+     "start": 4.668,
+     "end": 4.938
+    },
+    {
+     "text": "جاتا",
+     "start": 4.938,
+     "end": 5.298
+    },
+    {
+     "text": "ہے۔",
+     "start": 5.298,
+     "end": 5.568
+    }
+   ],
+   "visual": "The same fingertip turns cool blue-grey, blood flow stops, skin dries and wrinkles slightly; the fingerprint map flickers and breaks apart. No gore."
+  },
+  {
+   "id": 8,
+   "text": "اور اگر فون اڑتالیس گھنٹے نہ کھلے، تو آئی فون پاس کوڈ مانگنے لگتا ہے۔",
+   "title": "48 hours",
+   "audio": "p005/scene_8.mp3",
+   "startFrame": 1039,
+   "durationFrames": 146,
+   "words": [
+    {
+     "text": "اور",
+     "start": 0.08,
+     "end": 0.327
+    },
+    {
+     "text": "اگر",
+     "start": 0.327,
+     "end": 0.574
+    },
+    {
+     "text": "فون",
+     "start": 0.574,
+     "end": 0.821
+    },
+    {
+     "text": "اڑتالیس",
+     "start": 0.821,
+     "end": 1.397
+    },
+    {
+     "text": "گھنٹے",
+     "start": 1.397,
+     "end": 1.809
+    },
+    {
+     "text": "نہ",
+     "start": 1.809,
+     "end": 1.974
+    },
+    {
+     "text": "کھلے،",
+     "start": 1.974,
+     "end": 2.385
+    },
+    {
+     "text": "تو",
+     "start": 2.385,
+     "end": 2.55
+    },
+    {
+     "text": "آئی",
+     "start": 2.55,
+     "end": 2.797
+    },
+    {
+     "text": "فون",
+     "start": 2.797,
+     "end": 3.044
+    },
+    {
+     "text": "پاس",
+     "start": 3.044,
+     "end": 3.291
+    },
+    {
+     "text": "کوڈ",
+     "start": 3.291,
+     "end": 3.538
+    },
+    {
+     "text": "مانگنے",
+     "start": 3.538,
+     "end": 4.032
+    },
+    {
+     "text": "لگتا",
+     "start": 4.032,
+     "end": 4.361
+    },
+    {
+     "text": "ہے۔",
+     "start": 4.361,
+     "end": 4.608
+    }
+   ],
+   "visual": "A phone lock screen with a clock counter rolling up to 48 hours, then a passcode keypad appears; big number 48."
+  },
+  {
+   "id": 9,
+   "text": "لیکن ماہرین کہتے ہیں، کسی کی موت کے فوراً بعد کبھی کبھی یہ کام کر بھی جاتا ہے۔",
+   "title": "The twist",
+   "audio": "p005/scene_9.mp3",
+   "startFrame": 1185,
+   "durationFrames": 168,
+   "words": [
+    {
+     "text": "لیکن",
+     "start": 0.08,
+     "end": 0.426
+    },
+    {
+     "text": "ماہرین",
+     "start": 0.426,
+     "end": 0.944
+    },
+    {
+     "text": "کہتے",
+     "start": 0.944,
+     "end": 1.29
+    },
+    {
+     "text": "ہیں،",
+     "start": 1.29,
+     "end": 1.636
+    },
+    {
+     "text": "کسی",
+     "start": 1.636,
+     "end": 1.895
+    },
+    {
+     "text": "کی",
+     "start": 1.895,
+     "end": 2.068
+    },
+    {
+     "text": "موت",
+     "start": 2.068,
+     "end": 2.327
+    },
+    {
+     "text": "کے",
+     "start": 2.327,
+     "end": 2.5
+    },
+    {
+     "text": "فوراً",
+     "start": 2.5,
+     "end": 2.932
+    },
+    {
+     "text": "بعد",
+     "start": 2.932,
+     "end": 3.191
+    },
+    {
+     "text": "کبھی",
+     "start": 3.191,
+     "end": 3.537
+    },
+    {
+     "text": "کبھی",
+     "start": 3.537,
+     "end": 3.883
+    },
+    {
+     "text": "یہ",
+     "start": 3.883,
+     "end": 4.056
+    },
+    {
+     "text": "کام",
+     "start": 4.056,
+     "end": 4.315
+    },
+    {
+     "text": "کر",
+     "start": 4.315,
+     "end": 4.488
+    },
+    {
+     "text": "بھی",
+     "start": 4.488,
+     "end": 4.747
+    },
+    {
+     "text": "جاتا",
+     "start": 4.747,
+     "end": 5.093
+    },
+    {
+     "text": "ہے۔",
+     "start": 5.093,
+     "end": 5.352
+    }
+   ],
+   "visual": "The sensor flickers from red to green for a moment; a question mark glows; label: کبھی کبھی"
+  },
+  {
+   "id": 10,
+   "text": "یعنی آپ کے فون کا تالا صرف نشان نہیں، زندہ جلد بھی پڑھتا ہے۔",
+   "title": "Payoff",
+   "audio": "p005/scene_10.mp3",
+   "startFrame": 1353,
+   "durationFrames": 137,
+   "words": [
+    {
+     "text": "یعنی",
+     "start": 0.08,
+     "end": 0.439
+    },
+    {
+     "text": "آپ",
+     "start": 0.439,
+     "end": 0.618
+    },
+    {
+     "text": "کے",
+     "start": 0.618,
+     "end": 0.798
+    },
+    {
+     "text": "فون",
+     "start": 0.798,
+     "end": 1.067
+    },
+    {
+     "text": "کا",
+     "start": 1.067,
+     "end": 1.246
+    },
+    {
+     "text": "تالا",
+     "start": 1.246,
+     "end": 1.605
+    },
+    {
+     "text": "صرف",
+     "start": 1.605,
+     "end": 1.874
+    },
+    {
+     "text": "نشان",
+     "start": 1.874,
+     "end": 2.233
+    },
+    {
+     "text": "نہیں،",
+     "start": 2.233,
+     "end": 2.681
+    },
+    {
+     "text": "زندہ",
+     "start": 2.681,
+     "end": 3.04
+    },
+    {
+     "text": "جلد",
+     "start": 3.04,
+     "end": 3.309
+    },
+    {
+     "text": "بھی",
+     "start": 3.309,
+     "end": 3.578
+    },
+    {
+     "text": "پڑھتا",
+     "start": 3.578,
+     "end": 4.027
+    },
+    {
+     "text": "ہے۔",
+     "start": 4.027,
+     "end": 4.296
+    }
+   ],
+   "visual": "Back to the glowing sensor from the hook; a living warm hand touches it and it turns green with a soft pulse."
+  }
+ ],
+ "brand": {
+  "name": "Urdu Science Explainers",
+  "handle": "@MarginOfSafetyTV",
+  "accent": "#fdd835"
+ },
+ "endCard": {
+  "title": "فون زندہ جلد پڑھتا ہے",
+  "cta": "ایسی مزید دلچسپ باتوں کے لیے فالو کریں"
+ }
+}

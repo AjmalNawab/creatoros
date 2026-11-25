@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import {
-  Activity, Bot, Building2, CheckCircle2, Clapperboard, LayoutDashboard, Lightbulb, ListChecks, LogOut, Menu, MonitorUp,
+  Activity, BarChart3, Bot, Building2, CheckCircle2, Clapperboard, LayoutDashboard, Lightbulb, ListChecks, LogOut, Menu, MonitorUp,
   Radio, ScrollText, Sparkles, X,
 } from 'lucide-react';
 import { createClient } from '@/utils/supabase/client';
@@ -21,7 +21,10 @@ const GROUPS = [
     { href: '/ai', label: 'AI Queue', icon: Sparkles, count: 'ai' as const, tone: 'bg-sky-600' },
     { href: '/actions', label: 'Browser actions', icon: MonitorUp, count: 'actions' as const, tone: 'bg-fuchsia-600' },
   ] },
-  { label: 'Publish', items: [{ href: '/platforms', label: 'Platforms', icon: Radio }] },
+  { label: 'Publish', items: [
+    { href: '/published', label: 'Published & stats', icon: BarChart3 },
+    { href: '/platforms', label: 'Platforms', icon: Radio },
+  ] },
   { label: 'Settings', items: [
     { href: '/brand', label: 'Series', icon: Building2 },
     { href: '/agents', label: 'Agents', icon: Bot },

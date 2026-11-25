@@ -1,0 +1,64 @@
+{
+ "clips": [
+  {
+   "file": "p011/footage/impact-testing.mp4",
+   "kind": "video",
+   "source": "nasa",
+   "id": "jsc2021m000811_WSTF-Hypervelocity_Impact_Testing",
+   "page": "https://images.nasa.gov/details/jsc2021m000811_WSTF-Hypervelocity_Impact_Testing",
+   "licence": "Public domain (NASA)",
+   "credit": "NASA",
+   "note": "scene 3: hypervelocity impact tests incl. STS-7 Shuttle window debris pit (~33s)",
+   "sha256": "ef0af4f8b6205d22e10698d9fd9c1445dc32772d148f9b5e6f3e684cb470649f",
+   "addedAt": "2026-11-25T05:56:45.110Z"
+  },
+  {
+   "file": "p011/footage/iss-earth-view.mp4",
+   "kind": "video",
+   "source": "nasa",
+   "id": "jsc2024m000174_Cameras_On_The_International_Space_Station_Capture_New_Views_Of_Hurricane_Milton-241009",
+   "page": "https://images.nasa.gov/details/jsc2024m000174_Cameras_On_The_International_Space_Station_Capture_New_Views_Of_Hurricane_Milton-241009",
+   "licence": "Public domain (NASA)",
+   "credit": "NASA",
+   "note": "scenes 1/8: Earth seen from the ISS (generic orbital view)",
+   "segment": {
+    "start": 20,
+    "dur": 60
+   },
+   "sha256": "fd29cbaa7c983203a77725091f68777a9600b1f58ca055ffcd227a159fe59c41",
+   "addedAt": "2026-11-25T05:56:53.199Z"
+  },
+  {
+   "file": "p011/footage/houston-mcc-ms23.mp4",
+   "kind": "video",
+   "source": "nasa",
+   "id": "iss068m260570014_Expedition_68_Uncrewed_Soyuz_MS-23_Space_Station_Docking_230225",
+   "page": "https://images.nasa.gov/details/iss068m260570014_Expedition_68_Uncrewed_Soyuz_MS-23_Space_Station_Docking_230225",
+   "licence": "Public domain (NASA)",
+   "credit": "NASA",
+   "note": "scene 6: NASA Mission Control Houston during the uncrewed Soyuz MS-23 lifeboat docking, Feb 2023",
+   "segment": {
+    "start": 60,
+    "dur": 60
+   },
+   "sha256": "6f9d7df441d7b15c614eabed18e6375b20baba665500c60aef71500e527b4088",
+   "addedAt": "2026-11-25T05:57:04.943Z"
+  },
+  {
+   "file": "p011/footage/nasa-groundtrack-ms23.mp4",
+   "kind": "video",
+   "source": "nasa",
+   "id": "iss068m260570014_Expedition_68_Uncrewed_Soyuz_MS-23_Space_Station_Docking_230225",
+   "page": "https://images.nasa.gov/details/iss068m260570014_Expedition_68_Uncrewed_Soyuz_MS-23_Space_Station_Docking_230225",
+   "licence": "Public domain (NASA)",
+   "credit": "NASA",
+   "note": "scene 6: NASA ground-track map, Soyuz MS-23 docking coming up",
+   "segment": {
+    "start": 445,
+    "dur": 20
+   },
+   "sha256": "6699fe827c6c1da97f8225c40fd3b97e24556897ba8d33bf8e77ede735c6f4d5",
+   "addedAt": "2026-11-25T05:57:11.966Z"
+  }
+ ]
+}

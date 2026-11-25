@@ -2,7 +2,7 @@ import { execSync } from 'node:child_process';
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { PrismaClient } from '@creatoros/db';
 import { Engine, answerAiRequest, decideApproval, type AgentDefinition } from '@creatoros/core';
-import { PLATFORMS, STRATEGY_AGENTS, addPlatform, planInstruction, rejectIdea, selectIdea, submitIdeation, submitInstruction } from '../src';
+import { PLATFORMS, STRATEGY_AGENTS, addPlatform, planInstruction, publishedOverview, recordPostMetric, youtubeVideoId, rejectIdea, selectIdea, submitIdeation, submitInstruction } from '../src';
 
 // Own schema (core tests use creatoros_test) so packages can run tests in parallel.
 const withSchema = (url: string) => url + (url.includes('?') ? '&' : '?') + 'schema=creatoros_test_agents';
@@ -16,13 +16,13 @@ beforeAll(() => {
     env: { ...process.env, DATABASE_URL: TEST_URL, DIRECT_URL: withSchema(process.env.DIRECT_URL ?? process.env.DATABASE_URL!) } });
 }, 120_000);
 beforeEach(async () => {
-  await db.$executeRawUnsafe(`TRUNCATE "AuditLog","Approval","AiRequest","HumanActionRequest","PlatformPost","TaskRun","TaskDependency","Task","ContentProject","Idea","Brand","Agent","SystemSetting","ExecutionLock" CASCADE`);
+  await db.$executeRawUnsafe(`TRUNCATE "AuditLog","PostMetric","Approval","AiRequest","HumanActionRequest","PlatformPost","TaskRun","TaskDependency","Task","ContentProject","Idea","Brand","Agent","SystemSetting","ExecutionLock" CASCADE`);
 });
 afterAll(() => db.$disconnect());
 
 describe('Main Agent planning', () => {
   it('extracts topic, duration, language and platforms', () => {
-    expect(planInstruction('Create a 2 minute Urdu video about volcanoes for YouTube')).toEqual({ topic: 'volcanoes', language: 'ur', durationSec: 120, format: 'long', platforms: ['youtube'] });
+    expect(planInstruction('Create a 2 minute Urdu video about volcanoes for YouTube')).toMatchObject({ topic: 'volcanoes', language: 'ur', durationSec: 120, format: 'long', platforms: ['youtube'] });
     expect(planInstruction('Make a 45 second YouTube Short about Voyager 1')).toMatchObject({ topic: 'Voyager 1', durationSec: 45, format: 'short' });
     expect(planInstruction('make a short about bridges').durationSec).toBe(40);
     expect(planInstruction('make a 1 minute video about how rainbows form').platforms).toEqual(['youtube']); // default
@@ -40,9 +40,9 @@ describe('workflow: production → YouTube', () => {
     await engine.register(ids.map((id): AgentDefinition => ({ id, name: id, department: 'Test', requiresApprovalAfter: approvalAfter.has(id),
       run: async () => { order.push(id); return { output: { by: id } }; } })));
 
-    const res = await submitInstruction(db, 'Create a 1 minute Urdu video about rainbows for YouTube and TikTok');
+    const res = await submitInstruction(db, 'Create a 1 minute Urdu video about rainbows for YouTube and LinkedIn');
     expect(res.platforms).toEqual(['youtube']);
-    expect(res.skipped).toEqual(['tiktok']);           // planned, not built yet
+    expect(res.skipped).toEqual(['linkedin']);         // planned, not built yet
 
     const approveNext = async () => {
       const a = await db.approval.findFirstOrThrow({ where: { decision: 'PENDING' } });
@@ -67,7 +67,7 @@ describe('workflow: production → YouTube', () => {
       .map((id): AgentDefinition => ({ id, name: id, department: 'Test', run: async () => ({ output: {} }) })));
     const res = await submitInstruction(db, 'Create a video about clouds for youtube');
     await expect(addPlatform(db, res.contentProjectId, 'youtube')).rejects.toThrow(/already/);
-    await expect(addPlatform(db, res.contentProjectId, 'tiktok')).rejects.toThrow(/not available/);
+    await expect(addPlatform(db, res.contentProjectId, 'linkedin')).rejects.toThrow(/not available/);
   }, 30_000);
 });
 
@@ -108,4 +108,29 @@ describe('strategy: trends → ideas → owner picks one', () => {
     expect((await db.idea.findUniqueOrThrow({ where: { id: ideas[0].id } })).status).toBe('SELECTED');
     await expect(selectIdea(db, ideas[0].id)).rejects.toThrow(/already/);
   }, 90_000);
+});
+
+describe('post stats', () => {
+  it('appends snapshots, keeps "unavailable" distinct from zero, and groups posts by video', async () => {
+    const proj = await db.contentProject.create({ data: { key: 'p900', slug: '900-k2', title: 'instruction text' } });
+    const fb = await db.platformPost.create({ data: { contentProjectId: proj.id, platform: 'facebook', route: 'browser', idempotencyKey: 'x:facebook', url: 'https://www.facebook.com/reel/1', metadata: { title: 'K2' } } });
+    const tt = await db.platformPost.create({ data: { contentProjectId: proj.id, platform: 'tiktok', route: 'browser', idempotencyKey: 'x:tiktok', url: 'https://www.tiktok.com/@a/video/2' } });
+    await recordPostMetric(db, fb.id, { views: 5, comments: 0 }, { source: 'browser', actor: 't' });
+    await recordPostMetric(db, fb.id, { views: 12, likes: 1, comments: 2 }, { source: 'browser', actor: 't' });
+    await expect(recordPostMetric(db, tt.id, {}, { source: 'browser', actor: 't' })).rejects.toThrow('no numbers');
+    await expect(recordPostMetric(db, tt.id, { views: -1 }, { source: 'browser', actor: 't' })).rejects.toThrow();
+
+    expect(await db.postMetric.count()).toBe(2); // history kept
+    const [g] = await publishedOverview(db);
+    expect(g.title).toBe('K2'); // real title, not the instruction text
+    const posts = g.posts as { platform: string; latest: { views: number; likes: number | null; comments: number } | null; previous: { views: number; likes: number | null } | null }[];
+    const f = posts.find((p) => p.platform === 'facebook')!;
+    expect(f.latest).toMatchObject({ views: 12, likes: 1, comments: 2 });
+    expect(f.previous).toMatchObject({ views: 5, likes: null }); // null = unavailable, not 0
+    expect(posts.find((p) => p.platform === 'tiktok')!.latest).toBeNull();
+    expect(await db.auditLog.count({ where: { action: 'post.metrics_recorded' } })).toBe(2);
+
+    expect(youtubeVideoId({ externalId: null, url: 'https://youtube.com/shorts/98DTjFNq-LI' })).toBe('98DTjFNq-LI');
+    expect(youtubeVideoId({ externalId: 'g4v126g_lwo', url: null })).toBe('g4v126g_lwo');
+  });
 });

@@ -1,0 +1,38 @@
+{
+ "platform": "youtube",
+ "video": "output/011-9-minute-youtube-documentary-in-english-.mp4",
+ "videoSha256": "6fb1a2c9d55cb34143ec35727e39f74bb9d3b429a629d7f8b5bf65c721be5e9f",
+ "thumbnail": "platforms/youtube/thumbnail.jpg",
+ "format": "long",
+ "title": "The Crack That Stranded a Space Station Crew (Shenzhou-20)",
+ "description": "A cracked window left three astronauts without a safe ride home, so China launched an empty spaceship to rescue them. Here is how a space-station lifeboat system handles a near-miss.\n\nIn November 2025, Shenzhou-20 commander Chen Dong found cracks in the window of his return capsule, most likely caused by a tiny piece of space debris. Some cracks went right through the pane. The crew flew home in the newer Shenzhou-21 instead, which left the next crew on China's Tiangong station without a certified lifeboat until an uncrewed Shenzhou-22 arrived about eleven days later. The International Space Station faced the same problem in 2022 and 2023, when a leaking Soyuz was replaced by an empty one.\n\nWe follow what officials and the crews reported, why a damaged window is a hard engineering question, how the lifeboat swap works, and why Shenzhou-24, which carried Pakistan's first astronaut to Tiangong on 25 November 2026, is planned the way it is.\n\n⏱️ Chapters\n0:00 A leaf on the window\n1:03 Why the window matters\n2:09 The likely culprit: debris\n3:08 The lifeboat swap\n4:09 An empty ship to the rescue\n5:16 It has happened before\n6:19 Shenzhou-24\n7:25 The lesson\n\n📚 Sources: Space.com: Some of the cracks had penetrated through, Chinese astronauts reveal · Live Science: Chinese astronauts describe moment a crack was discovered · PBS NewsHour: Chinese astronauts return after delay blamed on space debris · Scientific American: Stranded Chinese astronauts return, space junk threats remain · The Register: Taikonauts inspect cracked Shenzhou-20 window during spacewalk · Astronomy.com: Replacement crew temporarily stranded · Hong Kong Free Press: China to launch space mission with first foreign astronaut\n🎙️ Narration: AI voice. Animation: original.\n🎞️ Footage: NASA archive (NASA)\n\n#engineering #space #Shenzhou24",
+ "tags": [
+  "Shenzhou-20",
+  "Shenzhou-20 window crack",
+  "Shenzhou-22",
+  "Shenzhou-24",
+  "Tiangong space station",
+  "space debris",
+  "China space station",
+  "Zeeshan Ali astronaut",
+  "Pakistan first astronaut",
+  "Soyuz MS-22 leak",
+  "Soyuz MS-23",
+  "space station lifeboat",
+  "engineering near miss",
+  "space engineering"
+ ],
+ "visibility": "public",
+ "madeForKids": false,
+ "category": "Science & Technology",
+ "playlist": "Engineering Stories (English)",
+ "series": "Margin of Safety",
+ "language": "English",
+ "channel": {
+  "id": "UCvugPJLIN5Wr5JeddlTrvKg",
+  "name": "Margin of Safety",
+  "handle": "@MarginOfSafetyTV"
+ },
+ "alteredContent": false,
+ "route": "browser"
+}

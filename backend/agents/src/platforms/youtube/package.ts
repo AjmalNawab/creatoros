@@ -4,7 +4,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { z } from 'zod';
 import { getDb } from '@creatoros/db';
 import { askAi, parseJson, paths, run, type AgentDefinition } from '@creatoros/core';
-import { FPS, brandBlock, projectWithBrand, readJson, withFeedback, writeJson } from '../../production/shared';
+import { FPS, brandBlock, footageCredits, projectWithBrand, readJson, withFeedback, writeJson } from '../../production/shared';
 
 /**
  * YouTube Package agent: prepares the exact upload package (video, title, description with chapters,
@@ -76,11 +76,12 @@ Answer with ONLY a JSON object:
     // Chapters need: first at 0:00, at least 3, each ≥ 10s apart (YouTube rules).
     const chapters = short ? [] : sb.scenes.map((s, i) => ({ at: s.startFrame / FPS, title: meta.chapterTitles[i] }))
       .filter((c, i, arr) => i === 0 || c.at - arr[i - 1].at >= 10);
+    const footage = await footageCredits(p.slug);
     const description = [
       meta.description.trim(), '',
       ...(chapters.length >= 3 ? [ur ? '⏱️ ابواب' : '⏱️ Chapters', ...chapters.map((c) => `${mmss(c.at)} ${c.title}`), ''] : []),
       `📚 Sources: ${research.sources.map((s) => s.name).join(' · ')}`,
-      '🎙️ Narration: AI voice. Animation: original.', '',
+      '🎙️ Narration: AI voice. Animation: original.', ...(footage.used ? [footage.line] : []), '',
       meta.hashtags.join(' '),
     ].join('\n').slice(0, LIMITS.description);
 

@@ -1,0 +1,17 @@
+{
+ "sources": [
+  {
+   "name": "USGS Volcano Hazards Program",
+   "url": "https://www.usgs.gov/programs/VHP"
+  },
+  {
+   "name": "Smithsonian Global Volcanism Program",
+   "url": "https://volcano.si.edu"
+  },
+  {
+   "name": "USGS Hawaiian Volcano Observatory",
+   "url": "https://www.usgs.gov/observatories/hvo"
+  }
+ ],
+ "derivedFrom": "research/research.md"
+}

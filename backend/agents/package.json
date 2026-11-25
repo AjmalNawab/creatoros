@@ -8,7 +8,8 @@
     "test": "dotenv -e ../../.env -- vitest run",
     "typecheck": "tsc --noEmit",
     "ai": "dotenv -e ../../.env -- tsx src/cli/ai.ts",
-    "action": "dotenv -e ../../.env -- tsx src/cli/action.ts"
+    "action": "dotenv -e ../../.env -- tsx src/cli/action.ts",
+    "stats": "dotenv -e ../../.env -- tsx src/cli/stats.ts"
   },
   "dependencies": {
     "@creatoros/core": "workspace:*",

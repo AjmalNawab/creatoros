@@ -1,0 +1,55 @@
+{
+ "clips": [
+  {
+   "file": "p014/footage/desert-heat.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "38270",
+   "page": "https://pixabay.com/videos/id-38270/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "desert wind and heat (Sahara, stock)",
+   "sha256": "7e02db62fd44adc37584c6a553330ff4eeb809acff444883b2e87fc0202710c7",
+   "addedAt": "2026-11-25T07:52:43.896Z",
+   "normalised": true
+  },
+  {
+   "file": "p014/footage/death-valley.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "86847",
+   "page": "https://pixabay.com/videos/id-86847/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "Death Valley (stock)",
+   "sha256": "060d04a322205184f47965d7fe1e19a86c7515832dabcf3fd8cba3f2a1257c2a",
+   "addedAt": "2026-11-25T07:52:57.458Z",
+   "normalised": true
+  },
+  {
+   "file": "p014/footage/thermometer.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "168788",
+   "page": "https://pixabay.com/videos/id-168788/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "thermometer in sun (stock)",
+   "sha256": "75a908c2c8193d350926fd549b7d1c067ba0978a7c8b21677ef821de0e7d6950",
+   "addedAt": "2026-11-25T07:52:59.067Z",
+   "normalised": true
+  },
+  {
+   "file": "p014/footage/lut-desert-iss.jpg",
+   "kind": "image",
+   "source": "nasa",
+   "id": "iss012e18779",
+   "page": "https://images.nasa.gov/details/iss012e18779",
+   "licence": "Public domain (NASA)",
+   "credit": "NASA",
+   "note": "Dasht-e-Lut, Iran, from the ISS (2006)",
+   "sha256": "e75bbaa6582ef95889c3469156cad38842917744e4ad237ed5a3d128d5c2a29a",
+   "addedAt": "2026-11-25T07:53:01.344Z"
+  }
+ ]
+}

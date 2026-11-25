@@ -1,0 +1,707 @@
+[
+ {
+  "text": "So",
+  "start": 0.18,
+  "end": 0.36
+ },
+ {
+  "text": "what",
+  "start": 0.39,
+  "end": 0.65
+ },
+ {
+  "text": "did",
+  "start": 0.77,
+  "end": 1
+ },
+ {
+  "text": "1999",
+  "start": 1,
+  "end": 2.1
+ },
+ {
+  "text": "really",
+  "start": 2.1,
+  "end": 2.62
+ },
+ {
+  "text": "teach?",
+  "start": 2.7,
+  "end": 3.39
+ },
+ {
+  "text": "Not",
+  "start": 3.62,
+  "end": 3.66
+ },
+ {
+  "text": "that",
+  "start": 3.8,
+  "end": 3.99
+ },
+ {
+  "text": "space",
+  "start": 3.99,
+  "end": 4.4
+ },
+ {
+  "text": "is",
+  "start": 4.4,
+  "end": 4.55
+ },
+ {
+  "text": "impossible.",
+  "start": 4.6,
+  "end": 5.66
+ },
+ {
+  "text": "Both",
+  "start": 5.86,
+  "end": 5.87
+ },
+ {
+  "text": "spacecraft",
+  "start": 6.04,
+  "end": 6.32
+ },
+ {
+  "text": "were",
+  "start": 6.43,
+  "end": 6.61
+ },
+ {
+  "text": "brought",
+  "start": 6.61,
+  "end": 6.99
+ },
+ {
+  "text": "down",
+  "start": 6.99,
+  "end": 7.2
+ },
+ {
+  "text": "by",
+  "start": 7.2,
+  "end": 7.34
+ },
+ {
+  "text": "small,",
+  "start": 7.34,
+  "end": 8.12
+ },
+ {
+  "text": "ordinary",
+  "start": 8.12,
+  "end": 8.49
+ },
+ {
+  "text": "problems.",
+  "start": 8.9,
+  "end": 9.66
+ },
+ {
+  "text": "A",
+  "start": 9.66,
+  "end": 9.75
+ },
+ {
+  "text": "unit",
+  "start": 9.75,
+  "end": 10.17
+ },
+ {
+  "text": "label.",
+  "start": 10.17,
+  "end": 10.9
+ },
+ {
+  "text": "A",
+  "start": 10.9,
+  "end": 10.96
+ },
+ {
+  "text": "remembered",
+  "start": 11.14,
+  "end": 11.56
+ },
+ {
+  "text": "signal.",
+  "start": 11.94,
+  "end": 12.21
+ },
+ {
+  "text": "Problems",
+  "start": 12.33,
+  "end": 12.93
+ },
+ {
+  "text": "that",
+  "start": 12.93,
+  "end": 13.27
+ },
+ {
+  "text": "engineers",
+  "start": 13.27,
+  "end": 14.02
+ },
+ {
+  "text": "on",
+  "start": 14.06,
+  "end": 14.19
+ },
+ {
+  "text": "any",
+  "start": 14.26,
+  "end": 14.39
+ },
+ {
+  "text": "project",
+  "start": 14.8,
+  "end": 15.07
+ },
+ {
+  "text": "could",
+  "start": 15.07,
+  "end": 15.5
+ },
+ {
+  "text": "make",
+  "start": 15.5,
+  "end": 15.84
+ },
+ {
+  "text": "on",
+  "start": 15.84,
+  "end": 16.01
+ },
+ {
+  "text": "any",
+  "start": 16.01,
+  "end": 16.27
+ },
+ {
+  "text": "day.",
+  "start": 16.27,
+  "end": 16.83
+ },
+ {
+  "text": "The",
+  "start": 17.04,
+  "end": 17.07
+ },
+ {
+  "text": "real",
+  "start": 17.22,
+  "end": 17.38
+ },
+ {
+  "text": "failure",
+  "start": 17.38,
+  "end": 17.92
+ },
+ {
+  "text": "was",
+  "start": 17.92,
+  "end": 18.15
+ },
+ {
+  "text": "in",
+  "start": 18.15,
+  "end": 18.3
+ },
+ {
+  "text": "the",
+  "start": 18.3,
+  "end": 18.53
+ },
+ {
+  "text": "safety",
+  "start": 18.53,
+  "end": 18.99
+ },
+ {
+  "text": "net.",
+  "start": 18.99,
+  "end": 19.47
+ },
+ {
+  "text": "The",
+  "start": 19.67,
+  "end": 19.67
+ },
+ {
+  "text": "checks",
+  "start": 19.86,
+  "end": 20.05
+ },
+ {
+  "text": "that",
+  "start": 20.05,
+  "end": 20.3
+ },
+ {
+  "text": "should",
+  "start": 20.3,
+  "end": 20.68
+ },
+ {
+  "text": "have",
+  "start": 20.68,
+  "end": 20.93
+ },
+ {
+  "text": "caught",
+  "start": 20.93,
+  "end": 21.31
+ },
+ {
+  "text": "those",
+  "start": 21.31,
+  "end": 21.62
+ },
+ {
+  "text": "mistakes",
+  "start": 21.62,
+  "end": 22.1
+ },
+ {
+  "text": "were",
+  "start": 22.12,
+  "end": 22.31
+ },
+ {
+  "text": "thin,",
+  "start": 22.62,
+  "end": 22.62
+ },
+ {
+  "text": "because",
+  "start": 22.72,
+  "end": 23.06
+ },
+ {
+  "text": "time,",
+  "start": 23.06,
+  "end": 23.43
+ },
+ {
+  "text": "money",
+  "start": 23.43,
+  "end": 23.74
+ },
+ {
+  "text": "and",
+  "start": 23.74,
+  "end": 23.96
+ },
+ {
+  "text": "people",
+  "start": 23.98,
+  "end": 24.32
+ },
+ {
+  "text": "had",
+  "start": 24.32,
+  "end": 24.44
+ },
+ {
+  "text": "been",
+  "start": 24.8,
+  "end": 24.8
+ },
+ {
+  "text": "stretched",
+  "start": 24.87,
+  "end": 25.53
+ },
+ {
+  "text": "too",
+  "start": 25.53,
+  "end": 25.77
+ },
+ {
+  "text": "far.",
+  "start": 25.77,
+  "end": 26.28
+ },
+ {
+  "text": "The",
+  "start": 26.6,
+  "end": 26.6
+ },
+ {
+  "text": "fix",
+  "start": 26.66,
+  "end": 26.92
+ },
+ {
+  "text": "was",
+  "start": 26.92,
+  "end": 27.23
+ },
+ {
+  "text": "not",
+  "start": 27.23,
+  "end": 27.56
+ },
+ {
+  "text": "a",
+  "start": 27.56,
+  "end": 27.67
+ },
+ {
+  "text": "genius",
+  "start": 27.67,
+  "end": 28.32
+ },
+ {
+  "text": "invention.",
+  "start": 28.32,
+  "end": 29.68
+ },
+ {
+  "text": "It",
+  "start": 29.82,
+  "end": 29.82
+ },
+ {
+  "text": "was",
+  "start": 30.03,
+  "end": 30.03
+ },
+ {
+  "text": "discipline:",
+  "start": 30.07,
+  "end": 30.87
+ },
+ {
+  "text": "clear",
+  "start": 30.87,
+  "end": 31.22
+ },
+ {
+  "text": "interfaces,",
+  "start": 31.22,
+  "end": 32.03
+ },
+ {
+  "text": "honest",
+  "start": 32.09,
+  "end": 32.48
+ },
+ {
+  "text": "testing,",
+  "start": 32.48,
+  "end": 33.07
+ },
+ {
+  "text": "and",
+  "start": 33.17,
+  "end": 33.28
+ },
+ {
+  "text": "a",
+  "start": 33.33,
+  "end": 33.39
+ },
+ {
+  "text": "culture",
+  "start": 33.39,
+  "end": 33.88
+ },
+ {
+  "text": "where",
+  "start": 33.88,
+  "end": 34.23
+ },
+ {
+  "text": "a",
+  "start": 34.23,
+  "end": 34.3
+ },
+ {
+  "text": "worried",
+  "start": 34.3,
+  "end": 34.6
+ },
+ {
+  "text": "engineer",
+  "start": 35.15,
+  "end": 35.4
+ },
+ {
+  "text": "is",
+  "start": 35.6,
+  "end": 35.62
+ },
+ {
+  "text": "heard",
+  "start": 35.78,
+  "end": 36.18
+ },
+ {
+  "text": "and",
+  "start": 36.18,
+  "end": 36.52
+ },
+ {
+  "text": "acted",
+  "start": 36.52,
+  "end": 37.08
+ },
+ {
+  "text": "on.",
+  "start": 37.08,
+  "end": 37.68
+ },
+ {
+  "text": "Every",
+  "start": 38.04,
+  "end": 38.05
+ },
+ {
+  "text": "successful",
+  "start": 38.07,
+  "end": 38.79
+ },
+ {
+  "text": "Mars",
+  "start": 38.79,
+  "end": 39.08
+ },
+ {
+  "text": "landing",
+  "start": 39.08,
+  "end": 39.6
+ },
+ {
+  "text": "since",
+  "start": 39.6,
+  "end": 39.97
+ },
+ {
+  "text": "then",
+  "start": 39.97,
+  "end": 40.26
+ },
+ {
+  "text": "has",
+  "start": 40.26,
+  "end": 40.48
+ },
+ {
+  "text": "carried",
+  "start": 40.48,
+  "end": 41
+ },
+ {
+  "text": "a",
+  "start": 41,
+  "end": 41.07
+ },
+ {
+  "text": "little",
+  "start": 41.07,
+  "end": 41.51
+ },
+ {
+  "text": "of",
+  "start": 41.51,
+  "end": 41.65
+ },
+ {
+  "text": "that",
+  "start": 41.65,
+  "end": 41.94
+ },
+ {
+  "text": "lesson.",
+  "start": 41.94,
+  "end": 42.6
+ },
+ {
+  "text": "Have",
+  "start": 42.95,
+  "end": 42.95
+ },
+ {
+  "text": "you",
+  "start": 43.06,
+  "end": 43.15
+ },
+ {
+  "text": "ever",
+  "start": 43.15,
+  "end": 43.33
+ },
+ {
+  "text": "seen",
+  "start": 43.45,
+  "end": 43.69
+ },
+ {
+  "text": "a",
+  "start": 43.69,
+  "end": 43.75
+ },
+ {
+  "text": "tiny",
+  "start": 43.75,
+  "end": 44.02
+ },
+ {
+  "text": "mistake",
+  "start": 44.02,
+  "end": 44.49
+ },
+ {
+  "text": "slip",
+  "start": 44.49,
+  "end": 44.76
+ },
+ {
+  "text": "through",
+  "start": 44.76,
+  "end": 45.23
+ },
+ {
+  "text": "because",
+  "start": 45.23,
+  "end": 45.51
+ },
+ {
+  "text": "the",
+  "start": 45.9,
+  "end": 45.9
+ },
+ {
+  "text": "checks",
+  "start": 45.93,
+  "end": 46.28
+ },
+ {
+  "text": "were",
+  "start": 46.33,
+  "end": 46.57
+ },
+ {
+  "text": "rushed?",
+  "start": 46.57,
+  "end": 47.24
+ },
+ {
+  "text": "Tell",
+  "start": 47.5,
+  "end": 47.5
+ },
+ {
+  "text": "me",
+  "start": 47.61,
+  "end": 47.63
+ },
+ {
+  "text": "in",
+  "start": 47.63,
+  "end": 47.76
+ },
+ {
+  "text": "the",
+  "start": 47.76,
+  "end": 47.89
+ },
+ {
+  "text": "comments.",
+  "start": 48.01,
+  "end": 48.72
+ },
+ {
+  "text": "And",
+  "start": 48.92,
+  "end": 48.92
+ },
+ {
+  "text": "if",
+  "start": 49.05,
+  "end": 49.05
+ },
+ {
+  "text": "you",
+  "start": 49.11,
+  "end": 49.24
+ },
+ {
+  "text": "like",
+  "start": 49.25,
+  "end": 49.52
+ },
+ {
+  "text": "stories",
+  "start": 49.52,
+  "end": 50
+ },
+ {
+  "text": "about",
+  "start": 50,
+  "end": 50.34
+ },
+ {
+  "text": "how",
+  "start": 50.34,
+  "end": 50.54
+ },
+ {
+  "text": "engineers",
+  "start": 50.54,
+  "end": 51.16
+ },
+ {
+  "text": "learn",
+  "start": 51.16,
+  "end": 51.5
+ },
+ {
+  "text": "from",
+  "start": 51.5,
+  "end": 51.55
+ },
+ {
+  "text": "failure,",
+  "start": 51.96,
+  "end": 52.38
+ },
+ {
+  "text": "subscribe",
+  "start": 52.38,
+  "end": 53
+ },
+ {
+  "text": "for",
+  "start": 53,
+  "end": 53.17
+ },
+ {
+  "text": "a",
+  "start": 53.2,
+  "end": 53.26
+ },
+ {
+  "text": "new",
+  "start": 53.26,
+  "end": 53.45
+ },
+ {
+  "text": "one",
+  "start": 53.46,
+  "end": 53.64
+ },
+ {
+  "text": "every",
+  "start": 54.07,
+  "end": 54.07
+ },
+ {
+  "text": "week.",
+  "start": 54.14,
+  "end": 54.41
+ }
+]

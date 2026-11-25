@@ -1,0 +1,782 @@
+[
+ {
+  "text": "What",
+  "start": 0.31,
+  "end": 0.31
+ },
+ {
+  "text": "hit",
+  "start": 0.38,
+  "end": 0.54
+ },
+ {
+  "text": "the",
+  "start": 0.54,
+  "end": 0.77
+ },
+ {
+  "text": "window?",
+  "start": 0.77,
+  "end": 1.27
+ },
+ {
+  "text": "Nobody",
+  "start": 1.63,
+  "end": 1.87
+ },
+ {
+  "text": "knows",
+  "start": 1.87,
+  "end": 2.18
+ },
+ {
+  "text": "for",
+  "start": 2.18,
+  "end": 2.36
+ },
+ {
+  "text": "certain.",
+  "start": 2.36,
+  "end": 2.85
+ },
+ {
+  "text": "The",
+  "start": 2.96,
+  "end": 3.28
+ },
+ {
+  "text": "most",
+  "start": 3.42,
+  "end": 3.66
+ },
+ {
+  "text": "likely",
+  "start": 3.66,
+  "end": 4.24
+ },
+ {
+  "text": "explanation",
+  "start": 4.24,
+  "end": 4.8
+ },
+ {
+  "text": "was",
+  "start": 4.8,
+  "end": 5.12
+ },
+ {
+  "text": "a",
+  "start": 5.12,
+  "end": 5.18
+ },
+ {
+  "text": "tiny",
+  "start": 5.18,
+  "end": 5.54
+ },
+ {
+  "text": "piece",
+  "start": 5.54,
+  "end": 5.88
+ },
+ {
+  "text": "of",
+  "start": 5.88,
+  "end": 6
+ },
+ {
+  "text": "space",
+  "start": 6,
+  "end": 6.36
+ },
+ {
+  "text": "debris.",
+  "start": 6.36,
+  "end": 6.87
+ },
+ {
+  "text": "Low",
+  "start": 7.2,
+  "end": 7.24
+ },
+ {
+  "text": "Earth",
+  "start": 7.38,
+  "end": 7.63
+ },
+ {
+  "text": "orbit",
+  "start": 7.73,
+  "end": 8.04
+ },
+ {
+  "text": "is",
+  "start": 8.04,
+  "end": 8.19
+ },
+ {
+  "text": "crowded",
+  "start": 8.22,
+  "end": 8.76
+ },
+ {
+  "text": "with",
+  "start": 8.76,
+  "end": 9.07
+ },
+ {
+  "text": "fragments:",
+  "start": 9.07,
+  "end": 9.85
+ },
+ {
+  "text": "flecks",
+  "start": 9.96,
+  "end": 10.39
+ },
+ {
+  "text": "of",
+  "start": 10.43,
+  "end": 10.52
+ },
+ {
+  "text": "paint,",
+  "start": 10.52,
+  "end": 10.97
+ },
+ {
+  "text": "bits",
+  "start": 11.04,
+  "end": 11.38
+ },
+ {
+  "text": "of",
+  "start": 11.38,
+  "end": 11.57
+ },
+ {
+  "text": "old",
+  "start": 11.57,
+  "end": 11.85
+ },
+ {
+  "text": "rockets,",
+  "start": 11.85,
+  "end": 12.66
+ },
+ {
+  "text": "shards",
+  "start": 12.72,
+  "end": 13.27
+ },
+ {
+  "text": "from",
+  "start": 13.27,
+  "end": 13.64
+ },
+ {
+  "text": "past",
+  "start": 13.64,
+  "end": 13.87
+ },
+ {
+  "text": "collisions.",
+  "start": 14.51,
+  "end": 15
+ },
+ {
+  "text": "Most",
+  "start": 15.38,
+  "end": 15.44
+ },
+ {
+  "text": "are",
+  "start": 15.44,
+  "end": 15.77
+ },
+ {
+  "text": "far",
+  "start": 15.77,
+  "end": 16.1
+ },
+ {
+  "text": "too",
+  "start": 16.1,
+  "end": 16.26
+ },
+ {
+  "text": "small",
+  "start": 16.63,
+  "end": 16.98
+ },
+ {
+  "text": "to",
+  "start": 16.98,
+  "end": 17.2
+ },
+ {
+  "text": "track.",
+  "start": 17.2,
+  "end": 17.84
+ },
+ {
+  "text": "But",
+  "start": 17.96,
+  "end": 18.21
+ },
+ {
+  "text": "even",
+  "start": 18.42,
+  "end": 18.51
+ },
+ {
+  "text": "a",
+  "start": 18.51,
+  "end": 18.58
+ },
+ {
+  "text": "speck",
+  "start": 18.58,
+  "end": 18.94
+ },
+ {
+  "text": "can",
+  "start": 18.94,
+  "end": 19.16
+ },
+ {
+  "text": "be",
+  "start": 19.16,
+  "end": 19.29
+ },
+ {
+  "text": "dangerous,",
+  "start": 19.32,
+  "end": 20
+ },
+ {
+  "text": "because",
+  "start": 20,
+  "end": 20.49
+ },
+ {
+  "text": "in",
+  "start": 20.49,
+  "end": 20.63
+ },
+ {
+  "text": "orbit,",
+  "start": 20.63,
+  "end": 21
+ },
+ {
+  "text": "objects",
+  "start": 21,
+  "end": 21.87
+ },
+ {
+  "text": "cross",
+  "start": 22.25,
+  "end": 22.26
+ },
+ {
+  "text": "paths",
+  "start": 22.51,
+  "end": 22.56
+ },
+ {
+  "text": "at",
+  "start": 22.56,
+  "end": 22.67
+ },
+ {
+  "text": "many",
+  "start": 22.67,
+  "end": 22.89
+ },
+ {
+  "text": "kilometres",
+  "start": 22.89,
+  "end": 23.46
+ },
+ {
+  "text": "per",
+  "start": 23.46,
+  "end": 23.63
+ },
+ {
+  "text": "second.",
+  "start": 23.63,
+  "end": 24
+ },
+ {
+  "text": "Sources",
+  "start": 24.38,
+  "end": 24.63
+ },
+ {
+  "text": "disagreed",
+  "start": 24.73,
+  "end": 25.19
+ },
+ {
+  "text": "about",
+  "start": 25.63,
+  "end": 26.07
+ },
+ {
+  "text": "how",
+  "start": 26.07,
+  "end": 26.38
+ },
+ {
+  "text": "big",
+  "start": 26.38,
+  "end": 26.68
+ },
+ {
+  "text": "this",
+  "start": 26.68,
+  "end": 26.85
+ },
+ {
+  "text": "one",
+  "start": 27.38,
+  "end": 27.38
+ },
+ {
+  "text": "was.",
+  "start": 27.43,
+  "end": 27.97
+ },
+ {
+  "text": "One",
+  "start": 28.2,
+  "end": 28.2
+ },
+ {
+  "text": "report",
+  "start": 28.38,
+  "end": 28.61
+ },
+ {
+  "text": "said",
+  "start": 28.61,
+  "end": 28.88
+ },
+ {
+  "text": "it",
+  "start": 28.88,
+  "end": 29.01
+ },
+ {
+  "text": "was",
+  "start": 29.01,
+  "end": 29.18
+ },
+ {
+  "text": "smaller",
+  "start": 29.22,
+  "end": 29.69
+ },
+ {
+  "text": "than",
+  "start": 29.69,
+  "end": 29.96
+ },
+ {
+  "text": "a",
+  "start": 29.96,
+  "end": 30.03
+ },
+ {
+  "text": "millimetre.",
+  "start": 30.03,
+  "end": 30.96
+ },
+ {
+  "text": "An",
+  "start": 30.96,
+  "end": 31.04
+ },
+ {
+  "text": "expert",
+  "start": 31.42,
+  "end": 31.68
+ },
+ {
+  "text": "quoted",
+  "start": 31.74,
+  "end": 32.26
+ },
+ {
+  "text": "by",
+  "start": 32.26,
+  "end": 32.39
+ },
+ {
+  "text": "Scientific",
+  "start": 32.47,
+  "end": 33.34
+ },
+ {
+  "text": "American",
+  "start": 33.34,
+  "end": 34.06
+ },
+ {
+  "text": "speculated",
+  "start": 34.06,
+  "end": 34.87
+ },
+ {
+  "text": "it",
+  "start": 35.13,
+  "end": 35.13
+ },
+ {
+  "text": "could",
+  "start": 35.39,
+  "end": 35.4
+ },
+ {
+  "text": "have",
+  "start": 35.51,
+  "end": 35.72
+ },
+ {
+  "text": "been",
+  "start": 35.72,
+  "end": 36
+ },
+ {
+  "text": "between",
+  "start": 36,
+  "end": 36.41
+ },
+ {
+  "text": "one",
+  "start": 36.41,
+  "end": 36.6
+ },
+ {
+  "text": "and",
+  "start": 36.6,
+  "end": 36.7
+ },
+ {
+  "text": "ten",
+  "start": 36.7,
+  "end": 37.45
+ },
+ {
+  "text": "centimetres.",
+  "start": 37.45,
+  "end": 38.2
+ },
+ {
+  "text": "The",
+  "start": 38.2,
+  "end": 38.24
+ },
+ {
+  "text": "truth",
+  "start": 38.38,
+  "end": 38.63
+ },
+ {
+  "text": "is",
+  "start": 38.73,
+  "end": 38.8
+ },
+ {
+  "text": "that",
+  "start": 38.8,
+  "end": 39.12
+ },
+ {
+  "text": "we",
+  "start": 39.12,
+  "end": 39.25
+ },
+ {
+  "text": "do",
+  "start": 39.28,
+  "end": 39.28
+ },
+ {
+  "text": "not",
+  "start": 39.63,
+  "end": 39.68
+ },
+ {
+  "text": "know,",
+  "start": 39.68,
+  "end": 40.16
+ },
+ {
+  "text": "and",
+  "start": 40.16,
+  "end": 40.4
+ },
+ {
+  "text": "it",
+  "start": 40.4,
+  "end": 40.56
+ },
+ {
+  "text": "is",
+  "start": 40.56,
+  "end": 40.72
+ },
+ {
+  "text": "worth",
+  "start": 40.72,
+  "end": 40.85
+ },
+ {
+  "text": "being",
+  "start": 41.42,
+  "end": 41.52
+ },
+ {
+  "text": "honest",
+  "start": 41.52,
+  "end": 41.97
+ },
+ {
+  "text": "about",
+  "start": 42.04,
+  "end": 42.39
+ },
+ {
+  "text": "that.",
+  "start": 42.47,
+  "end": 43
+ },
+ {
+  "text": "What",
+  "start": 43.28,
+  "end": 43.28
+ },
+ {
+  "text": "we",
+  "start": 43.38,
+  "end": 43.42
+ },
+ {
+  "text": "do",
+  "start": 43.42,
+  "end": 43.56
+ },
+ {
+  "text": "know",
+  "start": 43.56,
+  "end": 43.83
+ },
+ {
+  "text": "is",
+  "start": 43.84,
+  "end": 43.98
+ },
+ {
+  "text": "that",
+  "start": 43.98,
+  "end": 44.19
+ },
+ {
+  "text": "the",
+  "start": 44.19,
+  "end": 44.28
+ },
+ {
+  "text": "damage",
+  "start": 44.63,
+  "end": 44.89
+ },
+ {
+  "text": "was",
+  "start": 44.89,
+  "end": 45.1
+ },
+ {
+  "text": "real,",
+  "start": 45.1,
+  "end": 45.38
+ },
+ {
+  "text": "and",
+  "start": 45.38,
+  "end": 45.59
+ },
+ {
+  "text": "that",
+  "start": 45.59,
+  "end": 45.84
+ },
+ {
+  "text": "it",
+  "start": 45.93,
+  "end": 45.97
+ },
+ {
+  "text": "happened",
+  "start": 46.42,
+  "end": 46.57
+ },
+ {
+  "text": "to",
+  "start": 46.57,
+  "end": 46.68
+ },
+ {
+  "text": "the",
+  "start": 46.74,
+  "end": 46.92
+ },
+ {
+  "text": "one",
+  "start": 46.92,
+  "end": 47.13
+ },
+ {
+  "text": "part",
+  "start": 47.13,
+  "end": 47.39
+ },
+ {
+  "text": "of",
+  "start": 47.47,
+  "end": 47.55
+ },
+ {
+  "text": "the",
+  "start": 47.55,
+  "end": 47.76
+ },
+ {
+  "text": "spacecraft",
+  "start": 47.76,
+  "end": 48.46
+ },
+ {
+  "text": "that",
+  "start": 48.46,
+  "end": 48.73
+ },
+ {
+  "text": "had",
+  "start": 48.78,
+  "end": 48.95
+ },
+ {
+  "text": "to",
+  "start": 48.95,
+  "end": 49.09
+ },
+ {
+  "text": "be",
+  "start": 49.09,
+  "end": 49.23
+ },
+ {
+  "text": "perfect.",
+  "start": 49.23,
+  "end": 49.87
+ },
+ {
+  "text": "The",
+  "start": 50.2,
+  "end": 50.26
+ },
+ {
+  "text": "crew",
+  "start": 50.38,
+  "end": 50.6
+ },
+ {
+  "text": "was",
+  "start": 50.6,
+  "end": 50.86
+ },
+ {
+  "text": "safe",
+  "start": 50.86,
+  "end": 51.18
+ },
+ {
+  "text": "inside",
+  "start": 51.22,
+  "end": 51.72
+ },
+ {
+  "text": "the",
+  "start": 51.72,
+  "end": 51.98
+ },
+ {
+  "text": "station.",
+  "start": 51.98,
+  "end": 52.82
+ },
+ {
+  "text": "The",
+  "start": 52.84,
+  "end": 52.97
+ },
+ {
+  "text": "station",
+  "start": 53.42,
+  "end": 53.69
+ },
+ {
+  "text": "itself",
+  "start": 53.74,
+  "end": 54.22
+ },
+ {
+  "text": "was",
+  "start": 54.22,
+  "end": 54.48
+ },
+ {
+  "text": "not",
+  "start": 54.48,
+  "end": 54.74
+ },
+ {
+  "text": "leaking.",
+  "start": 54.74,
+  "end": 55.6
+ },
+ {
+  "text": "The",
+  "start": 55.6,
+  "end": 55.86
+ },
+ {
+  "text": "problem",
+  "start": 55.86,
+  "end": 56.44
+ },
+ {
+  "text": "was",
+  "start": 56.51,
+  "end": 56.72
+ },
+ {
+  "text": "the",
+  "start": 56.72,
+  "end": 56.87
+ },
+ {
+  "text": "ride",
+  "start": 56.97,
+  "end": 57.32
+ },
+ {
+  "text": "home.",
+  "start": 57.51,
+  "end": 58
+ }
+]

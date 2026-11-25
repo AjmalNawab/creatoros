@@ -1,0 +1,7859 @@
+{
+ "data": {
+  "key": "p009",
+  "language": "en",
+  "fps": 30,
+  "width": 1920,
+  "height": 1080,
+  "totalFrames": 15921,
+  "scenes": [
+   {
+    "id": 1,
+    "title": "Cold open: silence",
+    "visual": "Blueprint mission-control timeline on a navy grid; two spacecraft icons heading to Mars; first icon blinks out on 23 Sep 1999, second on 3 Dec 1999; a flat signal line",
+    "text": "On the third of December, 1999, a room full of engineers in California waited for a signal from Mars. It was supposed to arrive a few minutes after landing. It never came. They waited through the night. They waited for weeks. Nothing. What made that silence so hard was the date on the calendar. Less than three months earlier, the same programme had lost another spacecraft at Mars. Two missions, two failures, one year. And neither one was destroyed by anything exotic. No meteor. No mystery from deep space. One was lost to a mismatch in units between two pieces of software. The other was most likely lost to a tiny false signal that the software remembered when it should have forgotten. This is the story of how both happened, what the investigators found, and how NASA turned the worst year in its Mars programme into the foundation for the landings that followed.",
+    "audio": "p009/scene_1.wav",
+    "audioSec": 58.605,
+    "startFrame": 0,
+    "durationFrames": 1777,
+    "captions": [
+     {
+      "start": 0.17,
+      "end": 3.43,
+      "text": "On the third of December, 1999, a room"
+     },
+     {
+      "start": 3.43,
+      "end": 6.28,
+      "text": "full of engineers in California waited for a"
+     },
+     {
+      "start": 6.28,
+      "end": 7.7,
+      "text": "signal from Mars."
+     },
+     {
+      "start": 7.83,
+      "end": 9.83,
+      "text": "It was supposed to arrive a few minutes"
+     },
+     {
+      "start": 9.83,
+      "end": 10.9,
+      "text": "after landing."
+     },
+     {
+      "start": 11.08,
+      "end": 12.2,
+      "text": "It never came."
+     },
+     {
+      "start": 12.2,
+      "end": 14.42,
+      "text": "They waited through the night."
+     },
+     {
+      "start": 14.8,
+      "end": 16.1,
+      "text": "They waited for weeks."
+     },
+     {
+      "start": 16.1,
+      "end": 16.9,
+      "text": "Nothing."
+     },
+     {
+      "start": 17.1,
+      "end": 19.07,
+      "text": "What made that silence so hard was the"
+     },
+     {
+      "start": 19.07,
+      "end": 20.42,
+      "text": "date on the calendar."
+     },
+     {
+      "start": 20.7,
+      "end": 23.38,
+      "text": "Less than three months earlier, the same programme"
+     },
+     {
+      "start": 23.38,
+      "end": 25.64,
+      "text": "had lost another spacecraft at Mars."
+     },
+     {
+      "start": 25.9,
+      "end": 28.9,
+      "text": "Two missions, two failures, one year."
+     },
+     {
+      "start": 29.1,
+      "end": 32.3,
+      "text": "And neither one was destroyed by anything exotic."
+     },
+     {
+      "start": 32.3,
+      "end": 33.5,
+      "text": "No meteor."
+     },
+     {
+      "start": 33.5,
+      "end": 35.66,
+      "text": "No mystery from deep space."
+     },
+     {
+      "start": 35.9,
+      "end": 38.12,
+      "text": "One was lost to a mismatch in units"
+     },
+     {
+      "start": 38.12,
+      "end": 40.7,
+      "text": "between two pieces of software."
+     },
+     {
+      "start": 40.9,
+      "end": 42.94,
+      "text": "The other was most likely lost to a"
+     },
+     {
+      "start": 42.94,
+      "end": 45.83,
+      "text": "tiny false signal that the software remembered when"
+     },
+     {
+      "start": 45.97,
+      "end": 47.46,
+      "text": "it should have forgotten."
+     },
+     {
+      "start": 47.81,
+      "end": 50.09,
+      "text": "This is the story of how both happened,"
+     },
+     {
+      "start": 50.09,
+      "end": 53.28,
+      "text": "what the investigators found, and how NASA turned"
+     },
+     {
+      "start": 53.28,
+      "end": 55.62,
+      "text": "the worst year in its Mars programme into"
+     },
+     {
+      "start": 55.78,
+      "end": 58.6,
+      "text": "the foundation for the landings that followed."
+     }
+    ],
+    "words": [
+     {
+      "text": "On",
+      "start": 0.17,
+      "end": 0.17
+     },
+     {
+      "text": "the",
+      "start": 0.4,
+      "end": 0.42
+     },
+     {
+      "text": "third",
+      "start": 0.42,
+      "end": 0.84
+     },
+     {
+      "text": "of",
+      "start": 0.84,
+      "end": 0.96
+     },
+     {
+      "text": "December,",
+      "start": 1.05,
+      "end": 1.86
+     },
+     {
+      "text": "1999,",
+      "start": 1.86,
+      "end": 3.05
+     },
+     {
+      "text": "a",
+      "start": 3.06,
+      "end": 3.12
+     },
+     {
+      "text": "room",
+      "start": 3.12,
+      "end": 3.43
+     },
+     {
+      "text": "full",
+      "start": 3.43,
+      "end": 3.76
+     },
+     {
+      "text": "of",
+      "start": 3.76,
+      "end": 3.89
+     },
+     {
+      "text": "engineers",
+      "start": 3.92,
+      "end": 4.6
+     },
+     {
+      "text": "in",
+      "start": 4.6,
+      "end": 4.72
+     },
+     {
+      "text": "California",
+      "start": 4.72,
+      "end": 5.6
+     },
+     {
+      "text": "waited",
+      "start": 5.6,
+      "end": 6
+     },
+     {
+      "text": "for",
+      "start": 6,
+      "end": 6.2
+     },
+     {
+      "text": "a",
+      "start": 6.2,
+      "end": 6.28
+     },
+     {
+      "text": "signal",
+      "start": 6.28,
+      "end": 6.72
+     },
+     {
+      "text": "from",
+      "start": 6.72,
+      "end": 7.16
+     },
+     {
+      "text": "Mars.",
+      "start": 7.16,
+      "end": 7.7
+     },
+     {
+      "text": "It",
+      "start": 7.83,
+      "end": 7.83
+     },
+     {
+      "text": "was",
+      "start": 8.03,
+      "end": 8.03
+     },
+     {
+      "text": "supposed",
+      "start": 8.1,
+      "end": 8.57
+     },
+     {
+      "text": "to",
+      "start": 8.57,
+      "end": 8.66
+     },
+     {
+      "text": "arrive",
+      "start": 8.7,
+      "end": 9.1
+     },
+     {
+      "text": "a",
+      "start": 9.1,
+      "end": 9.15
+     },
+     {
+      "text": "few",
+      "start": 9.16,
+      "end": 9.36
+     },
+     {
+      "text": "minutes",
+      "start": 9.36,
+      "end": 9.83
+     },
+     {
+      "text": "after",
+      "start": 9.83,
+      "end": 10.17
+     },
+     {
+      "text": "landing.",
+      "start": 10.17,
+      "end": 10.9
+     },
+     {
+      "text": "It",
+      "start": 11.08,
+      "end": 11.08
+     },
+     {
+      "text": "never",
+      "start": 11.3,
+      "end": 11.5
+     },
+     {
+      "text": "came.",
+      "start": 11.62,
+      "end": 12.2
+     },
+     {
+      "text": "They",
+      "start": 12.2,
+      "end": 12.52
+     },
+     {
+      "text": "waited",
+      "start": 12.52,
+      "end": 13.01
+     },
+     {
+      "text": "through",
+      "start": 13.01,
+      "end": 13.52
+     },
+     {
+      "text": "the",
+      "start": 13.52,
+      "end": 13.81
+     },
+     {
+      "text": "night.",
+      "start": 13.96,
+      "end": 14.42
+     },
+     {
+      "text": "They",
+      "start": 14.8,
+      "end": 14.8
+     },
+     {
+      "text": "waited",
+      "start": 14.9,
+      "end": 15.25
+     },
+     {
+      "text": "for",
+      "start": 15.25,
+      "end": 15.46
+     },
+     {
+      "text": "weeks.",
+      "start": 15.47,
+      "end": 16.1
+     },
+     {
+      "text": "Nothing.",
+      "start": 16.1,
+      "end": 16.9
+     },
+     {
+      "text": "What",
+      "start": 17.1,
+      "end": 17.18
+     },
+     {
+      "text": "made",
+      "start": 17.3,
+      "end": 17.46
+     },
+     {
+      "text": "that",
+      "start": 17.46,
+      "end": 17.74
+     },
+     {
+      "text": "silence",
+      "start": 17.74,
+      "end": 18.23
+     },
+     {
+      "text": "so",
+      "start": 18.23,
+      "end": 18.37
+     },
+     {
+      "text": "hard",
+      "start": 18.37,
+      "end": 18.65
+     },
+     {
+      "text": "was",
+      "start": 18.65,
+      "end": 18.86
+     },
+     {
+      "text": "the",
+      "start": 18.86,
+      "end": 19.07
+     },
+     {
+      "text": "date",
+      "start": 19.07,
+      "end": 19.35
+     },
+     {
+      "text": "on",
+      "start": 19.35,
+      "end": 19.47
+     },
+     {
+      "text": "the",
+      "start": 19.47,
+      "end": 19.59
+     },
+     {
+      "text": "calendar.",
+      "start": 19.96,
+      "end": 20.42
+     },
+     {
+      "text": "Less",
+      "start": 20.7,
+      "end": 20.74
+     },
+     {
+      "text": "than",
+      "start": 20.9,
+      "end": 20.98
+     },
+     {
+      "text": "three",
+      "start": 20.98,
+      "end": 21.28
+     },
+     {
+      "text": "months",
+      "start": 21.28,
+      "end": 21.64
+     },
+     {
+      "text": "earlier,",
+      "start": 21.64,
+      "end": 22.2
+     },
+     {
+      "text": "the",
+      "start": 22.2,
+      "end": 22.42
+     },
+     {
+      "text": "same",
+      "start": 22.42,
+      "end": 22.71
+     },
+     {
+      "text": "programme",
+      "start": 22.71,
+      "end": 23.38
+     },
+     {
+      "text": "had",
+      "start": 23.38,
+      "end": 23.44
+     },
+     {
+      "text": "lost",
+      "start": 23.56,
+      "end": 23.74
+     },
+     {
+      "text": "another",
+      "start": 23.74,
+      "end": 24.26
+     },
+     {
+      "text": "spacecraft",
+      "start": 24.26,
+      "end": 25
+     },
+     {
+      "text": "at",
+      "start": 25,
+      "end": 25.14
+     },
+     {
+      "text": "Mars.",
+      "start": 25.14,
+      "end": 25.64
+     },
+     {
+      "text": "Two",
+      "start": 25.9,
+      "end": 25.96
+     },
+     {
+      "text": "missions,",
+      "start": 26.1,
+      "end": 26.84
+     },
+     {
+      "text": "two",
+      "start": 26.84,
+      "end": 27.1
+     },
+     {
+      "text": "failures,",
+      "start": 27.1,
+      "end": 27.98
+     },
+     {
+      "text": "one",
+      "start": 27.98,
+      "end": 28.24
+     },
+     {
+      "text": "year.",
+      "start": 28.24,
+      "end": 28.9
+     },
+     {
+      "text": "And",
+      "start": 29.1,
+      "end": 29.13
+     },
+     {
+      "text": "neither",
+      "start": 29.3,
+      "end": 29.68
+     },
+     {
+      "text": "one",
+      "start": 29.68,
+      "end": 29.87
+     },
+     {
+      "text": "was",
+      "start": 29.95,
+      "end": 30.14
+     },
+     {
+      "text": "destroyed",
+      "start": 30.14,
+      "end": 30.85
+     },
+     {
+      "text": "by",
+      "start": 30.85,
+      "end": 31
+     },
+     {
+      "text": "anything",
+      "start": 31,
+      "end": 31.52
+     },
+     {
+      "text": "exotic.",
+      "start": 31.95,
+      "end": 32.3
+     },
+     {
+      "text": "No",
+      "start": 32.3,
+      "end": 32.42
+     },
+     {
+      "text": "meteor.",
+      "start": 32.57,
+      "end": 33.5
+     },
+     {
+      "text": "No",
+      "start": 33.5,
+      "end": 33.67
+     },
+     {
+      "text": "mystery",
+      "start": 33.67,
+      "end": 34.28
+     },
+     {
+      "text": "from",
+      "start": 34.28,
+      "end": 34.63
+     },
+     {
+      "text": "deep",
+      "start": 34.63,
+      "end": 34.94
+     },
+     {
+      "text": "space.",
+      "start": 35.06,
+      "end": 35.66
+     },
+     {
+      "text": "One",
+      "start": 35.9,
+      "end": 35.96
+     },
+     {
+      "text": "was",
+      "start": 36.1,
+      "end": 36.22
+     },
+     {
+      "text": "lost",
+      "start": 36.22,
+      "end": 36.57
+     },
+     {
+      "text": "to",
+      "start": 36.57,
+      "end": 36.66
+     },
+     {
+      "text": "a",
+      "start": 36.75,
+      "end": 36.82
+     },
+     {
+      "text": "mismatch",
+      "start": 36.82,
+      "end": 37.48
+     },
+     {
+      "text": "in",
+      "start": 37.53,
+      "end": 37.69
+     },
+     {
+      "text": "units",
+      "start": 37.69,
+      "end": 38.12
+     },
+     {
+      "text": "between",
+      "start": 38.12,
+      "end": 38.34
+     },
+     {
+      "text": "two",
+      "start": 38.76,
+      "end": 38.99
+     },
+     {
+      "text": "pieces",
+      "start": 38.99,
+      "end": 39.51
+     },
+     {
+      "text": "of",
+      "start": 39.51,
+      "end": 39.63
+     },
+     {
+      "text": "software.",
+      "start": 39.71,
+      "end": 40.7
+     },
+     {
+      "text": "The",
+      "start": 40.9,
+      "end": 40.94
+     },
+     {
+      "text": "other",
+      "start": 41.1,
+      "end": 41.29
+     },
+     {
+      "text": "was",
+      "start": 41.43,
+      "end": 41.58
+     },
+     {
+      "text": "most",
+      "start": 41.58,
+      "end": 41.9
+     },
+     {
+      "text": "likely",
+      "start": 41.9,
+      "end": 42.38
+     },
+     {
+      "text": "lost",
+      "start": 42.38,
+      "end": 42.7
+     },
+     {
+      "text": "to",
+      "start": 42.7,
+      "end": 42.86
+     },
+     {
+      "text": "a",
+      "start": 42.86,
+      "end": 42.94
+     },
+     {
+      "text": "tiny",
+      "start": 42.94,
+      "end": 43.25
+     },
+     {
+      "text": "false",
+      "start": 43.25,
+      "end": 43.39
+     },
+     {
+      "text": "signal",
+      "start": 43.76,
+      "end": 44.2
+     },
+     {
+      "text": "that",
+      "start": 44.2,
+      "end": 44.44
+     },
+     {
+      "text": "the",
+      "start": 44.44,
+      "end": 44.59
+     },
+     {
+      "text": "software",
+      "start": 44.62,
+      "end": 45.09
+     },
+     {
+      "text": "remembered",
+      "start": 45.09,
+      "end": 45.7
+     },
+     {
+      "text": "when",
+      "start": 45.7,
+      "end": 45.83
+     },
+     {
+      "text": "it",
+      "start": 45.97,
+      "end": 46.07
+     },
+     {
+      "text": "should",
+      "start": 46.07,
+      "end": 46.45
+     },
+     {
+      "text": "have",
+      "start": 46.45,
+      "end": 46.7
+     },
+     {
+      "text": "forgotten.",
+      "start": 46.7,
+      "end": 47.46
+     },
+     {
+      "text": "This",
+      "start": 47.81,
+      "end": 47.81
+     },
+     {
+      "text": "is",
+      "start": 47.9,
+      "end": 47.96
+     },
+     {
+      "text": "the",
+      "start": 47.96,
+      "end": 48.07
+     },
+     {
+      "text": "story",
+      "start": 48.22,
+      "end": 48.58
+     },
+     {
+      "text": "of",
+      "start": 48.58,
+      "end": 48.73
+     },
+     {
+      "text": "how",
+      "start": 48.73,
+      "end": 48.95
+     },
+     {
+      "text": "both",
+      "start": 48.96,
+      "end": 49.27
+     },
+     {
+      "text": "happened,",
+      "start": 49.27,
+      "end": 50.09
+     },
+     {
+      "text": "what",
+      "start": 50.09,
+      "end": 50.19
+     },
+     {
+      "text": "the",
+      "start": 50.55,
+      "end": 50.61
+     },
+     {
+      "text": "investigators",
+      "start": 50.61,
+      "end": 51.57
+     },
+     {
+      "text": "found,",
+      "start": 51.57,
+      "end": 52.1
+     },
+     {
+      "text": "and",
+      "start": 52.3,
+      "end": 52.32
+     },
+     {
+      "text": "how",
+      "start": 52.5,
+      "end": 52.54
+     },
+     {
+      "text": "NASA",
+      "start": 52.54,
+      "end": 52.84
+     },
+     {
+      "text": "turned",
+      "start": 52.84,
+      "end": 53.28
+     },
+     {
+      "text": "the",
+      "start": 53.28,
+      "end": 53.5
+     },
+     {
+      "text": "worst",
+      "start": 53.5,
+      "end": 53.87
+     },
+     {
+      "text": "year",
+      "start": 53.87,
+      "end": 54.17
+     },
+     {
+      "text": "in",
+      "start": 54.17,
+      "end": 54.32
+     },
+     {
+      "text": "its",
+      "start": 54.32,
+      "end": 54.54
+     },
+     {
+      "text": "Mars",
+      "start": 54.54,
+      "end": 54.79
+     },
+     {
+      "text": "programme",
+      "start": 54.79,
+      "end": 55.4
+     },
+     {
+      "text": "into",
+      "start": 55.4,
+      "end": 55.62
+     },
+     {
+      "text": "the",
+      "start": 55.78,
+      "end": 55.84
+     },
+     {
+      "text": "foundation",
+      "start": 55.84,
+      "end": 56.5
+     },
+     {
+      "text": "for",
+      "start": 56.5,
+      "end": 56.71
+     },
+     {
+      "text": "the",
+      "start": 56.71,
+      "end": 56.91
+     },
+     {
+      "text": "landings",
+      "start": 56.95,
+      "end": 57.48
+     },
+     {
+      "text": "that",
+      "start": 57.48,
+      "end": 57.76
+     },
+     {
+      "text": "followed.",
+      "start": 57.76,
+      "end": 58.6
+     }
+    ]
+   },
+   {
+    "id": 2,
+    "title": "The plan: faster, better, cheaper",
+    "visual": "Cost bar chart: big 1970s Viking bar vs small 1990s mission bars; label 'Faster, Better, Cheaper'; Mars Climate Orbiter and Mars Polar Lander line drawings side by side",
+    "text": "To understand the losses, start with the plan. In the 1990s NASA wanted more missions for less money. The motto was faster, better, cheaper. Instead of one giant, expensive spacecraft every decade, send smaller ones often, and accept a bit more risk. The Mars programme was built around that idea. In late 1998 and early 1999, two spacecraft left Earth as a pair. Mars Climate Orbiter would circle the planet and study its weather. It would also relay radio signals for its partner. Mars Polar Lander would set down near the edge of the south polar ice, dig into the soil, and look for signs of water. They were built by the same industrial team and run by the same laboratory. On paper it was efficient. Shared designs, shared people, shared budgets. But as investigators would later find, shared also meant stretched. Fewer people were checking more work, and some of the checks that catch small mistakes were the ones that got squeezed.",
+    "audio": "p009/scene_2.wav",
+    "audioSec": 66.425,
+    "startFrame": 1777,
+    "durationFrames": 2011,
+    "captions": [
+     {
+      "start": 0.13,
+      "end": 3.01,
+      "text": "To understand the losses, start with the plan."
+     },
+     {
+      "start": 3.42,
+      "end": 6.19,
+      "text": "In the 1990s NASA wanted more missions for"
+     },
+     {
+      "start": 6.19,
+      "end": 7,
+      "text": "less money."
+     },
+     {
+      "start": 7.26,
+      "end": 10.01,
+      "text": "The motto was faster, better, cheaper."
+     },
+     {
+      "start": 10.64,
+      "end": 14.3,
+      "text": "Instead of one giant, expensive spacecraft every decade,"
+     },
+     {
+      "start": 14.3,
+      "end": 17.22,
+      "text": "send smaller ones often, and accept a bit"
+     },
+     {
+      "start": 17.76,
+      "end": 18.27,
+      "text": "more risk."
+     },
+     {
+      "start": 18.58,
+      "end": 22,
+      "text": "The Mars programme was built around that idea."
+     },
+     {
+      "start": 22.18,
+      "end": 26.63,
+      "text": "In late 1998 and early 1999, two spacecraft"
+     },
+     {
+      "start": 26.63,
+      "end": 28.3,
+      "text": "left Earth as a pair."
+     },
+     {
+      "start": 28.58,
+      "end": 31.19,
+      "text": "Mars Climate Orbiter would circle the planet and"
+     },
+     {
+      "start": 31.26,
+      "end": 32.27,
+      "text": "study its weather."
+     },
+     {
+      "start": 32.47,
+      "end": 35.19,
+      "text": "It would also relay radio signals for its"
+     },
+     {
+      "start": 35.82,
+      "end": 36.19,
+      "text": "partner."
+     },
+     {
+      "start": 36.52,
+      "end": 38.87,
+      "text": "Mars Polar Lander would set down near the"
+     },
+     {
+      "start": 38.87,
+      "end": 41.41,
+      "text": "edge of the south polar ice, dig into"
+     },
+     {
+      "start": 41.41,
+      "end": 44.3,
+      "text": "the soil, and look for signs of water."
+     },
+     {
+      "start": 44.57,
+      "end": 46.8,
+      "text": "They were built by the same industrial team"
+     },
+     {
+      "start": 46.8,
+      "end": 49.6,
+      "text": "and run by the same laboratory."
+     },
+     {
+      "start": 49.75,
+      "end": 51.26,
+      "text": "On paper it was efficient."
+     },
+     {
+      "start": 51.74,
+      "end": 54.6,
+      "text": "Shared designs, shared people, shared budgets."
+     },
+     {
+      "start": 54.8,
+      "end": 57.57,
+      "text": "But as investigators would later find, shared also"
+     },
+     {
+      "start": 58.12,
+      "end": 59.1,
+      "text": "meant stretched."
+     },
+     {
+      "start": 59.34,
+      "end": 62.03,
+      "text": "Fewer people were checking more work, and some"
+     },
+     {
+      "start": 62.03,
+      "end": 64.42,
+      "text": "of the checks that catch small mistakes were"
+     },
+     {
+      "start": 64.42,
+      "end": 66.42,
+      "text": "the ones that got squeezed."
+     }
+    ],
+    "words": [
+     {
+      "text": "To",
+      "start": 0.13,
+      "end": 0.13
+     },
+     {
+      "text": "understand",
+      "start": 0.34,
+      "end": 0.82
+     },
+     {
+      "text": "the",
+      "start": 0.82,
+      "end": 1.01
+     },
+     {
+      "text": "losses,",
+      "start": 1.02,
+      "end": 1.59
+     },
+     {
+      "text": "start",
+      "start": 1.6,
+      "end": 1.98
+     },
+     {
+      "text": "with",
+      "start": 2.04,
+      "end": 2.38
+     },
+     {
+      "text": "the",
+      "start": 2.38,
+      "end": 2.6
+     },
+     {
+      "text": "plan.",
+      "start": 2.65,
+      "end": 3.01
+     },
+     {
+      "text": "In",
+      "start": 3.42,
+      "end": 3.42
+     },
+     {
+      "text": "the",
+      "start": 3.61,
+      "end": 3.61
+     },
+     {
+      "text": "1990s",
+      "start": 3.65,
+      "end": 4.56
+     },
+     {
+      "text": "NASA",
+      "start": 4.56,
+      "end": 4.79
+     },
+     {
+      "text": "wanted",
+      "start": 4.81,
+      "end": 4.95
+     },
+     {
+      "text": "more",
+      "start": 5.22,
+      "end": 5.44
+     },
+     {
+      "text": "missions",
+      "start": 5.44,
+      "end": 6
+     },
+     {
+      "text": "for",
+      "start": 6,
+      "end": 6.19
+     },
+     {
+      "text": "less",
+      "start": 6.19,
+      "end": 6.27
+     },
+     {
+      "text": "money.",
+      "start": 6.79,
+      "end": 7
+     },
+     {
+      "text": "The",
+      "start": 7.26,
+      "end": 7.26
+     },
+     {
+      "text": "motto",
+      "start": 7.34,
+      "end": 7.7
+     },
+     {
+      "text": "was",
+      "start": 7.7,
+      "end": 7.96
+     },
+     {
+      "text": "faster,",
+      "start": 7.96,
+      "end": 8.65
+     },
+     {
+      "text": "better,",
+      "start": 8.91,
+      "end": 9.36
+     },
+     {
+      "text": "cheaper.",
+      "start": 9.36,
+      "end": 10.01
+     },
+     {
+      "text": "Instead",
+      "start": 10.64,
+      "end": 10.79
+     },
+     {
+      "text": "of",
+      "start": 10.79,
+      "end": 10.93
+     },
+     {
+      "text": "one",
+      "start": 10.93,
+      "end": 11.14
+     },
+     {
+      "text": "giant,",
+      "start": 11.14,
+      "end": 11.63
+     },
+     {
+      "text": "expensive",
+      "start": 11.63,
+      "end": 12.26
+     },
+     {
+      "text": "spacecraft",
+      "start": 12.26,
+      "end": 13
+     },
+     {
+      "text": "every",
+      "start": 13,
+      "end": 13.22
+     },
+     {
+      "text": "decade,",
+      "start": 13.82,
+      "end": 14.3
+     },
+     {
+      "text": "send",
+      "start": 14.3,
+      "end": 14.77
+     },
+     {
+      "text": "smaller",
+      "start": 14.77,
+      "end": 15.43
+     },
+     {
+      "text": "ones",
+      "start": 15.43,
+      "end": 15.79
+     },
+     {
+      "text": "often,",
+      "start": 15.81,
+      "end": 16.28
+     },
+     {
+      "text": "and",
+      "start": 16.34,
+      "end": 16.54
+     },
+     {
+      "text": "accept",
+      "start": 16.63,
+      "end": 17.08
+     },
+     {
+      "text": "a",
+      "start": 17.08,
+      "end": 17.15
+     },
+     {
+      "text": "bit",
+      "start": 17.15,
+      "end": 17.22
+     },
+     {
+      "text": "more",
+      "start": 17.76,
+      "end": 17.76
+     },
+     {
+      "text": "risk.",
+      "start": 17.82,
+      "end": 18.27
+     },
+     {
+      "text": "The",
+      "start": 18.58,
+      "end": 18.58
+     },
+     {
+      "text": "Mars",
+      "start": 18.64,
+      "end": 18.95
+     },
+     {
+      "text": "programme",
+      "start": 18.95,
+      "end": 19.61
+     },
+     {
+      "text": "was",
+      "start": 19.61,
+      "end": 19.8
+     },
+     {
+      "text": "built",
+      "start": 19.9,
+      "end": 20.36
+     },
+     {
+      "text": "around",
+      "start": 20.36,
+      "end": 20.88
+     },
+     {
+      "text": "that",
+      "start": 20.95,
+      "end": 21.2
+     },
+     {
+      "text": "idea.",
+      "start": 21.2,
+      "end": 22
+     },
+     {
+      "text": "In",
+      "start": 22.18,
+      "end": 22.18
+     },
+     {
+      "text": "late",
+      "start": 22.34,
+      "end": 22.54
+     },
+     {
+      "text": "1998",
+      "start": 22.54,
+      "end": 23.63
+     },
+     {
+      "text": "and",
+      "start": 23.63,
+      "end": 23.91
+     },
+     {
+      "text": "early",
+      "start": 23.91,
+      "end": 24.37
+     },
+     {
+      "text": "1999,",
+      "start": 24.37,
+      "end": 25.5
+     },
+     {
+      "text": "two",
+      "start": 25.76,
+      "end": 25.76
+     },
+     {
+      "text": "spacecraft",
+      "start": 25.85,
+      "end": 26.63
+     },
+     {
+      "text": "left",
+      "start": 26.63,
+      "end": 26.98
+     },
+     {
+      "text": "Earth",
+      "start": 26.98,
+      "end": 27.41
+     },
+     {
+      "text": "as",
+      "start": 27.42,
+      "end": 27.58
+     },
+     {
+      "text": "a",
+      "start": 27.58,
+      "end": 27.66
+     },
+     {
+      "text": "pair.",
+      "start": 27.66,
+      "end": 28.3
+     },
+     {
+      "text": "Mars",
+      "start": 28.58,
+      "end": 28.64
+     },
+     {
+      "text": "Climate",
+      "start": 28.65,
+      "end": 29.12
+     },
+     {
+      "text": "Orbiter",
+      "start": 29.12,
+      "end": 29.6
+     },
+     {
+      "text": "would",
+      "start": 29.6,
+      "end": 29.94
+     },
+     {
+      "text": "circle",
+      "start": 30.21,
+      "end": 30.4
+     },
+     {
+      "text": "the",
+      "start": 30.4,
+      "end": 30.54
+     },
+     {
+      "text": "planet",
+      "start": 30.63,
+      "end": 31.1
+     },
+     {
+      "text": "and",
+      "start": 31.1,
+      "end": 31.19
+     },
+     {
+      "text": "study",
+      "start": 31.26,
+      "end": 31.31
+     },
+     {
+      "text": "its",
+      "start": 31.72,
+      "end": 31.72
+     },
+     {
+      "text": "weather.",
+      "start": 31.82,
+      "end": 32.27
+     },
+     {
+      "text": "It",
+      "start": 32.47,
+      "end": 32.47
+     },
+     {
+      "text": "would",
+      "start": 32.64,
+      "end": 32.91
+     },
+     {
+      "text": "also",
+      "start": 32.91,
+      "end": 33.26
+     },
+     {
+      "text": "relay",
+      "start": 33.26,
+      "end": 33.7
+     },
+     {
+      "text": "radio",
+      "start": 33.7,
+      "end": 33.95
+     },
+     {
+      "text": "signals",
+      "start": 34.21,
+      "end": 34.7
+     },
+     {
+      "text": "for",
+      "start": 34.76,
+      "end": 35.02
+     },
+     {
+      "text": "its",
+      "start": 35.02,
+      "end": 35.19
+     },
+     {
+      "text": "partner.",
+      "start": 35.82,
+      "end": 36.19
+     },
+     {
+      "text": "Mars",
+      "start": 36.52,
+      "end": 36.6
+     },
+     {
+      "text": "Polar",
+      "start": 36.6,
+      "end": 37.01
+     },
+     {
+      "text": "Lander",
+      "start": 37.01,
+      "end": 37.49
+     },
+     {
+      "text": "would",
+      "start": 37.49,
+      "end": 37.84
+     },
+     {
+      "text": "set",
+      "start": 38.1,
+      "end": 38.14
+     },
+     {
+      "text": "down",
+      "start": 38.14,
+      "end": 38.44
+     },
+     {
+      "text": "near",
+      "start": 38.51,
+      "end": 38.71
+     },
+     {
+      "text": "the",
+      "start": 38.71,
+      "end": 38.87
+     },
+     {
+      "text": "edge",
+      "start": 38.87,
+      "end": 39.09
+     },
+     {
+      "text": "of",
+      "start": 39.09,
+      "end": 39.12
+     },
+     {
+      "text": "the",
+      "start": 39.31,
+      "end": 39.56
+     },
+     {
+      "text": "south",
+      "start": 39.72,
+      "end": 40.03
+     },
+     {
+      "text": "polar",
+      "start": 40.03,
+      "end": 40.5
+     },
+     {
+      "text": "ice,",
+      "start": 40.5,
+      "end": 40.8
+     },
+     {
+      "text": "dig",
+      "start": 41.06,
+      "end": 41.06
+     },
+     {
+      "text": "into",
+      "start": 41.14,
+      "end": 41.41
+     },
+     {
+      "text": "the",
+      "start": 41.41,
+      "end": 41.67
+     },
+     {
+      "text": "soil,",
+      "start": 41.67,
+      "end": 42.2
+     },
+     {
+      "text": "and",
+      "start": 42.2,
+      "end": 42.45
+     },
+     {
+      "text": "look",
+      "start": 42.71,
+      "end": 42.78
+     },
+     {
+      "text": "for",
+      "start": 42.78,
+      "end": 43.03
+     },
+     {
+      "text": "signs",
+      "start": 43.03,
+      "end": 43.39
+     },
+     {
+      "text": "of",
+      "start": 43.46,
+      "end": 43.6
+     },
+     {
+      "text": "water.",
+      "start": 43.6,
+      "end": 44.3
+     },
+     {
+      "text": "They",
+      "start": 44.57,
+      "end": 44.57
+     },
+     {
+      "text": "were",
+      "start": 44.64,
+      "end": 44.84
+     },
+     {
+      "text": "built",
+      "start": 44.84,
+      "end": 45.18
+     },
+     {
+      "text": "by",
+      "start": 45.18,
+      "end": 45.3
+     },
+     {
+      "text": "the",
+      "start": 45.31,
+      "end": 45.51
+     },
+     {
+      "text": "same",
+      "start": 45.51,
+      "end": 45.78
+     },
+     {
+      "text": "industrial",
+      "start": 45.78,
+      "end": 46.47
+     },
+     {
+      "text": "team",
+      "start": 46.47,
+      "end": 46.8
+     },
+     {
+      "text": "and",
+      "start": 46.8,
+      "end": 47.1
+     },
+     {
+      "text": "run",
+      "start": 47.1,
+      "end": 47.2
+     },
+     {
+      "text": "by",
+      "start": 47.41,
+      "end": 47.6
+     },
+     {
+      "text": "the",
+      "start": 47.82,
+      "end": 47.9
+     },
+     {
+      "text": "same",
+      "start": 47.9,
+      "end": 48.27
+     },
+     {
+      "text": "laboratory.",
+      "start": 48.31,
+      "end": 49.6
+     },
+     {
+      "text": "On",
+      "start": 49.75,
+      "end": 49.75
+     },
+     {
+      "text": "paper",
+      "start": 49.94,
+      "end": 50.12
+     },
+     {
+      "text": "it",
+      "start": 50.12,
+      "end": 50.27
+     },
+     {
+      "text": "was",
+      "start": 50.27,
+      "end": 50.49
+     },
+     {
+      "text": "efficient.",
+      "start": 50.49,
+      "end": 51.26
+     },
+     {
+      "text": "Shared",
+      "start": 51.74,
+      "end": 51.84
+     },
+     {
+      "text": "designs,",
+      "start": 51.87,
+      "end": 52.53
+     },
+     {
+      "text": "shared",
+      "start": 52.53,
+      "end": 52.89
+     },
+     {
+      "text": "people,",
+      "start": 53,
+      "end": 53.58
+     },
+     {
+      "text": "shared",
+      "start": 53.58,
+      "end": 53.98
+     },
+     {
+      "text": "budgets.",
+      "start": 54.05,
+      "end": 54.6
+     },
+     {
+      "text": "But",
+      "start": 54.8,
+      "end": 54.82
+     },
+     {
+      "text": "as",
+      "start": 54.94,
+      "end": 54.96
+     },
+     {
+      "text": "investigators",
+      "start": 54.98,
+      "end": 55.91
+     },
+     {
+      "text": "would",
+      "start": 55.91,
+      "end": 56.24
+     },
+     {
+      "text": "later",
+      "start": 56.51,
+      "end": 56.58
+     },
+     {
+      "text": "find,",
+      "start": 56.64,
+      "end": 57
+     },
+     {
+      "text": "shared",
+      "start": 57.06,
+      "end": 57.49
+     },
+     {
+      "text": "also",
+      "start": 57.49,
+      "end": 57.57
+     },
+     {
+      "text": "meant",
+      "start": 58.12,
+      "end": 58.15
+     },
+     {
+      "text": "stretched.",
+      "start": 58.15,
+      "end": 59.1
+     },
+     {
+      "text": "Fewer",
+      "start": 59.34,
+      "end": 59.5
+     },
+     {
+      "text": "people",
+      "start": 59.5,
+      "end": 59.98
+     },
+     {
+      "text": "were",
+      "start": 59.98,
+      "end": 60.3
+     },
+     {
+      "text": "checking",
+      "start": 60.3,
+      "end": 60.74
+     },
+     {
+      "text": "more",
+      "start": 61.02,
+      "end": 61.26
+     },
+     {
+      "text": "work,",
+      "start": 61.26,
+      "end": 61.6
+     },
+     {
+      "text": "and",
+      "start": 61.78,
+      "end": 61.78
+     },
+     {
+      "text": "some",
+      "start": 61.94,
+      "end": 62.03
+     },
+     {
+      "text": "of",
+      "start": 62.03,
+      "end": 62.15
+     },
+     {
+      "text": "the",
+      "start": 62.15,
+      "end": 62.33
+     },
+     {
+      "text": "checks",
+      "start": 62.33,
+      "end": 62.7
+     },
+     {
+      "text": "that",
+      "start": 62.7,
+      "end": 62.95
+     },
+     {
+      "text": "catch",
+      "start": 62.95,
+      "end": 63.24
+     },
+     {
+      "text": "small",
+      "start": 63.5,
+      "end": 63.57
+     },
+     {
+      "text": "mistakes",
+      "start": 63.57,
+      "end": 64.1
+     },
+     {
+      "text": "were",
+      "start": 64.1,
+      "end": 64.42
+     },
+     {
+      "text": "the",
+      "start": 64.42,
+      "end": 64.5
+     },
+     {
+      "text": "ones",
+      "start": 64.88,
+      "end": 64.98
+     },
+     {
+      "text": "that",
+      "start": 65.12,
+      "end": 65.3
+     },
+     {
+      "text": "got",
+      "start": 65.3,
+      "end": 65.49
+     },
+     {
+      "text": "squeezed.",
+      "start": 65.56,
+      "end": 66.42
+     }
+    ]
+   },
+   {
+    "id": 3,
+    "title": "Climate Orbiter: the approach",
+    "visual": "Trajectory diagram: planned arc to orbit insertion vs actual arc drifting lower toward the atmosphere; small thruster puffs along the path with arrows; altitude band shaded orange",
+    "text": "Mars Climate Orbiter launched on the eleventh of December, 1998. For nine months it cruised toward Mars. Along the way, small thrusters fired from time to time to keep the spacecraft pointed correctly. Each firing gave the spacecraft a tiny push. The navigation team on the ground had to account for every one of those pushes to predict exactly where the orbiter would be. On the twenty-third of September, 1999, the orbiter fired its main engine to slow down and slip into orbit. It passed behind the planet, as planned. It was supposed to reappear about twenty minutes later. It never did. The investigators concluded that the orbiter had approached Mars far lower than intended. Instead of skimming safely above the atmosphere, it dipped deep into it. The heat and drag would almost certainly have destroyed it. So the question became simple and painful. How did a team of experienced navigators get the trajectory so wrong, without realising it until it was too late?",
+    "audio": "p009/scene_3.wav",
+    "audioSec": 66.48,
+    "startFrame": 3788,
+    "durationFrames": 2013,
+    "captions": [
+     {
+      "start": 0.33,
+      "end": 3.05,
+      "text": "Mars Climate Orbiter launched on the eleventh of"
+     },
+     {
+      "start": 3.05,
+      "end": 5,
+      "text": "December, 1998."
+     },
+     {
+      "start": 5.2,
+      "end": 8,
+      "text": "For nine months it cruised toward Mars."
+     },
+     {
+      "start": 8.31,
+      "end": 10.99,
+      "text": "Along the way, small thrusters fired from time"
+     },
+     {
+      "start": 11,
+      "end": 14,
+      "text": "to time to keep the spacecraft pointed correctly."
+     },
+     {
+      "start": 14.4,
+      "end": 18,
+      "text": "Each firing gave the spacecraft a tiny push."
+     },
+     {
+      "start": 18.2,
+      "end": 20.41,
+      "text": "The navigation team on the ground had to"
+     },
+     {
+      "start": 20.41,
+      "end": 22.52,
+      "text": "account for every one of those pushes to"
+     },
+     {
+      "start": 22.52,
+      "end": 25,
+      "text": "predict exactly where the orbiter would be."
+     },
+     {
+      "start": 25.17,
+      "end": 29.34,
+      "text": "On the twenty-third of September, 1999, the orbiter"
+     },
+     {
+      "start": 29.34,
+      "end": 32.14,
+      "text": "fired its main engine to slow down and"
+     },
+     {
+      "start": 32.15,
+      "end": 33,
+      "text": "slip into orbit."
+     },
+     {
+      "start": 33.16,
+      "end": 35.99,
+      "text": "It passed behind the planet, as planned."
+     },
+     {
+      "start": 36.12,
+      "end": 38.46,
+      "text": "It was supposed to reappear about twenty minutes"
+     },
+     {
+      "start": 38.46,
+      "end": 38.99,
+      "text": "later."
+     },
+     {
+      "start": 39,
+      "end": 40.79,
+      "text": "It never did."
+     },
+     {
+      "start": 41.2,
+      "end": 44.89,
+      "text": "The investigators concluded that the orbiter had approached"
+     },
+     {
+      "start": 44.89,
+      "end": 47,
+      "text": "Mars far lower than intended."
+     },
+     {
+      "start": 47.4,
+      "end": 50.45,
+      "text": "Instead of skimming safely above the atmosphere, it"
+     },
+     {
+      "start": 50.46,
+      "end": 51.79,
+      "text": "dipped deep into it."
+     },
+     {
+      "start": 52.2,
+      "end": 54.95,
+      "text": "The heat and drag would almost certainly have"
+     },
+     {
+      "start": 54.95,
+      "end": 56,
+      "text": "destroyed it."
+     },
+     {
+      "start": 56,
+      "end": 59,
+      "text": "So the question became simple and painful."
+     },
+     {
+      "start": 59.2,
+      "end": 61.59,
+      "text": "How did a team of experienced navigators get"
+     },
+     {
+      "start": 61.59,
+      "end": 65.09,
+      "text": "the trajectory so wrong, without realising it until"
+     },
+     {
+      "start": 65.09,
+      "end": 66.42,
+      "text": "it was too late?"
+     }
+    ],
+    "words": [
+     {
+      "text": "Mars",
+      "start": 0.33,
+      "end": 0.33
+     },
+     {
+      "text": "Climate",
+      "start": 0.4,
+      "end": 0.92
+     },
+     {
+      "text": "Orbiter",
+      "start": 0.92,
+      "end": 1.49
+     },
+     {
+      "text": "launched",
+      "start": 1.5,
+      "end": 2.19
+     },
+     {
+      "text": "on",
+      "start": 2.26,
+      "end": 2.31
+     },
+     {
+      "text": "the",
+      "start": 2.31,
+      "end": 2.48
+     },
+     {
+      "text": "eleventh",
+      "start": 2.48,
+      "end": 2.94
+     },
+     {
+      "text": "of",
+      "start": 2.94,
+      "end": 3.05
+     },
+     {
+      "text": "December,",
+      "start": 3.05,
+      "end": 3.68
+     },
+     {
+      "text": "1998.",
+      "start": 3.85,
+      "end": 5
+     },
+     {
+      "text": "For",
+      "start": 5.2,
+      "end": 5.28
+     },
+     {
+      "text": "nine",
+      "start": 5.4,
+      "end": 5.65
+     },
+     {
+      "text": "months",
+      "start": 5.65,
+      "end": 6.19
+     },
+     {
+      "text": "it",
+      "start": 6.3,
+      "end": 6.39
+     },
+     {
+      "text": "cruised",
+      "start": 6.39,
+      "end": 7.04
+     },
+     {
+      "text": "toward",
+      "start": 7.04,
+      "end": 7.6
+     },
+     {
+      "text": "Mars.",
+      "start": 7.6,
+      "end": 8
+     },
+     {
+      "text": "Along",
+      "start": 8.31,
+      "end": 8.31
+     },
+     {
+      "text": "the",
+      "start": 8.4,
+      "end": 8.49
+     },
+     {
+      "text": "way,",
+      "start": 8.49,
+      "end": 8.75
+     },
+     {
+      "text": "small",
+      "start": 8.82,
+      "end": 9.1
+     },
+     {
+      "text": "thrusters",
+      "start": 9.1,
+      "end": 9.65
+     },
+     {
+      "text": "fired",
+      "start": 9.65,
+      "end": 10
+     },
+     {
+      "text": "from",
+      "start": 10,
+      "end": 10.5
+     },
+     {
+      "text": "time",
+      "start": 10.5,
+      "end": 10.99
+     },
+     {
+      "text": "to",
+      "start": 11,
+      "end": 11.33
+     },
+     {
+      "text": "time",
+      "start": 11.33,
+      "end": 12
+     },
+     {
+      "text": "to",
+      "start": 12,
+      "end": 12.1
+     },
+     {
+      "text": "keep",
+      "start": 12.1,
+      "end": 12.31
+     },
+     {
+      "text": "the",
+      "start": 12.31,
+      "end": 12.46
+     },
+     {
+      "text": "spacecraft",
+      "start": 12.46,
+      "end": 12.78
+     },
+     {
+      "text": "pointed",
+      "start": 13.31,
+      "end": 13.36
+     },
+     {
+      "text": "correctly.",
+      "start": 13.49,
+      "end": 14
+     },
+     {
+      "text": "Each",
+      "start": 14.4,
+      "end": 14.41
+     },
+     {
+      "text": "firing",
+      "start": 14.41,
+      "end": 15.02
+     },
+     {
+      "text": "gave",
+      "start": 15.02,
+      "end": 15.43
+     },
+     {
+      "text": "the",
+      "start": 15.43,
+      "end": 15.73
+     },
+     {
+      "text": "spacecraft",
+      "start": 15.73,
+      "end": 16.75
+     },
+     {
+      "text": "a",
+      "start": 16.75,
+      "end": 16.85
+     },
+     {
+      "text": "tiny",
+      "start": 16.85,
+      "end": 17.26
+     },
+     {
+      "text": "push.",
+      "start": 17.26,
+      "end": 18
+     },
+     {
+      "text": "The",
+      "start": 18.2,
+      "end": 18.21
+     },
+     {
+      "text": "navigation",
+      "start": 18.4,
+      "end": 18.92
+     },
+     {
+      "text": "team",
+      "start": 18.92,
+      "end": 19.19
+     },
+     {
+      "text": "on",
+      "start": 19.3,
+      "end": 19.34
+     },
+     {
+      "text": "the",
+      "start": 19.34,
+      "end": 19.55
+     },
+     {
+      "text": "ground",
+      "start": 19.55,
+      "end": 20
+     },
+     {
+      "text": "had",
+      "start": 20,
+      "end": 20.19
+     },
+     {
+      "text": "to",
+      "start": 20.26,
+      "end": 20.41
+     },
+     {
+      "text": "account",
+      "start": 20.41,
+      "end": 20.99
+     },
+     {
+      "text": "for",
+      "start": 21,
+      "end": 21.16
+     },
+     {
+      "text": "every",
+      "start": 21.16,
+      "end": 21.42
+     },
+     {
+      "text": "one",
+      "start": 21.42,
+      "end": 21.5
+     },
+     {
+      "text": "of",
+      "start": 21.58,
+      "end": 21.69
+     },
+     {
+      "text": "those",
+      "start": 21.85,
+      "end": 22
+     },
+     {
+      "text": "pushes",
+      "start": 22,
+      "end": 22.39
+     },
+     {
+      "text": "to",
+      "start": 22.39,
+      "end": 22.52
+     },
+     {
+      "text": "predict",
+      "start": 22.52,
+      "end": 22.79
+     },
+     {
+      "text": "exactly",
+      "start": 23.43,
+      "end": 23.43
+     },
+     {
+      "text": "where",
+      "start": 23.49,
+      "end": 23.74
+     },
+     {
+      "text": "the",
+      "start": 23.74,
+      "end": 23.92
+     },
+     {
+      "text": "orbiter",
+      "start": 23.92,
+      "end": 24.33
+     },
+     {
+      "text": "would",
+      "start": 24.44,
+      "end": 24.66
+     },
+     {
+      "text": "be.",
+      "start": 24.66,
+      "end": 25
+     },
+     {
+      "text": "On",
+      "start": 25.17,
+      "end": 25.17
+     },
+     {
+      "text": "the",
+      "start": 25.4,
+      "end": 25.43
+     },
+     {
+      "text": "twenty-third",
+      "start": 25.43,
+      "end": 26.12
+     },
+     {
+      "text": "of",
+      "start": 26.12,
+      "end": 26.17
+     },
+     {
+      "text": "September,",
+      "start": 26.3,
+      "end": 27.19
+     },
+     {
+      "text": "1999,",
+      "start": 27.26,
+      "end": 28.47
+     },
+     {
+      "text": "the",
+      "start": 28.47,
+      "end": 28.51
+     },
+     {
+      "text": "orbiter",
+      "start": 28.85,
+      "end": 29.34
+     },
+     {
+      "text": "fired",
+      "start": 29.34,
+      "end": 29.77
+     },
+     {
+      "text": "its",
+      "start": 29.78,
+      "end": 29.79
+     },
+     {
+      "text": "main",
+      "start": 30.39,
+      "end": 30.39
+     },
+     {
+      "text": "engine",
+      "start": 30.5,
+      "end": 31
+     },
+     {
+      "text": "to",
+      "start": 31,
+      "end": 31.14
+     },
+     {
+      "text": "slow",
+      "start": 31.19,
+      "end": 31.59
+     },
+     {
+      "text": "down",
+      "start": 31.59,
+      "end": 32
+     },
+     {
+      "text": "and",
+      "start": 32,
+      "end": 32.14
+     },
+     {
+      "text": "slip",
+      "start": 32.15,
+      "end": 32.36
+     },
+     {
+      "text": "into",
+      "start": 32.36,
+      "end": 32.44
+     },
+     {
+      "text": "orbit.",
+      "start": 32.62,
+      "end": 33
+     },
+     {
+      "text": "It",
+      "start": 33.16,
+      "end": 33.16
+     },
+     {
+      "text": "passed",
+      "start": 33.4,
+      "end": 33.64
+     },
+     {
+      "text": "behind",
+      "start": 33.64,
+      "end": 34.12
+     },
+     {
+      "text": "the",
+      "start": 34.12,
+      "end": 34.36
+     },
+     {
+      "text": "planet,",
+      "start": 34.36,
+      "end": 35
+     },
+     {
+      "text": "as",
+      "start": 35,
+      "end": 35.16
+     },
+     {
+      "text": "planned.",
+      "start": 35.16,
+      "end": 35.99
+     },
+     {
+      "text": "It",
+      "start": 36.12,
+      "end": 36.12
+     },
+     {
+      "text": "was",
+      "start": 36.3,
+      "end": 36.3
+     },
+     {
+      "text": "supposed",
+      "start": 36.4,
+      "end": 36.75
+     },
+     {
+      "text": "to",
+      "start": 36.82,
+      "end": 36.9
+     },
+     {
+      "text": "reappear",
+      "start": 36.9,
+      "end": 37.38
+     },
+     {
+      "text": "about",
+      "start": 37.38,
+      "end": 37.68
+     },
+     {
+      "text": "twenty",
+      "start": 37.68,
+      "end": 38.04
+     },
+     {
+      "text": "minutes",
+      "start": 38.04,
+      "end": 38.46
+     },
+     {
+      "text": "later.",
+      "start": 38.46,
+      "end": 38.99
+     },
+     {
+      "text": "It",
+      "start": 39,
+      "end": 39.3
+     },
+     {
+      "text": "never",
+      "start": 39.3,
+      "end": 40.05
+     },
+     {
+      "text": "did.",
+      "start": 40.08,
+      "end": 40.79
+     },
+     {
+      "text": "The",
+      "start": 41.2,
+      "end": 41.22
+     },
+     {
+      "text": "investigators",
+      "start": 41.4,
+      "end": 42.19
+     },
+     {
+      "text": "concluded",
+      "start": 42.3,
+      "end": 42.88
+     },
+     {
+      "text": "that",
+      "start": 42.88,
+      "end": 43.18
+     },
+     {
+      "text": "the",
+      "start": 43.18,
+      "end": 43.4
+     },
+     {
+      "text": "orbiter",
+      "start": 43.4,
+      "end": 43.91
+     },
+     {
+      "text": "had",
+      "start": 43.92,
+      "end": 44.14
+     },
+     {
+      "text": "approached",
+      "start": 44.14,
+      "end": 44.89
+     },
+     {
+      "text": "Mars",
+      "start": 44.89,
+      "end": 45.19
+     },
+     {
+      "text": "far",
+      "start": 45.19,
+      "end": 45.41
+     },
+     {
+      "text": "lower",
+      "start": 45.41,
+      "end": 45.77
+     },
+     {
+      "text": "than",
+      "start": 45.77,
+      "end": 45.79
+     },
+     {
+      "text": "intended.",
+      "start": 46.47,
+      "end": 47
+     },
+     {
+      "text": "Instead",
+      "start": 47.4,
+      "end": 47.54
+     },
+     {
+      "text": "of",
+      "start": 47.54,
+      "end": 47.69
+     },
+     {
+      "text": "skimming",
+      "start": 47.69,
+      "end": 48.21
+     },
+     {
+      "text": "safely",
+      "start": 48.3,
+      "end": 48.76
+     },
+     {
+      "text": "above",
+      "start": 48.76,
+      "end": 49.15
+     },
+     {
+      "text": "the",
+      "start": 49.15,
+      "end": 49.38
+     },
+     {
+      "text": "atmosphere,",
+      "start": 49.38,
+      "end": 50.31
+     },
+     {
+      "text": "it",
+      "start": 50.31,
+      "end": 50.45
+     },
+     {
+      "text": "dipped",
+      "start": 50.46,
+      "end": 50.92
+     },
+     {
+      "text": "deep",
+      "start": 50.92,
+      "end": 51.23
+     },
+     {
+      "text": "into",
+      "start": 51.23,
+      "end": 51.54
+     },
+     {
+      "text": "it.",
+      "start": 51.54,
+      "end": 51.79
+     },
+     {
+      "text": "The",
+      "start": 52.2,
+      "end": 52.23
+     },
+     {
+      "text": "heat",
+      "start": 52.4,
+      "end": 52.54
+     },
+     {
+      "text": "and",
+      "start": 52.54,
+      "end": 52.75
+     },
+     {
+      "text": "drag",
+      "start": 52.82,
+      "end": 53.08
+     },
+     {
+      "text": "would",
+      "start": 53.08,
+      "end": 53.46
+     },
+     {
+      "text": "almost",
+      "start": 53.47,
+      "end": 53.94
+     },
+     {
+      "text": "certainly",
+      "start": 53.94,
+      "end": 54.64
+     },
+     {
+      "text": "have",
+      "start": 54.64,
+      "end": 54.95
+     },
+     {
+      "text": "destroyed",
+      "start": 54.95,
+      "end": 55.48
+     },
+     {
+      "text": "it.",
+      "start": 55.8,
+      "end": 56
+     },
+     {
+      "text": "So",
+      "start": 56,
+      "end": 56.15
+     },
+     {
+      "text": "the",
+      "start": 56.15,
+      "end": 56.38
+     },
+     {
+      "text": "question",
+      "start": 56.38,
+      "end": 56.78
+     },
+     {
+      "text": "became",
+      "start": 57.45,
+      "end": 57.48
+     },
+     {
+      "text": "simple",
+      "start": 57.5,
+      "end": 57.95
+     },
+     {
+      "text": "and",
+      "start": 57.95,
+      "end": 58.14
+     },
+     {
+      "text": "painful.",
+      "start": 58.19,
+      "end": 59
+     },
+     {
+      "text": "How",
+      "start": 59.2,
+      "end": 59.21
+     },
+     {
+      "text": "did",
+      "start": 59.4,
+      "end": 59.42
+     },
+     {
+      "text": "a",
+      "start": 59.42,
+      "end": 59.49
+     },
+     {
+      "text": "team",
+      "start": 59.49,
+      "end": 59.75
+     },
+     {
+      "text": "of",
+      "start": 59.82,
+      "end": 59.91
+     },
+     {
+      "text": "experienced",
+      "start": 59.91,
+      "end": 60.68
+     },
+     {
+      "text": "navigators",
+      "start": 60.68,
+      "end": 61.38
+     },
+     {
+      "text": "get",
+      "start": 61.38,
+      "end": 61.59
+     },
+     {
+      "text": "the",
+      "start": 61.59,
+      "end": 61.8
+     },
+     {
+      "text": "trajectory",
+      "start": 61.8,
+      "end": 62.47
+     },
+     {
+      "text": "so",
+      "start": 62.47,
+      "end": 62.51
+     },
+     {
+      "text": "wrong,",
+      "start": 62.85,
+      "end": 63
+     },
+     {
+      "text": "without",
+      "start": 63,
+      "end": 63.55
+     },
+     {
+      "text": "realising",
+      "start": 63.55,
+      "end": 64.49
+     },
+     {
+      "text": "it",
+      "start": 64.49,
+      "end": 64.64
+     },
+     {
+      "text": "until",
+      "start": 64.64,
+      "end": 65.09
+     },
+     {
+      "text": "it",
+      "start": 65.09,
+      "end": 65.25
+     },
+     {
+      "text": "was",
+      "start": 65.27,
+      "end": 65.54
+     },
+     {
+      "text": "too",
+      "start": 65.54,
+      "end": 65.79
+     },
+     {
+      "text": "late?",
+      "start": 65.84,
+      "end": 66.42
+     }
+    ]
+   },
+   {
+    "id": 4,
+    "title": "The unit mismatch",
+    "visual": "Two software boxes linked by a data pipe: left box labelled 'ground software: pound-force seconds', right box 'navigation: newton-seconds'; a value passes through unchanged; magnifier shows 1 lbf·s = 4.45 N·s; error arrow grows",
+    "text": "The answer was in the data passed between two pieces of software. One program on the ground calculated the effect of each thruster firing. Its output was supposed to be in metric units, newton-seconds, as the interface specification required. Instead, it produced the numbers in English units, pound-force seconds. The navigation software read those numbers as if they were metric. One pound-force second is about four point four five newton-seconds. So every small push was underestimated by a factor of about four and a half. Each error was tiny. But they added up over months of cruise, and the trajectory drifted. Here is the uncomfortable part. Investigators found that the mismatch was not caught by verification and validation. Nobody confirmed the software matched its specification. And during the cruise, there were signs the trajectory was off. Those concerns were raised, but they were not escalated in a way that forced action. The unit mix-up started the problem. The missing checks let it finish.",
+    "audio": "p009/scene_4.wav",
+    "audioSec": 68.75,
+    "startFrame": 5801,
+    "durationFrames": 2081,
+    "captions": [
+     {
+      "start": 0.2,
+      "end": 2.16,
+      "text": "The answer was in the data passed between"
+     },
+     {
+      "start": 2.23,
+      "end": 4,
+      "text": "two pieces of software."
+     },
+     {
+      "start": 4.28,
+      "end": 7,
+      "text": "One program on the ground calculated the effect"
+     },
+     {
+      "start": 7,
+      "end": 9,
+      "text": "of each thruster firing."
+     },
+     {
+      "start": 9.28,
+      "end": 11.97,
+      "text": "Its output was supposed to be in metric"
+     },
+     {
+      "start": 11.97,
+      "end": 15.95,
+      "text": "units, newton-seconds, as the interface specification required."
+     },
+     {
+      "start": 16.37,
+      "end": 20.15,
+      "text": "Instead, it produced the numbers in English units,"
+     },
+     {
+      "start": 20.15,
+      "end": 21.81,
+      "text": "pound-force seconds."
+     },
+     {
+      "start": 22.2,
+      "end": 24.94,
+      "text": "The navigation software read those numbers as if"
+     },
+     {
+      "start": 24.94,
+      "end": 26,
+      "text": "they were metric."
+     },
+     {
+      "start": 26.3,
+      "end": 30.062,
+      "text": "One pound-force second is about four point four"
+     },
+     {
+      "start": 30.062,
+      "end": 31.11,
+      "text": "five newton-seconds."
+     },
+     {
+      "start": 31.11,
+      "end": 34.18,
+      "text": "So every small push was underestimated by a"
+     },
+     {
+      "start": 34.18,
+      "end": 36,
+      "text": "factor of about four and a half."
+     },
+     {
+      "start": 36.32,
+      "end": 37.42,
+      "text": "Each error was tiny."
+     },
+     {
+      "start": 37.42,
+      "end": 40.11,
+      "text": "But they added up over months of cruise,"
+     },
+     {
+      "start": 40.11,
+      "end": 41.81,
+      "text": "and the trajectory drifted."
+     },
+     {
+      "start": 42.36,
+      "end": 45,
+      "text": "Here is the uncomfortable part."
+     },
+     {
+      "start": 45,
+      "end": 47.81,
+      "text": "Investigators found that the mismatch was not caught"
+     },
+     {
+      "start": 48.11,
+      "end": 50,
+      "text": "by verification and validation."
+     },
+     {
+      "start": 50.37,
+      "end": 54.33,
+      "text": "Nobody confirmed the software matched its specification."
+     },
+     {
+      "start": 54.4,
+      "end": 56.92,
+      "text": "And during the cruise, there were signs the"
+     },
+     {
+      "start": 56.92,
+      "end": 58,
+      "text": "trajectory was off."
+     },
+     {
+      "start": 58.36,
+      "end": 61.15,
+      "text": "Those concerns were raised, but they were not"
+     },
+     {
+      "start": 61.15,
+      "end": 63.81,
+      "text": "escalated in a way that forced action."
+     },
+     {
+      "start": 64.2,
+      "end": 66.42,
+      "text": "The unit mix-up started the problem."
+     },
+     {
+      "start": 66.42,
+      "end": 68.75,
+      "text": "The missing checks let it finish."
+     }
+    ],
+    "words": [
+     {
+      "text": "The",
+      "start": 0.2,
+      "end": 0.22
+     },
+     {
+      "text": "answer",
+      "start": 0.38,
+      "end": 0.66
+     },
+     {
+      "text": "was",
+      "start": 0.66,
+      "end": 0.88
+     },
+     {
+      "text": "in",
+      "start": 0.88,
+      "end": 1.02
+     },
+     {
+      "text": "the",
+      "start": 1.02,
+      "end": 1.24
+     },
+     {
+      "text": "data",
+      "start": 1.24,
+      "end": 1.53
+     },
+     {
+      "text": "passed",
+      "start": 1.53,
+      "end": 1.99
+     },
+     {
+      "text": "between",
+      "start": 1.99,
+      "end": 2.16
+     },
+     {
+      "text": "two",
+      "start": 2.23,
+      "end": 2.48
+     },
+     {
+      "text": "pieces",
+      "start": 2.48,
+      "end": 3.04
+     },
+     {
+      "text": "of",
+      "start": 3.04,
+      "end": 3.23
+     },
+     {
+      "text": "software.",
+      "start": 3.23,
+      "end": 4
+     },
+     {
+      "text": "One",
+      "start": 4.28,
+      "end": 4.28
+     },
+     {
+      "text": "program",
+      "start": 4.38,
+      "end": 4.93
+     },
+     {
+      "text": "on",
+      "start": 4.94,
+      "end": 5.13
+     },
+     {
+      "text": "the",
+      "start": 5.13,
+      "end": 5.41
+     },
+     {
+      "text": "ground",
+      "start": 5.41,
+      "end": 5.99
+     },
+     {
+      "text": "calculated",
+      "start": 5.99,
+      "end": 6.67
+     },
+     {
+      "text": "the",
+      "start": 6.74,
+      "end": 6.9
+     },
+     {
+      "text": "effect",
+      "start": 6.9,
+      "end": 7
+     },
+     {
+      "text": "of",
+      "start": 7,
+      "end": 7.2
+     },
+     {
+      "text": "each",
+      "start": 7.2,
+      "end": 7.47
+     },
+     {
+      "text": "thruster",
+      "start": 7.61,
+      "end": 8.39
+     },
+     {
+      "text": "firing.",
+      "start": 8.4,
+      "end": 9
+     },
+     {
+      "text": "Its",
+      "start": 9.28,
+      "end": 9.28
+     },
+     {
+      "text": "output",
+      "start": 9.38,
+      "end": 9.84
+     },
+     {
+      "text": "was",
+      "start": 9.84,
+      "end": 10.12
+     },
+     {
+      "text": "supposed",
+      "start": 10.12,
+      "end": 10.87
+     },
+     {
+      "text": "to",
+      "start": 10.87,
+      "end": 11
+     },
+     {
+      "text": "be",
+      "start": 11.09,
+      "end": 11.16
+     },
+     {
+      "text": "in",
+      "start": 11.23,
+      "end": 11.41
+     },
+     {
+      "text": "metric",
+      "start": 11.41,
+      "end": 11.97
+     },
+     {
+      "text": "units,",
+      "start": 11.97,
+      "end": 12.69
+     },
+     {
+      "text": "newton-seconds,",
+      "start": 12.69,
+      "end": 14.06
+     },
+     {
+      "text": "as",
+      "start": 14.06,
+      "end": 14.11
+     },
+     {
+      "text": "the",
+      "start": 14.11,
+      "end": 14.22
+     },
+     {
+      "text": "interface",
+      "start": 14.22,
+      "end": 14.53
+     },
+     {
+      "text": "specification",
+      "start": 14.53,
+      "end": 14.81
+     },
+     {
+      "text": "required.",
+      "start": 15.14,
+      "end": 15.95
+     },
+     {
+      "text": "Instead,",
+      "start": 16.37,
+      "end": 16.83
+     },
+     {
+      "text": "it",
+      "start": 16.83,
+      "end": 17.01
+     },
+     {
+      "text": "produced",
+      "start": 17.01,
+      "end": 17.75
+     },
+     {
+      "text": "the",
+      "start": 17.75,
+      "end": 18
+     },
+     {
+      "text": "numbers",
+      "start": 18.09,
+      "end": 18.67
+     },
+     {
+      "text": "in",
+      "start": 18.74,
+      "end": 18.86
+     },
+     {
+      "text": "English",
+      "start": 18.86,
+      "end": 19.47
+     },
+     {
+      "text": "units,",
+      "start": 19.47,
+      "end": 20.15
+     },
+     {
+      "text": "pound-force",
+      "start": 20.15,
+      "end": 20.98
+     },
+     {
+      "text": "seconds.",
+      "start": 20.98,
+      "end": 21.81
+     },
+     {
+      "text": "The",
+      "start": 22.2,
+      "end": 22.21
+     },
+     {
+      "text": "navigation",
+      "start": 22.38,
+      "end": 22.92
+     },
+     {
+      "text": "software",
+      "start": 22.93,
+      "end": 23.51
+     },
+     {
+      "text": "read",
+      "start": 23.51,
+      "end": 23.8
+     },
+     {
+      "text": "those",
+      "start": 23.8,
+      "end": 24.14
+     },
+     {
+      "text": "numbers",
+      "start": 24.16,
+      "end": 24.66
+     },
+     {
+      "text": "as",
+      "start": 24.66,
+      "end": 24.76
+     },
+     {
+      "text": "if",
+      "start": 24.8,
+      "end": 24.94
+     },
+     {
+      "text": "they",
+      "start": 24.94,
+      "end": 25.23
+     },
+     {
+      "text": "were",
+      "start": 25.23,
+      "end": 25.47
+     },
+     {
+      "text": "metric.",
+      "start": 25.47,
+      "end": 26
+     },
+     {
+      "text": "One",
+      "start": 26.3,
+      "end": 26.3
+     },
+     {
+      "text": "pound-force",
+      "start": 26.3,
+      "end": 27.2
+     },
+     {
+      "text": "second",
+      "start": 27.2,
+      "end": 27.79
+     },
+     {
+      "text": "is",
+      "start": 27.79,
+      "end": 27.99
+     },
+     {
+      "text": "about",
+      "start": 27.99,
+      "end": 28.49
+     },
+     {
+      "text": "four",
+      "start": 28.49,
+      "end": 29.014
+     },
+     {
+      "text": "point",
+      "start": 29.014,
+      "end": 29.538
+     },
+     {
+      "text": "four",
+      "start": 29.538,
+      "end": 30.062
+     },
+     {
+      "text": "five",
+      "start": 30.062,
+      "end": 30.586
+     },
+     {
+      "text": "newton-seconds.",
+      "start": 30.586,
+      "end": 31.11
+     },
+     {
+      "text": "So",
+      "start": 31.11,
+      "end": 31.22
+     },
+     {
+      "text": "every",
+      "start": 31.22,
+      "end": 31.49
+     },
+     {
+      "text": "small",
+      "start": 31.49,
+      "end": 31.76
+     },
+     {
+      "text": "push",
+      "start": 31.76,
+      "end": 31.82
+     },
+     {
+      "text": "was",
+      "start": 32.14,
+      "end": 32.31
+     },
+     {
+      "text": "underestimated",
+      "start": 32.37,
+      "end": 34
+     },
+     {
+      "text": "by",
+      "start": 34,
+      "end": 34.06
+     },
+     {
+      "text": "a",
+      "start": 34.12,
+      "end": 34.18
+     },
+     {
+      "text": "factor",
+      "start": 34.18,
+      "end": 34.56
+     },
+     {
+      "text": "of",
+      "start": 34.56,
+      "end": 34.67
+     },
+     {
+      "text": "about",
+      "start": 34.67,
+      "end": 34.83
+     },
+     {
+      "text": "four",
+      "start": 34.83,
+      "end": 35.24
+     },
+     {
+      "text": "and",
+      "start": 35.44,
+      "end": 35.44
+     },
+     {
+      "text": "a",
+      "start": 35.5,
+      "end": 35.5
+     },
+     {
+      "text": "half.",
+      "start": 35.75,
+      "end": 36
+     },
+     {
+      "text": "Each",
+      "start": 36.32,
+      "end": 36.32
+     },
+     {
+      "text": "error",
+      "start": 36.38,
+      "end": 36.71
+     },
+     {
+      "text": "was",
+      "start": 36.71,
+      "end": 36.94
+     },
+     {
+      "text": "tiny.",
+      "start": 36.94,
+      "end": 37.42
+     },
+     {
+      "text": "But",
+      "start": 37.42,
+      "end": 37.65
+     },
+     {
+      "text": "they",
+      "start": 37.72,
+      "end": 37.98
+     },
+     {
+      "text": "added",
+      "start": 37.98,
+      "end": 38.37
+     },
+     {
+      "text": "up",
+      "start": 38.37,
+      "end": 38.51
+     },
+     {
+      "text": "over",
+      "start": 38.53,
+      "end": 38.85
+     },
+     {
+      "text": "months",
+      "start": 38.85,
+      "end": 39.31
+     },
+     {
+      "text": "of",
+      "start": 39.32,
+      "end": 39.47
+     },
+     {
+      "text": "cruise,",
+      "start": 39.47,
+      "end": 40.11
+     },
+     {
+      "text": "and",
+      "start": 40.11,
+      "end": 40.11
+     },
+     {
+      "text": "the",
+      "start": 40.35,
+      "end": 40.35
+     },
+     {
+      "text": "trajectory",
+      "start": 40.4,
+      "end": 41.14
+     },
+     {
+      "text": "drifted.",
+      "start": 41.14,
+      "end": 41.81
+     },
+     {
+      "text": "Here",
+      "start": 42.36,
+      "end": 42.41
+     },
+     {
+      "text": "is",
+      "start": 42.41,
+      "end": 42.61
+     },
+     {
+      "text": "the",
+      "start": 42.61,
+      "end": 42.91
+     },
+     {
+      "text": "uncomfortable",
+      "start": 42.92,
+      "end": 44.26
+     },
+     {
+      "text": "part.",
+      "start": 44.26,
+      "end": 45
+     },
+     {
+      "text": "Investigators",
+      "start": 45,
+      "end": 45.73
+     },
+     {
+      "text": "found",
+      "start": 46.16,
+      "end": 46.19
+     },
+     {
+      "text": "that",
+      "start": 46.4,
+      "end": 46.45
+     },
+     {
+      "text": "the",
+      "start": 46.45,
+      "end": 46.61
+     },
+     {
+      "text": "mismatch",
+      "start": 46.72,
+      "end": 47.18
+     },
+     {
+      "text": "was",
+      "start": 47.18,
+      "end": 47.33
+     },
+     {
+      "text": "not",
+      "start": 47.38,
+      "end": 47.58
+     },
+     {
+      "text": "caught",
+      "start": 47.58,
+      "end": 47.81
+     },
+     {
+      "text": "by",
+      "start": 48.11,
+      "end": 48.11
+     },
+     {
+      "text": "verification",
+      "start": 48.14,
+      "end": 48.9
+     },
+     {
+      "text": "and",
+      "start": 48.9,
+      "end": 49.1
+     },
+     {
+      "text": "validation.",
+      "start": 49.1,
+      "end": 50
+     },
+     {
+      "text": "Nobody",
+      "start": 50.37,
+      "end": 50.51
+     },
+     {
+      "text": "confirmed",
+      "start": 50.51,
+      "end": 51.28
+     },
+     {
+      "text": "the",
+      "start": 51.28,
+      "end": 51.53
+     },
+     {
+      "text": "software",
+      "start": 51.53,
+      "end": 52.14
+     },
+     {
+      "text": "matched",
+      "start": 52.23,
+      "end": 52.75
+     },
+     {
+      "text": "its",
+      "start": 52.8,
+      "end": 53.05
+     },
+     {
+      "text": "specification.",
+      "start": 53.05,
+      "end": 54.33
+     },
+     {
+      "text": "And",
+      "start": 54.4,
+      "end": 54.58
+     },
+     {
+      "text": "during",
+      "start": 54.58,
+      "end": 55.09
+     },
+     {
+      "text": "the",
+      "start": 55.09,
+      "end": 55.33
+     },
+     {
+      "text": "cruise,",
+      "start": 55.33,
+      "end": 56.14
+     },
+     {
+      "text": "there",
+      "start": 56.14,
+      "end": 56.27
+     },
+     {
+      "text": "were",
+      "start": 56.27,
+      "end": 56.49
+     },
+     {
+      "text": "signs",
+      "start": 56.49,
+      "end": 56.76
+     },
+     {
+      "text": "the",
+      "start": 56.76,
+      "end": 56.92
+     },
+     {
+      "text": "trajectory",
+      "start": 56.92,
+      "end": 57.45
+     },
+     {
+      "text": "was",
+      "start": 57.53,
+      "end": 57.63
+     },
+     {
+      "text": "off.",
+      "start": 57.63,
+      "end": 58
+     },
+     {
+      "text": "Those",
+      "start": 58.36,
+      "end": 58.41
+     },
+     {
+      "text": "concerns",
+      "start": 58.41,
+      "end": 59.06
+     },
+     {
+      "text": "were",
+      "start": 59.06,
+      "end": 59.35
+     },
+     {
+      "text": "raised,",
+      "start": 59.39,
+      "end": 60
+     },
+     {
+      "text": "but",
+      "start": 60.1,
+      "end": 60.27
+     },
+     {
+      "text": "they",
+      "start": 60.27,
+      "end": 60.59
+     },
+     {
+      "text": "were",
+      "start": 60.59,
+      "end": 60.91
+     },
+     {
+      "text": "not",
+      "start": 60.91,
+      "end": 61.15
+     },
+     {
+      "text": "escalated",
+      "start": 61.15,
+      "end": 61.73
+     },
+     {
+      "text": "in",
+      "start": 62.04,
+      "end": 62.04
+     },
+     {
+      "text": "a",
+      "start": 62.05,
+      "end": 62.12
+     },
+     {
+      "text": "way",
+      "start": 62.36,
+      "end": 62.36
+     },
+     {
+      "text": "that",
+      "start": 62.4,
+      "end": 62.61
+     },
+     {
+      "text": "forced",
+      "start": 62.72,
+      "end": 63.17
+     },
+     {
+      "text": "action.",
+      "start": 63.17,
+      "end": 63.81
+     },
+     {
+      "text": "The",
+      "start": 64.2,
+      "end": 64.23
+     },
+     {
+      "text": "unit",
+      "start": 64.38,
+      "end": 64.53
+     },
+     {
+      "text": "mix-up",
+      "start": 64.53,
+      "end": 64.98
+     },
+     {
+      "text": "started",
+      "start": 64.98,
+      "end": 65.51
+     },
+     {
+      "text": "the",
+      "start": 65.51,
+      "end": 65.73
+     },
+     {
+      "text": "problem.",
+      "start": 65.73,
+      "end": 66.42
+     },
+     {
+      "text": "The",
+      "start": 66.42,
+      "end": 66.65
+     },
+     {
+      "text": "missing",
+      "start": 66.65,
+      "end": 67.18
+     },
+     {
+      "text": "checks",
+      "start": 67.18,
+      "end": 67.62
+     },
+     {
+      "text": "let",
+      "start": 67.62,
+      "end": 67.81
+     },
+     {
+      "text": "it",
+      "start": 68.01,
+      "end": 68.01
+     },
+     {
+      "text": "finish.",
+      "start": 68.39,
+      "end": 68.75
+     }
+    ]
+   },
+   {
+    "id": 5,
+    "title": "Polar Lander: the descent",
+    "visual": "Vertical descent profile: entry, parachute, legs swinging out (flash at each leg sensor), radar lock, engine burn, altitude counter 1,500 m down to 40 m, then engines cut; impact speed label 22 m/s (50 mph)",
+    "text": "Less than three months later, all eyes turned to Mars Polar Lander. On the third of December it began its descent. There was no live link during the final minutes, so nobody could watch it happen. The plan went like this. Heat shield through the upper atmosphere. Parachute. Then the three landing legs swing out and lock. Then the descent engines take over to slow the lander for a gentle touchdown. On each leg was a small sensor. Its job was to feel the moment of touchdown and tell the computer to cut the engines. Here is the catch. When the legs snapped open on the parachute, high above the ground, the jolt could trigger those sensors for a split second. The software was meant to ignore any signal before it started listening for touchdown. But it kept that brief false signal in memory. At about forty metres above the surface, the software started listening. It saw the remembered signal. And it shut the engines down. The review board estimated the lander then fell to the surface at about twenty-two metres per second, roughly fifty miles per hour.",
+    "audio": "p009/scene_5.wav",
+    "audioSec": 70.025,
+    "startFrame": 7882,
+    "durationFrames": 2119,
+    "captions": [
+     {
+      "start": 0.2,
+      "end": 3,
+      "text": "Less than three months later, all eyes turned"
+     },
+     {
+      "start": 3,
+      "end": 5.16,
+      "text": "to Mars Polar Lander."
+     },
+     {
+      "start": 5.29,
+      "end": 7.27,
+      "text": "On the third of December it began its"
+     },
+     {
+      "start": 7.27,
+      "end": 7.95,
+      "text": "descent."
+     },
+     {
+      "start": 8.27,
+      "end": 9.69,
+      "text": "There was no live link during the final"
+     },
+     {
+      "start": 9.98,
+      "end": 13.56,
+      "text": "minutes, so nobody could watch it happen."
+     },
+     {
+      "start": 13.76,
+      "end": 15.31,
+      "text": "The plan went like this."
+     },
+     {
+      "start": 15.31,
+      "end": 17.98,
+      "text": "Heat shield through the upper atmosphere."
+     },
+     {
+      "start": 17.98,
+      "end": 18.91,
+      "text": "Parachute."
+     },
+     {
+      "start": 19.12,
+      "end": 21.29,
+      "text": "Then the three landing legs swing out and"
+     },
+     {
+      "start": 21.29,
+      "end": 21.84,
+      "text": "lock."
+     },
+     {
+      "start": 22.14,
+      "end": 24.45,
+      "text": "Then the descent engines take over to slow"
+     },
+     {
+      "start": 24.45,
+      "end": 26.84,
+      "text": "the lander for a gentle touchdown."
+     },
+     {
+      "start": 26.84,
+      "end": 28.96,
+      "text": "On each leg was a small sensor."
+     },
+     {
+      "start": 28.96,
+      "end": 31,
+      "text": "Its job was to feel the moment of"
+     },
+     {
+      "start": 31,
+      "end": 33.66,
+      "text": "touchdown and tell the computer to cut the"
+     },
+     {
+      "start": 33.66,
+      "end": 34.52,
+      "text": "engines."
+     },
+     {
+      "start": 34.92,
+      "end": 36.27,
+      "text": "Here is the catch."
+     },
+     {
+      "start": 36.62,
+      "end": 38.87,
+      "text": "When the legs snapped open on the parachute,"
+     },
+     {
+      "start": 38.87,
+      "end": 41.46,
+      "text": "high above the ground, the jolt could trigger"
+     },
+     {
+      "start": 41.86,
+      "end": 44.04,
+      "text": "those sensors for a split second."
+     },
+     {
+      "start": 44.24,
+      "end": 46.72,
+      "text": "The software was meant to ignore any signal"
+     },
+     {
+      "start": 46.72,
+      "end": 49.66,
+      "text": "before it started listening for touchdown."
+     },
+     {
+      "start": 49.88,
+      "end": 51.92,
+      "text": "But it kept that brief false signal in"
+     },
+     {
+      "start": 51.92,
+      "end": 52.64,
+      "text": "memory."
+     },
+     {
+      "start": 52.77,
+      "end": 55.18,
+      "text": "At about forty metres above the surface, the"
+     },
+     {
+      "start": 55.18,
+      "end": 57.02,
+      "text": "software started listening."
+     },
+     {
+      "start": 57.2,
+      "end": 59.18,
+      "text": "It saw the remembered signal."
+     },
+     {
+      "start": 59.18,
+      "end": 61.46,
+      "text": "And it shut the engines down."
+     },
+     {
+      "start": 61.76,
+      "end": 64.35,
+      "text": "The review board estimated the lander then fell"
+     },
+     {
+      "start": 64.35,
+      "end": 66.8,
+      "text": "to the surface at about twenty-two metres per"
+     },
+     {
+      "start": 66.8,
+      "end": 69.46,
+      "text": "second, roughly fifty miles per hour."
+     }
+    ],
+    "words": [
+     {
+      "text": "Less",
+      "start": 0.2,
+      "end": 0.27
+     },
+     {
+      "text": "than",
+      "start": 0.41,
+      "end": 0.54
+     },
+     {
+      "text": "three",
+      "start": 0.54,
+      "end": 0.81
+     },
+     {
+      "text": "months",
+      "start": 0.93,
+      "end": 1.27
+     },
+     {
+      "text": "later,",
+      "start": 1.29,
+      "end": 1.75
+     },
+     {
+      "text": "all",
+      "start": 2.02,
+      "end": 2.21
+     },
+     {
+      "text": "eyes",
+      "start": 2.21,
+      "end": 2.7
+     },
+     {
+      "text": "turned",
+      "start": 2.77,
+      "end": 3
+     },
+     {
+      "text": "to",
+      "start": 3,
+      "end": 3.18
+     },
+     {
+      "text": "Mars",
+      "start": 3.18,
+      "end": 3.59
+     },
+     {
+      "text": "Polar",
+      "start": 3.68,
+      "end": 4.08
+     },
+     {
+      "text": "Lander.",
+      "start": 4.08,
+      "end": 5.16
+     },
+     {
+      "text": "On",
+      "start": 5.29,
+      "end": 5.29
+     },
+     {
+      "text": "the",
+      "start": 5.49,
+      "end": 5.49
+     },
+     {
+      "text": "third",
+      "start": 5.49,
+      "end": 5.85
+     },
+     {
+      "text": "of",
+      "start": 5.85,
+      "end": 5.95
+     },
+     {
+      "text": "December",
+      "start": 5.95,
+      "end": 6.61
+     },
+     {
+      "text": "it",
+      "start": 6.61,
+      "end": 6.74
+     },
+     {
+      "text": "began",
+      "start": 6.74,
+      "end": 6.91
+     },
+     {
+      "text": "its",
+      "start": 7.18,
+      "end": 7.27
+     },
+     {
+      "text": "descent.",
+      "start": 7.27,
+      "end": 7.95
+     },
+     {
+      "text": "There",
+      "start": 8.27,
+      "end": 8.27
+     },
+     {
+      "text": "was",
+      "start": 8.37,
+      "end": 8.46
+     },
+     {
+      "text": "no",
+      "start": 8.46,
+      "end": 8.57
+     },
+     {
+      "text": "live",
+      "start": 8.58,
+      "end": 8.77
+     },
+     {
+      "text": "link",
+      "start": 8.89,
+      "end": 9.08
+     },
+     {
+      "text": "during",
+      "start": 9.08,
+      "end": 9.46
+     },
+     {
+      "text": "the",
+      "start": 9.46,
+      "end": 9.65
+     },
+     {
+      "text": "final",
+      "start": 9.65,
+      "end": 9.69
+     },
+     {
+      "text": "minutes,",
+      "start": 9.98,
+      "end": 10.6
+     },
+     {
+      "text": "so",
+      "start": 10.6,
+      "end": 10.76
+     },
+     {
+      "text": "nobody",
+      "start": 10.81,
+      "end": 11.41
+     },
+     {
+      "text": "could",
+      "start": 11.41,
+      "end": 11.92
+     },
+     {
+      "text": "watch",
+      "start": 11.92,
+      "end": 12.38
+     },
+     {
+      "text": "it",
+      "start": 12.43,
+      "end": 12.46
+     },
+     {
+      "text": "happen.",
+      "start": 13.02,
+      "end": 13.56
+     },
+     {
+      "text": "The",
+      "start": 13.76,
+      "end": 13.8
+     },
+     {
+      "text": "plan",
+      "start": 13.97,
+      "end": 14.12
+     },
+     {
+      "text": "went",
+      "start": 14.12,
+      "end": 14.37
+     },
+     {
+      "text": "like",
+      "start": 14.49,
+      "end": 14.76
+     },
+     {
+      "text": "this.",
+      "start": 14.76,
+      "end": 15.31
+     },
+     {
+      "text": "Heat",
+      "start": 15.31,
+      "end": 15.66
+     },
+     {
+      "text": "shield",
+      "start": 15.66,
+      "end": 16.01
+     },
+     {
+      "text": "through",
+      "start": 16.01,
+      "end": 16.51
+     },
+     {
+      "text": "the",
+      "start": 16.51,
+      "end": 16.68
+     },
+     {
+      "text": "upper",
+      "start": 16.73,
+      "end": 17.07
+     },
+     {
+      "text": "atmosphere.",
+      "start": 17.34,
+      "end": 17.98
+     },
+     {
+      "text": "Parachute.",
+      "start": 17.98,
+      "end": 18.91
+     },
+     {
+      "text": "Then",
+      "start": 19.12,
+      "end": 19.2
+     },
+     {
+      "text": "the",
+      "start": 19.33,
+      "end": 19.41
+     },
+     {
+      "text": "three",
+      "start": 19.41,
+      "end": 19.73
+     },
+     {
+      "text": "landing",
+      "start": 19.85,
+      "end": 20.25
+     },
+     {
+      "text": "legs",
+      "start": 20.25,
+      "end": 20.53
+     },
+     {
+      "text": "swing",
+      "start": 20.53,
+      "end": 20.66
+     },
+     {
+      "text": "out",
+      "start": 20.94,
+      "end": 21.09
+     },
+     {
+      "text": "and",
+      "start": 21.09,
+      "end": 21.29
+     },
+     {
+      "text": "lock.",
+      "start": 21.29,
+      "end": 21.84
+     },
+     {
+      "text": "Then",
+      "start": 22.14,
+      "end": 22.14
+     },
+     {
+      "text": "the",
+      "start": 22.25,
+      "end": 22.36
+     },
+     {
+      "text": "descent",
+      "start": 22.36,
+      "end": 22.88
+     },
+     {
+      "text": "engines",
+      "start": 22.88,
+      "end": 23.4
+     },
+     {
+      "text": "take",
+      "start": 23.4,
+      "end": 23.59
+     },
+     {
+      "text": "over",
+      "start": 23.86,
+      "end": 24
+     },
+     {
+      "text": "to",
+      "start": 24,
+      "end": 24.12
+     },
+     {
+      "text": "slow",
+      "start": 24.2,
+      "end": 24.45
+     },
+     {
+      "text": "the",
+      "start": 24.45,
+      "end": 24.64
+     },
+     {
+      "text": "lander",
+      "start": 24.69,
+      "end": 25.12
+     },
+     {
+      "text": "for",
+      "start": 25.12,
+      "end": 25.34
+     },
+     {
+      "text": "a",
+      "start": 25.34,
+      "end": 25.41
+     },
+     {
+      "text": "gentle",
+      "start": 25.41,
+      "end": 25.86
+     },
+     {
+      "text": "touchdown.",
+      "start": 25.86,
+      "end": 26.84
+     },
+     {
+      "text": "On",
+      "start": 26.84,
+      "end": 27.25
+     },
+     {
+      "text": "each",
+      "start": 27.25,
+      "end": 27.44
+     },
+     {
+      "text": "leg",
+      "start": 27.44,
+      "end": 27.65
+     },
+     {
+      "text": "was",
+      "start": 27.77,
+      "end": 27.9
+     },
+     {
+      "text": "a",
+      "start": 27.9,
+      "end": 27.97
+     },
+     {
+      "text": "small",
+      "start": 27.97,
+      "end": 28.35
+     },
+     {
+      "text": "sensor.",
+      "start": 28.35,
+      "end": 28.96
+     },
+     {
+      "text": "Its",
+      "start": 28.96,
+      "end": 29.12
+     },
+     {
+      "text": "job",
+      "start": 29.2,
+      "end": 29.42
+     },
+     {
+      "text": "was",
+      "start": 29.42,
+      "end": 29.64
+     },
+     {
+      "text": "to",
+      "start": 29.69,
+      "end": 29.8
+     },
+     {
+      "text": "feel",
+      "start": 29.8,
+      "end": 30.1
+     },
+     {
+      "text": "the",
+      "start": 30.1,
+      "end": 30.33
+     },
+     {
+      "text": "moment",
+      "start": 30.33,
+      "end": 30.79
+     },
+     {
+      "text": "of",
+      "start": 30.79,
+      "end": 31
+     },
+     {
+      "text": "touchdown",
+      "start": 31,
+      "end": 31.29
+     },
+     {
+      "text": "and",
+      "start": 31.9,
+      "end": 31.96
+     },
+     {
+      "text": "tell",
+      "start": 31.96,
+      "end": 32.09
+     },
+     {
+      "text": "the",
+      "start": 32.32,
+      "end": 32.36
+     },
+     {
+      "text": "computer",
+      "start": 32.53,
+      "end": 33
+     },
+     {
+      "text": "to",
+      "start": 33.05,
+      "end": 33.18
+     },
+     {
+      "text": "cut",
+      "start": 33.18,
+      "end": 33.39
+     },
+     {
+      "text": "the",
+      "start": 33.43,
+      "end": 33.66
+     },
+     {
+      "text": "engines.",
+      "start": 33.66,
+      "end": 34.52
+     },
+     {
+      "text": "Here",
+      "start": 34.92,
+      "end": 34.96
+     },
+     {
+      "text": "is",
+      "start": 34.96,
+      "end": 35.13
+     },
+     {
+      "text": "the",
+      "start": 35.21,
+      "end": 35.51
+     },
+     {
+      "text": "catch.",
+      "start": 35.51,
+      "end": 36.27
+     },
+     {
+      "text": "When",
+      "start": 36.62,
+      "end": 36.68
+     },
+     {
+      "text": "the",
+      "start": 36.83,
+      "end": 36.87
+     },
+     {
+      "text": "legs",
+      "start": 36.87,
+      "end": 37.13
+     },
+     {
+      "text": "snapped",
+      "start": 37.13,
+      "end": 37.58
+     },
+     {
+      "text": "open",
+      "start": 37.58,
+      "end": 37.83
+     },
+     {
+      "text": "on",
+      "start": 37.84,
+      "end": 37.97
+     },
+     {
+      "text": "the",
+      "start": 37.97,
+      "end": 38.16
+     },
+     {
+      "text": "parachute,",
+      "start": 38.44,
+      "end": 38.87
+     },
+     {
+      "text": "high",
+      "start": 38.87,
+      "end": 39.13
+     },
+     {
+      "text": "above",
+      "start": 39.13,
+      "end": 39.45
+     },
+     {
+      "text": "the",
+      "start": 39.45,
+      "end": 39.64
+     },
+     {
+      "text": "ground,",
+      "start": 39.64,
+      "end": 40.14
+     },
+     {
+      "text": "the",
+      "start": 40.18,
+      "end": 40.35
+     },
+     {
+      "text": "jolt",
+      "start": 40.35,
+      "end": 40.6
+     },
+     {
+      "text": "could",
+      "start": 40.6,
+      "end": 40.86
+     },
+     {
+      "text": "trigger",
+      "start": 41.46,
+      "end": 41.46
+     },
+     {
+      "text": "those",
+      "start": 41.86,
+      "end": 41.89
+     },
+     {
+      "text": "sensors",
+      "start": 41.89,
+      "end": 42.49
+     },
+     {
+      "text": "for",
+      "start": 42.49,
+      "end": 42.73
+     },
+     {
+      "text": "a",
+      "start": 42.77,
+      "end": 42.82
+     },
+     {
+      "text": "split",
+      "start": 42.82,
+      "end": 43.21
+     },
+     {
+      "text": "second.",
+      "start": 43.48,
+      "end": 44.04
+     },
+     {
+      "text": "The",
+      "start": 44.24,
+      "end": 44.26
+     },
+     {
+      "text": "software",
+      "start": 44.45,
+      "end": 44.85
+     },
+     {
+      "text": "was",
+      "start": 44.97,
+      "end": 45.08
+     },
+     {
+      "text": "meant",
+      "start": 45.08,
+      "end": 45.4
+     },
+     {
+      "text": "to",
+      "start": 45.45,
+      "end": 45.6
+     },
+     {
+      "text": "ignore",
+      "start": 45.6,
+      "end": 45.76
+     },
+     {
+      "text": "any",
+      "start": 46.06,
+      "end": 46.27
+     },
+     {
+      "text": "signal",
+      "start": 46.27,
+      "end": 46.72
+     },
+     {
+      "text": "before",
+      "start": 46.72,
+      "end": 47.17
+     },
+     {
+      "text": "it",
+      "start": 47.17,
+      "end": 47.32
+     },
+     {
+      "text": "started",
+      "start": 47.32,
+      "end": 47.84
+     },
+     {
+      "text": "listening",
+      "start": 47.84,
+      "end": 48.46
+     },
+     {
+      "text": "for",
+      "start": 48.51,
+      "end": 48.55
+     },
+     {
+      "text": "touchdown.",
+      "start": 49.1,
+      "end": 49.66
+     },
+     {
+      "text": "But",
+      "start": 49.88,
+      "end": 49.9
+     },
+     {
+      "text": "it",
+      "start": 50.04,
+      "end": 50.04
+     },
+     {
+      "text": "kept",
+      "start": 50.09,
+      "end": 50.3
+     },
+     {
+      "text": "that",
+      "start": 50.37,
+      "end": 50.62
+     },
+     {
+      "text": "brief",
+      "start": 50.62,
+      "end": 50.95
+     },
+     {
+      "text": "false",
+      "start": 50.98,
+      "end": 51.34
+     },
+     {
+      "text": "signal",
+      "start": 51.34,
+      "end": 51.78
+     },
+     {
+      "text": "in",
+      "start": 51.78,
+      "end": 51.92
+     },
+     {
+      "text": "memory.",
+      "start": 51.92,
+      "end": 52.64
+     },
+     {
+      "text": "At",
+      "start": 52.77,
+      "end": 52.77
+     },
+     {
+      "text": "about",
+      "start": 53.04,
+      "end": 53.1
+     },
+     {
+      "text": "forty",
+      "start": 53.1,
+      "end": 53.49
+     },
+     {
+      "text": "metres",
+      "start": 53.49,
+      "end": 53.88
+     },
+     {
+      "text": "above",
+      "start": 53.88,
+      "end": 54.21
+     },
+     {
+      "text": "the",
+      "start": 54.21,
+      "end": 54.38
+     },
+     {
+      "text": "surface,",
+      "start": 54.66,
+      "end": 54.92
+     },
+     {
+      "text": "the",
+      "start": 55,
+      "end": 55.18
+     },
+     {
+      "text": "software",
+      "start": 55.18,
+      "end": 55.71
+     },
+     {
+      "text": "started",
+      "start": 55.71,
+      "end": 56.17
+     },
+     {
+      "text": "listening.",
+      "start": 56.17,
+      "end": 57.02
+     },
+     {
+      "text": "It",
+      "start": 57.2,
+      "end": 57.2
+     },
+     {
+      "text": "saw",
+      "start": 57.42,
+      "end": 57.47
+     },
+     {
+      "text": "the",
+      "start": 57.47,
+      "end": 57.74
+     },
+     {
+      "text": "remembered",
+      "start": 57.74,
+      "end": 58.64
+     },
+     {
+      "text": "signal.",
+      "start": 58.64,
+      "end": 59.18
+     },
+     {
+      "text": "And",
+      "start": 59.18,
+      "end": 59.44
+     },
+     {
+      "text": "it",
+      "start": 59.44,
+      "end": 59.63
+     },
+     {
+      "text": "shut",
+      "start": 59.63,
+      "end": 59.99
+     },
+     {
+      "text": "the",
+      "start": 59.99,
+      "end": 60.26
+     },
+     {
+      "text": "engines",
+      "start": 60.26,
+      "end": 60.89
+     },
+     {
+      "text": "down.",
+      "start": 60.89,
+      "end": 61.46
+     },
+     {
+      "text": "The",
+      "start": 61.76,
+      "end": 61.77
+     },
+     {
+      "text": "review",
+      "start": 61.97,
+      "end": 62.18
+     },
+     {
+      "text": "board",
+      "start": 62.25,
+      "end": 62.54
+     },
+     {
+      "text": "estimated",
+      "start": 62.54,
+      "end": 63.17
+     },
+     {
+      "text": "the",
+      "start": 63.17,
+      "end": 63.31
+     },
+     {
+      "text": "lander",
+      "start": 63.58,
+      "end": 63.8
+     },
+     {
+      "text": "then",
+      "start": 63.8,
+      "end": 64.07
+     },
+     {
+      "text": "fell",
+      "start": 64.07,
+      "end": 64.35
+     },
+     {
+      "text": "to",
+      "start": 64.35,
+      "end": 64.5
+     },
+     {
+      "text": "the",
+      "start": 64.5,
+      "end": 64.7
+     },
+     {
+      "text": "surface",
+      "start": 64.71,
+      "end": 65.15
+     },
+     {
+      "text": "at",
+      "start": 65.24,
+      "end": 65.34
+     },
+     {
+      "text": "about",
+      "start": 65.34,
+      "end": 65.69
+     },
+     {
+      "text": "twenty-two",
+      "start": 65.69,
+      "end": 66.155
+     },
+     {
+      "text": "metres",
+      "start": 66.155,
+      "end": 66.62
+     },
+     {
+      "text": "per",
+      "start": 66.62,
+      "end": 66.8
+     },
+     {
+      "text": "second,",
+      "start": 66.8,
+      "end": 67.72
+     },
+     {
+      "text": "roughly",
+      "start": 68.12,
+      "end": 68.15
+     },
+     {
+      "text": "fifty",
+      "start": 68.15,
+      "end": 68.52
+     },
+     {
+      "text": "miles",
+      "start": 68.52,
+      "end": 68.83
+     },
+     {
+      "text": "per",
+      "start": 68.83,
+      "end": 68.99
+     },
+     {
+      "text": "hour.",
+      "start": 69.03,
+      "end": 69.46
+     }
+    ]
+   },
+   {
+    "id": 6,
+    "title": "What the boards found",
+    "visual": "Two investigation report covers drawn as blueprint cards; a list of findings ticking in: 'under-funded', 'under-staffed', 'inadequate testing', 'poor communication'; a test-rig drawing of a leg sensor flashing",
+    "text": "Investigators were careful with their words. For the lander, there was no data from the final descent, so the board called premature engine shutdown the most probable cause, not a certainty. But they had strong evidence. In tests, the touchdown sensors really did produce false signals when the legs deployed. And the board found that the system tests that should have caught it were incomplete. One test that could have revealed the problem had been run with the sensors wired incorrectly, and it was not repeated after the wiring was fixed. The board called the underlying cause inadequate software design and systems testing. Then a wider review looked at both losses together. It was led by Thomas Young, a veteran of the Viking missions. His team found that the Mars programme had been under-funded and under-staffed, and that communication between NASA, the laboratory and the contractor had been poor. But they did not say faster, better, cheaper was wrong. They said it could work, if it was properly implemented. And they said every flaw they found was correctable.",
+    "audio": "p009/scene_6.wav",
+    "audioSec": 69.6,
+    "startFrame": 10001,
+    "durationFrames": 2106,
+    "captions": [
+     {
+      "start": 0.4,
+      "end": 3,
+      "text": "Investigators were careful with their words."
+     },
+     {
+      "start": 3.2,
+      "end": 5,
+      "text": "For the lander, there was no data from"
+     },
+     {
+      "start": 5.1,
+      "end": 8.09,
+      "text": "the final descent, so the board called premature"
+     },
+     {
+      "start": 8.09,
+      "end": 11.1,
+      "text": "engine shutdown the most probable cause, not a"
+     },
+     {
+      "start": 11.1,
+      "end": 12,
+      "text": "certainty."
+     },
+     {
+      "start": 12.2,
+      "end": 14.49,
+      "text": "But they had strong evidence."
+     },
+     {
+      "start": 14.66,
+      "end": 18.05,
+      "text": "In tests, the touchdown sensors really did produce"
+     },
+     {
+      "start": 18.05,
+      "end": 20.5,
+      "text": "false signals when the legs deployed."
+     },
+     {
+      "start": 20.7,
+      "end": 22.8,
+      "text": "And the board found that the system tests"
+     },
+     {
+      "start": 22.8,
+      "end": 25.5,
+      "text": "that should have caught it were incomplete."
+     },
+     {
+      "start": 25.7,
+      "end": 28.02,
+      "text": "One test that could have revealed the problem"
+     },
+     {
+      "start": 28.16,
+      "end": 31,
+      "text": "had been run with the sensors wired incorrectly,"
+     },
+     {
+      "start": 31.2,
+      "end": 33.75,
+      "text": "and it was not repeated after the wiring"
+     },
+     {
+      "start": 34.24,
+      "end": 34.9,
+      "text": "was fixed."
+     },
+     {
+      "start": 35.19,
+      "end": 37.76,
+      "text": "The board called the underlying cause inadequate software"
+     },
+     {
+      "start": 38.29,
+      "end": 40,
+      "text": "design and systems testing."
+     },
+     {
+      "start": 40.31,
+      "end": 42.52,
+      "text": "Then a wider review looked at both losses"
+     },
+     {
+      "start": 42.59,
+      "end": 43.5,
+      "text": "together."
+     },
+     {
+      "start": 43.68,
+      "end": 46.25,
+      "text": "It was led by Thomas Young, a veteran"
+     },
+     {
+      "start": 46.55,
+      "end": 48.5,
+      "text": "of the Viking missions."
+     },
+     {
+      "start": 48.7,
+      "end": 51.02,
+      "text": "His team found that the Mars programme had"
+     },
+     {
+      "start": 51.05,
+      "end": 55.42,
+      "text": "been under-funded and under-staffed, and that communication between"
+     },
+     {
+      "start": 55.42,
+      "end": 58.4,
+      "text": "NASA, the laboratory and the contractor had been"
+     },
+     {
+      "start": 58.4,
+      "end": 59,
+      "text": "poor."
+     },
+     {
+      "start": 59.2,
+      "end": 62.12,
+      "text": "But they did not say faster, better, cheaper"
+     },
+     {
+      "start": 62.27,
+      "end": 62.9,
+      "text": "was wrong."
+     },
+     {
+      "start": 63.2,
+      "end": 64.69,
+      "text": "They said it could work, if it was"
+     },
+     {
+      "start": 64.78,
+      "end": 66,
+      "text": "properly implemented."
+     },
+     {
+      "start": 66.2,
+      "end": 68.4,
+      "text": "And they said every flaw they found was"
+     },
+     {
+      "start": 68.4,
+      "end": 69.5,
+      "text": "correctable."
+     }
+    ],
+    "words": [
+     {
+      "text": "Investigators",
+      "start": 0.4,
+      "end": 1.02
+     },
+     {
+      "text": "were",
+      "start": 1.02,
+      "end": 1.33
+     },
+     {
+      "text": "careful",
+      "start": 1.33,
+      "end": 1.88
+     },
+     {
+      "text": "with",
+      "start": 1.88,
+      "end": 2.19
+     },
+     {
+      "text": "their",
+      "start": 2.19,
+      "end": 2.52
+     },
+     {
+      "text": "words.",
+      "start": 2.57,
+      "end": 3
+     },
+     {
+      "text": "For",
+      "start": 3.2,
+      "end": 3.21
+     },
+     {
+      "text": "the",
+      "start": 3.4,
+      "end": 3.42
+     },
+     {
+      "text": "lander,",
+      "start": 3.42,
+      "end": 4
+     },
+     {
+      "text": "there",
+      "start": 4,
+      "end": 4.25
+     },
+     {
+      "text": "was",
+      "start": 4.29,
+      "end": 4.48
+     },
+     {
+      "text": "no",
+      "start": 4.48,
+      "end": 4.6
+     },
+     {
+      "text": "data",
+      "start": 4.6,
+      "end": 4.84
+     },
+     {
+      "text": "from",
+      "start": 4.84,
+      "end": 5
+     },
+     {
+      "text": "the",
+      "start": 5.1,
+      "end": 5.26
+     },
+     {
+      "text": "final",
+      "start": 5.26,
+      "end": 5.49
+     },
+     {
+      "text": "descent,",
+      "start": 5.55,
+      "end": 6.5
+     },
+     {
+      "text": "so",
+      "start": 6.62,
+      "end": 6.62
+     },
+     {
+      "text": "the",
+      "start": 6.81,
+      "end": 6.81
+     },
+     {
+      "text": "board",
+      "start": 6.9,
+      "end": 7.13
+     },
+     {
+      "text": "called",
+      "start": 7.13,
+      "end": 7.51
+     },
+     {
+      "text": "premature",
+      "start": 7.51,
+      "end": 8.09
+     },
+     {
+      "text": "engine",
+      "start": 8.09,
+      "end": 8.5
+     },
+     {
+      "text": "shutdown",
+      "start": 8.5,
+      "end": 9.01
+     },
+     {
+      "text": "the",
+      "start": 9.01,
+      "end": 9.25
+     },
+     {
+      "text": "most",
+      "start": 9.25,
+      "end": 9.27
+     },
+     {
+      "text": "probable",
+      "start": 9.79,
+      "end": 10.25
+     },
+     {
+      "text": "cause,",
+      "start": 10.25,
+      "end": 10.81
+     },
+     {
+      "text": "not",
+      "start": 10.81,
+      "end": 11
+     },
+     {
+      "text": "a",
+      "start": 11,
+      "end": 11.1
+     },
+     {
+      "text": "certainty.",
+      "start": 11.1,
+      "end": 12
+     },
+     {
+      "text": "But",
+      "start": 12.2,
+      "end": 12.27
+     },
+     {
+      "text": "they",
+      "start": 12.4,
+      "end": 12.64
+     },
+     {
+      "text": "had",
+      "start": 12.64,
+      "end": 12.91
+     },
+     {
+      "text": "strong",
+      "start": 12.91,
+      "end": 13.38
+     },
+     {
+      "text": "evidence.",
+      "start": 13.46,
+      "end": 14.49
+     },
+     {
+      "text": "In",
+      "start": 14.66,
+      "end": 14.66
+     },
+     {
+      "text": "tests,",
+      "start": 14.9,
+      "end": 15.22
+     },
+     {
+      "text": "the",
+      "start": 15.22,
+      "end": 15.46
+     },
+     {
+      "text": "touchdown",
+      "start": 15.46,
+      "end": 16.17
+     },
+     {
+      "text": "sensors",
+      "start": 16.28,
+      "end": 16.74
+     },
+     {
+      "text": "really",
+      "start": 16.74,
+      "end": 17.22
+     },
+     {
+      "text": "did",
+      "start": 17.22,
+      "end": 17.27
+     },
+     {
+      "text": "produce",
+      "start": 17.79,
+      "end": 18.05
+     },
+     {
+      "text": "false",
+      "start": 18.05,
+      "end": 18.39
+     },
+     {
+      "text": "signals",
+      "start": 18.67,
+      "end": 19
+     },
+     {
+      "text": "when",
+      "start": 19,
+      "end": 19.31
+     },
+     {
+      "text": "the",
+      "start": 19.31,
+      "end": 19.52
+     },
+     {
+      "text": "legs",
+      "start": 19.58,
+      "end": 19.8
+     },
+     {
+      "text": "deployed.",
+      "start": 19.95,
+      "end": 20.5
+     },
+     {
+      "text": "And",
+      "start": 20.7,
+      "end": 20.7
+     },
+     {
+      "text": "the",
+      "start": 20.9,
+      "end": 20.9
+     },
+     {
+      "text": "board",
+      "start": 20.9,
+      "end": 21.22
+     },
+     {
+      "text": "found",
+      "start": 21.3,
+      "end": 21.58
+     },
+     {
+      "text": "that",
+      "start": 21.58,
+      "end": 21.85
+     },
+     {
+      "text": "the",
+      "start": 21.85,
+      "end": 22.05
+     },
+     {
+      "text": "system",
+      "start": 22.05,
+      "end": 22.46
+     },
+     {
+      "text": "tests",
+      "start": 22.46,
+      "end": 22.8
+     },
+     {
+      "text": "that",
+      "start": 22.8,
+      "end": 23.02
+     },
+     {
+      "text": "should",
+      "start": 23.07,
+      "end": 23.27
+     },
+     {
+      "text": "have",
+      "start": 23.75,
+      "end": 23.75
+     },
+     {
+      "text": "caught",
+      "start": 23.79,
+      "end": 24.16
+     },
+     {
+      "text": "it",
+      "start": 24.16,
+      "end": 24.28
+     },
+     {
+      "text": "were",
+      "start": 24.28,
+      "end": 24.41
+     },
+     {
+      "text": "incomplete.",
+      "start": 24.67,
+      "end": 25.5
+     },
+     {
+      "text": "One",
+      "start": 25.7,
+      "end": 25.71
+     },
+     {
+      "text": "test",
+      "start": 25.9,
+      "end": 25.99
+     },
+     {
+      "text": "that",
+      "start": 25.99,
+      "end": 26.22
+     },
+     {
+      "text": "could",
+      "start": 26.3,
+      "end": 26.62
+     },
+     {
+      "text": "have",
+      "start": 26.62,
+      "end": 26.88
+     },
+     {
+      "text": "revealed",
+      "start": 26.96,
+      "end": 27.46
+     },
+     {
+      "text": "the",
+      "start": 27.46,
+      "end": 27.67
+     },
+     {
+      "text": "problem",
+      "start": 27.67,
+      "end": 28.02
+     },
+     {
+      "text": "had",
+      "start": 28.16,
+      "end": 28.27
+     },
+     {
+      "text": "been",
+      "start": 28.65,
+      "end": 28.65
+     },
+     {
+      "text": "run",
+      "start": 28.77,
+      "end": 28.86
+     },
+     {
+      "text": "with",
+      "start": 28.86,
+      "end": 29.14
+     },
+     {
+      "text": "the",
+      "start": 29.14,
+      "end": 29.35
+     },
+     {
+      "text": "sensors",
+      "start": 29.35,
+      "end": 29.84
+     },
+     {
+      "text": "wired",
+      "start": 29.84,
+      "end": 30.16
+     },
+     {
+      "text": "incorrectly,",
+      "start": 30.19,
+      "end": 31
+     },
+     {
+      "text": "and",
+      "start": 31.2,
+      "end": 31.27
+     },
+     {
+      "text": "it",
+      "start": 31.4,
+      "end": 31.45
+     },
+     {
+      "text": "was",
+      "start": 31.45,
+      "end": 31.72
+     },
+     {
+      "text": "not",
+      "start": 31.72,
+      "end": 31.99
+     },
+     {
+      "text": "repeated",
+      "start": 31.99,
+      "end": 32.67
+     },
+     {
+      "text": "after",
+      "start": 32.78,
+      "end": 33.16
+     },
+     {
+      "text": "the",
+      "start": 33.16,
+      "end": 33.43
+     },
+     {
+      "text": "wiring",
+      "start": 33.43,
+      "end": 33.75
+     },
+     {
+      "text": "was",
+      "start": 34.24,
+      "end": 34.24
+     },
+     {
+      "text": "fixed.",
+      "start": 34.29,
+      "end": 34.9
+     },
+     {
+      "text": "The",
+      "start": 35.19,
+      "end": 35.19
+     },
+     {
+      "text": "board",
+      "start": 35.4,
+      "end": 35.51
+     },
+     {
+      "text": "called",
+      "start": 35.51,
+      "end": 35.84
+     },
+     {
+      "text": "the",
+      "start": 35.9,
+      "end": 36.09
+     },
+     {
+      "text": "underlying",
+      "start": 36.09,
+      "end": 36.67
+     },
+     {
+      "text": "cause",
+      "start": 36.78,
+      "end": 37
+     },
+     {
+      "text": "inadequate",
+      "start": 37.08,
+      "end": 37.71
+     },
+     {
+      "text": "software",
+      "start": 37.71,
+      "end": 37.76
+     },
+     {
+      "text": "design",
+      "start": 38.29,
+      "end": 38.62
+     },
+     {
+      "text": "and",
+      "start": 38.62,
+      "end": 38.81
+     },
+     {
+      "text": "systems",
+      "start": 38.81,
+      "end": 39.27
+     },
+     {
+      "text": "testing.",
+      "start": 39.27,
+      "end": 40
+     },
+     {
+      "text": "Then",
+      "start": 40.31,
+      "end": 40.31
+     },
+     {
+      "text": "a",
+      "start": 40.38,
+      "end": 40.38
+     },
+     {
+      "text": "wider",
+      "start": 40.4,
+      "end": 40.72
+     },
+     {
+      "text": "review",
+      "start": 40.78,
+      "end": 41.22
+     },
+     {
+      "text": "looked",
+      "start": 41.22,
+      "end": 41.67
+     },
+     {
+      "text": "at",
+      "start": 41.78,
+      "end": 41.83
+     },
+     {
+      "text": "both",
+      "start": 41.83,
+      "end": 42.14
+     },
+     {
+      "text": "losses",
+      "start": 42.14,
+      "end": 42.52
+     },
+     {
+      "text": "together.",
+      "start": 42.59,
+      "end": 43.5
+     },
+     {
+      "text": "It",
+      "start": 43.68,
+      "end": 43.68
+     },
+     {
+      "text": "was",
+      "start": 43.9,
+      "end": 43.96
+     },
+     {
+      "text": "led",
+      "start": 43.96,
+      "end": 44.22
+     },
+     {
+      "text": "by",
+      "start": 44.3,
+      "end": 44.42
+     },
+     {
+      "text": "Thomas",
+      "start": 44.42,
+      "end": 44.98
+     },
+     {
+      "text": "Young,",
+      "start": 44.98,
+      "end": 45.63
+     },
+     {
+      "text": "a",
+      "start": 45.63,
+      "end": 45.72
+     },
+     {
+      "text": "veteran",
+      "start": 45.72,
+      "end": 46.25
+     },
+     {
+      "text": "of",
+      "start": 46.55,
+      "end": 46.55
+     },
+     {
+      "text": "the",
+      "start": 46.76,
+      "end": 46.83
+     },
+     {
+      "text": "Viking",
+      "start": 46.83,
+      "end": 47.38
+     },
+     {
+      "text": "missions.",
+      "start": 47.39,
+      "end": 48.5
+     },
+     {
+      "text": "His",
+      "start": 48.7,
+      "end": 48.73
+     },
+     {
+      "text": "team",
+      "start": 48.9,
+      "end": 49.04
+     },
+     {
+      "text": "found",
+      "start": 49.04,
+      "end": 49.43
+     },
+     {
+      "text": "that",
+      "start": 49.43,
+      "end": 49.74
+     },
+     {
+      "text": "the",
+      "start": 49.74,
+      "end": 49.96
+     },
+     {
+      "text": "Mars",
+      "start": 49.97,
+      "end": 50.2
+     },
+     {
+      "text": "programme",
+      "start": 50.2,
+      "end": 50.83
+     },
+     {
+      "text": "had",
+      "start": 50.83,
+      "end": 51.02
+     },
+     {
+      "text": "been",
+      "start": 51.05,
+      "end": 51.26
+     },
+     {
+      "text": "under-funded",
+      "start": 51.75,
+      "end": 52.23
+     },
+     {
+      "text": "and",
+      "start": 52.23,
+      "end": 52.4
+     },
+     {
+      "text": "under-staffed,",
+      "start": 52.67,
+      "end": 53.5
+     },
+     {
+      "text": "and",
+      "start": 53.7,
+      "end": 53.71
+     },
+     {
+      "text": "that",
+      "start": 53.9,
+      "end": 53.99
+     },
+     {
+      "text": "communication",
+      "start": 53.99,
+      "end": 54.88
+     },
+     {
+      "text": "between",
+      "start": 54.96,
+      "end": 55.42
+     },
+     {
+      "text": "NASA,",
+      "start": 55.42,
+      "end": 55.84
+     },
+     {
+      "text": "the",
+      "start": 55.84,
+      "end": 56.02
+     },
+     {
+      "text": "laboratory",
+      "start": 56.04,
+      "end": 56.77
+     },
+     {
+      "text": "and",
+      "start": 56.79,
+      "end": 56.98
+     },
+     {
+      "text": "the",
+      "start": 56.98,
+      "end": 57.19
+     },
+     {
+      "text": "contractor",
+      "start": 57.19,
+      "end": 57.91
+     },
+     {
+      "text": "had",
+      "start": 57.91,
+      "end": 58.12
+     },
+     {
+      "text": "been",
+      "start": 58.12,
+      "end": 58.4
+     },
+     {
+      "text": "poor.",
+      "start": 58.4,
+      "end": 59
+     },
+     {
+      "text": "But",
+      "start": 59.2,
+      "end": 59.23
+     },
+     {
+      "text": "they",
+      "start": 59.4,
+      "end": 59.53
+     },
+     {
+      "text": "did",
+      "start": 59.53,
+      "end": 59.72
+     },
+     {
+      "text": "not",
+      "start": 59.8,
+      "end": 59.99
+     },
+     {
+      "text": "say",
+      "start": 59.99,
+      "end": 60.22
+     },
+     {
+      "text": "faster,",
+      "start": 60.22,
+      "end": 60.83
+     },
+     {
+      "text": "better,",
+      "start": 60.83,
+      "end": 61.44
+     },
+     {
+      "text": "cheaper",
+      "start": 61.44,
+      "end": 62.12
+     },
+     {
+      "text": "was",
+      "start": 62.27,
+      "end": 62.35
+     },
+     {
+      "text": "wrong.",
+      "start": 62.35,
+      "end": 62.9
+     },
+     {
+      "text": "They",
+      "start": 63.2,
+      "end": 63.26
+     },
+     {
+      "text": "said",
+      "start": 63.4,
+      "end": 63.52
+     },
+     {
+      "text": "it",
+      "start": 63.52,
+      "end": 63.65
+     },
+     {
+      "text": "could",
+      "start": 63.65,
+      "end": 63.98
+     },
+     {
+      "text": "work,",
+      "start": 63.98,
+      "end": 64.24
+     },
+     {
+      "text": "if",
+      "start": 64.24,
+      "end": 64.37
+     },
+     {
+      "text": "it",
+      "start": 64.37,
+      "end": 64.49
+     },
+     {
+      "text": "was",
+      "start": 64.5,
+      "end": 64.69
+     },
+     {
+      "text": "properly",
+      "start": 64.78,
+      "end": 65.23
+     },
+     {
+      "text": "implemented.",
+      "start": 65.23,
+      "end": 66
+     },
+     {
+      "text": "And",
+      "start": 66.2,
+      "end": 66.22
+     },
+     {
+      "text": "they",
+      "start": 66.4,
+      "end": 66.52
+     },
+     {
+      "text": "said",
+      "start": 66.52,
+      "end": 66.82
+     },
+     {
+      "text": "every",
+      "start": 66.82,
+      "end": 67.2
+     },
+     {
+      "text": "flaw",
+      "start": 67.2,
+      "end": 67.49
+     },
+     {
+      "text": "they",
+      "start": 67.51,
+      "end": 67.8
+     },
+     {
+      "text": "found",
+      "start": 67.8,
+      "end": 68.18
+     },
+     {
+      "text": "was",
+      "start": 68.18,
+      "end": 68.4
+     },
+     {
+      "text": "correctable.",
+      "start": 68.4,
+      "end": 69.5
+     }
+    ]
+   },
+   {
+    "id": 7,
+    "title": "The fix and Phoenix",
+    "visual": "Before/after checklist: 'test as you fly', 'independent review', 'margins restored'; the cancelled 2001 lander drawing gets a new name label 'Phoenix'; north-pole landing arc with successful touchdown in May 2008, green signal line",
+    "text": "NASA listened. The Mars programme was restructured. Missions got more people, more money for testing, and more independent review. Engineers took a phrase to heart: test as you fly, and fly as you test. If a spacecraft will shake when its legs deploy, then test it while its legs deploy, with the real wiring and the real software. There was also a quiet second chance. A nearly identical lander had been built for a 2001 mission. After the losses, that mission was cancelled, and the lander went into storage. Years later it was brought back, studied, and modified. Reviewers went through it and produced forty-two corrective actions for weaknesses that could explain what happened in 1999. Then it flew again, under a new name: Phoenix. In May 2008, Phoenix landed safely near the north pole of Mars. It dug into the soil and confirmed water ice just below the surface. The same basic machine that had failed at the south pole succeeded at the north, because the people around it had changed how they checked their work.",
+    "audio": "p009/scene_7.wav",
+    "audioSec": 70.9,
+    "startFrame": 12107,
+    "durationFrames": 2145,
+    "captions": [
+     {
+      "start": 0.4,
+      "end": 1.74,
+      "text": "NASA listened."
+     },
+     {
+      "start": 1.74,
+      "end": 3.75,
+      "text": "The Mars programme was restructured."
+     },
+     {
+      "start": 4.19,
+      "end": 7,
+      "text": "Missions got more people, more money for testing,"
+     },
+     {
+      "start": 7,
+      "end": 8.42,
+      "text": "and more independent review."
+     },
+     {
+      "start": 9.4,
+      "end": 11.9,
+      "text": "Engineers took a phrase to heart: test as"
+     },
+     {
+      "start": 11.9,
+      "end": 14,
+      "text": "you fly, and fly as you test."
+     },
+     {
+      "start": 14.14,
+      "end": 16.38,
+      "text": "If a spacecraft will shake when its legs"
+     },
+     {
+      "start": 16.38,
+      "end": 20.14,
+      "text": "deploy, then test it while its legs deploy,"
+     },
+     {
+      "start": 20.14,
+      "end": 23,
+      "text": "with the real wiring and the real software."
+     },
+     {
+      "start": 23.39,
+      "end": 25.98,
+      "text": "There was also a quiet second chance."
+     },
+     {
+      "start": 26,
+      "end": 28.42,
+      "text": "A nearly identical lander had been built for"
+     },
+     {
+      "start": 28.42,
+      "end": 29.98,
+      "text": "a 2001 mission."
+     },
+     {
+      "start": 30.35,
+      "end": 33.01,
+      "text": "After the losses, that mission was cancelled, and"
+     },
+     {
+      "start": 33.02,
+      "end": 35,
+      "text": "the lander went into storage."
+     },
+     {
+      "start": 35.37,
+      "end": 38.12,
+      "text": "Years later it was brought back, studied, and"
+     },
+     {
+      "start": 38.12,
+      "end": 38.74,
+      "text": "modified."
+     },
+     {
+      "start": 39.39,
+      "end": 42.5,
+      "text": "Reviewers went through it and produced forty-two corrective"
+     },
+     {
+      "start": 42.5,
+      "end": 45.84,
+      "text": "actions for weaknesses that could explain what happened"
+     },
+     {
+      "start": 45.84,
+      "end": 46.99,
+      "text": "in 1999."
+     },
+     {
+      "start": 47.38,
+      "end": 50.01,
+      "text": "Then it flew again, under a new name:"
+     },
+     {
+      "start": 50.01,
+      "end": 50.73,
+      "text": "Phoenix."
+     },
+     {
+      "start": 51.15,
+      "end": 54.51,
+      "text": "In May 2008, Phoenix landed safely near the"
+     },
+     {
+      "start": 54.51,
+      "end": 56,
+      "text": "north pole of Mars."
+     },
+     {
+      "start": 56.17,
+      "end": 58.8,
+      "text": "It dug into the soil and confirmed water"
+     },
+     {
+      "start": 58.8,
+      "end": 61,
+      "text": "ice just below the surface."
+     },
+     {
+      "start": 61.2,
+      "end": 63.58,
+      "text": "The same basic machine that had failed at"
+     },
+     {
+      "start": 63.58,
+      "end": 66.49,
+      "text": "the south pole succeeded at the north, because"
+     },
+     {
+      "start": 66.75,
+      "end": 69.34,
+      "text": "the people around it had changed how they"
+     },
+     {
+      "start": 69.34,
+      "end": 70.89,
+      "text": "checked their work."
+     }
+    ],
+    "words": [
+     {
+      "text": "NASA",
+      "start": 0.4,
+      "end": 0.46
+     },
+     {
+      "text": "listened.",
+      "start": 0.46,
+      "end": 1.74
+     },
+     {
+      "text": "The",
+      "start": 1.74,
+      "end": 1.95
+     },
+     {
+      "text": "Mars",
+      "start": 1.95,
+      "end": 2.19
+     },
+     {
+      "text": "programme",
+      "start": 2.19,
+      "end": 2.72
+     },
+     {
+      "text": "was",
+      "start": 2.72,
+      "end": 2.94
+     },
+     {
+      "text": "restructured.",
+      "start": 2.94,
+      "end": 3.75
+     },
+     {
+      "text": "Missions",
+      "start": 4.19,
+      "end": 4.51
+     },
+     {
+      "text": "got",
+      "start": 4.51,
+      "end": 4.71
+     },
+     {
+      "text": "more",
+      "start": 4.71,
+      "end": 5
+     },
+     {
+      "text": "people,",
+      "start": 5,
+      "end": 5.44
+     },
+     {
+      "text": "more",
+      "start": 5.44,
+      "end": 5.92
+     },
+     {
+      "text": "money",
+      "start": 5.92,
+      "end": 6.16
+     },
+     {
+      "text": "for",
+      "start": 6.16,
+      "end": 6.36
+     },
+     {
+      "text": "testing,",
+      "start": 6.36,
+      "end": 7
+     },
+     {
+      "text": "and",
+      "start": 7,
+      "end": 7.1
+     },
+     {
+      "text": "more",
+      "start": 7.1,
+      "end": 7.24
+     },
+     {
+      "text": "independent",
+      "start": 7.24,
+      "end": 7.99
+     },
+     {
+      "text": "review.",
+      "start": 7.99,
+      "end": 8.42
+     },
+     {
+      "text": "Engineers",
+      "start": 9.4,
+      "end": 9.73
+     },
+     {
+      "text": "took",
+      "start": 9.73,
+      "end": 10.05
+     },
+     {
+      "text": "a",
+      "start": 10.05,
+      "end": 10.12
+     },
+     {
+      "text": "phrase",
+      "start": 10.12,
+      "end": 10.24
+     },
+     {
+      "text": "to",
+      "start": 10.72,
+      "end": 10.78
+     },
+     {
+      "text": "heart:",
+      "start": 10.78,
+      "end": 11.19
+     },
+     {
+      "text": "test",
+      "start": 11.35,
+      "end": 11.74
+     },
+     {
+      "text": "as",
+      "start": 11.74,
+      "end": 11.9
+     },
+     {
+      "text": "you",
+      "start": 11.9,
+      "end": 12.14
+     },
+     {
+      "text": "fly,",
+      "start": 12.14,
+      "end": 12.38
+     },
+     {
+      "text": "and",
+      "start": 12.38,
+      "end": 12.62
+     },
+     {
+      "text": "fly",
+      "start": 12.62,
+      "end": 12.72
+     },
+     {
+      "text": "as",
+      "start": 12.9,
+      "end": 13.02
+     },
+     {
+      "text": "you",
+      "start": 13.19,
+      "end": 13.26
+     },
+     {
+      "text": "test.",
+      "start": 13.26,
+      "end": 14
+     },
+     {
+      "text": "If",
+      "start": 14.14,
+      "end": 14.14
+     },
+     {
+      "text": "a",
+      "start": 14.2,
+      "end": 14.21
+     },
+     {
+      "text": "spacecraft",
+      "start": 14.4,
+      "end": 14.94
+     },
+     {
+      "text": "will",
+      "start": 14.94,
+      "end": 15.09
+     },
+     {
+      "text": "shake",
+      "start": 15.23,
+      "end": 15.59
+     },
+     {
+      "text": "when",
+      "start": 15.72,
+      "end": 15.88
+     },
+     {
+      "text": "its",
+      "start": 15.88,
+      "end": 16.09
+     },
+     {
+      "text": "legs",
+      "start": 16.09,
+      "end": 16.38
+     },
+     {
+      "text": "deploy,",
+      "start": 16.38,
+      "end": 16.98
+     },
+     {
+      "text": "then",
+      "start": 16.99,
+      "end": 17.38
+     },
+     {
+      "text": "test",
+      "start": 17.46,
+      "end": 17.72
+     },
+     {
+      "text": "it",
+      "start": 17.93,
+      "end": 18.05
+     },
+     {
+      "text": "while",
+      "start": 18.19,
+      "end": 18.58
+     },
+     {
+      "text": "its",
+      "start": 18.58,
+      "end": 18.9
+     },
+     {
+      "text": "legs",
+      "start": 18.9,
+      "end": 19.28
+     },
+     {
+      "text": "deploy,",
+      "start": 19.36,
+      "end": 20.14
+     },
+     {
+      "text": "with",
+      "start": 20.14,
+      "end": 20.44
+     },
+     {
+      "text": "the",
+      "start": 20.44,
+      "end": 20.66
+     },
+     {
+      "text": "real",
+      "start": 20.66,
+      "end": 20.96
+     },
+     {
+      "text": "wiring",
+      "start": 20.96,
+      "end": 21.4
+     },
+     {
+      "text": "and",
+      "start": 21.4,
+      "end": 21.58
+     },
+     {
+      "text": "the",
+      "start": 21.65,
+      "end": 21.84
+     },
+     {
+      "text": "real",
+      "start": 21.84,
+      "end": 22.14
+     },
+     {
+      "text": "software.",
+      "start": 22.14,
+      "end": 23
+     },
+     {
+      "text": "There",
+      "start": 23.39,
+      "end": 23.45
+     },
+     {
+      "text": "was",
+      "start": 23.45,
+      "end": 23.72
+     },
+     {
+      "text": "also",
+      "start": 23.72,
+      "end": 24.07
+     },
+     {
+      "text": "a",
+      "start": 24.07,
+      "end": 24.14
+     },
+     {
+      "text": "quiet",
+      "start": 24.16,
+      "end": 24.24
+     },
+     {
+      "text": "second",
+      "start": 24.72,
+      "end": 25.16
+     },
+     {
+      "text": "chance.",
+      "start": 25.16,
+      "end": 25.98
+     },
+     {
+      "text": "A",
+      "start": 26,
+      "end": 26
+     },
+     {
+      "text": "nearly",
+      "start": 26.39,
+      "end": 26.45
+     },
+     {
+      "text": "identical",
+      "start": 26.45,
+      "end": 27.02
+     },
+     {
+      "text": "lander",
+      "start": 27.02,
+      "end": 27.43
+     },
+     {
+      "text": "had",
+      "start": 27.63,
+      "end": 27.63
+     },
+     {
+      "text": "been",
+      "start": 27.72,
+      "end": 27.89
+     },
+     {
+      "text": "built",
+      "start": 27.89,
+      "end": 28.19
+     },
+     {
+      "text": "for",
+      "start": 28.35,
+      "end": 28.42
+     },
+     {
+      "text": "a",
+      "start": 28.42,
+      "end": 28.48
+     },
+     {
+      "text": "2001",
+      "start": 28.48,
+      "end": 29.19
+     },
+     {
+      "text": "mission.",
+      "start": 29.26,
+      "end": 29.98
+     },
+     {
+      "text": "After",
+      "start": 30.35,
+      "end": 30.35
+     },
+     {
+      "text": "the",
+      "start": 30.4,
+      "end": 30.56
+     },
+     {
+      "text": "losses,",
+      "start": 30.56,
+      "end": 31.09
+     },
+     {
+      "text": "that",
+      "start": 31.12,
+      "end": 31.24
+     },
+     {
+      "text": "mission",
+      "start": 31.72,
+      "end": 31.89
+     },
+     {
+      "text": "was",
+      "start": 31.89,
+      "end": 32.1
+     },
+     {
+      "text": "cancelled,",
+      "start": 32.1,
+      "end": 32.81
+     },
+     {
+      "text": "and",
+      "start": 32.81,
+      "end": 33.01
+     },
+     {
+      "text": "the",
+      "start": 33.02,
+      "end": 33.19
+     },
+     {
+      "text": "lander",
+      "start": 33.29,
+      "end": 33.62
+     },
+     {
+      "text": "went",
+      "start": 33.64,
+      "end": 33.72
+     },
+     {
+      "text": "into",
+      "start": 34.19,
+      "end": 34.21
+     },
+     {
+      "text": "storage.",
+      "start": 34.21,
+      "end": 35
+     },
+     {
+      "text": "Years",
+      "start": 35.37,
+      "end": 35.37
+     },
+     {
+      "text": "later",
+      "start": 35.4,
+      "end": 35.89
+     },
+     {
+      "text": "it",
+      "start": 35.89,
+      "end": 36.02
+     },
+     {
+      "text": "was",
+      "start": 36.02,
+      "end": 36.14
+     },
+     {
+      "text": "brought",
+      "start": 36.7,
+      "end": 36.78
+     },
+     {
+      "text": "back,",
+      "start": 36.78,
+      "end": 37.19
+     },
+     {
+      "text": "studied,",
+      "start": 37.29,
+      "end": 37.9
+     },
+     {
+      "text": "and",
+      "start": 37.9,
+      "end": 38.12
+     },
+     {
+      "text": "modified.",
+      "start": 38.12,
+      "end": 38.74
+     },
+     {
+      "text": "Reviewers",
+      "start": 39.39,
+      "end": 39.64
+     },
+     {
+      "text": "went",
+      "start": 39.64,
+      "end": 39.93
+     },
+     {
+      "text": "through",
+      "start": 39.93,
+      "end": 40.12
+     },
+     {
+      "text": "it",
+      "start": 40.45,
+      "end": 40.57
+     },
+     {
+      "text": "and",
+      "start": 40.72,
+      "end": 40.78
+     },
+     {
+      "text": "produced",
+      "start": 40.78,
+      "end": 41.19
+     },
+     {
+      "text": "forty-two",
+      "start": 41.19,
+      "end": 41.78
+     },
+     {
+      "text": "corrective",
+      "start": 41.78,
+      "end": 42.5
+     },
+     {
+      "text": "actions",
+      "start": 42.5,
+      "end": 42.72
+     },
+     {
+      "text": "for",
+      "start": 43.19,
+      "end": 43.21
+     },
+     {
+      "text": "weaknesses",
+      "start": 43.21,
+      "end": 44
+     },
+     {
+      "text": "that",
+      "start": 44,
+      "end": 44.26
+     },
+     {
+      "text": "could",
+      "start": 44.26,
+      "end": 44.49
+     },
+     {
+      "text": "explain",
+      "start": 44.75,
+      "end": 45.05
+     },
+     {
+      "text": "what",
+      "start": 45.05,
+      "end": 45.21
+     },
+     {
+      "text": "happened",
+      "start": 45.3,
+      "end": 45.84
+     },
+     {
+      "text": "in",
+      "start": 45.84,
+      "end": 45.97
+     },
+     {
+      "text": "1999.",
+      "start": 45.97,
+      "end": 46.99
+     },
+     {
+      "text": "Then",
+      "start": 47.38,
+      "end": 47.38
+     },
+     {
+      "text": "it",
+      "start": 47.4,
+      "end": 47.57
+     },
+     {
+      "text": "flew",
+      "start": 47.57,
+      "end": 47.95
+     },
+     {
+      "text": "again,",
+      "start": 47.95,
+      "end": 48.61
+     },
+     {
+      "text": "under",
+      "start": 48.72,
+      "end": 49.08
+     },
+     {
+      "text": "a",
+      "start": 49.08,
+      "end": 49.17
+     },
+     {
+      "text": "new",
+      "start": 49.17,
+      "end": 49.45
+     },
+     {
+      "text": "name:",
+      "start": 49.45,
+      "end": 50.01
+     },
+     {
+      "text": "Phoenix.",
+      "start": 50.01,
+      "end": 50.73
+     },
+     {
+      "text": "In",
+      "start": 51.15,
+      "end": 51.15
+     },
+     {
+      "text": "May",
+      "start": 51.38,
+      "end": 51.38
+     },
+     {
+      "text": "2008,",
+      "start": 51.4,
+      "end": 52.47
+     },
+     {
+      "text": "Phoenix",
+      "start": 52.72,
+      "end": 53.03
+     },
+     {
+      "text": "landed",
+      "start": 53.03,
+      "end": 53.49
+     },
+     {
+      "text": "safely",
+      "start": 53.49,
+      "end": 53.97
+     },
+     {
+      "text": "near",
+      "start": 53.97,
+      "end": 54.19
+     },
+     {
+      "text": "the",
+      "start": 54.29,
+      "end": 54.51
+     },
+     {
+      "text": "north",
+      "start": 54.51,
+      "end": 54.72
+     },
+     {
+      "text": "pole",
+      "start": 55.19,
+      "end": 55.21
+     },
+     {
+      "text": "of",
+      "start": 55.21,
+      "end": 55.36
+     },
+     {
+      "text": "Mars.",
+      "start": 55.36,
+      "end": 56
+     },
+     {
+      "text": "It",
+      "start": 56.17,
+      "end": 56.17
+     },
+     {
+      "text": "dug",
+      "start": 56.39,
+      "end": 56.42
+     },
+     {
+      "text": "into",
+      "start": 56.42,
+      "end": 56.76
+     },
+     {
+      "text": "the",
+      "start": 56.76,
+      "end": 57.01
+     },
+     {
+      "text": "soil",
+      "start": 57.01,
+      "end": 57.13
+     },
+     {
+      "text": "and",
+      "start": 57.49,
+      "end": 57.6
+     },
+     {
+      "text": "confirmed",
+      "start": 57.72,
+      "end": 58.37
+     },
+     {
+      "text": "water",
+      "start": 58.37,
+      "end": 58.8
+     },
+     {
+      "text": "ice",
+      "start": 58.8,
+      "end": 59.05
+     },
+     {
+      "text": "just",
+      "start": 59.05,
+      "end": 59.38
+     },
+     {
+      "text": "below",
+      "start": 59.38,
+      "end": 59.72
+     },
+     {
+      "text": "the",
+      "start": 59.95,
+      "end": 60.07
+     },
+     {
+      "text": "surface.",
+      "start": 60.19,
+      "end": 61
+     },
+     {
+      "text": "The",
+      "start": 61.2,
+      "end": 61.23
+     },
+     {
+      "text": "same",
+      "start": 61.4,
+      "end": 61.53
+     },
+     {
+      "text": "basic",
+      "start": 61.53,
+      "end": 61.91
+     },
+     {
+      "text": "machine",
+      "start": 61.91,
+      "end": 62.12
+     },
+     {
+      "text": "that",
+      "start": 62.7,
+      "end": 62.74
+     },
+     {
+      "text": "had",
+      "start": 62.74,
+      "end": 62.97
+     },
+     {
+      "text": "failed",
+      "start": 62.97,
+      "end": 63.43
+     },
+     {
+      "text": "at",
+      "start": 63.43,
+      "end": 63.58
+     },
+     {
+      "text": "the",
+      "start": 63.58,
+      "end": 63.81
+     },
+     {
+      "text": "south",
+      "start": 63.81,
+      "end": 64.19
+     },
+     {
+      "text": "pole",
+      "start": 64.19,
+      "end": 64.49
+     },
+     {
+      "text": "succeeded",
+      "start": 64.49,
+      "end": 64.72
+     },
+     {
+      "text": "at",
+      "start": 65.19,
+      "end": 65.33
+     },
+     {
+      "text": "the",
+      "start": 65.33,
+      "end": 65.56
+     },
+     {
+      "text": "north,",
+      "start": 65.56,
+      "end": 66.13
+     },
+     {
+      "text": "because",
+      "start": 66.14,
+      "end": 66.49
+     },
+     {
+      "text": "the",
+      "start": 66.75,
+      "end": 66.93
+     },
+     {
+      "text": "people",
+      "start": 66.93,
+      "end": 67.36
+     },
+     {
+      "text": "around",
+      "start": 67.43,
+      "end": 67.87
+     },
+     {
+      "text": "it",
+      "start": 67.87,
+      "end": 68.02
+     },
+     {
+      "text": "had",
+      "start": 68.02,
+      "end": 68.25
+     },
+     {
+      "text": "changed",
+      "start": 68.25,
+      "end": 68.8
+     },
+     {
+      "text": "how",
+      "start": 68.8,
+      "end": 69.03
+     },
+     {
+      "text": "they",
+      "start": 69.03,
+      "end": 69.34
+     },
+     {
+      "text": "checked",
+      "start": 69.34,
+      "end": 69.48
+     },
+     {
+      "text": "their",
+      "start": 70.01,
+      "end": 70.28
+     },
+     {
+      "text": "work.",
+      "start": 70.28,
+      "end": 70.89
+     }
+    ]
+   },
+   {
+    "id": 8,
+    "title": "The lesson",
+    "visual": "Final blueprint card: two failure icons connected by a line to one success icon; text 'Small errors + missing checks'; margin-of-safety gauge needle moves from red to green",
+    "text": "So what did 1999 really teach? Not that space is impossible. Both spacecraft were brought down by small, ordinary problems. A unit label. A remembered signal. Problems that engineers on any project could make on any day. The real failure was in the safety net. The checks that should have caught those mistakes were thin, because time, money and people had been stretched too far. The fix was not a genius invention. It was discipline: clear interfaces, honest testing, and a culture where a worried engineer is heard and acted on. Every successful Mars landing since then has carried a little of that lesson. Have you ever seen a tiny mistake slip through because the checks were rushed? Tell me in the comments. And if you like stories about how engineers learn from failure, subscribe for a new one every week.",
+    "audio": "p009/scene_8.wav",
+    "audioSec": 55.01,
+    "startFrame": 14252,
+    "durationFrames": 1669,
+    "captions": [
+     {
+      "start": 0.18,
+      "end": 3.39,
+      "text": "So what did 1999 really teach?"
+     },
+     {
+      "start": 3.62,
+      "end": 5.66,
+      "text": "Not that space is impossible."
+     },
+     {
+      "start": 5.86,
+      "end": 8.49,
+      "text": "Both spacecraft were brought down by small, ordinary"
+     },
+     {
+      "start": 8.9,
+      "end": 9.66,
+      "text": "problems."
+     },
+     {
+      "start": 9.66,
+      "end": 10.9,
+      "text": "A unit label."
+     },
+     {
+      "start": 10.9,
+      "end": 12.21,
+      "text": "A remembered signal."
+     },
+     {
+      "start": 12.33,
+      "end": 15.84,
+      "text": "Problems that engineers on any project could make"
+     },
+     {
+      "start": 15.84,
+      "end": 16.83,
+      "text": "on any day."
+     },
+     {
+      "start": 17.04,
+      "end": 19.47,
+      "text": "The real failure was in the safety net."
+     },
+     {
+      "start": 19.67,
+      "end": 22.1,
+      "text": "The checks that should have caught those mistakes"
+     },
+     {
+      "start": 22.12,
+      "end": 24.44,
+      "text": "were thin, because time, money and people had"
+     },
+     {
+      "start": 24.8,
+      "end": 26.28,
+      "text": "been stretched too far."
+     },
+     {
+      "start": 26.6,
+      "end": 29.68,
+      "text": "The fix was not a genius invention."
+     },
+     {
+      "start": 29.82,
+      "end": 33.28,
+      "text": "It was discipline: clear interfaces, honest testing, and"
+     },
+     {
+      "start": 33.33,
+      "end": 36.18,
+      "text": "a culture where a worried engineer is heard"
+     },
+     {
+      "start": 36.18,
+      "end": 37.68,
+      "text": "and acted on."
+     },
+     {
+      "start": 38.04,
+      "end": 41,
+      "text": "Every successful Mars landing since then has carried"
+     },
+     {
+      "start": 41,
+      "end": 42.6,
+      "text": "a little of that lesson."
+     },
+     {
+      "start": 42.95,
+      "end": 44.76,
+      "text": "Have you ever seen a tiny mistake slip"
+     },
+     {
+      "start": 44.76,
+      "end": 47.24,
+      "text": "through because the checks were rushed?"
+     },
+     {
+      "start": 47.5,
+      "end": 48.72,
+      "text": "Tell me in the comments."
+     },
+     {
+      "start": 48.92,
+      "end": 51.16,
+      "text": "And if you like stories about how engineers"
+     },
+     {
+      "start": 51.16,
+      "end": 53.64,
+      "text": "learn from failure, subscribe for a new one"
+     },
+     {
+      "start": 54.07,
+      "end": 54.41,
+      "text": "every week."
+     }
+    ],
+    "words": [
+     {
+      "text": "So",
+      "start": 0.18,
+      "end": 0.36
+     },
+     {
+      "text": "what",
+      "start": 0.39,
+      "end": 0.65
+     },
+     {
+      "text": "did",
+      "start": 0.77,
+      "end": 1
+     },
+     {
+      "text": "1999",
+      "start": 1,
+      "end": 2.1
+     },
+     {
+      "text": "really",
+      "start": 2.1,
+      "end": 2.62
+     },
+     {
+      "text": "teach?",
+      "start": 2.7,
+      "end": 3.39
+     },
+     {
+      "text": "Not",
+      "start": 3.62,
+      "end": 3.66
+     },
+     {
+      "text": "that",
+      "start": 3.8,
+      "end": 3.99
+     },
+     {
+      "text": "space",
+      "start": 3.99,
+      "end": 4.4
+     },
+     {
+      "text": "is",
+      "start": 4.4,
+      "end": 4.55
+     },
+     {
+      "text": "impossible.",
+      "start": 4.6,
+      "end": 5.66
+     },
+     {
+      "text": "Both",
+      "start": 5.86,
+      "end": 5.87
+     },
+     {
+      "text": "spacecraft",
+      "start": 6.04,
+      "end": 6.32
+     },
+     {
+      "text": "were",
+      "start": 6.43,
+      "end": 6.61
+     },
+     {
+      "text": "brought",
+      "start": 6.61,
+      "end": 6.99
+     },
+     {
+      "text": "down",
+      "start": 6.99,
+      "end": 7.2
+     },
+     {
+      "text": "by",
+      "start": 7.2,
+      "end": 7.34
+     },
+     {
+      "text": "small,",
+      "start": 7.34,
+      "end": 8.12
+     },
+     {
+      "text": "ordinary",
+      "start": 8.12,
+      "end": 8.49
+     },
+     {
+      "text": "problems.",
+      "start": 8.9,
+      "end": 9.66
+     },
+     {
+      "text": "A",
+      "start": 9.66,
+      "end": 9.75
+     },
+     {
+      "text": "unit",
+      "start": 9.75,
+      "end": 10.17
+     },
+     {
+      "text": "label.",
+      "start": 10.17,
+      "end": 10.9
+     },
+     {
+      "text": "A",
+      "start": 10.9,
+      "end": 10.96
+     },
+     {
+      "text": "remembered",
+      "start": 11.14,
+      "end": 11.56
+     },
+     {
+      "text": "signal.",
+      "start": 11.94,
+      "end": 12.21
+     },
+     {
+      "text": "Problems",
+      "start": 12.33,
+      "end": 12.93
+     },
+     {
+      "text": "that",
+      "start": 12.93,
+      "end": 13.27
+     },
+     {
+      "text": "engineers",
+      "start": 13.27,
+      "end": 14.02
+     },
+     {
+      "text": "on",
+      "start": 14.06,
+      "end": 14.19
+     },
+     {
+      "text": "any",
+      "start": 14.26,
+      "end": 14.39
+     },
+     {
+      "text": "project",
+      "start": 14.8,
+      "end": 15.07
+     },
+     {
+      "text": "could",
+      "start": 15.07,
+      "end": 15.5
+     },
+     {
+      "text": "make",
+      "start": 15.5,
+      "end": 15.84
+     },
+     {
+      "text": "on",
+      "start": 15.84,
+      "end": 16.01
+     },
+     {
+      "text": "any",
+      "start": 16.01,
+      "end": 16.27
+     },
+     {
+      "text": "day.",
+      "start": 16.27,
+      "end": 16.83
+     },
+     {
+      "text": "The",
+      "start": 17.04,
+      "end": 17.07
+     },
+     {
+      "text": "real",
+      "start": 17.22,
+      "end": 17.38
+     },
+     {
+      "text": "failure",
+      "start": 17.38,
+      "end": 17.92
+     },
+     {
+      "text": "was",
+      "start": 17.92,
+      "end": 18.15
+     },
+     {
+      "text": "in",
+      "start": 18.15,
+      "end": 18.3
+     },
+     {
+      "text": "the",
+      "start": 18.3,
+      "end": 18.53
+     },
+     {
+      "text": "safety",
+      "start": 18.53,
+      "end": 18.99
+     },
+     {
+      "text": "net.",
+      "start": 18.99,
+      "end": 19.47
+     },
+     {
+      "text": "The",
+      "start": 19.67,
+      "end": 19.67
+     },
+     {
+      "text": "checks",
+      "start": 19.86,
+      "end": 20.05
+     },
+     {
+      "text": "that",
+      "start": 20.05,
+      "end": 20.3
+     },
+     {
+      "text": "should",
+      "start": 20.3,
+      "end": 20.68
+     },
+     {
+      "text": "have",
+      "start": 20.68,
+      "end": 20.93
+     },
+     {
+      "text": "caught",
+      "start": 20.93,
+      "end": 21.31
+     },
+     {
+      "text": "those",
+      "start": 21.31,
+      "end": 21.62
+     },
+     {
+      "text": "mistakes",
+      "start": 21.62,
+      "end": 22.1
+     },
+     {
+      "text": "were",
+      "start": 22.12,
+      "end": 22.31
+     },
+     {
+      "text": "thin,",
+      "start": 22.62,
+      "end": 22.62
+     },
+     {
+      "text": "because",
+      "start": 22.72,
+      "end": 23.06
+     },
+     {
+      "text": "time,",
+      "start": 23.06,
+      "end": 23.43
+     },
+     {
+      "text": "money",
+      "start": 23.43,
+      "end": 23.74
+     },
+     {
+      "text": "and",
+      "start": 23.74,
+      "end": 23.96
+     },
+     {
+      "text": "people",
+      "start": 23.98,
+      "end": 24.32
+     },
+     {
+      "text": "had",
+      "start": 24.32,
+      "end": 24.44
+     },
+     {
+      "text": "been",
+      "start": 24.8,
+      "end": 24.8
+     },
+     {
+      "text": "stretched",
+      "start": 24.87,
+      "end": 25.53
+     },
+     {
+      "text": "too",
+      "start": 25.53,
+      "end": 25.77
+     },
+     {
+      "text": "far.",
+      "start": 25.77,
+      "end": 26.28
+     },
+     {
+      "text": "The",
+      "start": 26.6,
+      "end": 26.6
+     },
+     {
+      "text": "fix",
+      "start": 26.66,
+      "end": 26.92
+     },
+     {
+      "text": "was",
+      "start": 26.92,
+      "end": 27.23
+     },
+     {
+      "text": "not",
+      "start": 27.23,
+      "end": 27.56
+     },
+     {
+      "text": "a",
+      "start": 27.56,
+      "end": 27.67
+     },
+     {
+      "text": "genius",
+      "start": 27.67,
+      "end": 28.32
+     },
+     {
+      "text": "invention.",
+      "start": 28.32,
+      "end": 29.68
+     },
+     {
+      "text": "It",
+      "start": 29.82,
+      "end": 29.82
+     },
+     {
+      "text": "was",
+      "start": 30.03,
+      "end": 30.03
+     },
+     {
+      "text": "discipline:",
+      "start": 30.07,
+      "end": 30.87
+     },
+     {
+      "text": "clear",
+      "start": 30.87,
+      "end": 31.22
+     },
+     {
+      "text": "interfaces,",
+      "start": 31.22,
+      "end": 32.03
+     },
+     {
+      "text": "honest",
+      "start": 32.09,
+      "end": 32.48
+     },
+     {
+      "text": "testing,",
+      "start": 32.48,
+      "end": 33.07
+     },
+     {
+      "text": "and",
+      "start": 33.17,
+      "end": 33.28
+     },
+     {
+      "text": "a",
+      "start": 33.33,
+      "end": 33.39
+     },
+     {
+      "text": "culture",
+      "start": 33.39,
+      "end": 33.88
+     },
+     {
+      "text": "where",
+      "start": 33.88,
+      "end": 34.23
+     },
+     {
+      "text": "a",
+      "start": 34.23,
+      "end": 34.3
+     },
+     {
+      "text": "worried",
+      "start": 34.3,
+      "end": 34.6
+     },
+     {
+      "text": "engineer",
+      "start": 35.15,
+      "end": 35.4
+     },
+     {
+      "text": "is",
+      "start": 35.6,
+      "end": 35.62
+     },
+     {
+      "text": "heard",
+      "start": 35.78,
+      "end": 36.18
+     },
+     {
+      "text": "and",
+      "start": 36.18,
+      "end": 36.52
+     },
+     {
+      "text": "acted",
+      "start": 36.52,
+      "end": 37.08
+     },
+     {
+      "text": "on.",
+      "start": 37.08,
+      "end": 37.68
+     },
+     {
+      "text": "Every",
+      "start": 38.04,
+      "end": 38.05
+     },
+     {
+      "text": "successful",
+      "start": 38.07,
+      "end": 38.79
+     },
+     {
+      "text": "Mars",
+      "start": 38.79,
+      "end": 39.08
+     },
+     {
+      "text": "landing",
+      "start": 39.08,
+      "end": 39.6
+     },
+     {
+      "text": "since",
+      "start": 39.6,
+      "end": 39.97
+     },
+     {
+      "text": "then",
+      "start": 39.97,
+      "end": 40.26
+     },
+     {
+      "text": "has",
+      "start": 40.26,
+      "end": 40.48
+     },
+     {
+      "text": "carried",
+      "start": 40.48,
+      "end": 41
+     },
+     {
+      "text": "a",
+      "start": 41,
+      "end": 41.07
+     },
+     {
+      "text": "little",
+      "start": 41.07,
+      "end": 41.51
+     },
+     {
+      "text": "of",
+      "start": 41.51,
+      "end": 41.65
+     },
+     {
+      "text": "that",
+      "start": 41.65,
+      "end": 41.94
+     },
+     {
+      "text": "lesson.",
+      "start": 41.94,
+      "end": 42.6
+     },
+     {
+      "text": "Have",
+      "start": 42.95,
+      "end": 42.95
+     },
+     {
+      "text": "you",
+      "start": 43.06,
+      "end": 43.15
+     },
+     {
+      "text": "ever",
+      "start": 43.15,
+      "end": 43.33
+     },
+     {
+      "text": "seen",
+      "start": 43.45,
+      "end": 43.69
+     },
+     {
+      "text": "a",
+      "start": 43.69,
+      "end": 43.75
+     },
+     {
+      "text": "tiny",
+      "start": 43.75,
+      "end": 44.02
+     },
+     {
+      "text": "mistake",
+      "start": 44.02,
+      "end": 44.49
+     },
+     {
+      "text": "slip",
+      "start": 44.49,
+      "end": 44.76
+     },
+     {
+      "text": "through",
+      "start": 44.76,
+      "end": 45.23
+     },
+     {
+      "text": "because",
+      "start": 45.23,
+      "end": 45.51
+     },
+     {
+      "text": "the",
+      "start": 45.9,
+      "end": 45.9
+     },
+     {
+      "text": "checks",
+      "start": 45.93,
+      "end": 46.28
+     },
+     {
+      "text": "were",
+      "start": 46.33,
+      "end": 46.57
+     },
+     {
+      "text": "rushed?",
+      "start": 46.57,
+      "end": 47.24
+     },
+     {
+      "text": "Tell",
+      "start": 47.5,
+      "end": 47.5
+     },
+     {
+      "text": "me",
+      "start": 47.61,
+      "end": 47.63
+     },
+     {
+      "text": "in",
+      "start": 47.63,
+      "end": 47.76
+     },
+     {
+      "text": "the",
+      "start": 47.76,
+      "end": 47.89
+     },
+     {
+      "text": "comments.",
+      "start": 48.01,
+      "end": 48.72
+     },
+     {
+      "text": "And",
+      "start": 48.92,
+      "end": 48.92
+     },
+     {
+      "text": "if",
+      "start": 49.05,
+      "end": 49.05
+     },
+     {
+      "text": "you",
+      "start": 49.11,
+      "end": 49.24
+     },
+     {
+      "text": "like",
+      "start": 49.25,
+      "end": 49.52
+     },
+     {
+      "text": "stories",
+      "start": 49.52,
+      "end": 50
+     },
+     {
+      "text": "about",
+      "start": 50,
+      "end": 50.34
+     },
+     {
+      "text": "how",
+      "start": 50.34,
+      "end": 50.54
+     },
+     {
+      "text": "engineers",
+      "start": 50.54,
+      "end": 51.16
+     },
+     {
+      "text": "learn",
+      "start": 51.16,
+      "end": 51.5
+     },
+     {
+      "text": "from",
+      "start": 51.5,
+      "end": 51.55
+     },
+     {
+      "text": "failure,",
+      "start": 51.96,
+      "end": 52.38
+     },
+     {
+      "text": "subscribe",
+      "start": 52.38,
+      "end": 53
+     },
+     {
+      "text": "for",
+      "start": 53,
+      "end": 53.17
+     },
+     {
+      "text": "a",
+      "start": 53.2,
+      "end": 53.26
+     },
+     {
+      "text": "new",
+      "start": 53.26,
+      "end": 53.45
+     },
+     {
+      "text": "one",
+      "start": 53.46,
+      "end": 53.64
+     },
+     {
+      "text": "every",
+      "start": 54.07,
+      "end": 54.07
+     },
+     {
+      "text": "week.",
+      "start": 54.14,
+      "end": 54.41
+     }
+    ]
+   }
+  ]
+ }
+}
