@@ -11,13 +11,14 @@ export async function submitInstruction(form: FormData) {
   const text = String(form.get('text') ?? '').trim();
   const brandId = String(form.get('brandId') ?? '') || undefined;
   const format = String(form.get('format') ?? '') || undefined;
-  if (text.length >= 3) await post('/instructions', { text, brandId, format });
+  const platforms = form.getAll('platforms').map(String).filter(Boolean);
+  if (text.length >= 3) await post('/instructions', { text, brandId, format, platforms: platforms.length ? platforms : undefined });
   revalidatePath('/', 'layout');
 }
 export async function setAgentEnabled(id: string, enabled: boolean) {
   await api(`/agents/${id}`, { method: 'PATCH', body: JSON.stringify({ enabled }) }); revalidatePath('/agents');
 }
-export async function retryTask(id: string) { await post(`/tasks/${id}/retry`); revalidatePath('/tasks'); }
+export async function retryTask(id: string) { await post(`/tasks/${id}/retry`); revalidatePath('/', 'layout'); }
 export async function cancelTask(id: string) { await post(`/tasks/${id}/cancel`); revalidatePath('/tasks'); }
 export async function decide(id: string, form: FormData) {
   await post(`/approvals/${id}/decide`, { decision: String(form.get('decision')), feedback: String(form.get('feedback') ?? '') || undefined });
@@ -39,7 +40,8 @@ export async function startIdeation(form: FormData) {
   revalidatePath('/ideas');
 }
 export async function selectIdea(id: string, form: FormData) {
-  void form; await post(`/ideas/${id}/select`, {}); revalidatePath('/', 'layout');
+  const platforms = form.getAll('platforms').map(String).filter(Boolean);
+  await post(`/ideas/${id}/select`, { platforms: platforms.length ? platforms : undefined }); revalidatePath('/', 'layout');
 }
 export async function rejectIdea(id: string, form: FormData) {
   await post(`/ideas/${id}/reject`, { feedback: String(form.get('feedback') ?? '') || undefined }); revalidatePath('/ideas');
@@ -55,7 +57,8 @@ export async function saveBrand(slug: string, form: FormData) {
     wordsPerMinute: Number(form.get('wpm')), visualStyle: String(form.get('visualStyle')), youtubeCategory: String(form.get('youtubeCategory')),
     youtubePlaylist: String(form.get('youtubePlaylist') ?? '') || undefined,
     channels: ytId ? { youtube: { id: ytId, handle: String(form.get('ytHandle') ?? ''), name: String(form.get('ytName') ?? '') } } : {} } });
-  revalidatePath('/brand');
+  revalidatePath('/', 'layout');
+  redirect(`/brand?slug=${encodeURIComponent(slug)}&saved=1`);
 }
 
 function errMsg(e: unknown) {
@@ -78,3 +81,18 @@ export async function recordPostStats(form: FormData) {
   revalidatePath('/published');
   redirect(`/published?msg=${encodeURIComponent(msg.slice(0, 300))}`);
 }
+
+export async function setArchived(id: string, archived: boolean) {
+  await post(`/content/${id}/archive`, { archived });
+  revalidatePath('/content'); revalidatePath('/');
+}
+
+/* "Process with Claude": headless Claude Code answers the AI queue (never approves or posts). */
+export async function runClaude() {
+  let msg: string | null = null;
+  try { await post('/operator/run'); } catch (e) { msg = errMsg(e); }
+  revalidatePath('/', 'layout');
+  if (msg) redirect(`/ai?msg=${encodeURIComponent(msg.slice(0, 200))}`);
+}
+export async function stopClaude() { await post('/operator/stop'); revalidatePath('/', 'layout'); }
+export async function setClaudeAuto(enabled: boolean) { await post('/operator/auto', { enabled }); revalidatePath('/', 'layout'); }

@@ -7,6 +7,7 @@
  */
 import type { PrismaClient } from '@creatoros/db';
 import { audit } from '@creatoros/core';
+import { displayTitles } from '../main/titles';
 
 export const METRIC_FIELDS = ['views', 'likes', 'comments', 'shares', 'saves', 'reach', 'watchTimeSec'] as const;
 export type MetricField = (typeof METRIC_FIELDS)[number];
@@ -89,6 +90,7 @@ export async function publishedOverview(db: PrismaClient) {
     g.posts.push({ id: p.id, platform: p.platform, url: p.url, status: p.status, visibility: p.visibility, publishedAt: p.publishedAt,
       title: meta.title ?? null, latest: latest ?? null, previous: previous ?? null });
   }
-  return [...groups.values()].map((g) => ({ ...g, title: g.title || g.project.title }))
+  const titles = await displayTitles(db, [...groups.keys()]);
+  return [...groups.values()].map((g) => ({ ...g, title: g.title || titles.get(g.project.id) || g.project.title }))
     .sort((a, b) => +b.firstPublishedAt - +a.firstPublishedAt);
 }

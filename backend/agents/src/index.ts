@@ -16,3 +16,6 @@ export { FB_POST } from './platforms/facebook/publish';
 export { TIKTOK_ACCOUNT } from './platforms/tiktok/package';
 export { TT_POST } from './platforms/tiktok/publish';
 export * from './platforms/metrics';
+export * from './main/titles';
+export { INSTAGRAM_ACCOUNT, IG_POST } from './platforms/instagram';
+export { SNAPCHAT_ACCOUNT, SC_POST } from './platforms/snapchat';

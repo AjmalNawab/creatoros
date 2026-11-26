@@ -2,7 +2,7 @@ import { execSync } from 'node:child_process';
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from 'vitest';
 import { PrismaClient } from '@creatoros/db';
 import { Engine, answerAiRequest, decideApproval, type AgentDefinition } from '@creatoros/core';
-import { PLATFORMS, STRATEGY_AGENTS, addPlatform, planInstruction, publishedOverview, recordPostMetric, youtubeVideoId, rejectIdea, selectIdea, submitIdeation, submitInstruction } from '../src';
+import { IG_POST, PLATFORMS, SC_POST, STRATEGY_AGENTS, addPlatform, cleanInstruction, displayTitles, planInstruction, publishedOverview, recordPostMetric, youtubeVideoId, rejectIdea, selectIdea, submitIdeation, submitInstruction } from '../src';
 
 // Own schema (core tests use creatoros_test) so packages can run tests in parallel.
 const withSchema = (url: string) => url + (url.includes('?') ? '&' : '?') + 'schema=creatoros_test_agents';
@@ -132,5 +132,35 @@ describe('post stats', () => {
 
     expect(youtubeVideoId({ externalId: null, url: 'https://youtube.com/shorts/98DTjFNq-LI' })).toBe('98DTjFNq-LI');
     expect(youtubeVideoId({ externalId: 'g4v126g_lwo', url: null })).toBe('g4v126g_lwo');
+  });
+});
+
+describe('display titles', () => {
+  it('cleans instruction text and prefers approved package titles', async () => {
+    expect(cleanInstruction('Facebook Reel, about 60 seconds, Urdu: K2 in Pakistan, the savage mountain. Use real licensed footage. Platforms: facebook'))
+      .toBe('K2 in Pakistan, the savage mountain.');
+    expect(cleanInstruction('how rainbows form (vertical)')).toBe('How rainbows form (vertical)');
+    const a = await db.contentProject.create({ data: { key: 'p901', slug: '901-a', title: 'TikTok short, about 45 seconds, Urdu: the hottest place on Earth' } });
+    const b = await db.contentProject.create({ data: { key: 'p902', slug: '902-b', title: 'x' } });
+    const agent = await db.agent.upsert({ where: { id: 'youtube.package' }, create: { id: 'youtube.package', name: 'YT', department: 'Test' }, update: {} });
+    await db.task.create({ data: { contentProjectId: b.id, agentId: agent.id, type: 'youtube_package', status: 'COMPLETED', output: { title: 'The Real Title' } } });
+    const t = await displayTitles(db, [a.id, b.id]);
+    expect(t.get(a.id)).toBe('The hottest place on Earth');
+    expect(t.get(b.id)).toBe('The Real Title');
+  });
+});
+
+describe('Instagram and Snapchat', () => {
+  it('recognise real post links, stay off until the account exists, and are understood in instructions', () => {
+    expect(IG_POST.exec('https://www.instagram.com/reel/DAbc-12_x/')?.[1]).toBe('DAbc-12_x');
+    expect(IG_POST.test('https://www.instagram.com/chai_and_curiosity/')).toBe(false);
+    expect(SC_POST.test('https://www.snapchat.com/spotlight/W7_EDlXWTBiXAEEniNoMPwAAYb')).toBe(true);
+    expect(SC_POST.test('https://www.snapchat.com/@chai.curiosity/spotlight/W7_abc')).toBe(true);
+    expect(SC_POST.test('https://www.snapchat.com/add/someone')).toBe(false);
+    // No handle in the test env → planned, so their steps are never added to a project.
+    if (!process.env.INSTAGRAM_HANDLE) expect(PLATFORMS.instagram.status).toBe('planned');
+    if (!process.env.SNAPCHAT_HANDLE) expect(PLATFORMS.snapchat.status).toBe('planned');
+    expect(PLATFORMS.snapchat.steps.map((s) => s.agentId)).toEqual(['snapchat.package', 'snapchat.publish']);
+    expect(planInstruction('Make a 40 second Urdu short about rain for TikTok and Snapchat').platforms).toEqual(['tiktok', 'snapchat']);
   });
 });

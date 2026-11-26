@@ -28,7 +28,7 @@ const get = async (url, headers = {}) => {
   return r;
 };
 const json = async (url, headers) => (await get(url, headers)).json();
-const OK_LICENCE = /public domain|^pd|cc0|cc[- ]by(?![- ]?nc)(?![- ]?nd)|creativecommons\.org\/(publicdomain|licenses\/by(-sa)?\/)/i;
+const OK_LICENCE = /public domain|^pd|cc0|cc[- ]by(?![- ]?nc)(?![- ]?nd)|creativecommons\.org\/(publicdomain|licenses\/publicdomain|licenses\/by(-sa)?\/)/i;
 
 const SOURCES = {
   async nasa(q, type = 'video') {
@@ -146,10 +146,14 @@ try {
     const [slug, key, source, id] = a;
     await add(slug, key, source, id, flag('name'), flag('note'));
   } else if (cmd === 'remove') {
-    const [slug, f] = a; const m = readManifest(slug); m.clips = m.clips.filter((c) => c.file !== f);
+    const [slug, name] = a; const m = readManifest(slug);
+    // Accept the full path (p015/footage/x.mp4) or just the file name (x.mp4).
+    const hit = m.clips.filter((c) => c.file === name || path.basename(c.file) === name);
+    if (!hit.length) throw new Error(`no clip "${name}" in the manifest (see: list ${slug})`);
+    m.clips = m.clips.filter((c) => !hit.includes(c));
     writeFileSync(manifestPath(slug), JSON.stringify(m, null, 1));
-    const abs = path.join(ROOT, 'media', 'renderer', 'public', f); if (existsSync(abs)) (await import('node:fs')).rmSync(abs);
-    console.log(`removed ${f}`);
+    for (const c of hit) { const abs = path.join(ROOT, 'media', 'renderer', 'public', c.file); if (existsSync(abs)) (await import('node:fs')).rmSync(abs); }
+    console.log(`removed ${hit.map((c) => c.file).join(', ')}`);
   } else if (cmd === 'normalise') {
     const m = readManifest(a[0]);
     for (const c of m.clips.filter((x) => x.kind === 'video')) {

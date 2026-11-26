@@ -1,0 +1,36 @@
+{
+ "passed": true,
+ "checks": [
+  {
+   "check": "Video stream 1080x1920 (vertical Short)",
+   "pass": true,
+   "detail": "1080x1920"
+  },
+  {
+   "check": "Audio stream present",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "Duration matches storyboard (±2s)",
+   "pass": true,
+   "detail": "52.0s vs 51.0s"
+  },
+  {
+   "check": "Short length 15-60 s",
+   "pass": true,
+   "detail": "52.0s"
+  },
+  {
+   "check": "Every line has word-by-word captions",
+   "pass": true,
+   "detail": ""
+  },
+  {
+   "check": "All facts from research (no unsourced claims)",
+   "pass": true,
+   "detail": "script approved by owner against research"
+  }
+ ],
+ "at": "2026-11-25T16:01:16.353Z"
+}

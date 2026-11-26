@@ -1,0 +1,63 @@
+{
+ "titleOptions": [
+  "ایک ہزار نو انکار؟ کے ایف سی کی اصل کہانی",
+  "کرنل سینڈرز: پینسٹھ سال کی عمر اور ایک نسخہ",
+  "کے ایف سی والے بابا جی کی سچی کہانی"
+ ],
+ "scenes": [
+  {
+   "title": "Hook: the famous number",
+   "visual": "Big '1009' slams in over real footage of fried chicken, then a question mark and a 'MYTH?' stamp",
+   "text": "ایک ہزار نو انکار، کیا یہ کہانی سچ ہے؟"
+  },
+  {
+   "title": "Hard childhood",
+   "visual": "Old-photo style frame: 1890s Indiana farmhouse, a boy at a wood stove (silhouette, not a realistic face)",
+   "text": "ہارلینڈ سینڈرز کے والد بچپن میں چل بسے، تو وہ گھر کا کھانا پکانے لگے۔"
+  },
+  {
+   "title": "Many jobs",
+   "visual": "Quick cuts of job icons sliding in: farm, railway, insurance papers; some get crossed out",
+   "text": "پھر کئی نوکریاں کیں: کھیتوں میں، ریلوے میں، انشورنس میں، اور کئی چھوٹ بھی گئیں۔"
+  },
+  {
+   "title": "Corbin service station",
+   "visual": "Archive footage of a 1950s American roadside gas station and diner; label: Corbin, Kentucky 1930",
+   "text": "کینٹکی میں ایک پیٹرول پمپ پر مسافروں کو کھانا کھلایا، اور ان کی مرغی مشہور ہو گئی۔"
+  },
+  {
+   "title": "The highway bypass",
+   "visual": "Map animation: a new highway line curves away from the small town dot; cars stream past it",
+   "text": "پھر نئی شاہراہ بنی، گاڑیاں دور ہو گئیں، اور ریستوران گھاٹے میں بیچنا پڑا۔"
+  },
+  {
+   "title": "Age 65, $105",
+   "visual": "Counter counts up to '$105 / month' with 'age ~65' label over archive footage of an old car on a 1950s road",
+   "text": "عمر پینسٹھ کے قریب، آمدنی بس ایک سو پانچ ڈالر ماہانہ پنشن۔"
+  },
+  {
+   "title": "The turning point",
+   "visual": "A small map pin in Salt Lake City lights up: 'first franchise, 1952, a friend's restaurant'",
+   "text": "ایک دوست کے ہوٹل میں نسخہ پہلے ہی بک رہا تھا، تو انہوں نے یہی راستہ چنا۔"
+  },
+  {
+   "title": "On the road",
+   "visual": "Real footage of a 1950s road trip; icons of a pressure cooker and '+ few cents per chicken'",
+   "text": "پریشر ککر گاڑی میں رکھا، ہوٹل ہوٹل گئے، ہر مرغی پر چند سینٹ۔"
+  },
+  {
+   "title": "The 1009 myth",
+   "visual": "The '1009' from the hook returns with a red 'NO PROOF' stamp; small source tags: Snopes, AAP FactCheck",
+   "text": "انکار بہت ہوئے، مگر ایک ہزار نو کا عدد؟ اس کا کوئی ثبوت نہیں۔"
+  },
+  {
+   "title": "Payoff and lesson",
+   "visual": "Counter to '$2,000,000 · 1964' over real fried chicken footage, then the lesson text",
+   "text": "انیس سو چونسٹھ میں کمپنی بیس لاکھ ڈالر میں بکی۔ ہزار انکار نہیں، برسوں کی محنت۔"
+  }
+ ],
+ "endCard": {
+  "title": "کامیابی: برسوں کی محنت",
+  "cta": "ہر ہفتے ایک نئی اصل کہانی"
+ }
+}

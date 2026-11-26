@@ -18,9 +18,26 @@ export const STEPS: Record<string, { label: string; icon: LucideIcon }> = {
   visuals: { label: 'Visuals', icon: Palette },
   video: { label: 'Render', icon: Clapperboard },
   qa: { label: 'Quality check', icon: ShieldCheck },
-  'youtube.package': { label: 'YouTube package', icon: Package },
-  'youtube.publish': { label: 'Upload', icon: Upload },
+  'youtube.package': { label: 'YouTube details', icon: Package },
+  'youtube.publish': { label: 'Post to YouTube', icon: Upload },
+  'facebook.package': { label: 'Facebook caption', icon: Package },
+  'facebook.publish': { label: 'Post to Facebook', icon: Upload },
+  'tiktok.package': { label: 'TikTok caption', icon: Package },
+  'tiktok.publish': { label: 'Post to TikTok', icon: Upload },
+  'instagram.package': { label: 'Instagram caption', icon: Package },
+  'instagram.publish': { label: 'Post to Instagram', icon: Upload },
+  'snapchat.package': { label: 'Snapchat caption', icon: Package },
+  'snapchat.publish': { label: 'Post to Snapchat', icon: Upload },
 };
+export const stepLabel = (agentId: string) => STEPS[agentId]?.label ?? agentId.replace(/[._]/g, ' ');
+
+/** What a step is doing, in words: "Writing the script", "Rendering the video", … */
+export const STEP_DOING: Record<string, string> = {
+  orchestrator: 'Planning the video', trends: 'Looking for trends', ideas: 'Proposing ideas', research: 'Researching facts',
+  script: 'Writing the script', voice: 'Recording the voice', storyboard: 'Planning the scenes', visuals: 'Designing the visuals',
+  video: 'Rendering the video', qa: 'Checking quality',
+};
+export const stepDoing = (agentId: string) => STEP_DOING[agentId] ?? stepLabel(agentId);
 
 type StepTask = { agentId: string; status: string };
 

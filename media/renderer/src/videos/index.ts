@@ -12,6 +12,7 @@ import { SCENES as p011 } from './p011';
 import { SCENES as p012 } from './p012';
 import { SCENES as p013 } from './p013';
 import { SCENES as p014 } from './p014';
+import { SCENES as p015 } from './p015';
 
 export const VIDEOS: Record<string, React.FC[]> = {
   p001,
@@ -26,4 +27,5 @@ export const VIDEOS: Record<string, React.FC[]> = {
   p012,
   p013,
   p014,
+  p015,
 };

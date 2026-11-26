@@ -24,3 +24,6 @@ content/*/footage/*
 media/renderer/public/reframe/
 media/renderer/public/styletest/
 content/_tests/
+
+# "Process with Claude" run logs and answer files
+.operator/

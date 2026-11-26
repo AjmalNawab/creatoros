@@ -211,6 +211,7 @@ model ContentProject {
   language  String   @default("ur")
   status    String   @default("in_production")
   params    Json     @default("{}")
+  archivedAt DateTime? // hidden from the default dashboard lists; nothing is deleted
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 

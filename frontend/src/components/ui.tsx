@@ -1,5 +1,11 @@
 import React from 'react';
+import Link from 'next/link';
 import type { LucideIcon } from 'lucide-react';
+import { btnCls, iconCls, type BtnSize, type BtnTone } from './btn-styles';
+import { FormPending } from './buttons';
+
+export { btnCls } from './btn-styles';
+export { ConfirmBtn } from './buttons';
 
 /* ------------------------------------------------------------------ status */
 
@@ -127,32 +133,41 @@ export function EmptyState({ icon: Icon, title, children }: { icon: LucideIcon; 
 
 /* ------------------------------------------------------------------ controls */
 
-type BtnTone = 'default' | 'primary' | 'accent' | 'danger' | 'ghost' | 'success';
-const BTN: Record<BtnTone, string> = {
-  default: 'border border-zinc-200 bg-white text-zinc-800 shadow-sm hover:bg-zinc-50 dark:border-zinc-700 dark:bg-zinc-900 dark:text-zinc-100 dark:hover:bg-zinc-800',
-  primary: 'bg-zinc-900 text-white shadow-sm hover:bg-zinc-700 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200',
-  accent: 'bg-orange-500 text-white shadow-sm hover:bg-orange-600',
-  success: 'bg-emerald-600 text-white shadow-sm hover:bg-emerald-700',
-  danger: 'bg-red-600 text-white shadow-sm hover:bg-red-700',
-  ghost: 'text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-300 dark:hover:bg-zinc-800 dark:hover:text-white',
-};
-
-export function Btn({ children, tone = 'default', icon: Icon, size = 'md', ...p }: React.ButtonHTMLAttributes<HTMLButtonElement> & { tone?: BtnTone; icon?: LucideIcon; size?: 'sm' | 'md' }) {
-  const sz = size === 'sm' ? 'h-8 px-2.5 text-xs gap-1.5' : 'h-9 px-3.5 text-sm gap-2';
+/**
+ * Button. Inside a <form>, it shows a spinner while the action runs (and blocks double clicks).
+ * Pass name/value when one form has several buttons, so only the clicked one spins.
+ */
+export function Btn({ children, tone = 'default', icon: Icon, size = 'md', pendingLabel, ...p }: React.ButtonHTMLAttributes<HTMLButtonElement> & { tone?: BtnTone; icon?: LucideIcon; size?: BtnSize; pendingLabel?: string }) {
   return (
-    <button {...p} className={`inline-flex shrink-0 items-center justify-center rounded-lg font-medium transition active:scale-[.98] disabled:pointer-events-none disabled:opacity-50 ${sz} ${BTN[tone]} ${p.className ?? ''}`}>
-      {Icon && <Icon className={size === 'sm' ? 'size-3.5' : 'size-4'} />}{children}
+    <button type="submit" {...p} className={`${btnCls(tone, size)} ${p.className ?? ''}`}>
+      {Icon && <Icon className={iconCls(size)} />}{children}
+      {(p.type ?? 'submit') === 'submit' && <FormPending name={p.name} value={typeof p.value === 'string' ? p.value : undefined} label={pendingLabel} />}
     </button>
   );
 }
 
-export const inputCls = 'h-9 w-full rounded-lg border border-zinc-200 bg-white px-3 text-sm shadow-sm outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-4 focus:ring-orange-500/10 dark:border-zinc-700 dark:bg-zinc-900';
+/** A link that looks like a button (navigation, external pages, downloads). */
+export function LinkBtn({ href, children, tone = 'default', size = 'md', icon: Icon, external, className = '' }: {
+  href: string; children: React.ReactNode; tone?: BtnTone; size?: BtnSize; icon?: LucideIcon; external?: boolean; className?: string;
+}) {
+  const cls = `${btnCls(tone, size)} ${className}`;
+  const inner = <>{Icon && <Icon className={iconCls(size)} />}{children}</>;
+  return external
+    ? <a href={href} target="_blank" rel="noreferrer" className={cls}>{inner}</a>
+    : <Link href={href} className={cls}>{inner}</Link>;
+}
+
+export function Skeleton({ className = '' }: { className?: string }) {
+  return <div className={`animate-pulse rounded-xl bg-zinc-200/70 dark:bg-zinc-800/70 ${className}`} />;
+}
+
+export const inputCls = 'h-10 w-full rounded-lg border border-zinc-200 bg-white px-3 text-sm shadow-sm outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-4 focus:ring-orange-500/10 dark:border-zinc-700 dark:bg-zinc-900';
 export const textareaCls = 'w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm shadow-sm outline-none transition placeholder:text-zinc-400 focus:border-orange-400 focus:ring-4 focus:ring-orange-500/10 dark:border-zinc-700 dark:bg-zinc-900';
 
 /** Short (9:16) / Long (16:9) segmented control. Posts `format`. */
 export function FormatToggle({ defaultValue = 'long' }: { defaultValue?: 'short' | 'long' }) {
   return (
-    <div role="radiogroup" aria-label="Format" className="inline-flex h-9 shrink-0 rounded-lg border border-zinc-200 bg-zinc-100 p-0.5 text-sm dark:border-zinc-700 dark:bg-zinc-800">
+    <div role="radiogroup" aria-label="Format" className="inline-flex h-10 shrink-0 rounded-lg border border-zinc-200 bg-zinc-100 p-0.5 text-sm dark:border-zinc-700 dark:bg-zinc-800">
       {[['short', 'Short'], ['long', 'Long']].map(([v, l]) => (
         <label key={v} className="flex cursor-pointer items-center gap-1.5 rounded-md px-3 font-medium text-zinc-500 transition has-[:checked]:bg-white has-[:checked]:text-zinc-900 has-[:checked]:shadow-sm dark:has-[:checked]:bg-zinc-950 dark:has-[:checked]:text-white">
           <input type="radio" name="format" value={v} defaultChecked={v === defaultValue} className="sr-only" />
@@ -166,7 +181,7 @@ export function FormatToggle({ defaultValue = 'long' }: { defaultValue?: 'short'
 /** English / Urdu segmented control (works inside <form>, posts `language`). */
 export function LanguageToggle({ defaultValue }: { defaultValue: string }) {
   return (
-    <div role="radiogroup" aria-label="Video language" className="inline-flex h-9 shrink-0 rounded-lg border border-zinc-200 bg-zinc-100 p-0.5 text-sm dark:border-zinc-700 dark:bg-zinc-800">
+    <div role="radiogroup" aria-label="Video language" className="inline-flex h-10 shrink-0 rounded-lg border border-zinc-200 bg-zinc-100 p-0.5 text-sm dark:border-zinc-700 dark:bg-zinc-800">
       {[['en', 'English'], ['ur', 'اردو']].map(([v, l]) => (
         <label key={v} className="flex cursor-pointer items-center rounded-md px-3 font-medium text-zinc-500 transition has-[:checked]:bg-white has-[:checked]:text-zinc-900 has-[:checked]:shadow-sm dark:has-[:checked]:bg-zinc-950 dark:has-[:checked]:text-white">
           <input type="radio" name="language" value={v} defaultChecked={v === defaultValue} className="sr-only" />
@@ -183,7 +198,7 @@ export type SeriesOption = { id: string; name: string; active: boolean; profile:
 export function SeriesPicker({ series }: { series: SeriesOption[] }) {
   const def = series.find((s) => s.active)?.id ?? series[0]?.id;
   return (
-    <div role="radiogroup" aria-label="Series" className="inline-flex h-9 shrink-0 rounded-lg border border-zinc-200 bg-zinc-100 p-0.5 text-sm dark:border-zinc-700 dark:bg-zinc-800">
+    <div role="radiogroup" aria-label="Series" className="inline-flex h-10 shrink-0 rounded-lg border border-zinc-200 bg-zinc-100 p-0.5 text-sm dark:border-zinc-700 dark:bg-zinc-800">
       {series.map((s) => (
         <label key={s.id} className="flex cursor-pointer items-center gap-1.5 whitespace-nowrap rounded-md px-3 font-medium text-zinc-500 transition has-[:checked]:bg-white has-[:checked]:text-zinc-900 has-[:checked]:shadow-sm dark:has-[:checked]:bg-zinc-950 dark:has-[:checked]:text-white">
           <input type="radio" name="brandId" value={s.id} defaultChecked={s.id === def} className="sr-only" />

@@ -1,0 +1,841 @@
+{
+ "data": {
+  "key": "p015",
+  "language": "ur",
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "totalFrames": 1530,
+  "lines": [
+   {
+    "id": 1,
+    "text": "ایک ہزار نو انکار، کیا یہ کہانی سچ ہے؟",
+    "title": "Hook: the famous number",
+    "audio": "p015/scene_1.mp3",
+    "startFrame": 0,
+    "durationFrames": 100,
+    "words": [
+     {
+      "text": "ایک",
+      "start": 0.08,
+      "end": 0.379
+     },
+     {
+      "text": "ہزار",
+      "start": 0.379,
+      "end": 0.778
+     },
+     {
+      "text": "نو",
+      "start": 0.778,
+      "end": 0.978
+     },
+     {
+      "text": "انکار،",
+      "start": 0.978,
+      "end": 1.576
+     },
+     {
+      "text": "کیا",
+      "start": 1.576,
+      "end": 1.875
+     },
+     {
+      "text": "یہ",
+      "start": 1.875,
+      "end": 2.075
+     },
+     {
+      "text": "کہانی",
+      "start": 2.075,
+      "end": 2.573
+     },
+     {
+      "text": "سچ",
+      "start": 2.573,
+      "end": 2.773
+     },
+     {
+      "text": "ہے؟",
+      "start": 2.773,
+      "end": 3.072
+     }
+    ],
+    "visual": "Big '1009' slams in over real footage of fried chicken, then a question mark and a 'MYTH?' stamp"
+   },
+   {
+    "id": 2,
+    "text": "ہارلینڈ سینڈرز کے والد بچپن میں چل بسے، تو وہ گھر کا کھانا پکانے لگے۔",
+    "title": "Hard childhood",
+    "audio": "p015/scene_2.mp3",
+    "startFrame": 100,
+    "durationFrames": 155,
+    "words": [
+     {
+      "text": "ہارلینڈ",
+      "start": 0.08,
+      "end": 0.693
+     },
+     {
+      "text": "سینڈرز",
+      "start": 0.693,
+      "end": 1.218
+     },
+     {
+      "text": "کے",
+      "start": 1.218,
+      "end": 1.393
+     },
+     {
+      "text": "والد",
+      "start": 1.393,
+      "end": 1.744
+     },
+     {
+      "text": "بچپن",
+      "start": 1.744,
+      "end": 2.094
+     },
+     {
+      "text": "میں",
+      "start": 2.094,
+      "end": 2.357
+     },
+     {
+      "text": "چل",
+      "start": 2.357,
+      "end": 2.532
+     },
+     {
+      "text": "بسے،",
+      "start": 2.532,
+      "end": 2.882
+     },
+     {
+      "text": "تو",
+      "start": 2.882,
+      "end": 3.057
+     },
+     {
+      "text": "وہ",
+      "start": 3.057,
+      "end": 3.232
+     },
+     {
+      "text": "گھر",
+      "start": 3.232,
+      "end": 3.495
+     },
+     {
+      "text": "کا",
+      "start": 3.495,
+      "end": 3.67
+     },
+     {
+      "text": "کھانا",
+      "start": 3.67,
+      "end": 4.108
+     },
+     {
+      "text": "پکانے",
+      "start": 4.108,
+      "end": 4.546
+     },
+     {
+      "text": "لگے۔",
+      "start": 4.546,
+      "end": 4.896
+     }
+    ],
+    "visual": "Old-photo style frame: 1890s Indiana farmhouse, a boy at a wood stove (silhouette, not a realistic face)"
+   },
+   {
+    "id": 3,
+    "text": "پھر کئی نوکریاں کیں: کھیتوں میں، ریلوے میں، انشورنس میں، اور کئی چھوٹ بھی گئیں۔",
+    "title": "Many jobs",
+    "audio": "p015/scene_3.mp3",
+    "startFrame": 255,
+    "durationFrames": 162,
+    "words": [
+     {
+      "text": "پھر",
+      "start": 0.08,
+      "end": 0.313
+     },
+     {
+      "text": "کئی",
+      "start": 0.313,
+      "end": 0.547
+     },
+     {
+      "text": "نوکریاں",
+      "start": 0.547,
+      "end": 1.091
+     },
+     {
+      "text": "کیں:",
+      "start": 1.091,
+      "end": 1.402
+     },
+     {
+      "text": "کھیتوں",
+      "start": 1.402,
+      "end": 1.869
+     },
+     {
+      "text": "میں،",
+      "start": 1.869,
+      "end": 2.18
+     },
+     {
+      "text": "ریلوے",
+      "start": 2.18,
+      "end": 2.569
+     },
+     {
+      "text": "میں،",
+      "start": 2.569,
+      "end": 2.88
+     },
+     {
+      "text": "انشورنس",
+      "start": 2.88,
+      "end": 3.425
+     },
+     {
+      "text": "میں،",
+      "start": 3.425,
+      "end": 3.736
+     },
+     {
+      "text": "اور",
+      "start": 3.736,
+      "end": 3.969
+     },
+     {
+      "text": "کئی",
+      "start": 3.969,
+      "end": 4.203
+     },
+     {
+      "text": "چھوٹ",
+      "start": 4.203,
+      "end": 4.514
+     },
+     {
+      "text": "بھی",
+      "start": 4.514,
+      "end": 4.747
+     },
+     {
+      "text": "گئیں۔",
+      "start": 4.747,
+      "end": 5.136
+     }
+    ],
+    "visual": "Quick cuts of job icons sliding in: farm, railway, insurance papers; some get crossed out"
+   },
+   {
+    "id": 4,
+    "text": "کینٹکی میں ایک پیٹرول پمپ پر مسافروں کو کھانا کھلایا، اور ان کی مرغی مشہور ہو گئی۔",
+    "title": "Corbin service station",
+    "audio": "p015/scene_4.mp3",
+    "startFrame": 417,
+    "durationFrames": 172,
+    "words": [
+     {
+      "text": "کینٹکی",
+      "start": 0.08,
+      "end": 0.57
+     },
+     {
+      "text": "میں",
+      "start": 0.57,
+      "end": 0.815
+     },
+     {
+      "text": "ایک",
+      "start": 0.815,
+      "end": 1.06
+     },
+     {
+      "text": "پیٹرول",
+      "start": 1.06,
+      "end": 1.551
+     },
+     {
+      "text": "پمپ",
+      "start": 1.551,
+      "end": 1.796
+     },
+     {
+      "text": "پر",
+      "start": 1.796,
+      "end": 1.959
+     },
+     {
+      "text": "مسافروں",
+      "start": 1.959,
+      "end": 2.531
+     },
+     {
+      "text": "کو",
+      "start": 2.531,
+      "end": 2.694
+     },
+     {
+      "text": "کھانا",
+      "start": 2.694,
+      "end": 3.103
+     },
+     {
+      "text": "کھلایا،",
+      "start": 3.103,
+      "end": 3.675
+     },
+     {
+      "text": "اور",
+      "start": 3.675,
+      "end": 3.92
+     },
+     {
+      "text": "ان",
+      "start": 3.92,
+      "end": 4.083
+     },
+     {
+      "text": "کی",
+      "start": 4.083,
+      "end": 4.247
+     },
+     {
+      "text": "مرغی",
+      "start": 4.247,
+      "end": 4.573
+     },
+     {
+      "text": "مشہور",
+      "start": 4.573,
+      "end": 4.982
+     },
+     {
+      "text": "ہو",
+      "start": 4.982,
+      "end": 5.145
+     },
+     {
+      "text": "گئی۔",
+      "start": 5.145,
+      "end": 5.472
+     }
+    ],
+    "visual": "Archive footage of a 1950s American roadside gas station and diner; label: Corbin, Kentucky 1930"
+   },
+   {
+    "id": 5,
+    "text": "پھر نئی شاہراہ بنی، گاڑیاں دور ہو گئیں، اور ریستوران گھاٹے میں بیچنا پڑا۔",
+    "title": "The highway bypass",
+    "audio": "p015/scene_5.mp3",
+    "startFrame": 589,
+    "durationFrames": 148,
+    "words": [
+     {
+      "text": "پھر",
+      "start": 0.08,
+      "end": 0.31
+     },
+     {
+      "text": "نئی",
+      "start": 0.31,
+      "end": 0.54
+     },
+     {
+      "text": "شاہراہ",
+      "start": 0.54,
+      "end": 1
+     },
+     {
+      "text": "بنی،",
+      "start": 1,
+      "end": 1.307
+     },
+     {
+      "text": "گاڑیاں",
+      "start": 1.307,
+      "end": 1.767
+     },
+     {
+      "text": "دور",
+      "start": 1.767,
+      "end": 1.997
+     },
+     {
+      "text": "ہو",
+      "start": 1.997,
+      "end": 2.15
+     },
+     {
+      "text": "گئیں،",
+      "start": 2.15,
+      "end": 2.533
+     },
+     {
+      "text": "اور",
+      "start": 2.533,
+      "end": 2.763
+     },
+     {
+      "text": "ریستوران",
+      "start": 2.763,
+      "end": 3.377
+     },
+     {
+      "text": "گھاٹے",
+      "start": 3.377,
+      "end": 3.76
+     },
+     {
+      "text": "میں",
+      "start": 3.76,
+      "end": 3.99
+     },
+     {
+      "text": "بیچنا",
+      "start": 3.99,
+      "end": 4.373
+     },
+     {
+      "text": "پڑا۔",
+      "start": 4.373,
+      "end": 4.68
+     }
+    ],
+    "visual": "Map animation: a new highway line curves away from the small town dot; cars stream past it"
+   },
+   {
+    "id": 6,
+    "text": "عمر پینسٹھ کے قریب، آمدنی بس ایک سو پانچ ڈالر ماہانہ پنشن۔",
+    "title": "Age 65, $105",
+    "audio": "p015/scene_6.mp3",
+    "startFrame": 737,
+    "durationFrames": 139,
+    "words": [
+     {
+      "text": "عمر",
+      "start": 0.08,
+      "end": 0.355
+     },
+     {
+      "text": "پینسٹھ",
+      "start": 0.355,
+      "end": 0.906
+     },
+     {
+      "text": "کے",
+      "start": 0.906,
+      "end": 1.089
+     },
+     {
+      "text": "قریب،",
+      "start": 1.089,
+      "end": 1.548
+     },
+     {
+      "text": "آمدنی",
+      "start": 1.548,
+      "end": 2.007
+     },
+     {
+      "text": "بس",
+      "start": 2.007,
+      "end": 2.19
+     },
+     {
+      "text": "ایک",
+      "start": 2.19,
+      "end": 2.465
+     },
+     {
+      "text": "سو",
+      "start": 2.465,
+      "end": 2.649
+     },
+     {
+      "text": "پانچ",
+      "start": 2.649,
+      "end": 3.016
+     },
+     {
+      "text": "ڈالر",
+      "start": 3.016,
+      "end": 3.383
+     },
+     {
+      "text": "ماہانہ",
+      "start": 3.383,
+      "end": 3.933
+     },
+     {
+      "text": "پنشن۔",
+      "start": 3.933,
+      "end": 4.392
+     }
+    ],
+    "visual": "Counter counts up to '$105 / month' with 'age ~65' label over archive footage of an old car on a 1950s road"
+   },
+   {
+    "id": 7,
+    "text": "ایک دوست کے ہوٹل میں نسخہ پہلے ہی بک رہا تھا، تو انہوں نے یہی راستہ چنا۔",
+    "title": "The turning point",
+    "audio": "p015/scene_7.mp3",
+    "startFrame": 876,
+    "durationFrames": 157,
+    "words": [
+     {
+      "text": "ایک",
+      "start": 0.08,
+      "end": 0.343
+     },
+     {
+      "text": "دوست",
+      "start": 0.343,
+      "end": 0.694
+     },
+     {
+      "text": "کے",
+      "start": 0.694,
+      "end": 0.869
+     },
+     {
+      "text": "ہوٹل",
+      "start": 0.869,
+      "end": 1.22
+     },
+     {
+      "text": "میں",
+      "start": 1.22,
+      "end": 1.483
+     },
+     {
+      "text": "نسخہ",
+      "start": 1.483,
+      "end": 1.834
+     },
+     {
+      "text": "پہلے",
+      "start": 1.834,
+      "end": 2.185
+     },
+     {
+      "text": "ہی",
+      "start": 2.185,
+      "end": 2.361
+     },
+     {
+      "text": "بک",
+      "start": 2.361,
+      "end": 2.536
+     },
+     {
+      "text": "رہا",
+      "start": 2.536,
+      "end": 2.799
+     },
+     {
+      "text": "تھا،",
+      "start": 2.799,
+      "end": 3.15
+     },
+     {
+      "text": "تو",
+      "start": 3.15,
+      "end": 3.325
+     },
+     {
+      "text": "انہوں",
+      "start": 3.325,
+      "end": 3.764
+     },
+     {
+      "text": "نے",
+      "start": 3.764,
+      "end": 3.939
+     },
+     {
+      "text": "یہی",
+      "start": 3.939,
+      "end": 4.203
+     },
+     {
+      "text": "راستہ",
+      "start": 4.203,
+      "end": 4.641
+     },
+     {
+      "text": "چنا۔",
+      "start": 4.641,
+      "end": 4.992
+     }
+    ],
+    "visual": "A small map pin in Salt Lake City lights up: 'first franchise, 1952, a friend's restaurant'"
+   },
+   {
+    "id": 8,
+    "text": "پریشر ککر گاڑی میں رکھا، ہوٹل ہوٹل گئے، ہر مرغی پر چند سینٹ۔",
+    "title": "On the road",
+    "audio": "p015/scene_8.mp3",
+    "startFrame": 1033,
+    "durationFrames": 142,
+    "words": [
+     {
+      "text": "پریشر",
+      "start": 0.08,
+      "end": 0.537
+     },
+     {
+      "text": "ککر",
+      "start": 0.537,
+      "end": 0.811
+     },
+     {
+      "text": "گاڑی",
+      "start": 0.811,
+      "end": 1.176
+     },
+     {
+      "text": "میں",
+      "start": 1.176,
+      "end": 1.45
+     },
+     {
+      "text": "رکھا،",
+      "start": 1.45,
+      "end": 1.907
+     },
+     {
+      "text": "ہوٹل",
+      "start": 1.907,
+      "end": 2.272
+     },
+     {
+      "text": "ہوٹل",
+      "start": 2.272,
+      "end": 2.637
+     },
+     {
+      "text": "گئے،",
+      "start": 2.637,
+      "end": 3.003
+     },
+     {
+      "text": "ہر",
+      "start": 3.003,
+      "end": 3.185
+     },
+     {
+      "text": "مرغی",
+      "start": 3.185,
+      "end": 3.551
+     },
+     {
+      "text": "پر",
+      "start": 3.551,
+      "end": 3.733
+     },
+     {
+      "text": "چند",
+      "start": 3.733,
+      "end": 4.007
+     },
+     {
+      "text": "سینٹ۔",
+      "start": 4.007,
+      "end": 4.464
+     }
+    ],
+    "visual": "Real footage of a 1950s road trip; icons of a pressure cooker and '+ few cents per chicken'"
+   },
+   {
+    "id": 9,
+    "text": "انکار بہت ہوئے، مگر ایک ہزار نو کا عدد؟ اس کا کوئی ثبوت نہیں۔",
+    "title": "The 1009 myth",
+    "audio": "p015/scene_9.mp3",
+    "startFrame": 1175,
+    "durationFrames": 165,
+    "words": [
+     {
+      "text": "انکار",
+      "start": 0.08,
+      "end": 0.617
+     },
+     {
+      "text": "بہت",
+      "start": 0.617,
+      "end": 0.939
+     },
+     {
+      "text": "ہوئے،",
+      "start": 0.939,
+      "end": 1.475
+     },
+     {
+      "text": "مگر",
+      "start": 1.475,
+      "end": 1.797
+     },
+     {
+      "text": "ایک",
+      "start": 1.797,
+      "end": 2.119
+     },
+     {
+      "text": "ہزار",
+      "start": 2.119,
+      "end": 2.549
+     },
+     {
+      "text": "نو",
+      "start": 2.549,
+      "end": 2.763
+     },
+     {
+      "text": "کا",
+      "start": 2.763,
+      "end": 2.978
+     },
+     {
+      "text": "عدد؟",
+      "start": 2.978,
+      "end": 3.407
+     },
+     {
+      "text": "اس",
+      "start": 3.407,
+      "end": 3.622
+     },
+     {
+      "text": "کا",
+      "start": 3.622,
+      "end": 3.837
+     },
+     {
+      "text": "کوئی",
+      "start": 3.837,
+      "end": 4.266
+     },
+     {
+      "text": "ثبوت",
+      "start": 4.266,
+      "end": 4.695
+     },
+     {
+      "text": "نہیں۔",
+      "start": 4.695,
+      "end": 5.232
+     }
+    ],
+    "visual": "The '1009' from the hook returns with a red 'NO PROOF' stamp; small source tags: Snopes, AAP FactCheck"
+   },
+   {
+    "id": 10,
+    "text": "انیس سو چونسٹھ میں کمپنی بیس لاکھ ڈالر میں بکی۔ ہزار انکار نہیں، برسوں کی محنت۔",
+    "title": "Payoff and lesson",
+    "audio": "p015/scene_10.mp3",
+    "startFrame": 1340,
+    "durationFrames": 190,
+    "words": [
+     {
+      "text": "انیس",
+      "start": 0.08,
+      "end": 0.455
+     },
+     {
+      "text": "سو",
+      "start": 0.455,
+      "end": 0.642
+     },
+     {
+      "text": "چونسٹھ",
+      "start": 0.642,
+      "end": 1.204
+     },
+     {
+      "text": "میں",
+      "start": 1.204,
+      "end": 1.484
+     },
+     {
+      "text": "کمپنی",
+      "start": 1.484,
+      "end": 1.953
+     },
+     {
+      "text": "بیس",
+      "start": 1.953,
+      "end": 2.233
+     },
+     {
+      "text": "لاکھ",
+      "start": 2.233,
+      "end": 2.608
+     },
+     {
+      "text": "ڈالر",
+      "start": 2.608,
+      "end": 2.982
+     },
+     {
+      "text": "میں",
+      "start": 2.982,
+      "end": 3.263
+     },
+     {
+      "text": "بکی۔",
+      "start": 3.263,
+      "end": 3.638
+     },
+     {
+      "text": "ہزار",
+      "start": 3.638,
+      "end": 4.012
+     },
+     {
+      "text": "انکار",
+      "start": 4.012,
+      "end": 4.48
+     },
+     {
+      "text": "نہیں،",
+      "start": 4.48,
+      "end": 4.948
+     },
+     {
+      "text": "برسوں",
+      "start": 4.948,
+      "end": 5.417
+     },
+     {
+      "text": "کی",
+      "start": 5.417,
+      "end": 5.604
+     },
+     {
+      "text": "محنت۔",
+      "start": 5.604,
+      "end": 6.072
+     }
+    ],
+    "visual": "Counter to '$2,000,000 · 1964' over real fried chicken footage, then the lesson text"
+   }
+  ],
+  "brand": {
+   "name": "Chai & Curiosity",
+   "handle": "instagram · @chai_curiosity",
+   "accent": "#ffd27a"
+  },
+  "endCard": {
+   "title": "کامیابی: برسوں کی محنت",
+   "cta": "ہر ہفتے ایک نئی اصل کہانی"
+  }
+ }
+}

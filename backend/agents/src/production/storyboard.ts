@@ -57,12 +57,18 @@ export const storyboard: AgentDefinition = {
       cursor += durationFrames;
     }
     const platforms = ((p.params as { platforms?: string[] }).platforms ?? []);
-    const fbOnly = platforms.includes('facebook') && !platforms.includes('youtube');
+    // Videos not going to YouTube belong to the "Chai & Curiosity" accounts (Facebook Page, TikTok, Instagram, Snapchat),
+    // so the end card must not show the YouTube channel handle.
+    const chaiOnly = platforms.length > 0 && !platforms.includes('youtube');
+    const chaiHandle = platforms.length === 1 && platforms[0] === 'instagram' ? `instagram · ${process.env.INSTAGRAM_HANDLE ?? '@chai_curiosity'}`
+      : platforms.length === 1 && platforms[0] === 'tiktok' ? `tiktok · ${process.env.TIKTOK_HANDLE ?? 'Chai & Curiosity'}`
+      : platforms.length === 1 && platforms[0] === 'facebook' ? 'facebook.com · Chai & Curiosity'
+      : 'Chai & Curiosity';
     const data = short
       ? { key: p.key, language: p.language, fps: FPS, width: 1080, height: 1920, totalFrames: cursor,
           lines: scenes.map(({ id, text, audio, startFrame, durationFrames, words, visual, title }) => ({ id, text, title, audio, startFrame, durationFrames, words, visual })),
-          // The end card names where the video is posted: Facebook-only videos go to the Page, not the YouTube channel.
-          brand: fbOnly ? { name: FACEBOOK_PAGE.name, handle: 'facebook.com · Chai & Curiosity', accent: '#ffd27a' }
+          // The end card names where the video is posted (not the YouTube channel for Chai & Curiosity-only videos).
+          brand: chaiOnly ? { name: FACEBOOK_PAGE.name, handle: chaiHandle, accent: '#ffd27a' }
             : { name: brand.name, handle: profile.channels.youtube?.handle, accent: p.language === 'ur' ? '#fdd835' : '#ff7a1a' },
           endCard: s.endCard }
       : (p.params as { orientation?: string }).orientation === 'vertical'

@@ -16,13 +16,13 @@ export default async function LogsPage() {
   const logs = await api<Log[]>('/audit?limit=300');
   return (
     <div>
-      <PageHeader icon={ScrollText} title="Logs" description="Append-only audit trail: every decision, agent run, approval and upload is recorded here." />
+      <PageHeader icon={ScrollText} title="Activity log" description="A permanent record of every decision, step, approval and post. Nothing here can be edited or deleted." />
       {!logs.length ? <EmptyState icon={ScrollText} title="No events yet" /> : (
         <Card padded={false}>
           <ol className="divide-y divide-zinc-100 font-mono text-xs dark:divide-zinc-800">
             {logs.map((l) => (
-              <li key={l.id} className="grid grid-cols-[auto_1fr] items-baseline gap-x-3 px-5 py-2 sm:grid-cols-[110px_auto_200px_150px_1fr]">
-                <span className="text-zinc-400">{new Date(l.at).toLocaleTimeString()}</span>
+              <li key={l.id} className="grid grid-cols-[auto_1fr] items-baseline gap-x-3 px-5 py-2 sm:grid-cols-[150px_auto_200px_150px_1fr]">
+                <span className="whitespace-nowrap text-zinc-400">{new Date(l.at).toLocaleString(undefined, { day: 'numeric', month: 'short', hour: '2-digit', minute: '2-digit', second: '2-digit' })}</span>
                 <span className={`hidden size-2 self-center rounded-full sm:block ${tone(l.action)}`} />
                 <span className="font-semibold text-zinc-800 dark:text-zinc-200">{l.action}</span>
                 <span className="truncate text-zinc-500">{l.actor}</span>

@@ -1,0 +1,42 @@
+# Research: Instagram Reel, about 50 seconds, Urdu, series Kamyabi ki Asal Kahani (The real story of success): Colonel Harland Sanders and KFC. Tell the true turning point: losing his roadside cafe business in his 60s and starting to franchise his chicken recipe instead. Verified facts only, and honestly check the famous '1,009 rejections' claim (is it documented or a myth?). End with one honest lesson and a question for viewers. No KFC logos, no realistic AI images of Sanders; use real licensed footage (fried chicken, 1950s American roads/diners) where available.
+
+The real Colonel Sanders story: a man who failed or quit many jobs, built a roadside cafe in Corbin, Kentucky, lost its traffic when a new interstate bypassed the town in the mid-1950s, and in his mid-60s, living on a $105 monthly Social Security check, drove from restaurant to restaurant selling his chicken recipe for a few cents per chicken. He had already signed his first franchisee (Pete Harman, Salt Lake City) in 1952, so the true turning point was choosing to grow franchising instead of rebuilding a single cafe. The famous '1,009 rejections' number has no documented primary source: he was rejected many times, but the exact number is legend. By 1964 he sold the company for $2 million and stayed on as its face.
+
+**Audience:** Young Pakistanis (16-35) on Instagram who love success stories and KFC, many of whom have seen the viral '1,009 rejections, started at 65' meme and would enjoy the honest version.
+
+## Facts
+
+| # | Fact | Confidence | Source |
+|---|---|---|---|
+| 1 | Harland Sanders was born in 1890 in Henryville, Indiana; his father died when he was a young boy and he cooked for his younger siblings while his mother worked. | high | Britannica / Biography.com |
+| 2 | Before KFC he worked many jobs, including farmhand, streetcar conductor, railroad worker and insurance salesman, and lost or left several of them. | high | History.com: 8 facts about the real Colonel Sanders |
+| 3 | In 1930 he began serving meals to travellers and truck drivers at his service station in Corbin, Kentucky, which grew into a roadside restaurant. | high | History.com |
+| 4 | Kentucky's governor gave him the honorary title 'Kentucky Colonel' in the 1930s; he was never a military colonel. | high | Britannica / History.com |
+| 5 | He fried chicken in pressure cookers so it cooked much faster than in a pan. | medium | Christian Science Monitor obituary (1980); History.com |
+| 6 | In 1952 his friend Pete Harman in Salt Lake City became the first restaurant to sell his chicken under a franchise deal, and the name 'Kentucky Fried Chicken' was coined there. | high | History.com; University of New Hampshire Rosenberg Center |
+| 7 | In the mid-1950s a new interstate highway (I-75) took traffic away from his Corbin restaurant, and he sold it at a loss. | high | New York Times (via The Nightly); historical marker HMdb |
+| 8 | In his mid-60s, living on a $105-a-month Social Security check, he drove to restaurants with a pressure cooker and his seasoning, offering his recipe in exchange for a few cents per chicken sold. | high | Christian Science Monitor obituary quoting his autobiography; Snopes; History.com |
+| 9 | The popular claim that he was rejected exactly 1,009 times has no documented primary source; even articles repeating it call it legend. He did face many rejections. | high | Snopes; AAP FactCheck; HowStuffWorks 'Legends about Colonel Sanders' |
+| 10 | The viral meme that he started from nothing at 65 is exaggerated: franchising had already begun in 1952, when he was about 62, before the Social Security check. | high | AAP FactCheck: Barely a nugget of truth in Colonel Sanders rags-to-riches meme |
+| 11 | In 1964 he sold the company to investors led by John Y. Brown Jr. and Jack Massey for $2 million, plus a yearly salary to remain its spokesman. | high | Britannica Money; History of KFC |
+| 12 | In 1971 the company was sold again, to Heublein, for about $285 million. | high | History of KFC; Benzinga |
+| 13 | Sanders died in 1980 in Louisville, Kentucky; his face is still the brand's logo, and KFC operates restaurants in Pakistan today. | medium | Britannica; KFC global history |
+
+## Sources
+- Britannica Money: Harland Sanders: https://www.britannica.com/money/Harland-Sanders
+- History.com: 8 facts about the real Colonel Sanders: https://www.history.com/articles/8-facts-real-colonel-sanders-kfc
+- AAP FactCheck: Colonel Sanders rags-to-riches meme: https://www.aap.com.au/factcheck/barely-a-nugget-of-truth-in-colonel-sanders-rags-to-riches-meme/
+- Snopes: Colonel Sanders: https://snopes.com/colonel-sanders/
+- Christian Science Monitor: Harland Sanders, 'the Colonel' (1980): https://csmonitor.com/1980/1217/121729.html
+- HowStuffWorks: Legends about Colonel Sanders and KFC: https://history.howstuffworks.com/history-vs-myth/colonel-sanders.htm
+- UNH Rosenberg Center: Harland 'Colonel' Sanders: https://paulcollege.unh.edu/rosenberg/pioneers/harland-colonel-sanders
+- Wikipedia: History of KFC: https://en.wikipedia.org/wiki/History_of_KFC
+
+## Avoid
+- Stating '1,009 rejections' as fact (only as the famous legend, then correct it)
+- Claiming he started from zero at 65 or that the $105 check started his business
+- Invented motivational quotes attributed to Sanders
+- Claims about the secret recipe's ingredients
+- KFC logos, ads or the company's own footage; realistic AI images of Sanders
+- 'Get rich' promises or money advice
+- Calling him a military colonel

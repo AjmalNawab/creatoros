@@ -5,8 +5,9 @@ import { facebook } from './facebook';
 import { instagram } from './instagram';
 import { tiktok } from './tiktok';
 import { linkedin } from './linkedin';
+import { snapchat } from './snapchat';
 
-export type PlatformId = 'youtube' | 'facebook' | 'instagram' | 'tiktok' | 'linkedin';
+export type PlatformId = 'youtube' | 'facebook' | 'instagram' | 'tiktok' | 'snapchat' | 'linkedin';
 
 /** Each platform is an independent module: its own agents, workflow steps and publishing route. */
 export interface PlatformModule {
@@ -21,5 +22,5 @@ export interface PlatformModule {
   notes: string;
 }
 
-export const PLATFORMS: Record<PlatformId, PlatformModule> = { youtube, facebook, instagram, tiktok, linkedin };
+export const PLATFORMS: Record<PlatformId, PlatformModule> = { youtube, facebook, instagram, tiktok, snapchat, linkedin };
 export const PLATFORM_AGENTS = Object.values(PLATFORMS).flatMap((p) => p.agents);

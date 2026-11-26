@@ -47,7 +47,7 @@ export function planInstruction(text: string): Plan {
   const topic = text
     .replace(/^(please\s+)?(create|make|produce|generate)\s+/i, '')
     .replace(new RegExp(`\\b(for|on|to)\\s+(${platformWords})(\\s*(,|and|&)\\s*(${platformWords}))*\\b`, 'ig'), '')
-    .replace(/^(an?\s+)?(\d+(\.\d+)?\s*-?\s*(min|minutes?|s|sec|secs|seconds?)\s+)?((urdu|english)\s+)?((youtube|facebook|instagram|tiktok|linkedin)\s+)?(educational\s+|vertical\s+)?(video|short|shorts|reel|explainer|post)\s+(about|on)\s+/i, '')
+    .replace(/^(an?\s+)?(\d+(\.\d+)?\s*-?\s*(min|minutes?|s|sec|secs|seconds?)\s+)?((urdu|english)\s+)?((youtube|facebook|instagram|tiktok|snapchat|linkedin)\s+)?(educational\s+|vertical\s+)?(video|short|shorts|reel|explainer|post)\s+(about|on)\s+/i, '')
     .replace(/\s+/g, ' ').trim() || text.trim();
   // Explicit language wins; otherwise the brand's language is applied in createContentWorkflow.
   const language = /english/i.test(text) ? 'en' : /urdu|اردو|[\u0600-\u06FF]/i.test(text) ? 'ur' : '';
@@ -71,7 +71,7 @@ async function createSteps(tx: Tx, steps: WorkflowStep[], ctx: { projectId: stri
 }
 
 /** Instruction → content project + production workflow + platform workflows. */
-export async function submitInstruction(db: PrismaClient, text: string, opts: { brandId?: string; actor?: string; language?: 'en' | 'ur'; format?: 'short' | 'long' } = {}) {
+export async function submitInstruction(db: PrismaClient, text: string, opts: { brandId?: string; actor?: string; language?: 'en' | 'ur'; format?: 'short' | 'long'; platforms?: PlatformId[] } = {}) {
   const brandId = opts.brandId ?? (await getDefaultBrand(db)).id;
   let plan = planInstruction(text);
   if (opts.format && opts.format !== plan.format) {
@@ -81,6 +81,7 @@ export async function submitInstruction(db: PrismaClient, text: string, opts: { 
     const raw = planInstruction(text.replace(/\b(shorts?|reels?|tiktok|vertical)\b/gi, '')).durationSec;
     plan = { ...plan, format: opts.format, durationSec: opts.format === 'short' ? Math.min(60, stated ? raw : 40) : stated ? raw : 120 };
   }
+  if (opts.platforms?.length) plan = { ...plan, platforms: opts.platforms };
   // The owner's explicit choice wins over words in the instruction and over the brand default.
   return createContentWorkflow(db, opts.language ? { ...plan, language: opts.language } : plan, { brandId, actor: opts.actor, instruction: text });
 }

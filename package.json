@@ -3,12 +3,14 @@
   "private": true,
   "packageManager": "pnpm@9.15.9",
   "scripts": {
+    "start": "./start.sh",
     "db:generate": "pnpm --filter @creatoros/db generate",
     "db:migrate": "pnpm --filter @creatoros/db migrate",
     "test": "pnpm -r test",
     "worker": "pnpm --filter @creatoros/worker start",
     "api": "pnpm --filter @creatoros/api start:dev",
-    "web": "pnpm --filter @creatoros/web dev",
+    "web": "pnpm --filter @creatoros/web build && pnpm --filter @creatoros/web start",
+    "web:dev": "pnpm --filter @creatoros/web dev",
     "ai": "pnpm --silent --filter @creatoros/agents ai",
     "action": "pnpm --silent --filter @creatoros/agents action",
     "stats": "pnpm --silent --filter @creatoros/agents stats"

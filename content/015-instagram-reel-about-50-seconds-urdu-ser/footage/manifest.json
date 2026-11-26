@@ -1,0 +1,148 @@
+{
+ "clips": [
+  {
+   "file": "p015/footage/hwy-aerial.mp4",
+   "kind": "video",
+   "source": "archive",
+   "id": "GiveYour1954",
+   "page": "https://archive.org/details/GiveYour1954",
+   "licence": "http://creativecommons.org/licenses/publicdomain/",
+   "credit": "",
+   "note": "1954 film: aerial view of a new highway interchange (scene 5: the new highway)",
+   "segment": {
+    "start": 57,
+    "dur": 7
+   },
+   "sha256": "4356005b512e0774bf7ca4339008432f16245f70c7edf77d3a7dd98c30274311",
+   "addedAt": "2026-11-25T13:06:39.479Z"
+  },
+  {
+   "file": "p015/footage/road-car.mp4",
+   "kind": "video",
+   "source": "archive",
+   "id": "GiveYour1954",
+   "page": "https://archive.org/details/GiveYour1954",
+   "licence": "http://creativecommons.org/licenses/publicdomain/",
+   "credit": "",
+   "note": "1954 film: 1950s car driving on a road (scene 6/8: on the road)",
+   "segment": {
+    "start": 136,
+    "dur": 7
+   },
+   "sha256": "823f669217c1285dc9bcd385e9d95278b0caaf2cd8e2b4bd566c18cb06c380b4",
+   "addedAt": "2026-11-25T13:06:51.250Z"
+  },
+  {
+   "file": "p015/footage/town-street.mp4",
+   "kind": "video",
+   "source": "archive",
+   "id": "GiveYour1954",
+   "page": "https://archive.org/details/GiveYour1954",
+   "licence": "http://creativecommons.org/licenses/publicdomain/",
+   "credit": "",
+   "note": "1954 film: 1950s small-town main street with shops and cars (scene 4)",
+   "segment": {
+    "start": 492,
+    "dur": 8
+   },
+   "sha256": "b328a16ff18b1b63ff2fa3e91e419244fd757952d40ceced44c99ac6d8df90df",
+   "addedAt": "2026-11-25T13:07:02.934Z"
+  },
+  {
+   "file": "p015/footage/hwy-cars.mp4",
+   "kind": "video",
+   "source": "archive",
+   "id": "GiveYour1954",
+   "page": "https://archive.org/details/GiveYour1954",
+   "licence": "http://creativecommons.org/licenses/publicdomain/",
+   "credit": "",
+   "note": "1954 film: cars on a new divided highway (scene 5)",
+   "segment": {
+    "start": 976,
+    "dur": 7
+   },
+   "sha256": "0bd751e005372cf033cc10dd4822213a587f1cbea637e27f85637b7c54e8289c",
+   "addedAt": "2026-11-25T13:07:16.095Z"
+  },
+  {
+   "file": "p015/footage/freeway-sign.mp4",
+   "kind": "video",
+   "source": "archive",
+   "id": "GiveYour1954",
+   "page": "https://archive.org/details/GiveYour1954",
+   "licence": "http://creativecommons.org/licenses/publicdomain/",
+   "credit": "",
+   "note": "1954 film: 'Another FREEWAY for your safety' sign (scene 5)",
+   "segment": {
+    "start": 1096,
+    "dur": 6
+   },
+   "sha256": "6d48d0a3f69407c3a8dd45c82aee501f1229fa5cba8c3be2d9e3fda838482eea",
+   "addedAt": "2026-11-25T13:07:28.719Z"
+  },
+  {
+   "file": "p015/footage/country-road.mp4",
+   "kind": "video",
+   "source": "archive",
+   "id": "GiveYour1954",
+   "page": "https://archive.org/details/GiveYour1954",
+   "licence": "http://creativecommons.org/licenses/publicdomain/",
+   "credit": "",
+   "note": "1954 film: truck on a country road (scene 8: travelling)",
+   "segment": {
+    "start": 256,
+    "dur": 6
+   },
+   "sha256": "9c35c103c715b9668c316ae6f1d25af393d233bddfe2343fd07c292ca2d73d1f",
+   "addedAt": "2026-11-25T13:07:41.070Z"
+  },
+  {
+   "file": "p015/footage/steam.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "154406",
+   "page": "https://pixabay.com/videos/id-154406/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "stock: steam from a pressure cooker (scene 8)",
+   "sha256": "b41f5aab5bf3977043896149c2e4d8e5177069092e5f2a47f7d4b847d3a6fd0a",
+   "addedAt": "2026-11-25T13:08:14.162Z"
+  },
+  {
+   "file": "p015/footage/lamp.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "11186",
+   "page": "https://pixabay.com/videos/id-11186/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "stock: old kerosene lamp (scene 2: a hard childhood, ~1890s feel)",
+   "sha256": "ce5d690fd1ee3647c07a05a98b348070e7a1883a85c93abd8e98cca753042f8a",
+   "addedAt": "2026-11-25T13:08:20.132Z"
+  },
+  {
+   "file": "p015/footage/steam-train.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "188828",
+   "page": "https://pixabay.com/videos/id-188828/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "stock: historical steam locomotive (scene 3: railway job)",
+   "sha256": "1495bebce40042042e5fd86a0bce0ad9c297b6a0f6aaac50b0a862ac7ec531b4",
+   "addedAt": "2026-11-25T13:08:22.005Z"
+  },
+  {
+   "file": "p015/footage/chicken-fries.mp4",
+   "kind": "video",
+   "source": "pixabay",
+   "id": "11674",
+   "page": "https://pixabay.com/videos/id-11674/",
+   "licence": "Pixabay Content License (free to use, no attribution required)",
+   "credit": "",
+   "note": "stock: fried chicken with fries (scenes 1, 4, 10)",
+   "sha256": "de7819cf249a68a8c37373912fa25785bc0174b25e82e5bde56ec5e3f87c32c6",
+   "addedAt": "2026-11-25T13:09:23.710Z"
+  }
+ ]
+}

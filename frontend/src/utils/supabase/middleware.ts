@@ -15,7 +15,10 @@ export async function updateSession(request: NextRequest) {
       },
     },
   });
-  const { data: { user } } = await supabase.auth.getUser();
+  // getClaims verifies the signed (ES256) session token locally with cached public keys and refreshes an
+  // expired session, so most requests need no round trip to Supabase.
+  const { data } = await supabase.auth.getClaims();
+  const user = data?.claims ? { email: data.claims.email as string | undefined } : null;
   if (!request.nextUrl.pathname.startsWith('/login') && (!user || !isOwner(user.email))) {
     // Signed in but not an allowed owner: end the session and send to login.
     if (user) await supabase.auth.signOut();

@@ -3,35 +3,36 @@ import Link from 'next/link';
 import { usePathname, useRouter } from 'next/navigation';
 import { useState } from 'react';
 import {
-  Activity, BarChart3, Bot, Building2, CheckCircle2, Clapperboard, LayoutDashboard, Lightbulb, ListChecks, LogOut, Menu, MonitorUp,
+  Activity, BarChart3, Bot, Building2, CheckCircle2, ChevronDown, Clapperboard, LayoutDashboard, Lightbulb, ListChecks, LogOut, Menu, MonitorUp,
   Radio, ScrollText, Sparkles, X,
 } from 'lucide-react';
 import { createClient } from '@/utils/supabase/client';
 
 export type NavCounts = { approvals: number; ai: number; actions: number; ideas: number };
 
-const GROUPS = [
-  { label: 'Create', items: [
+type Item = { href: string; label: string; icon: typeof Activity; count?: keyof NavCounts; tone?: string };
+const GROUPS: { label: string; items: Item[]; advanced?: boolean }[] = [
+  { label: 'Today', items: [
     { href: '/', label: 'Overview', icon: LayoutDashboard },
-    { href: '/ideas', label: 'Ideas', icon: Lightbulb, count: 'ideas' as const },
-    { href: '/content', label: 'Content Studio', icon: Clapperboard },
+    { href: '/approvals', label: 'Approvals', icon: CheckCircle2, count: 'approvals', tone: 'bg-violet-600' },
+    { href: '/actions', label: 'Ready to post', icon: MonitorUp, count: 'actions', tone: 'bg-fuchsia-600' },
+    { href: '/ai', label: 'Waiting for Claude', icon: Sparkles, count: 'ai', tone: 'bg-sky-600' },
   ] },
-  { label: 'Your attention', items: [
-    { href: '/approvals', label: 'Approvals', icon: CheckCircle2, count: 'approvals' as const, tone: 'bg-violet-600' },
-    { href: '/ai', label: 'AI Queue', icon: Sparkles, count: 'ai' as const, tone: 'bg-sky-600' },
-    { href: '/actions', label: 'Browser actions', icon: MonitorUp, count: 'actions' as const, tone: 'bg-fuchsia-600' },
+  { label: 'Create', items: [
+    { href: '/ideas', label: 'Ideas', icon: Lightbulb, count: 'ideas' },
+    { href: '/content', label: 'Videos', icon: Clapperboard },
   ] },
-  { label: 'Publish', items: [
+  { label: 'Results', items: [
     { href: '/published', label: 'Published & stats', icon: BarChart3 },
-    { href: '/platforms', label: 'Platforms', icon: Radio },
   ] },
   { label: 'Settings', items: [
-    { href: '/brand', label: 'Series', icon: Building2 },
-    { href: '/agents', label: 'Agents', icon: Bot },
+    { href: '/brand', label: 'Series & accounts', icon: Building2 },
+    { href: '/platforms', label: 'Platforms', icon: Radio },
   ] },
-  { label: 'System', items: [
+  { label: 'Advanced', advanced: true, items: [
     { href: '/tasks', label: 'Tasks', icon: ListChecks },
-    { href: '/logs', label: 'Logs', icon: ScrollText },
+    { href: '/agents', label: 'Agents', icon: Bot },
+    { href: '/logs', label: 'Activity log', icon: ScrollText },
   ] },
 ];
 
@@ -40,6 +41,8 @@ export function Sidebar({ counts, brand, email }: { counts: NavCounts; brand: { 
   const router = useRouter();
   const [open, setOpen] = useState(false);
   const isActive = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
+  const [showAdvanced, setShowAdvanced] = useState(() => GROUPS.some((g) => g.advanced && g.items.some((it) => isActive(it.href))));
+  const needsYou = counts.approvals + counts.actions;
 
   async function signOut() {
     await createClient().auth.signOut();
@@ -51,11 +54,16 @@ export function Sidebar({ counts, brand, email }: { counts: NavCounts; brand: { 
     <nav className="flex flex-1 flex-col gap-5 overflow-y-auto px-3 py-4">
       {GROUPS.map((g) => (
         <div key={g.label}>
-          <div className="px-3 pb-1.5 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">{g.label}</div>
-          <ul className="space-y-0.5">
+          {g.advanced ? (
+            <button type="button" onClick={() => setShowAdvanced((v) => !v)} aria-expanded={showAdvanced}
+              className="flex w-full items-center justify-between rounded-md px-3 pb-1.5 text-[11px] font-semibold uppercase tracking-wider text-zinc-400 hover:text-zinc-600 dark:hover:text-zinc-200">
+              {g.label}<ChevronDown className={`size-3.5 transition ${showAdvanced ? 'rotate-180' : ''}`} />
+            </button>
+          ) : <div className="px-3 pb-1.5 text-[11px] font-semibold uppercase tracking-wider text-zinc-400">{g.label}</div>}
+          {(!g.advanced || showAdvanced) && <ul className="space-y-0.5">
             {g.items.map((it) => {
               const active = isActive(it.href);
-              const n = 'count' in it && it.count ? counts[it.count] : 0;
+              const n = it.count ? counts[it.count] : 0;
               return (
                 <li key={it.href}>
                   <Link href={it.href} onClick={() => setOpen(false)}
@@ -64,12 +72,12 @@ export function Sidebar({ counts, brand, email }: { counts: NavCounts; brand: { 
                       : 'text-zinc-600 hover:bg-zinc-100 hover:text-zinc-900 dark:text-zinc-400 dark:hover:bg-zinc-800 dark:hover:text-white'}`}>
                     <it.icon className={`size-4 shrink-0 ${active ? '' : 'text-zinc-400 group-hover:text-zinc-600 dark:group-hover:text-zinc-200'}`} />
                     <span className="flex-1">{it.label}</span>
-                    {n > 0 && <span className={`min-w-5 rounded-full px-1.5 text-center text-[11px] font-semibold leading-5 text-white ${'tone' in it && it.tone ? it.tone : 'bg-zinc-500'}`}>{n}</span>}
+                    {n > 0 && <span className={`min-w-5 rounded-full px-1.5 text-center text-[11px] font-semibold leading-5 text-white ${it.tone ?? 'bg-zinc-500'}`}>{n}</span>}
                   </Link>
                 </li>
               );
             })}
-          </ul>
+          </ul>}
         </div>
       ))}
     </nav>
@@ -110,7 +118,10 @@ export function Sidebar({ counts, brand, email }: { counts: NavCounts; brand: { 
       {/* Mobile top bar */}
       <div className="sticky top-0 z-30 flex items-center justify-between border-b border-zinc-200 bg-white/80 px-4 py-3 backdrop-blur lg:hidden dark:border-zinc-800 dark:bg-zinc-950/80">
         <div className="flex items-center gap-2 font-semibold"><Activity className="size-4 text-orange-500" />CreatorOS</div>
-        <button onClick={() => setOpen(true)} aria-label="Open menu" className="rounded-md p-1.5 hover:bg-zinc-100 dark:hover:bg-zinc-800"><Menu className="size-5" /></button>
+        <div className="flex items-center gap-2">
+          {needsYou > 0 && <Link href="/approvals" className="rounded-full bg-violet-600 px-2.5 py-1 text-xs font-semibold text-white">{needsYou} need you</Link>}
+          <button onClick={() => setOpen(true)} aria-label="Open menu" className="rounded-lg p-2 hover:bg-zinc-100 dark:hover:bg-zinc-800"><Menu className="size-5" /></button>
+        </div>
       </div>
       {open && (
         <div className="fixed inset-0 z-40 lg:hidden">
